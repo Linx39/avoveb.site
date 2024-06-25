@@ -1,0 +1,21 @@
+{
+  "name": "avoveb",
+  "private": true,
+  "description": "",
+  "devDependencies": {
+    "gulp": "4.0.2",
+    "gulp-imagemin": "9.0.0",
+    "gulp-webp": "4.0.1"
+  },  
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all",
+    "not < 0.25%"
+  ],
+  "engines": {
+    "node": "^16"
+  },
+  "type": "module"
+}
