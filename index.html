@@ -2,10 +2,10 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/hystmodal.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/hystmodal.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Вкус бани</title>
   </head>
   <body>
@@ -245,14 +245,18 @@
     <header class="header">
       <div class="header__wrapper">
         <div class="header__logo">
-          <img src="assets/img/logo.png" alt="logo" class="header__logoImg" />
+          <img src="assets/img/logo.png" alt="logo" class="header__logoImg">
           <div class="header__logoText">Ceмeйныe банные традиции –от пармастеров со стажем</div>
         </div>
 
         <div class="header__info">
           <a href="tel:+79263906734" class="header__phone">+7-926-390-67-34</a>
-          <svg class="header__contactImg"><use href="#telegram"></use></svg>
-          <svg class="header__contactImg"><use href="#whatsapp"></use></svg>
+          <a href="https://t.me/olga_rsh" class="header__contact">
+            <svg class="header__contactImg"><use href="#telegram"></use></svg>
+          </a>
+          <a href="https://wa.me/79832276997?text=Здравствуйте,%20хочу%20заказать%20услугу." class="header__contact">
+            <svg class="header__contactImg"><use href="#whatsapp"></use></svg>
+          </a>
           <button class="header__hamburgerButton">
             <svg class="header__hamburgerImg"><use href="#hamburger"></use></svg>
           </button>
@@ -265,9 +269,9 @@
     <main class="main">
       <section id="promo" class="promo">
         <div class="container">
-          <img src="assets/img/promo-wave.png" alt="" class="promo__wave" />
-          <img src="assets/img/promo-wave-768.png" alt="" class="promo__wave promo__wave_768" />
-          <img src="assets/img/promo-wave-320.svg" alt="" class="promo__wave promo__wave_320" />
+          <img src="assets/img/promo-wave.png" alt="" class="promo__wave" >
+          <img src="assets/img/promo-wave-768.png" alt="" class="promo__wave promo__wave_768">
+          <img src="assets/img/promo-wave-320.svg" alt="" class="promo__wave promo__wave_320">
           <!-- <video loop="" muted="" autoplay="" poster="video/plane.jpg.html" class="promo__bgVideo">
             <source src="https://vkusbani.ru/wp-content/uploads/2019/03/video-bg.mp4" type="video/mp4" />
             <source src="https://vkusbani.ru/wp-content/uploads/2019/03/video-bg.webm" type="video/webm" />
@@ -282,7 +286,7 @@
             </style> -->
 
             <h1 class="promo__title">
-              Ощутите вкус настоящей бани <br />
+              Ощутите вкус настоящей бани <br>
               <span>с семьей профессиональных банщиков</span>
             </h1>
 
@@ -291,12 +295,12 @@
               <div class="promo__location__item">Выезд на дом</div>
             </div>
 
-            <button class="promo__videoButton">
+            <a class="promo__videoButton">
               <div class="promo__videoButton__text">Посмотреть видеоролик</div>
               <div class="promo__videoButton__playCircle">
                 <svg class="promo__videoButton__play"><use href="#play"></use></svg>
               </div>
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -633,7 +637,7 @@
             <a data-services="#services-modal-1" class="services__item">
               <div class="services__item__circle">
                 <div class="services__item__circleText">
-                  15<br />
+                  15<br>
                   мин
                 </div>
               </div>
@@ -642,8 +646,7 @@
                 alt="Ребенок в сауне"
                 class="services__item__img"
               />
-              <h4 class="services__item__title">Парение</h4>
-              <h4 class="services__item__title services__item__title_bottom">Первый пар</h4>
+              <h4 class="services__item__title">Парение<br> Первый пар</h4>
               <div class="services__item__bottomText">Подробнее</div>
             </a>
 
@@ -651,24 +654,18 @@
               <div class="hystmodal__wrap">
                 <div class="hystmodal__window feedbackModal servicesModal services-modal-1" role="dialog" aria-modal="true">
                   <button data-hystclose class="hystmodal__close feedbackModal__close">Закрыть</button>
-                  <!-- <img
-                    src="assets/img/services-section/services-modal-bg-1.png"
-                    alt="feedback"
-                    class="feedbackModal__img"
-                  /> -->
 
-                  <div class="feedbackModal__content">
-                    <h2 class="feedbackModal__title servicesModal__title">Парение <span>Первый пар</span></h2>
-                    <div class="servicesModal__subtitle">Длительность - 15 минут</div>
+                  <div class="feedbackModal__content servicesModal__content">
+                    <h2 class="feedbackModal__title servicesModal__title"><span>Парение</span> Первый пар</h2>
+                    <p class="servicesModal__subtitle">Длительность - 15 минут</p>
 
                     <div class="servicesModal__textWrapper">
                       <div class="servicesModal__textWrapper__scroll">
-                        <div class="servicesModal__text">
+                        <p class="servicesModal__text">
                           Мягкое ознакомительное веничное парение без резких контрастных переходов с плавным погружением
                           в мир банного удовольствия. Подходит тем, кто впервые пробует париться с банным мастером.
-                        </div>
+                        </p>
                       </div>
-                      <!-- <img src="assets/img/shadow.svg" alt="shadow" class="servicesModal__textWrapper__shadow" /> -->
                     </div>
 
                     <button
@@ -686,7 +683,7 @@
             <a data-services="#services-modal-2" class="services__item">
               <div class="services__item__circle">
                 <div class="services__item__circleText">
-                  30<br />
+                  30<br>
                   мин
                 </div>
               </div>
@@ -695,45 +692,38 @@
                 alt="Ребенок в сауне"
                 class="services__item__img"
               />
-              <h4 class="services__item__title">Парение</h4>
-              <h4 class="services__item__title services__item__title_bottom">классическое</h4>
+              <h4 class="services__item__title">Парение<br> классическое</h4>
 
               <div class="services__item__bottomText">Подробнее</div>
             </a>
 
             <div class="hystmodal" id="services-modal-2" aria-hidden="true">
               <div class="hystmodal__wrap">
-                <div class="hystmodal__window feedbackModal servicesModal" role="dialog" aria-modal="true">
+                <div class="hystmodal__window feedbackModal servicesModal services-modal-2" role="dialog" aria-modal="true">
                   <button data-hystclose class="hystmodal__close feedbackModal__close">Закрыть</button>
-                  <!-- <img
-                    src="assets/img/services-section/services-modal-bg-2.png"
-                    alt="feedback"
-                    class="feedbackModal__img"
-                  /> -->
-
-                  <div class="feedbackModal__content">
-                    <h2 class="feedbackModal__title servicesModal__title">Парение <span>Классическое</span></h2>
-                    <div class="servicesModal__subtitle">Длительность - 40 мин</div>
+                  
+                  <div class="feedbackModal__content servicesModal__content">
+                    <h2 class="feedbackModal__title servicesModal__title"><span>Парение</span> Классическое</h2>
+                    <p class="servicesModal__subtitle">Длительность - 40 мин</p>
 
                     <div class="servicesModal__textWrapper">
                       <div class="servicesModal__textWrapper__scroll">
-                        <div class="servicesModal__text">
+                        <p class="servicesModal__text">
                           Парение начинается с качественного согревания ног, что доставляет особое удовольствие
                           ценителям бани.
-                        </div>
+                        </p>
 
-                        <div class="servicesModal__text">
+                        <p class="servicesModal__text">
                           Классическое парение — это постепенный прогрев всего тела, когда оно методично пропаривается
                           до состояния «хочу в купель».
-                        </div>
+                        </p>
 
-                        <div class="servicesModal__text">
+                        <p class="servicesModal__text">
                           После контраста (по желанию может быть обливание на полке/окунание в купель/обливание из
                           ведра) вы возвращаетесь обратно в парную, где совершается догрев тела на мягком или ярком пару
                           с массажно-растирочными движениями.
-                        </div>
+                        </p>
                       </div>
-                      <img src="assets/img/shadow.svg" alt="shadow" class="servicesModal__textWrapper__shadow" />
                     </div>
 
                     <button data-feedback="#feedback-modal" class="button feedbackModal__button servicesModal__button">
@@ -747,7 +737,7 @@
             <a data-services="#services-modal-3" class="services__item">
               <div class="services__item__circle">
                 <div class="services__item__circleText">
-                  40<br />
+                  40<br>
                   мин
                 </div>
               </div>
@@ -762,47 +752,41 @@
 
             <div class="hystmodal" id="services-modal-3" aria-hidden="true">
               <div class="hystmodal__wrap">
-                <div class="hystmodal__window feedbackModal servicesModal" role="dialog" aria-modal="true">
+                <div class="hystmodal__window feedbackModal servicesModal services-modal-3" role="dialog" aria-modal="true">
                   <button data-hystclose class="hystmodal__close feedbackModal__close">Закрыть</button>
-                  <!-- <img
-                    src="assets/img/services-section/services-modal-bg-3.png"
-                    alt="feedback"
-                    class="feedbackModal__img servicesModal__img"
-                  /> -->
-
-                  <div class="feedbackModal__content">
-                    <h2 class="feedbackModal__title servicesModal__title">Парение <span>Гурме</span></h2>
-                    <div class="servicesModal__subtitle">Длительность - 40 мин</div>
+                  
+                  <div class="feedbackModal__content servicesModal__content">
+                    <h2 class="feedbackModal__title servicesModal__title"><span>Парение</span> Гурме</h2>
+                    <p class="servicesModal__subtitle">Длительность - 40 мин</p>
 
                     <div class="servicesModal__textWrapper">
                       <div class="servicesModal__textWrapper__scroll">
-                        <div class="servicesModal__text">
+                        <p class="servicesModal__text">
                           Персональное парение, которое рождается во взаимодействии гостя и пармастера. Оно абсолютно
                           уникально для каждого.
-                        </div>
+                        </p>
 
-                        <div class="servicesModal__text">
+                        <p class="servicesModal__text">
                           Изысканный и глубокий процесс для тех, кто давно ходит в баню и любит ее.
-                        </div>
+                        </p>
 
-                        <div class="servicesModal__text">
+                        <p class="servicesModal__text">
                           Парение-гурме основано на желании создать для Вас впечатляющий банный опыт, исходя из ваших
                           пожеланий и предпочтений которые и становятся частью процесса.
-                        </div>
+                        </p>
 
-                        <div class="servicesModal__text">
+                        <p class="servicesModal__text">
                           Длительное парение, тщательный прогрев всего тела, нескончаемая череда самых вкусных и
                           приятных припарок, пасов, компрессов и других изысканных банных приемов. Контрастная процедура
                           на ваш выбор. Догрев тела в парной или холодное парение на улице. Всё самое вкусное из мира
                           банного искусства в этом парении для Вас!
-                        </div>
+                        </p>
 
-                        <div class="servicesModal__text">
+                        <p class="servicesModal__text">
                           Парение-гурме основано на желании создать для Вас впечатляющий банный опыт, исходя из ваших
                           пожеланий и предпочтений которые и становятся частью процесса.
-                        </div>
+                        </p>
                       </div>
-                      <img src="assets/img/shadow.svg" alt="shadow" class="servicesModal__textWrapper__shadow" />
                     </div>
 
                     <button data-feedback="#feedback-modal" class="button feedbackModal__button servicesModal__button">
@@ -822,41 +806,34 @@
                 alt="Ребенок в сауне"
                 class="services__item__img"
               />
-              <h4 class="services__item__title">Парение</h4>
-              <h4 class="services__item__title services__item__title_bottom">Коллективное</h4>
+              <h4 class="services__item__title">Парение<br> Коллективное</h4>
 
               <div class="services__item__bottomText">Подробнее</div>
             </a>
 
             <div class="hystmodal" id="services-modal-4" aria-hidden="true">
               <div class="hystmodal__wrap">
-                <div class="hystmodal__window feedbackModal servicesModal" role="dialog" aria-modal="true">
+                <div class="hystmodal__window feedbackModal servicesModal services-modal-4" role="dialog" aria-modal="true">
                   <button data-hystclose class="hystmodal__close feedbackModal__close">Закрыть</button>
-                  <!-- <img
-                    src="assets/img/services-section/services-modal-bg-4.png"
-                    alt="feedback"
-                    class="feedbackModal__img servicesModal__img"
-                  /> -->
-
-                  <div class="feedbackModal__content">
-                    <h2 class="feedbackModal__title servicesModal__title">Парение <span>Коллективное</span></h2>
-                    <div class="servicesModal__subtitle">Длительность - 30 мин</div>
+                  
+                  <div class="feedbackModal__content servicesModal__content">
+                    <h2 class="feedbackModal__title servicesModal__title"><span>Парение</span> Коллективное</h2>
+                    <p class="servicesModal__subtitle">Длительность - 30 мин</p>
 
                     <div class="servicesModal__textWrapper">
                       <div class="servicesModal__textWrapper__scroll">
-                        <div class="servicesModal__text">
+                        <p class="servicesModal__text">
                           Предложим интересную авторскую программу коллективного парения исходя из ваших задач,
                           количества человек и возможностей банного пространства.
-                        </div>
+                        </p>
 
-                        <div class="servicesModal__text">
+                        <p class="servicesModal__text">
                           Например, это может быть "пассивный" вариант парения, когда пармастер работает веером,
                           распаривает ароматные травы, согревает всех гостей нежным теплом. Или же активная программа,
                           когда под руководством мастера все гости принимают участие в парении, согреваясь березовыми
                           вениками. Парная наполняется радостью, улыбками и яркими эмоциями.
-                        </div>
+                        </p>
                       </div>
-                      <img src="assets/img/shadow.svg" alt="shadow" class="servicesModal__textWrapper__shadow" />
                     </div>
 
                     <button data-feedback="#feedback-modal" class="button feedbackModal__button servicesModal__button">
@@ -870,7 +847,7 @@
             <a data-services="#services-modal-5" class="services__item">
               <div class="services__item__circle">
                 <div class="services__item__circleText">
-                  40<br />
+                  40<br>
                   мин
                 </div>
               </div>
@@ -879,41 +856,34 @@
                 alt="Ребенок в сауне"
                 class="services__item__img"
               />
-              <h4 class="services__item__title">Медовая</h4>
-              <h4 class="services__item__title services__item__title_bottom">ладка</h4>
+              <h4 class="services__item__title">Медовая<br> ладка</h4>
 
               <div class="services__item__bottomText">Подробнее</div>
             </a>
 
             <div class="hystmodal" id="services-modal-5" aria-hidden="true">
               <div class="hystmodal__wrap">
-                <div class="hystmodal__window feedbackModal servicesModal" role="dialog" aria-modal="true">
+                <div class="hystmodal__window feedbackModal servicesModal services-modal-5" role="dialog" aria-modal="true">
                   <button data-hystclose class="hystmodal__close feedbackModal__close">Закрыть</button>
-                  <!-- <img
-                    src="assets/img/services-section/services-modal-bg-5.png"
-                    alt="feedback"
-                    class="feedbackModal__img servicesModal__img"
-                  /> -->
-
-                  <div class="feedbackModal__content">
+                  
+                  <div class="feedbackModal__content servicesModal__content">
                     <h2 class="feedbackModal__title servicesModal__title">Медовая ладка</h2>
                     <div class="servicesModal__subtitle">Длительность - 40 мин</div>
 
                     <div class="servicesModal__textWrapper">
                       <div class="servicesModal__textWrapper__scroll">
-                        <div class="servicesModal__text">
+                        <p class="servicesModal__text">
                           Теплый мед буквально проваливается сквозь теплую, голодную после хорошего парения кожу,
                           напитывая ее полезными компонентами.
-                        </div>
+                        </p>
 
-                        <div class="servicesModal__text">
+                        <p class="servicesModal__text">
                           Осмысленное проведение этого ритуала мастером, когда мед внимательно провожается в распаренное
                           тело, позволяет тщательно промассировать и проработать всё тело от пяток до макушки.
-                        </div>
+                        </p>
 
-                        <div class="servicesModal__text">Так достигается изумительный результат</div>
+                        <p class="servicesModal__text">Так достигается изумительный результат</p>
                       </div>
-                      <img src="assets/img/shadow.svg" alt="shadow" class="servicesModal__textWrapper__shadow" />
                     </div>
 
                     <button data-feedback="#feedback-modal" class="button feedbackModal__button servicesModal__button">
@@ -927,7 +897,7 @@
             <a data-services="#services-modal-6" class="services__item">
               <div class="services__item__circle">
                 <div class="services__item__circleText">
-                  30<br />
+                  30<br>
                   мин
                 </div>
               </div>
@@ -936,44 +906,37 @@
                 alt="Ребенок в сауне"
                 class="services__item__img"
               />
-              <h4 class="services__item__title">Очищение</h4>
-              <h4 class="services__item__title services__item__title_bottom">солью</h4>
+              <h4 class="services__item__title">Очищение<br> солью</h4>
 
               <div class="services__item__bottomText">Подробнее</div>
             </a>
 
             <div class="hystmodal" id="services-modal-6" aria-hidden="true">
               <div class="hystmodal__wrap">
-                <div class="hystmodal__window feedbackModal servicesModal" role="dialog" aria-modal="true">
+                <div class="hystmodal__window feedbackModal servicesModal services-modal-6" role="dialog" aria-modal="true">
                   <button data-hystclose class="hystmodal__close feedbackModal__close">Закрыть</button>
-                  <!-- <img
-                    src="assets/img/services-section/services-modal-bg-6.png"
-                    alt="feedback"
-                    class="feedbackModal__img servicesModal__img"
-                  /> -->
-
-                  <div class="feedbackModal__content">
+                  
+                  <div class="feedbackModal__content servicesModal__content">
                     <h2 class="feedbackModal__title servicesModal__title">Очищение солью</h2>
-                    <div class="servicesModal__subtitle">Длительность - 30 мин</div>
+                    <p class="servicesModal__subtitle">Длительность - 30 мин</p>
 
                     <div class="servicesModal__textWrapper">
                       <div class="servicesModal__textWrapper__scroll">
-                        <div class="servicesModal__text">
+                        <p class="servicesModal__text">
                           Соль для банных гурманов — особый компонент, помогающий не только очистить поверхность кожи,
                           но и ярче ощутить наслаждение и обновление.
-                        </div>
+                        </p>
 
-                        <div class="servicesModal__text">
+                        <p class="servicesModal__text">
                           Она обладает уникальной способностью "поглощать информацию", что позволяет освобождать тело от
                           негативных эмоций и тягостных мыслей.
-                        </div>
+                        </p>
 
-                        <div class="servicesModal__text">
+                        <p class="servicesModal__text">
                           Постепенное нанесение соли на всё тело, нежный пиллинг и качественное очищение на всех
                           уровнях.
-                        </div>
+                        </p>
                       </div>
-                      <img src="assets/img/shadow.svg" alt="shadow" class="servicesModal__textWrapper__shadow" />
                     </div>
 
                     <button data-feedback="#feedback-modal" class="button feedbackModal__button servicesModal__button">
@@ -987,7 +950,7 @@
             <a data-services="#services-modal-7" class="services__item">
               <div class="services__item__circle">
                 <div class="services__item__circleText">
-                  30<br />
+                  30<br>
                   мин
                 </div>
               </div>
@@ -996,40 +959,33 @@
                 alt="Ребенок в сауне"
                 class="services__item__img"
               />
-              <h4 class="services__item__title">Березовая</h4>
-              <h4 class="services__item__title services__item__title_bottom">помывка</h4>
+              <h4 class="services__item__title">Березовая<br> помывка</h4>
 
               <div class="services__item__bottomText">Подробнее</div>
             </a>
 
             <div class="hystmodal" id="services-modal-7" aria-hidden="true">
               <div class="hystmodal__wrap">
-                <div class="hystmodal__window feedbackModal servicesModal" role="dialog" aria-modal="true">
+                <div class="hystmodal__window feedbackModal servicesModal services-modal-7" role="dialog" aria-modal="true">
                   <button data-hystclose class="hystmodal__close feedbackModal__close">Закрыть</button>
-                  <!-- <img
-                    src="assets/img/services-section/services-modal-bg-7.png"
-                    alt="feedback"
-                    class="feedbackModal__img servicesModal__img"
-                  /> -->
-
-                  <div class="feedbackModal__content">
+                  
+                  <div class="feedbackModal__content servicesModal__content">
                     <h2 class="feedbackModal__title servicesModal__title">Березовая помывка</h2>
-                    <div class="servicesModal__subtitle">Длительность - 30 мин</div>
+                    <p class="servicesModal__subtitle">Длительность - 30 мин</p>
 
                     <div class="servicesModal__textWrapper">
                       <div class="servicesModal__textWrapper__scroll">
-                        <div class="servicesModal__text">
+                        <p class="servicesModal__text">
                           Пушистый березовый веник + ароматное хвойное или дегтярное мыло - традиционный атрибут
                           настоящей бани.
-                        </div>
+                        </p>
 
-                        <div class="servicesModal__text">
+                        <p class="servicesModal__text">
                           Шелковистая пена наносится на тело распаренным веником и начинается магия — все мышцы
                           проминаются, растягиваются и массируются. Поверхность кожи очищается на 100%. Вы испытываете
                           полное расслабление и настоящее удовольствие от чистоты тела.
-                        </div>
+                        </p>
                       </div>
-                      <img src="assets/img/shadow.svg" alt="shadow" class="servicesModal__textWrapper__shadow" />
                     </div>
 
                     <button data-feedback="#feedback-modal" class="button feedbackModal__button servicesModal__button">
@@ -1043,7 +999,7 @@
             <a data-services="#services-modal-8" class="services__item">
               <div class="services__item__circle">
                 <div class="services__item__circleText">
-                  20<br />
+                  20<br>
                   мин
                 </div>
               </div>
@@ -1052,38 +1008,31 @@
                 alt="Ребенок в сауне"
                 class="services__item__img"
               />
-              <h4 class="services__item__title">Пилинг</h4>
-              <h4 class="services__item__title services__item__title_bottom">тела</h4>
+              <h4 class="services__item__title">Пилинг<br> тела</h4>
 
               <div class="services__item__bottomText">Подробнее</div>
             </a>
 
             <div class="hystmodal" id="services-modal-8" aria-hidden="true">
               <div class="hystmodal__wrap">
-                <div class="hystmodal__window feedbackModal servicesModal" role="dialog" aria-modal="true">
+                <div class="hystmodal__window feedbackModal servicesModal services-modal-8" role="dialog" aria-modal="true">
                   <button data-hystclose class="hystmodal__close feedbackModal__close">Закрыть</button>
-                  <!-- <img
-                    src="assets/img/services-section/services-modal-bg-8.png"
-                    alt="feedback"
-                    class="feedbackModal__img servicesModal__img"
-                  /> -->
-
-                  <div class="feedbackModal__content">
+                 
+                  <div class="feedbackModal__content servicesModal__content">
                     <h2 class="feedbackModal__title servicesModal__title">Пилинг тела</h2>
-                    <div class="servicesModal__subtitle">Длительность - 20 мин</div>
+                    <p class="servicesModal__subtitle">Длительность - 20 мин</p>
 
                     <div class="servicesModal__textWrapper">
                       <div class="servicesModal__textWrapper__scroll">
-                        <div class="servicesModal__text">
+                        <p class="servicesModal__text">
                           Внимательная работа мастера с Вашим телом, приправленная нежными частицами скраба, ароматными
                           маслами, качественным медом – вот рецепт лучшего пилинга для тела.
-                        </div>
+                        </p>
 
-                        <div class="servicesModal__text">
+                        <p class="servicesModal__text">
                           Почувствуйте приятное послевкусие обновления – бодрость, чистоту, гладкость и нежность кожи.
-                        </div>
+                        </p>
                       </div>
-                      <img src="assets/img/shadow.svg" alt="shadow" class="servicesModal__textWrapper__shadow" />
                     </div>
 
                     <button data-feedback="#feedback-modal" class="button feedbackModal__button servicesModal__button">
@@ -1438,54 +1387,54 @@
                 </style>
                 <div class="swiper-slide">
                   <button data-feedback="#review-modal-1" class="reviews__item">
-                    <div class="reviews__item__circle">
+                    <span class="reviews__item__circle">
                       <svg class="reviews__item__circleImg"><use href="#increase"></use></svg>
-                    </div>
+                    </span>
 
                     <img src="assets/img/reviews/reviews-3.png" alt="Отзыв" class="reviews__item__img" />
                   </button>
                 </div>
                 <div class="swiper-slide">
                   <button data-feedback="#review-modal-2" class="reviews__item">
-                    <div class="reviews__item__circle">
+                    <span class="reviews__item__circle">
                       <svg class="reviews__item__circleImg"><use href="#increase"></use></svg>
-                    </div>
+                    </span>
 
                     <img src="assets/img/reviews/reviews-2.png" alt="Отзыв" class="reviews__item__img" />
                   </button>
                 </div>
                 <div class="swiper-slide">
                   <button data-feedback="#review-modal-3" class="reviews__item">
-                    <div class="reviews__item__circle">
+                    <span class="reviews__item__circle">
                       <svg class="reviews__item__circleImg"><use href="#increase"></use></svg>
-                    </div>
+                    </span>
 
                     <img src="assets/img/reviews/reviews-3.png" alt="Отзыв" class="reviews__item__img" />
                   </button>
                 </div>
                 <div class="swiper-slide">
                   <button data-feedback="#review-modal-4" class="reviews__item">
-                    <div class="reviews__item__circle">
+                    <span class="reviews__item__circle">
                       <svg class="reviews__item__circleImg"><use href="#increase"></use></svg>
-                    </div>
+                    </span>
 
                     <img src="assets/img/reviews/reviews-3.png" alt="Отзыв" class="reviews__item__img" />
                   </button>
                 </div>
                 <div class="swiper-slide">
                   <button data-feedback="#review-modal-5" class="reviews__item">
-                    <div class="reviews__item__circle">
+                    <span class="reviews__item__circle">
                       <svg class="reviews__item__circleImg"><use href="#increase"></use></svg>
-                    </div>
+                    </span>
 
                     <img src="assets/img/reviews/reviews-2.png" alt="Отзыв" class="reviews__item__img" />
                   </button>
                 </div>
                 <div class="swiper-slide">
                   <button data-feedback="#review-modal-6" class="reviews__item">
-                    <div class="reviews__item__circle">
+                    <span class="reviews__item__circle">
                       <svg class="reviews__item__circleImg"><use href="#increase"></use></svg>
-                    </div>
+                    </span>
 
                     <img src="assets/img/reviews/reviews-3.png" alt="Отзыв" class="reviews__item__img" />
                   </button>
@@ -1624,11 +1573,11 @@
               <h3 class="stages__item__title">Бронирование</h3>
               <div class="stages__item__text">
                 В качестве бронирования вносится оплата в размере 15 000 р. - 1 час оказания услуги.
-                <br />
-                <br />
+                <br>
+                <br>
                 Минимальный заказ - 4 часа.
-                <br />
-                <br />
+                <br>
+                <br>
                 Оплата бронирования возвращается в случае отмены заказа более чем за 1 сутки.
               </div>
             </div>
@@ -1639,8 +1588,8 @@
 
             <div class="stages__item__text">
               Мы приедем на локацию вовремя, нам понадобится около 20-30 минут для подготовки бани.
-              <br />
-              <br />
+              <br>
+              <br>
               После окончания банной программы и остановки оплачиваемого времени мы неспешно соберёмся и уберём за
               собой.
             </div>
@@ -1669,11 +1618,11 @@
                 <h3 class="stages__item__title">Бронирование</h3>
                 <div class="stages__item__text">
                   В качестве бронирования вносится оплата в размере <span>15 000 р.</span> - 1 час оказания услуги.
-                  <br />
-                  <br />
+                  <br>
+                  <br>
                   Минимальный заказ - 4 часа.
-                  <br />
-                  <br />
+                  <br>
+                  <br>
                   Оплата бронирования возвращается в случае отмены заказа более чем за 1 сутки.
                 </div>
               </div>
@@ -1686,8 +1635,8 @@
 
                 <div class="stages__item__text">
                   Мы приедем на локацию вовремя, нам понадобится около 20-30 минут для подготовки бани.
-                  <br />
-                  <br />
+                  <br>
+                  <br>
                   После окончания банной программы и остановки оплачиваемого времени мы неспешно соберёмся и уберём за
                   собой.
                 </div>
@@ -1732,7 +1681,7 @@
         <a href="tel:79263906734" class="footer__phone">+7-926-390-67-34</a>
 
         <div class="footer__description">
-          Мы работаем по Москве и МО <br />
+          Мы работаем по Москве и МО <br>
           Возможны выезды в регионы и за пределы РФ
         </div>
       </div>
@@ -1802,7 +1751,6 @@
       <div class="hystmodal__wrap">
         <div class="hystmodal__window feedbackModal" role="dialog" aria-modal="true">
           <button data-hystclose class="hystmodal__close feedbackModal__close">Закрыть</button>
-          <!-- <img src="assets/img/feedback-bg.png" alt="feedback" class="feedbackModal__img" /> -->
 
           <div class="feedbackModal__content">
             <h2 class="feedbackModal__title">Оставить заявку</h2>

@@ -15,6 +15,7 @@
     --brown-pallet-600: #48302b;
     --brown-pallet-600-30: rgba(72, 48, 43, 0.3);
     --brown-pallet-700: #110300;
+    --brown-pallet-800: #d8ab72;
     --brown-pallet-1000: #000;
     --green-pallet-100-50: rgba(193, 225, 192, 0.5);
     --green-pallet-100: #c1e1c0;
@@ -39,7 +40,8 @@
 }
 
 a {
-    text-decoration: none
+    text-decoration: none;
+    cursor: pointer;
 }
 
 a:hover {
@@ -2529,10 +2531,6 @@ section {
     color: var(--brown-pallet-600)
 }
 
-.services__item__title_bottom {
-    margin: 0 auto
-}
-
 .services__item__bottomText {
     position: absolute;
     bottom: 40px;
@@ -2590,10 +2588,6 @@ section {
 
     .services__item__title {
         margin-top: 28px
-    }
-
-    .services__item__title_bottom {
-        margin: 0 auto
     }
 }
 
@@ -2692,10 +2686,6 @@ section {
     .services__item__title {
         margin-top: 16px;
         font-size: 20px
-    }
-
-    .services__item__title_bottom {
-        margin: 0 auto
     }
 
     .services__item__bottomText {
@@ -4709,7 +4699,7 @@ section {
     height: 60px;
     margin-bottom: 32px;
     
-    border: 1px solid #d8ab72;
+    border: 1px solid var(--brown-pallet-800);
     border-radius: 20px;
     font-weight: 500;
     font-size: 20px;
@@ -5030,43 +5020,105 @@ section {
 
 .servicesModal {
     width: 1440px;
-    min-height: 700px;
+    min-height: auto;
     max-height: 812px;
-    padding: 140px 60px 140px 736px;
+    padding: 140px 52px 140px 736px;
 
-    background-image: url("../assets/img/services-modal/services-modal-1-1920.png");
-
-    /* background-image: image-set(
-        url("../assets/img/feedback/feedback-bg-1920.webp") type("image/webp") 1x,
-        url("../assets/img/feedback/feedback-bg-1920@2x.webp") type("image/webp") 2x,
-        url("../assets/img/feedback/feedback-bg-1920.png") type("image/png") 1x,
-        url("../assets/img/feedback/feedback-bg-1920@2x.png") type("image/png") 2x
-    ); */
     background-repeat: no-repeat;
     background-position: left center;
-    background-size: 570px 700px;
+    background-size: auto 100%;
+}
 
-    /* height: auto;
-    padding-bottom: 100px */
+.services-modal-1 {
+    background-image: image-set(
+        url("../assets/img/services-modal/services-modal-1-1920.webp") type("image/webp") 1x,
+        url("../assets/img/services-modal/services-modal-1-1920@2x.webp") type("image/webp") 2x,
+        url("../assets/img/services-modal/services-modal-1-1920.png") type("image/png") 1x,
+        url("../assets/img/services-modal/services-modal-1-1920@2x.png") type("image/png") 2x
+    );    
+}
+
+.services-modal-2 {
+    background-image: image-set(
+        url("../assets/img/services-modal/services-modal-2-1920.webp") type("image/webp") 1x,
+        url("../assets/img/services-modal/services-modal-2-1920@2x.webp") type("image/webp") 2x,
+        url("../assets/img/services-modal/services-modal-2-1920.png") type("image/png") 1x,
+        url("../assets/img/services-modal/services-modal-2-1920@2x.png") type("image/png") 2x
+    );    
+}
+
+.services-modal-3 {
+    background-image: image-set(
+        url("../assets/img/services-modal/services-modal-3-1920.webp") type("image/webp") 1x,
+        url("../assets/img/services-modal/services-modal-3-1920@2x.webp") type("image/webp") 2x,
+        url("../assets/img/services-modal/services-modal-3-1920.png") type("image/png") 1x,
+        url("../assets/img/services-modal/services-modal-3-1920@2x.png") type("image/png") 2x
+    );    
+}
+
+.services-modal-4 {
+    background-image: image-set(
+        url("../assets/img/services-modal/services-modal-4-1920.webp") type("image/webp") 1x,
+        url("../assets/img/services-modal/services-modal-4-1920@2x.webp") type("image/webp") 2x,
+        url("../assets/img/services-modal/services-modal-4-1920.png") type("image/png") 1x,
+        url("../assets/img/services-modal/services-modal-4-1920@2x.png") type("image/png") 2x
+    );    
+}
+
+.services-modal-5 {
+    background-image: image-set(
+        url("../assets/img/services-modal/services-modal-5-1920.webp") type("image/webp") 1x,
+        url("../assets/img/services-modal/services-modal-5-1920@2x.webp") type("image/webp") 2x,
+        url("../assets/img/services-modal/services-modal-5-1920.png") type("image/png") 1x,
+        url("../assets/img/services-modal/services-modal-5-1920@2x.png") type("image/png") 2x
+    );    
+}
+
+.services-modal-6 {
+    background-image: image-set(
+        url("../assets/img/services-modal/services-modal-6-1920.webp") type("image/webp") 1x,
+        url("../assets/img/services-modal/services-modal-6-1920@2x.webp") type("image/webp") 2x,
+        url("../assets/img/services-modal/services-modal-6-1920.png") type("image/png") 1x,
+        url("../assets/img/services-modal/services-modal-6-1920@2x.png") type("image/png") 2x
+    );    
+}
+
+.services-modal-7 {
+    background-image: image-set(
+        url("../assets/img/services-modal/services-modal-7-1920.webp") type("image/webp") 1x,
+        url("../assets/img/services-modal/services-modal-7-1920@2x.webp") type("image/webp") 2x,
+        url("../assets/img/services-modal/services-modal-7-1920.png") type("image/png") 1x,
+        url("../assets/img/services-modal/services-modal-7-1920@2x.png") type("image/png") 2x
+    );    
+}
+
+.services-modal-8 {
+    background-image: image-set(
+        url("../assets/img/services-modal/services-modal-8-1920.webp") type("image/webp") 1x,
+        url("../assets/img/services-modal/services-modal-8-1920@2x.webp") type("image/webp") 2x,
+        url("../assets/img/services-modal/services-modal-8-1920.png") type("image/png") 1x,
+        url("../assets/img/services-modal/services-modal-8-1920@2x.png") type("image/png") 2x
+    );    
+}
+
+.servicesModal__content {
+    margin: 0;
 }
 
 .servicesModal__title {
-    text-align: left;
-    /* font-family: var(--second-family);
-    font-weight: 100;
+    font-family: var(--second-family);
+    font-weight: 700;
     font-size: 56px;
-    line-height: 114%;
-    color: var(--brown-pallet-600) */
+    line-height: 64px;
+    color: var(--brown-pallet-600);
+    text-align: left;
 }
 
 .servicesModal__title span {
     display: block;
     width: 100%;
-    font-family: var(--second-family);
-    font-weight: 700;
-    font-size: 56px;
-    line-height: 114%;
-    color: var(--brown-pallet-600)
+
+    font-weight: 100;
 }
 
 .servicesModal__subtitle {
@@ -5074,7 +5126,7 @@ section {
 
     font-weight: 600;
     font-size: 24px;
-    line-height: 117%;
+    line-height: 28px;
     color: var(--brown-pallet-400)
 }
 
@@ -5082,7 +5134,6 @@ section {
     position: relative;
 
     padding-bottom: 32px;
-    /* height: 244px; */
     overflow: hidden;
 }
 
@@ -5091,100 +5142,241 @@ section {
     content: "";
     left: 0;
     right: 0;
+    z-index: 1;
 
     bottom: 0;
 
-    width: 100%;
+    width: calc(100% - 12px);
     height: 94px;
-
-    background: linear-gradient(0deg, var(--brown-pallet-100) 50%, var(--brown-pallet-100) 100%);
-}
-
-.servicesModal__textWrapper::-webkit-scrollbar-track {
-    background: red
-}
-
-.servicesModal__textWrapper::-webkit-scrollbar-thumb {
-    background-color: #050c26;
-    border-radius: 20px;
-    border: 3px solid #050c26
+    background: linear-gradient(0deg, #f8f1e1 50%, rgba(248, 241, 225, 0) 100%);
 }
 
 .servicesModal__textWrapper__scroll {
     position: relative;
+
+    max-height: 224px;
+    padding-bottom: 62px;
+
     overflow-y: auto;
-    height: 100%
 }
 
 .servicesModal__textWrapper__scroll::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.13);
-    border-radius: 20px
+    /* background-color: rgba(0, 0, 0, 0.13); */
+    background-color: var(--brown-pallet-600);
+    border-radius: 20px;
+    border-radius: 5px;
 }
 
 .servicesModal__textWrapper__scroll::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.42);
-    border-radius: 20px
+    /* background-color: rgba(0, 0, 0, 0.42); */
+    background-color: var(--brown-pallet-800);
+    border-radius: 20px;
+    border-radius: 5px;
 }
 
 .servicesModal__textWrapper__scroll::-webkit-scrollbar {
-    width: 12px
+    /* width: 12px; */
+    width: 10px;
 }
-
-/* .servicesModal__textWrapper__shadow {
-    position: absolute;
-    bottom: 0;
-    -webkit-transform: translateY(50%);
-    transform: translateY(50%);
-    left: 0;
-    width: 100%;
-    height: auto;
-    pointer-events: none
-} */
 
 .servicesModal__text {
     font-weight: 500;
     font-size: 20px;
-    line-height: 140%;
-    color: #2e1f1c
+    line-height: 28px;
+    color: #2e1f1c;
+}
+
+.servicesModal__text:not(:last-of-type) {
+    margin-bottom: 24px;
 }
 
 .servicesModal__button {
     margin: 0;
 }
 
-/* .servicesModal__text:first-child {
-    margin-top: 0
-}
-
-.servicesModal__text:last-child {
-    margin-bottom: 50px
-}
-
-.servicesModal__img {
-    max-width: 570px
-} */
-
 @media (max-width:1500px) {
     .servicesModal {
-        width: 1160x;
-        min-height: 628px;
+        width: 1160px;
         max-height: 672px;
         padding: 120px 55px 120px 596px;
-    
-        background-image: url("../assets/img/services-modal/services-modal-1-1440.png");
-        background-size: 410px 628px;
     }
+
+    .services-modal-1 {
+        background-image: image-set(
+            url("../assets/img/services-modal/services-modal-1-1440.webp") type("image/webp") 1x,
+            url("../assets/img/services-modal/services-modal-1-1440@2x.webp") type("image/webp") 2x,
+            url("../assets/img/services-modal/services-modal-1-1440.png") type("image/png") 1x,
+            url("../assets/img/services-modal/services-modal-1-1440@2x.png") type("image/png") 2x
+        );    
+    }
+    
+    .services-modal-2 {
+        background-image: image-set(
+            url("../assets/img/services-modal/services-modal-2-1440.webp") type("image/webp") 1x,
+            url("../assets/img/services-modal/services-modal-2-1440@2x.webp") type("image/webp") 2x,
+            url("../assets/img/services-modal/services-modal-2-1440.png") type("image/png") 1x,
+            url("../assets/img/services-modal/services-modal-2-1440@2x.png") type("image/png") 2x
+        );    
+    }
+    
+    .services-modal-3 {
+        background-image: image-set(
+            url("../assets/img/services-modal/services-modal-3-1440.webp") type("image/webp") 1x,
+            url("../assets/img/services-modal/services-modal-3-1440@2x.webp") type("image/webp") 2x,
+            url("../assets/img/services-modal/services-modal-3-1440.png") type("image/png") 1x,
+            url("../assets/img/services-modal/services-modal-3-1440@2x.png") type("image/png") 2x
+        );    
+    }
+    
+    .services-modal-4 {
+        background-image: image-set(
+            url("../assets/img/services-modal/services-modal-4-1440.webp") type("image/webp") 1x,
+            url("../assets/img/services-modal/services-modal-4-1440@2x.webp") type("image/webp") 2x,
+            url("../assets/img/services-modal/services-modal-4-1440.png") type("image/png") 1x,
+            url("../assets/img/services-modal/services-modal-4-1440@2x.png") type("image/png") 2x
+        );    
+    }
+    
+    .services-modal-5 {
+        background-image: image-set(
+            url("../assets/img/services-modal/services-modal-5-1440.webp") type("image/webp") 1x,
+            url("../assets/img/services-modal/services-modal-5-1440@2x.webp") type("image/webp") 2x,
+            url("../assets/img/services-modal/services-modal-5-1440.png") type("image/png") 1x,
+            url("../assets/img/services-modal/services-modal-5-1440@2x.png") type("image/png") 2x
+        );    
+    }
+    
+    .services-modal-6 {
+        background-image: image-set(
+            url("../assets/img/services-modal/services-modal-6-1440.webp") type("image/webp") 1x,
+            url("../assets/img/services-modal/services-modal-6-1440@2x.webp") type("image/webp") 2x,
+            url("../assets/img/services-modal/services-modal-6-1440.png") type("image/png") 1x,
+            url("../assets/img/services-modal/services-modal-6-1440@2x.png") type("image/png") 2x
+        );    
+    }
+    
+    .services-modal-7 {
+        background-image: image-set(
+            url("../assets/img/services-modal/services-modal-7-1440.webp") type("image/webp") 1x,
+            url("../assets/img/services-modal/services-modal-7-1440@2x.webp") type("image/webp") 2x,
+            url("../assets/img/services-modal/services-modal-7-1440.png") type("image/png") 1x,
+            url("../assets/img/services-modal/services-modal-7-1440@2x.png") type("image/png") 2x
+        );    
+    }
+    
+    .services-modal-8 {
+        background-image: image-set(
+            url("../assets/img/services-modal/services-modal-8-1440.webp") type("image/webp") 1x,
+            url("../assets/img/services-modal/services-modal-8-1440@2x.webp") type("image/webp") 2x,
+            url("../assets/img/services-modal/services-modal-8-1440.png") type("image/png") 1x,
+            url("../assets/img/services-modal/services-modal-8-1440@2x.png") type("image/png") 2x
+        );    
+    }    
+
+    .servicesModal__title {
+        font-size: 48px;
+        line-height: 56px;
+    }
+    
+    .servicesModal__textWrapper::before {
+        height: 64px;
+    }
+
+    .servicesModal__textWrapper__scroll {
+        max-height: 140px;
+        padding-bottom: 32px;
+    }
+
+    .servicesModal__text {
+        font-size: 18px;
+        line-height: 24px;
+    } 
 }
 
 @media (max-width:1200px) {
     .servicesModal {
         width: 720px;
-        min-height: 564px;
         max-height: 564px;
-        padding: 100px 60px 108px 334px;
+        padding: 100px 60px 100px 334px;
+    }
+
+    .services-modal-1 {
+        background-image: image-set(
+            url("../assets/img/services-modal/services-modal-1-1024.webp") type("image/webp") 1x,
+            url("../assets/img/services-modal/services-modal-1-1024@2x.webp") type("image/webp") 2x,
+            url("../assets/img/services-modal/services-modal-1-1024.png") type("image/png") 1x,
+            url("../assets/img/services-modal/services-modal-1-1024@2x.png") type("image/png") 2x
+        );    
+    }
     
-        background-image: url("../assets/img/services-modal/services-modal-1-1024.png");
-        background-size: 263px 564px;
+    .services-modal-2 {
+        background-image: image-set(
+            url("../assets/img/services-modal/services-modal-2-1024.webp") type("image/webp") 1x,
+            url("../assets/img/services-modal/services-modal-2-1024@2x.webp") type("image/webp") 2x,
+            url("../assets/img/services-modal/services-modal-2-1024.png") type("image/png") 1x,
+            url("../assets/img/services-modal/services-modal-2-1024@2x.png") type("image/png") 2x
+        );    
+    }
+    
+    .services-modal-3 {
+        background-image: image-set(
+            url("../assets/img/services-modal/services-modal-3-1024.webp") type("image/webp") 1x,
+            url("../assets/img/services-modal/services-modal-3-1024@2x.webp") type("image/webp") 2x,
+            url("../assets/img/services-modal/services-modal-3-1024.png") type("image/png") 1x,
+            url("../assets/img/services-modal/services-modal-3-1024@2x.png") type("image/png") 2x
+        );    
+    }
+    
+    .services-modal-4 {
+        background-image: image-set(
+            url("../assets/img/services-modal/services-modal-4-1024.webp") type("image/webp") 1x,
+            url("../assets/img/services-modal/services-modal-4-1024@2x.webp") type("image/webp") 2x,
+            url("../assets/img/services-modal/services-modal-4-1024.png") type("image/png") 1x,
+            url("../assets/img/services-modal/services-modal-4-1024@2x.png") type("image/png") 2x
+        );    
+    }
+    
+    .services-modal-5 {
+        background-image: image-set(
+            url("../assets/img/services-modal/services-modal-5-1024.webp") type("image/webp") 1x,
+            url("../assets/img/services-modal/services-modal-5-1024@2x.webp") type("image/webp") 2x,
+            url("../assets/img/services-modal/services-modal-5-1024.png") type("image/png") 1x,
+            url("../assets/img/services-modal/services-modal-5-1024@2x.png") type("image/png") 2x
+        );    
+    }
+    
+    .services-modal-6 {
+        background-image: image-set(
+            url("../assets/img/services-modal/services-modal-6-1024.webp") type("image/webp") 1x,
+            url("../assets/img/services-modal/services-modal-6-1024@2x.webp") type("image/webp") 2x,
+            url("../assets/img/services-modal/services-modal-6-1024.png") type("image/png") 1x,
+            url("../assets/img/services-modal/services-modal-6-1024@2x.png") type("image/png") 2x
+        );    
+    }
+    
+    .services-modal-7 {
+        background-image: image-set(
+            url("../assets/img/services-modal/services-modal-7-1024.webp") type("image/webp") 1x,
+            url("../assets/img/services-modal/services-modal-7-1024@2x.webp") type("image/webp") 2x,
+            url("../assets/img/services-modal/services-modal-7-1024.png") type("image/png") 1x,
+            url("../assets/img/services-modal/services-modal-7-1024@2x.png") type("image/png") 2x
+        );    
+    }
+    
+    .services-modal-8 {
+        background-image: image-set(
+            url("../assets/img/services-modal/services-modal-8-1024.webp") type("image/webp") 1x,
+            url("../assets/img/services-modal/services-modal-8-1024@2x.webp") type("image/webp") 2x,
+            url("../assets/img/services-modal/services-modal-8-1024.png") type("image/png") 1x,
+            url("../assets/img/services-modal/services-modal-8-1024@2x.png") type("image/png") 2x
+        );    
+    }    
+
+    .servicesModal__title {
+        margin-bottom: 24px;
+
+        font-size: 40px;
+        line-height: 48px;
     }
 
     .servicesModal__subtitle {
@@ -5196,82 +5388,105 @@ section {
     
         padding-bottom: 24px;
     }
+    
+    .servicesModal__textWrapper__scroll {
+        max-height: 128px;    
+        padding-bottom: 40px;
+    }
 
     .servicesModal__text {
         font-size: 16px;
         line-height: 20px;
     }
-}
-
-@media (max-width:750px) {
-    .servicesModal__title {
-        font-size: 40px
-    }
-
-    .servicesModal__title span {
-        font-size: 40px
-    }
-
-    .servicesModal__subtitle {
-        margin-top: 24px
-    }
-
-    .servicesModal__text {
-        margin-top: 24px;
-        font-size: 16px
-    }
-
-    .servicesModal__textWrapper {
-        margin-top: 24px;
-        height: 140px
-    }
 
     .servicesModal__button {
-        margin-top: 24px;
-        width: 100%
+        width: 100%;
+        min-height: 40px;
+        border-radius: 8px;
+
+        font-size: 12px;
+        line-height: 16px;
+    }
+}
+
+@media (max-width:1024px) {
+    .servicesModal {
+        padding: 100px 44px 100px 350px;
+    }    
+}
+
+@media (max-width:768px) {
+    .servicesModal {
+        width: 548px;
+        /* min-height: auto; */
+        max-height: 520px;
+        padding: 60px 44px 60px 44px;
+
+        background-image: none;
+    }
+    
+    .servicesModal__textWrapper__scroll {
+        max-height: 148px;
     }
 }
 
 @media (max-width:576px) {
-    .servicesModal {
-        padding-bottom: 60px
+    .servicesModal {      
+        width: calc(100% - 32px);
+        min-height: 392px;
+        max-height: 392px;
+        padding: 60px 17px 16px 17px;
     }
 
     .servicesModal__title {
-        font-size: 20px
+        margin-bottom: 20px;
+
+        font-size: 28px;
+        line-height: 32px;
     }
 
     .servicesModal__title span {
-        font-size: 28px
+        font-size: 20px;
+        line-height: 24px;
     }
 
     .servicesModal__subtitle {
-        margin-top: 20px;
-        font-size: 14px
+        margin-bottom: 20px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .servicesModal__textWrapper {
+        padding-bottom: 20px;
+    }
+    
+    .servicesModal__textWrapper__scroll {
+        max-height: 140px;    
+        padding-bottom: 44px;
     }
 
     .servicesModal__text {
-        margin-top: 20px;
-        font-size: 12px
-    }
+        font-size: 12px;
+        line-height: 16px;
+    }   
 
-    .servicesModal__text:last-child {
-        margin-bottom: 35px
+    .servicesModal__text:not(:last-of-type) {
+        margin-bottom: 20px;
     }
 
     .servicesModal__button {
-        margin-top: 20px
+        border-radius: 12px 0 12px 12px;
     }
 }
 
 @media (min-width:420px) and (max-width:576px) {
-    .servicesModal__textWrapper__scroll::-webkit-scrollbar {
+    /* .servicesModal__textWrapper__scroll::-webkit-scrollbar {
         width: 6px
-    }
+    } */
 
-    .servicesModal__text {
+    /* .servicesModal__text {
         font-size: 14px
-    }
+    } */
 }
 
 .successModal {
