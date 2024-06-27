@@ -1355,7 +1355,7 @@
             <div class="swiper reviews__swiper">
               <div class="swiper-wrapper reviews__swiper__wrapper">
                 <style>
-                  .reviews__item {
+                  /* .reviews__item {
                     background-image: url("assets/img/reviews/reviews-item-bg.svg");
                     background-repeat: no-repeat;
                     background-size: cover;
@@ -1383,73 +1383,88 @@
                     .reviews__item {
                       background-size: 288px 219px;
                     }
-                  }
+                  } */
                 </style>
-                <div class="swiper-slide">
-                  <button data-feedback="#review-modal-1" class="reviews__item">
+                <div class="swiper-slide reviews__slide">
+                  <a data-feedback="#review-modal-1" class="reviews__item">
                     <span class="reviews__item__circle">
                       <svg class="reviews__item__circleImg"><use href="#increase"></use></svg>
                     </span>
 
-                    <img src="assets/img/reviews/reviews-3.png" alt="Отзыв" class="reviews__item__img" />
-                  </button>
+                    <div class="reviews__item__img-container">
+                      <img src="assets/img/reviews/reviews-1.png" alt="Отзыв" class="reviews__item__img">
+                    </div>
+                  </a>
                 </div>
-                <div class="swiper-slide">
-                  <button data-feedback="#review-modal-2" class="reviews__item">
+                <div class="swiper-slide reviews__slide">
+                  <a data-feedback="#review-modal-2" class="reviews__item">
                     <span class="reviews__item__circle">
                       <svg class="reviews__item__circleImg"><use href="#increase"></use></svg>
                     </span>
 
-                    <img src="assets/img/reviews/reviews-2.png" alt="Отзыв" class="reviews__item__img" />
-                  </button>
+                    <div class="reviews__item__img-container">
+                      <img src="assets/img/reviews/reviews-2.png" alt="Отзыв" class="reviews__item__img">
+                    </div>
+                  </a>
                 </div>
-                <div class="swiper-slide">
-                  <button data-feedback="#review-modal-3" class="reviews__item">
+                <div class="swiper-slide reviews__slide">
+                  <a data-feedback="#review-modal-3" class="reviews__item">
                     <span class="reviews__item__circle">
                       <svg class="reviews__item__circleImg"><use href="#increase"></use></svg>
                     </span>
 
-                    <img src="assets/img/reviews/reviews-3.png" alt="Отзыв" class="reviews__item__img" />
-                  </button>
+                    <div class="reviews__item__img-container">
+                      <img src="assets/img/reviews/reviews-3.png" alt="Отзыв" class="reviews__item__img">
+                    </div>
+                  </a>
                 </div>
-                <div class="swiper-slide">
-                  <button data-feedback="#review-modal-4" class="reviews__item">
+                <div class="swiper-slide reviews__slide">
+                  <a data-feedback="#review-modal-4" class="reviews__item">
                     <span class="reviews__item__circle">
                       <svg class="reviews__item__circleImg"><use href="#increase"></use></svg>
                     </span>
 
-                    <img src="assets/img/reviews/reviews-3.png" alt="Отзыв" class="reviews__item__img" />
-                  </button>
+                    <div class="reviews__item__img-container">
+                      <img src="assets/img/reviews/reviews-1.png" alt="Отзыв" class="reviews__item__img">
+                    </div>
+                  </a>
                 </div>
-                <div class="swiper-slide">
-                  <button data-feedback="#review-modal-5" class="reviews__item">
+                <div class="swiper-slide reviews__slide">
+                  <a data-feedback="#review-modal-5" class="reviews__item">
                     <span class="reviews__item__circle">
                       <svg class="reviews__item__circleImg"><use href="#increase"></use></svg>
                     </span>
 
-                    <img src="assets/img/reviews/reviews-2.png" alt="Отзыв" class="reviews__item__img" />
-                  </button>
+                    <div class="reviews__item__img-container">
+                      <img src="assets/img/reviews/reviews-2.png" alt="Отзыв" class="reviews__item__img">
+                    </div>
+                  </a>
                 </div>
-                <div class="swiper-slide">
-                  <button data-feedback="#review-modal-6" class="reviews__item">
+                <div class="swiper-slide reviews__slide">
+                  <a data-feedback="#review-modal-6" class="reviews__item">
                     <span class="reviews__item__circle">
                       <svg class="reviews__item__circleImg"><use href="#increase"></use></svg>
                     </span>
 
-                    <img src="assets/img/reviews/reviews-3.png" alt="Отзыв" class="reviews__item__img" />
-                  </button>
+                    <div class="reviews__item__img-container">
+                      <img src="assets/img/reviews/reviews-3.png" alt="Отзыв" class="reviews__item__img">
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
-            <div class="swiper-pagination reviews__swiper__pagination"></div>
 
-            <button class="reviews__swiper__buttonPrev">
-              <img src="assets/img/icons/chevron-left.svg" alt="" class="reviews__swiper__button__img" />
-            </button>
+            <div class="reviews__swiper__controls">
+              <div class="swiper-pagination reviews__swiper__pagination"></div>
 
-            <button class="reviews__swiper__buttonNext">
-              <img src="assets/img/icons/chevron-right.svg" alt="" class="reviews__swiper__button__img" />
-            </button>
+              <button class="reviews__swiper__buttonPrev">
+                <img src="assets/img/icons/chevron-left.svg" alt="" class="reviews__swiper__button__img" />
+              </button>
+
+              <button class="reviews__swiper__buttonNext">
+                <img src="assets/img/icons/chevron-right.svg" alt="" class="reviews__swiper__button__img" />
+              </button>
+            </div>
           </div>
         </div>
 
@@ -1458,8 +1473,8 @@
             <div class="hystmodal__window inviteUs__certificateImgModal" role="dialog" aria-modal="true">
               <button data-hystclose class="hystmodal__close inviteUs__certificateImgModal__close"></button>
               <img
-                src="assets/img/reviews/reviews-3.png"
-                alt="certificate"
+                src="assets/img/reviews/reviews-1.png"
+                alt="review"
                 class="inviteUs__certificateImgModal__img"
               />
             </div>
@@ -1472,7 +1487,7 @@
               <button data-hystclose class="hystmodal__close inviteUs__certificateImgModal__close"></button>
               <img
                 src="assets/img/reviews/reviews-2.png"
-                alt="certificate"
+                alt="review"
                 class="inviteUs__certificateImgModal__img"
               />
             </div>
@@ -1485,7 +1500,7 @@
               <button data-hystclose class="hystmodal__close inviteUs__certificateImgModal__close"></button>
               <img
                 src="assets/img/reviews/reviews-3.png"
-                alt="certificate"
+                alt="review"
                 class="inviteUs__certificateImgModal__img"
               />
             </div>

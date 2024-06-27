@@ -3,28 +3,45 @@ new Swiper(".reviews__swiper", {
     prevEl: ".reviews__swiper__buttonPrev",
     nextEl: ".reviews__swiper__buttonNext",
   },
+
   pagination: {
     el: ".reviews__swiper__pagination",
     clickable: true,
   },
+
   slidesPerView: 3,
   loop: true,
+
   breakpoints: {
     320: {
       slidesPerView: 1,
       // slidesPerGroup: 1,
     },
-    750: {
-      autoHeight: false,
-      // slidesPerGroup: 2,
-      slidesPerView: 2,
-      // spaceBetween: 20,
+    576: {
+      autoHeight: true,
+      slidesPerView: 1,
+      // slidesOffsetAfter: 20,
     },
-    890: {
+    768: {
+      autoHeight: true,
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1024: {
       autoHeight: true,
       // slidesPerGroup: 3,
       slidesPerView: 3,
-      // spaceBetween: 60,
+      spaceBetween: 20,
+    },
+    1200: {
+      autoHeight: true,
+      slidesPerView: 3,
+      spaceBetween: 28,
+    },
+    1500: {
+      autoHeight: true,
+      slidesPerView: 3,
+      spaceBetween: 32,
     },
   },
 });
