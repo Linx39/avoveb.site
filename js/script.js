@@ -9,23 +9,29 @@ new Swiper(".reviews__swiper", {
     clickable: true,
   },
 
-  slidesPerView: 3,
+  // slidesPerView: 3,
   loop: true,
 
   breakpoints: {
     320: {
       slidesPerView: 1,
       // slidesPerGroup: 1,
+      spaceBetween: 20,
     },
     576: {
       autoHeight: true,
       slidesPerView: 1,
-      // slidesOffsetAfter: 20,
+      spaceBetween: 20,
     },
-    768: {
+    750: {
       autoHeight: true,
       slidesPerView: 2,
       spaceBetween: 20,
+    },
+    890: {
+      autoHeight: true,
+      slidesPerView: 2,
+      spaceBetween: 28,
     },
     1024: {
       autoHeight: true,
