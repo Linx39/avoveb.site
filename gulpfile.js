@@ -81,10 +81,10 @@ export const optimizeImages = () => {
 
 export const createWebp = () => {
   return gulp.src([
-    `assets/img/services-modal/*.png`,
+    `assets/img/invite-us-bg/*.png`,
   ])
     .pipe(webp({quality: 90}))
-    .pipe(gulp.dest(`assets/img/services-modal`))
+    .pipe(gulp.dest(`assets/img/invite-us-bg`))
 }
 
 // export const createSprite = () => {
