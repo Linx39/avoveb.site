@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 :root {
-    --max-width: 1920px;
+    --max-width: 1920px;    
     --font-family: "Manrope", sans-serif;
     --second-family: "Dudka", sans-serif;
     --brown-pallet-50: #fffaee;
@@ -183,10 +183,6 @@ legend {
     font-display: swap
 }
 
-.page-body {
-    min-width: 320px;
-}
-
 .title {
     font-family: var(--second-family);
     font-weight: 700;
@@ -303,18 +299,20 @@ legend {
 }
 
 body {
+    width: 100%;
+    min-width: 320px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     font-family: var(--font-family);
     font-display: swap;
     color: var(--brown-pallet-100);
     background-color: var(--brown-pallet-100);
-    /* zoom: 80% */
+    /* zoom: 80%; */
 }
 
 @media (max-width:1200px) {
     body {
-        /* zoom: 100% */
+        /* zoom: 100%; */
     }
 }
 
@@ -3145,7 +3143,8 @@ section {
     );
     background-repeat: no-repeat;
     background-size: 100% 67%;
-    background-position: top center;
+    /* background-position: top center; */
+    background-position: center;
   }
 
 @media (max-width: 1500px) {
@@ -3157,7 +3156,7 @@ section {
             url("../assets/img/guarantees-bg/guarantees-bg-1440@2x.png") type("image/png") 2x
         );
         background-size: 100% auto;
-        background-position: top 12% center;
+        /* background-position: top 12% center; */
     }
 }
 
@@ -3169,7 +3168,7 @@ section {
             url("../assets/img/guarantees-bg/guarantees-bg-768.png") type("image/png") 1x,
             url("../assets/img/guarantees-bg/guarantees-bg-768@2x.png") type("image/png") 2x
         );
-        background-position: top center;
+        background-position: top 32% center;
     }
 }
 
@@ -3845,7 +3844,7 @@ section {
 
 @media (max-width:750px) {
     .reviews__swiperContainer {
-        max-width: 398px;
+        max-width: 418px;
     }
 
     .reviews__swiper {
@@ -3879,7 +3878,7 @@ section {
 
 @media (max-width: 576px) {
     .reviews__swiperContainer {
-        max-width: 398px;
+        max-width: 418px;
     }
 
     .reviews__swiper {
