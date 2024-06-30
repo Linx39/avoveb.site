@@ -21,7 +21,7 @@
     --green-pallet-100: #c1e1c0;
     --green-pallet-200: #c8d39d;
     --green-pallet-300: #a7b76b;
-    --green-pallet-500: #5da65b
+    --green-pallet-500: #5da65b;
 }
 
 * {
@@ -183,6 +183,34 @@ legend {
     font-display: swap
 }
 
+html {
+    zoom: 80%;
+}
+
+@media (max-width:1200px) {
+    html {
+        zoom: 100%;
+    }
+}
+
+body {
+    width: 100%;
+    min-width: 320px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    font-display: swap;
+    color: var(--brown-pallet-100);
+    background-color: var(--brown-pallet-100);
+    /* zoom: 80%; */
+}
+
+/* @media (max-width:1200px) {
+    body {
+        zoom: 100%;
+    }
+} */
+
 .title {
     font-family: var(--second-family);
     font-weight: 700;
@@ -295,24 +323,6 @@ legend {
         width: 288px;
         height: 40px;
         border-radius: 8px
-    }
-}
-
-body {
-    width: 100%;
-    min-width: 320px;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    font-family: var(--font-family);
-    font-display: swap;
-    color: var(--brown-pallet-100);
-    background-color: var(--brown-pallet-100);
-    zoom: 80%;
-}
-
-@media (max-width:1200px) {
-    body {
-        zoom: 100%;
     }
 }
 
@@ -439,7 +449,7 @@ section {
     top: 0;
     left: 0;
     width: 100%;
-    height: 143px;
+    min-height: 143px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -470,7 +480,10 @@ section {
     align-items: center;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between
+    justify-content: space-between;    
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
 }
 
 .header__logo {
@@ -498,19 +511,22 @@ section {
 }
 
 .header__info {
-    width: 555px;
+    justify-self: end;
+    /* width: 555px; */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    -webkit-column-gap: 28px;
-    -moz-column-gap: 28px;
-    column-gap: 28px
+    -webkit-column-gap: 21px;
+    -moz-column-gap: 21px;
+    column-gap: 21px;
 }
 
 .header__phone {
+    flex-shrink: 0;
+
     font-family: var(--second-family);
     font-weight: 700;
     font-size: 32px;
@@ -518,20 +534,58 @@ section {
     color: var(--brown-pallet-100)
 }
 
-.header__contactImg {
+.header__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 56px;
     height: 56px;
-    fill: #d5a864
+}
+
+.header__contactImg {
+    fill: var(--brown-pallet-300);
+}
+
+.header__contactImg:hover {
+    fill: var(--green-pallet-500);
+}
+
+.header__contactImg:active {
+    fill: var(--green-pallet-500);
+    opacity: .8;
+}
+
+.header__contactImg-telegram {
+    width: 46px;
+    height: 42px;
+}
+
+.header__contactImg-whatsapp {
+    width: 46px;
+    height: 46px;
 }
 
 .header__hamburgerButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 74px;
-    height: 74px
+    height: 74px;
 }
 
 .header__hamburgerImg {
-    width: 100%;
-    height: 100%
+    width: 56px;
+    height: 31px;
+    stroke: var(--brown-pallet-100);
+}
+
+.header__hamburgerImg:hover {
+    stroke: var(--green-pallet-500);
+}
+
+.header__hamburgerImg:active {
+    stroke: var(--green-pallet-500);
+    opacity: .8;
 }
 
 @media (max-width:1500px) {
@@ -539,22 +593,35 @@ section {
         padding: 0 40px
     }
 
+    .header__info {
+        -webkit-column-gap: 20px;
+        -moz-column-gap: 20px;
+        column-gap: 20px;
+    }
+
     .header__phone {
-        font-size: 28px
+        font-size: 28px;
+        font-weight: 600;
     }
 
     .header__logoText {
         font-weight: 400
     }
 
-    .header__phone {
-        font-weight: 600
+    .header__hamburgerButton {
+        width: 71px;
+        height: 69px
+    }
+
+    .header__hamburgerImg {
+        width: 54px;
+        height: 29px
     }
 }
 
 @media (max-width:1200px) {
     .header {
-        height: 177px;
+        min-height: 177px;
     }
 
     .header__placeholder {
@@ -576,15 +643,25 @@ section {
     }
 
     .header__info {
-        width: 447px;
+        max-width: 440px;
         -webkit-column-gap: 20px;
         -moz-column-gap: 20px;
         column-gap: 20px
     }
 
-    .header__contactImg {
+    .header__link {
         width: 40px;
-        height: 40px
+        height: 40px;
+    }
+
+    .header__contactImg-telegram {
+        width: 37px;
+        height: 32px;
+    }
+    
+    .header__contactImg-whatsapp {
+        width: 32px;
+        height: 32px;
     }
 
     .header__hamburgerButton {
@@ -593,14 +670,14 @@ section {
     }
 
     .header__hamburgerImg {
-        width: 60px;
-        height: 60px
+        width: 45px;
+        height: 25px
     }
 }
 
 @media (max-width:1024px) {
     .header {
-        height: 120px
+        min-height: 120px
     }
 
     .header__logoText {
@@ -612,7 +689,7 @@ section {
     }
 
     .header__info {
-        width: 370px;
+        /* width: 370px; */
         -webkit-column-gap: 18px;
         -moz-column-gap: 18px;
         column-gap: 18px
@@ -621,7 +698,7 @@ section {
 
 @media (max-width:1024px) and (orientation:landscape) {
     .header {
-        height: 70px
+        min-height: 70px
     }
 
     .header__logoImg {
@@ -639,17 +716,12 @@ section {
         column-gap: 12px;
         -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
-        width: 336px
+        /* width: 336px */
     }
 
     .header__hamburgerImg {
         width: 44px;
         height: 44px
-    }
-
-    .header__contactImg {
-        width: 32px;
-        height: 32px
     }
 
     .header__phone {
@@ -662,7 +734,7 @@ section {
 
 @media (max-width:890px) {
     .header {
-        height: 122px
+        min-height: 122px
     }
 
     .header__logo {
@@ -673,7 +745,7 @@ section {
     }
 
     .header__info {
-        width: 247px;
+        max-width: 250px;
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
         -webkit-box-pack: end;
@@ -690,7 +762,7 @@ section {
 
 @media (max-width:890px) and (orientation:landscape) {
     .header {
-        height: 70px
+        min-height: 70px
     }
 
     .header__logoImg {
@@ -708,17 +780,12 @@ section {
         column-gap: 12px;
         -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
-        width: 336px
+        /* width: 336px */
     }
 
     .header__hamburgerImg {
         width: 44px;
         height: 44px
-    }
-
-    .header__contactImg {
-        width: 32px;
-        height: 32px;
     }
 
     .header__phone {
@@ -731,7 +798,7 @@ section {
 
 @media (max-width:576px) {
     .header {
-        height: 80px;
+        min-height: 80px;
         border-radius: 0;
         -webkit-box-align: center;
         -ms-flex-align: center;
@@ -746,7 +813,7 @@ section {
     }
 
     .header__wrapper {
-        height: 48px;
+        /* height: 48px; */
         padding: 0 15px;
     }
 
@@ -765,18 +832,14 @@ section {
     }
 
     .header__info {
-        width: 130px;
-        height: 48px;
-        -webkit-column-gap: 12px;
-        -moz-column-gap: 12px;
-        column-gap: 12px;
+        /* width: 130px; */
+        /* height: 48px; */
+        max-width: 160px;
+        -webkit-column-gap: 10px;
+        -moz-column-gap: 10px;
+        column-gap: 10px;
         -ms-flex-wrap: wrap;
         flex-wrap: wrap
-    }
-
-    .header__contactImg {
-        width: 34px;
-        height: 34px
     }
 
     .header__hamburgerButton {
@@ -785,8 +848,8 @@ section {
     }
 
     .header__hamburgerImg {
-        width: 34px;
-        height: 34px
+        width: 26px;
+        height: 15px
     }
 
     .header__phone {
@@ -797,6 +860,31 @@ section {
         -ms-flex-order: 4;
         order: 4
     }
+
+    .header__link {
+        width: 32px;
+        height: 32px;
+    }
+
+    .header__contactImg-telegram {
+        width: 20px;
+        height: 17px;
+    }
+    
+    .header__contactImg-whatsapp {
+        width: 17px;
+        height: 17px;
+    }
+}
+
+@media (max-width:420px) {
+    .header__info {
+        /* height: 48px; */
+        -webkit-column-gap: 0;
+        -moz-column-gap: 0;
+        column-gap: 0;
+    }
+
 }
 
 .promo {
@@ -2433,11 +2521,6 @@ section {
     fill: var(--green-pallet-500)
 }
 
-.price__contacts__socialButton__img {
-    width: 56px;
-    height: 56px
-}
-
 @media (max-width:1500px) {
     .price__amountSubtitle {
         font-weight: 400
@@ -2471,13 +2554,13 @@ section {
     }
 
     .price__contacts__button {
-        width: 557px
+        max-width: 557px
     }
 }
 
 @media (max-width:1024px) {
     .price__contacts__button {
-        width: 500px
+        width: 100%;
     }
 }
 
@@ -3144,8 +3227,7 @@ section {
     );
     background-repeat: no-repeat;
     background-size: 100% 67%;
-    /* background-position: top center; */
-    background-position: center;
+    background-position: top center;
   }
 
 @media (max-width: 1500px) {
@@ -3719,6 +3801,13 @@ section {
     cursor: pointer
 }
 
+@-moz-document url-prefix() {
+    .reviews__swiper__buttonNext,
+    .reviews__swiper__buttonPrev {
+        display: none;
+    }
+}
+
 .reviews__swiper__buttonPrev {
     left: 0
 }
@@ -3802,6 +3891,13 @@ section {
     .reviews__swiper__buttonNext,
     .reviews__swiper__buttonPrev {
         top: unset;
+    }
+
+    @-moz-document url-prefix() {
+        .reviews__swiper__buttonNext,
+        .reviews__swiper__buttonPrev {
+            display: block;
+        }
     }
 }
 
@@ -4329,6 +4425,218 @@ section {
     }
 }
 
+.sidebar {
+    width: 699px;
+    height: 100%;
+    padding: 32px 180px 68px 120px;
+    position: fixed;
+    right: 0;
+    overflow-y: scroll;
+    right: -100%;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none
+}
+
+.sidebar_opened {
+    right: 0
+}
+
+.sidebar__topRow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 135px
+}
+
+.sidebar__logo {
+    width: 213px;
+    height: 57px
+}
+
+.sidebar__close {
+    width: 48px;
+    height: 48px
+}
+
+.sidebar__closeImg {
+    width: 100%;
+    height: 100%
+}
+
+.sidebar__list {
+    margin-top: 42px
+}
+
+.sidebar__listItem {
+    margin-top: 24px
+}
+
+.sidebar__listItem:first-child {
+    margin: 0
+}
+
+.sidebar__list__link {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 120%;
+    color: var(--brown-pallet-600)
+}
+
+.sidebar__phone {
+    display: block;
+    margin-top: 52px;
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 120%;
+    color: var(--brown-pallet-600)
+}
+
+.sidebar__social {
+    margin-top: 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 19px
+}
+
+.sidebar__socialLink {
+    flex-shrink: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+
+    background-color: var(--brown-pallet-100);
+    border-radius: 50%;
+}
+
+.sidebar__socialLink__img {
+    fill: var(--green-pallet-500);
+}
+
+.sidebar__socialLink__img:hover {
+    fill: var(--green-pallet-300);
+}
+
+.sidebar__socialLink__img:active {
+    fill: var(--green-pallet-300);
+    opacity: .8;
+}
+
+.sidebar__socialLink__img_telegram {
+    width: 36px;
+    height: 32px;
+}
+
+.sidebar__socialLink__img_whatsapp {
+    width: 36px;
+    height: 36px;
+}
+
+.sidebar__socialLink__img_youtube {
+
+}
+
+@media (max-width:576px) {
+    .sidebar__socialLink {
+        width: 48px;
+        height: 48px;
+    }
+
+    .sidebar__socialLink__img_telegram {
+        width: 32px;
+        height: 29px;
+    }
+    
+    .sidebar__socialLink__img_whatsapp {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+.sidebar__privacy {
+    display: block;
+    margin-top: 50px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--brown-pallet-400)
+}
+
+@media (max-width:1200px) {
+    .sidebar {
+        width: 480px;
+        padding: 32px 24px 20px 100px
+    }
+
+    .sidebar__topRow {
+        gap: 90px
+    }
+}
+
+@media (max-width:1024px) {
+    .sidebar {
+        width: 360px;
+        padding: 32px 24px 20px 68px
+    }
+
+    .sidebar__logo {
+        width: 135px;
+        height: 36px
+    }
+
+    .sidebar__topRow {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center
+    }
+
+    .sidebar__phone {
+        font-size: 28px
+    }
+
+    .sidebar__list__link {
+        font-size: 30px
+    }
+}
+
+@media (max-width:576px) {
+    .sidebar {
+        width: 320px;
+        padding: 32px 24px 20px 50px
+    }
+
+    .sidebar__topRow {
+        gap: 75px
+    }
+
+    .sidebar__logo {
+        width: 133px;
+        height: 36px
+    }
+
+    .sidebar__close {
+        width: 40px;
+        height: 40px
+    }
+
+    .sidebar__list__link {
+        font-size: 24px
+    }
+
+    .sidebar__phone {
+        font-size: 20px
+    }
+}
+
 .footer {
     padding: 140px 0;
     position: relative
@@ -4384,20 +4692,47 @@ section {
 }
 
 .footer__link {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
     width: 60px;
     height: 60px;
-    background-color: var(--brown-pallet-100);
-    border-radius: 100%
 }
+
+.footer__link__img__telegram {
+    width: 32px;
+    height: 29px;
+}
+
+.footer__link__img__whatsapp {
+    width: 32px;
+    height: 32px;
+}
+
+.footer__link__img__youtube {
+    width: 32px;
+    height: 25px;    
+}
+
+@media (max-width:576px) {
+    .footer__link {
+        width: 40px;
+        height: 40px;
+    }
+
+    .footer__link__img__telegram {
+        width: 21px;
+        height: 19px;
+    }
+    
+    .footer__link__img__whatsapp {
+        width: 21px;
+        height: 21px;
+    }
+
+    .footer__link__img__youtube {
+        width: 21px;
+        height: 17px;    
+    }
+}
+
 
 .header__contactImg_telegram {
     width: 33px;
@@ -4577,21 +4912,6 @@ section {
         width: 40px;
         height: 40px
     }
-
-    .header__contactImg_telegram {
-        width: 22px;
-        height: 20px
-    }
-
-    .header__contactImg_whatsapp {
-        width: 22px;
-        height: 22px
-    }
-
-    .header__contactImg_youtube {
-        width: 22px;
-        height: 17px
-    }
 }
 
 @media (min-width:420px) and (max-width:576px) {
@@ -4601,178 +4921,6 @@ section {
 
     .footer__description {
         font-size: 15px
-    }
-}
-
-.sidebar {
-    width: 699px;
-    height: 100%;
-    padding: 32px 180px 68px 120px;
-    position: fixed;
-    right: 0;
-    overflow-y: scroll;
-    right: -100%;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s
-}
-
-.sidebar::-webkit-scrollbar {
-    display: none
-}
-
-.sidebar_opened {
-    right: 0
-}
-
-.sidebar__topRow {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    gap: 135px
-}
-
-.sidebar__logo {
-    width: 213px;
-    height: 57px
-}
-
-.sidebar__close {
-    width: 48px;
-    height: 48px
-}
-
-.sidebar__closeImg {
-    width: 100%;
-    height: 100%
-}
-
-.sidebar__list {
-    margin-top: 42px
-}
-
-.sidebar__listItem {
-    margin-top: 24px
-}
-
-.sidebar__listItem:first-child {
-    margin: 0
-}
-
-.sidebar__list__link {
-    font-family: var(--second-family);
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 120%;
-    color: var(--brown-pallet-600)
-}
-
-.sidebar__phone {
-    display: block;
-    margin-top: 52px;
-    font-family: var(--second-family);
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 120%;
-    color: var(--brown-pallet-600)
-}
-
-.sidebar__social {
-    margin-top: 18px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    gap: 19px
-}
-
-.sidebar__socialLink {
-    width: 56px;
-    height: 56px;
-    display: block
-}
-
-.sidebar__socialLink__img {
-    width: 100%;
-    height: 100%;
-    fill: var(--green-pallet-500)
-}
-
-.sidebar__privacy {
-    display: block;
-    margin-top: 50px;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    color: var(--brown-pallet-400)
-}
-
-@media (max-width:1200px) {
-    .sidebar {
-        width: 480px;
-        padding: 32px 24px 20px 100px
-    }
-
-    .sidebar__topRow {
-        gap: 90px
-    }
-}
-
-@media (max-width:1024px) {
-    .sidebar {
-        width: 360px;
-        padding: 32px 24px 20px 68px
-    }
-
-    .sidebar__logo {
-        width: 135px;
-        height: 36px
-    }
-
-    .sidebar__topRow {
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center
-    }
-
-    .sidebar__phone {
-        font-size: 28px
-    }
-
-    .sidebar__list__link {
-        font-size: 30px
-    }
-}
-
-@media (max-width:576px) {
-    .sidebar {
-        width: 320px;
-        padding: 32px 24px 20px 50px
-    }
-
-    .sidebar__topRow {
-        gap: 75px
-    }
-
-    .sidebar__logo {
-        width: 133px;
-        height: 36px
-    }
-
-    .sidebar__close {
-        width: 40px;
-        height: 40px
-    }
-
-    .sidebar__list__link {
-        font-size: 24px
-    }
-
-    .sidebar__phone {
-        font-size: 20px
-    }
-
-    .sidebar__socialLink {
-        width: 40px;
-        height: 40px
     }
 }
 
