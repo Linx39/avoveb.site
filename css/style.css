@@ -5403,13 +5403,12 @@ section {
     }
 }
 
-@media (max-width:820px) and (orientation:landscape) {
+/* @media (max-width:820px) and (orientation:landscape) {
     .feedbackModal {
         max-height: 95vh;
-        /* min-height: auto; */
         margin: 0
     }
-}
+} */
 
 .servicesModal {
     width: 1440px;
