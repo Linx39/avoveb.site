@@ -362,7 +362,7 @@ body {
     }
 }
 
-@media (max-width:440px) {
+@media (max-width:420px) {
     .container {
         max-width: calc(100% - 32px);
     }
@@ -5414,7 +5414,7 @@ section {
 .servicesModal {
     width: 1440px;
     min-height: auto;
-    /* max-height: 812px; */
+
     padding: 140px 52px 140px 736px;
 
     background-repeat: no-repeat;
@@ -5547,6 +5547,7 @@ section {
 .servicesModal__textWrapper__scroll {
     position: relative;
 
+    min-height: 100px;
     max-height: 160px;
     padding-bottom: 48px;
 
@@ -5555,16 +5556,16 @@ section {
 
 .servicesModal__textWrapper__scroll::-webkit-scrollbar-track {
     background-color: rgba(0, 0, 0, 0.13);
-    border-radius: 5px;
+    border-radius: 4px;
 }
 
 .servicesModal__textWrapper__scroll::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 0, 0.42);
-    border-radius: 5px;
+    border-radius: 4px;
 }
 
 .servicesModal__textWrapper__scroll::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
 }
 
 @-moz-document url-prefix() {
@@ -5592,7 +5593,6 @@ section {
 @media (max-width:1700px) {
     .servicesModal {
         width: 1160px;
-        /* max-height: 672px; */
         padding: 120px 55px 120px 596px;
     }
 
@@ -5691,7 +5691,6 @@ section {
 @media (max-width:1200px) {
     .servicesModal {
         width: 720px;
-        /* max-height: 564px; */
         padding: 100px 60px 100px 334px;
     }
 
@@ -5818,7 +5817,6 @@ section {
 @media (max-width: 760px) {
     .servicesModal {
         width: 520px;
-        /* max-height: 520px; */
         padding: 60px 44px 60px 44px;
 
         background-image: none;
