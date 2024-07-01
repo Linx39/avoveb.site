@@ -9,6 +9,11 @@ new Swiper(".reviews__swiper", {
     clickable: true,
   },
 
+  autoplay: {
+    delay: 3000,
+    pauseOnMouseEnter: true,
+  },
+
   loop: true,
 
   breakpoints: {
