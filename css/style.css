@@ -254,6 +254,7 @@ body {
     border-radius: 12px 0 12px 12px;
     width: 336px;
     min-height: 56px;
+    padding: 10px;
     background-color: var(--green-pallet-500);
     color: #ffffff;
     font-weight: 800;
@@ -261,7 +262,7 @@ body {
     line-height: 120%;
     text-align: center;
     -webkit-transition: all 0.2s;
-    transition: all 0.2s
+    transition: all 0.2s;
 }
 
 .button:hover {
@@ -689,7 +690,7 @@ section {
 
 @media (max-width:1200px) {
     .header {
-        min-height: 177px;
+        /* min-height: 177px; */
     }
 
     .header__placeholder {
@@ -4058,7 +4059,7 @@ section {
 
     .reviews__swiper {
         width: 100%;
-        margin-bottom: 64px;
+        margin-bottom: 32px;
     }
 
     .reviews__item__circle {
@@ -4066,9 +4067,20 @@ section {
         height: 48px;
     }
 
+    .reviews__swiper__controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 976px;
+        min-height: 80px;
+    }
+
     .reviews__swiper__buttonNext,
     .reviews__swiper__buttonPrev {
-        top: unset;
+        position: static;
+        flex-shrink: 0;
+        transform: none;
     }
 
     @-moz-document url-prefix() {
@@ -4089,7 +4101,11 @@ section {
     }
 
     .reviews__swiper {
-        margin-bottom: 32px;
+        margin-bottom: 40px;
+    }
+
+    .reviews__swiper__controls {
+        max-width: 836px;
     }
 
     .reviews__item__circle {
@@ -4110,6 +4126,10 @@ section {
         padding: 10px 10px 0 0;
     }
 
+    .reviews__swiper__controls {
+        width: calc(100% - 10px);
+    }
+
     .reviews__item__circle {
         width: 12.5%;
         height: auto;
@@ -4124,6 +4144,10 @@ section {
 
     .reviews__swiper {
         margin-bottom: 16px;
+    }
+
+    .reviews__swiper__controls {
+        max-width: 398px;
     }
 
     .reviews__swiper__buttonNext,
@@ -4163,6 +4187,10 @@ section {
 
     .reviews__item {
         height: 100%;
+    }
+
+    .reviews__swiper__controls {
+        max-width: 398px;
     }
 
     .reviews__swiper__buttonNext,
