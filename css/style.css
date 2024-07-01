@@ -225,7 +225,7 @@ body {
     color: var(--brown-pallet-100)
 }
 
-@media (max-width:1500px) {
+@media (max-width:1700px) {
     .title {
         font-size: 36px
     }
@@ -332,7 +332,7 @@ body {
     padding: 0
 }
 
-@media (max-width:1500px) {
+@media (max-width:1700px) {
     .container {
         max-width: 1160px;
     }
@@ -378,7 +378,7 @@ section {
     padding: 140px 0;
 }
 
-@media (max-width:1500px) {
+@media (max-width:1700px) {
     section {
         padding: 120px 0;
     }
@@ -656,7 +656,7 @@ section {
     opacity: .8;
 }
 
-@media (max-width:1500px) {
+@media (max-width:1700px) {
     .header__wrapper {
         padding: 0 40px
     }
@@ -1100,7 +1100,7 @@ section {
     display: none
 }
 
-@media (max-width:1500px) {
+@media (max-width:1700px) {
     .promo {
         background-position: -200px
     }
@@ -1252,7 +1252,7 @@ section {
     background-position: center;
   }
 
-@media (max-width: 1500px) {
+@media (max-width: 1700px) {
     .bg-container-top {
         background-image: image-set(
             url("../assets/img/invite-us-bg/invite-us-bg-1440.webp") type("image/webp") 1x,
@@ -1693,7 +1693,7 @@ section {
     font-weight: 500
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1700px) {
     .inviteUs__certificateImgModal {
         max-width: 960px;
     }
@@ -1733,7 +1733,7 @@ section {
     }
 }
 
-@media (max-width:1500px) {
+@media (max-width:1700px) {
     .inviteUs {
         padding-top: 92px
     }
@@ -2665,7 +2665,7 @@ section {
     fill: var(--green-pallet-500)
 }
 
-@media (max-width:1500px) {
+@media (max-width:1700px) {
     .price__amountSubtitle {
         font-weight: 400
     }
@@ -2926,7 +2926,7 @@ section {
     color: var(--brown-pallet-400)
 }
 
-@media (max-width:1500px) {
+@media (max-width:1700px) {
     .services__bgItem:first-child {
         width: 72px;
         height: 105px;
@@ -3251,7 +3251,7 @@ section {
     color: var(--brown-pallet-700)
 }
 
-@media (max-width:1500px) {
+@media (max-width:1700px) {
     .benefits {
         padding-bottom: 115px;
     }
@@ -3388,7 +3388,7 @@ section {
     background-position: top center;
   }
 
-@media (max-width: 1500px) {
+@media (max-width: 1700px) {
     .bg-container-bottom {
         background-image: image-set(
             url("../assets/img/guarantees-bg/guarantees-bg-1440.webp") type("image/webp") 1x,
@@ -3539,7 +3539,7 @@ section {
     display: none
 }
 
-@media (max-width:1500px) {
+@media (max-width:1700px) {
     .guarantees__topRow {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -3838,7 +3838,7 @@ section {
 .reviews__swiper {
     position: relative;
 
-    max-width: 1480px;
+    max-width: 1460px;
     margin-bottom: 32px;
     padding: 20px 20px 0 0;
 }
@@ -4024,17 +4024,17 @@ section {
     position: static;
 }
 
-@media (max-width:1500px) {
+@media (max-width:1700px) {
     .reviews__title {
         margin-bottom: 10px;
     }
 
     .reviews__swiperContainer {
-        max-width: 1340px;
+        max-width: 1360px;
     }
 
     .reviews__swiper {
-        max-width: 1200px;
+        max-width: 1180px;
         margin-bottom: 28px;
     }
     
@@ -4100,7 +4100,7 @@ section {
 
 @media (max-width:890px) {
     .reviews__swiperContainer {
-        width: calc(100% - 2px);
+        width: calc(100% - 32px + 20px);
         max-width: unset;
         padding-left: 10px;
     }
@@ -4388,7 +4388,7 @@ section {
     display: none
 }
 
-@media (max-width:1500px) {
+@media (max-width:1700px) {
     .stages__bgItem {
         position: absolute;
         z-index: -1
@@ -4944,7 +4944,7 @@ section {
     color: var(--brown-pallet-200)
 }
 
-@media (max-width:1500px) {
+@media (max-width:1700px) {
     .footer__bgItem {
         position: absolute
     }
@@ -5266,7 +5266,7 @@ section {
     right: 80px;
 }
 
-@media (max-width:1500px) {
+@media (max-width:1700px) {
     .feedbackModal {
         width: 1173px;
         /* min-height: 840px; */
@@ -5653,7 +5653,7 @@ section {
     margin: 0;
 }
 
-@media (max-width:1500px) {
+@media (max-width:1700px) {
     .servicesModal {
         width: 1160px;
         /* max-height: 672px; */
