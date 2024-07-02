@@ -931,16 +931,6 @@ section {
     }
 }
 
-@media (max-width:420px) {
-    .header__info {
-        /* height: 48px; */
-        -webkit-column-gap: 0;
-        -moz-column-gap: 0;
-        column-gap: 0;
-    }
-
-}
-
 .promo {
     position: relative;
     top: -20px;
