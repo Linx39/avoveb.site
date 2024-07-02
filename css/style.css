@@ -2955,17 +2955,15 @@ section {
 }
 
 @media (max-width:890px) {
-    .services__item__title {
-        font-size: 28px
-    }
-}
-
-@media (max-width:790px) {
     .services__item {
         height: 466px;
         width: calc(50% - 11px);
         background-color: var(--brown-pallet-50);
         padding-bottom: 32px
+    }
+
+    .services__item__title {
+        font-size: 28px
     }
 
     .services__item__img {
