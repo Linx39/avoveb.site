@@ -902,8 +902,8 @@ section {
     }
 
     .header__hamburgerImg {
-        width: 26px;
-        height: 15px
+        width: 33px;
+        height: 19px
     }
 
     .header__phone {
@@ -921,13 +921,13 @@ section {
     }
 
     .header__contactImg-telegram {
-        width: 20px;
-        height: 17px;
+        width: 37px;
+        height: 28px;
     }
     
     .header__contactImg-whatsapp {
-        width: 17px;
-        height: 17px;
+        width: 28px;
+        height: 28px;
     }
 }
 
