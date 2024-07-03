@@ -258,14 +258,14 @@
           <div class="container">
             <h2 class="advantages__title title">Пригласите нас, если:</h2>
 
-            <div class="advantages__cards">
+            <div class="advantages__cards container__mobile">
               <div class="advantages__card">
                 <div class="advantages__card__img">
                   <img src="assets/img/invite-us-card-1.png" alt="Люди в бане">
                 </div>
                 <div class="advantages__card__bottom">
-                  <div class="advantages__card__circle">
-                    <svg class="advantages__card__circle__img inviteUs__peopleImg"><use href="#people"></use></svg>
+                  <div class="advantages__card__circle advantages__card__circle_peopleImg">
+                    <svg><use href="#people"></use></svg>
                   </div>
                   <p class="advantages__card__text text text_light">Хотите с пользой провести время с семьей или друзьями.</p>
                 </div>
@@ -276,8 +276,8 @@
                   <img src="assets/img/invite-us-card-2.png" alt="Женщина с цветами">
                 </div>
                 <div class="advantages__card__bottom">
-                  <div class="advantages__card__circle">
-                    <svg class="advantages__card__circle__img inviteUs__likeImg"><use href="#like"></use></svg>
+                  <div class="advantages__card__circle advantages__card__circle_likeImg">
+                    <svg><use href="#like"></use></svg>
                   </div>
                   <p class="advantages__card__text text text_light">
                     Нужно великолепно выглядеть перед важным событием, снять стресс или восстановиться после бурных
@@ -291,8 +291,8 @@
                   <img src="assets/img/invite-us-card-3.png" alt="Люди в бане">
                 </div>
                 <div class="advantages__card__bottom">
-                  <div class="advantages__card__circle">
-                    <svg class="advantages__card__circle__img inviteUs__giftImg"><use href="#gift"></use></svg>
+                  <div class="advantages__card__circle advantages__card__circle_giftImg">
+                    <svg><use href="#gift"></use></svg>
                   </div>
                   <p class="advantages__card__text text text_light">Желаете сделать здоровый и оригинальный подарок близким.</p>
                 </div>
@@ -303,41 +303,45 @@
 
         <section class="inviteUs">
           <div class="container">
-            <h3 class="inviteUs__benefitsTitle title">Пармейстеры с богатым опытом работы</h3>
-            <div class="inviteUs__subtitle">
-              в частных и арендованных банях — Владимир и Елизавета Русановы помогут Вам в этом
-            </div>
+            <h3 class="inviteUs__title title">
+              Пармейстеры с богатым опытом работы
+              <span class="title__span">
+                в частных и арендованных банях&nbsp;— Владимир и&nbspЕлизавета Русановы помогут Вам в этом
+              </span>
+            </h3>
 
-            <div class="inviteUs__benefits">
-              <div class="inviteUs__benefitsGroup">
-                <div class="inviteUs__benefits__text inviteUs__benefits__text_small">
-                  Мы практикуем семейное парение (банщик и банщица — семья). Проводим бани в паре, слаженно и органично.
+            <div class="container__mobile">
+              <div class="inviteUs__benefits">
+                <div class="inviteUs__benefitsGroup">
+                  <p class="inviteUs__benefits__text text">
+                    Мы практикуем семейное парение (банщик и банщица — семья). Проводим бани в паре, слаженно и органично.
+                  </p>
+                  <p class="inviteUs__benefits__text text">
+                    Владимир Русанов участник первого в России чемпионата по парению вениками среди профессионалов «Русь
+                    Банная» 2010 года.
+                  </p>
                 </div>
-                <div class="inviteUs__benefits__text inviteUs__benefits__text_big">
-                  Владимир Русанов участник первого в России чемпионата по парению вениками среди профессионалов «Русь
-                  Банная» 2010 года.
+
+                <div class="inviteUs__benefitsGroup inviteUs__benefits__img">
+                  <img src="assets/img/providers.png" alt="Пармейстеры">
+                </div>
+
+                <div class="inviteUs__benefitsGroup">
+                  <p class="inviteUs__benefits__text text">
+                    С 2008 года представляем школу банного мастерства В.С. Ляхова.
+                  </p>
+                  <p class="inviteUs__benefits__text text">
+                    Елизавета Русанова — участница женского чемпионата по парению вениками среди профессионалов «Кубок
+                    Здравы» 2019 года.
+                  </p>
                 </div>
               </div>
 
-              <div class="inviteUs__benefitsGroup inviteUs__benefitsGroup_withImg">
-                <img src="assets/img/providers.png" alt="Пармейстеры" class="inviteUs__benefits__img" />
+              <div class="inviteUs__buttons">
+                <a data-certificates="#certificates-modal" class="button button_rightCorner inviteUs__button">Сертификаты</a>
+
+                <a class="button button_leftCorner button_light inviteUs__button">Видеоролик о нас</a>
               </div>
-
-              <div class="inviteUs__benefitsGroup">
-                <div class="inviteUs__benefits__text inviteUs__benefits__text_small">
-                  С 2008 года представляем школу банного мастерства В.С. Ляхова.
-                </div>
-                <div class="inviteUs__benefits__text inviteUs__benefits__text_big">
-                  Елизавета Русанова — участница женского чемпионата по парению вениками среди профессионалов «Кубок
-                  Здравы» 2019 года.
-                </div>
-              </div>
-            </div>
-
-            <div class="inviteUs__buttons">
-              <button data-certificates="#certificates-modal" class="button inviteUs__button">Сертификаты</button>
-
-              <button class="button button_leftCorner button_light inviteUs__button">Видеоролик о нас</button>
             </div>
           </div>
         </section>
@@ -1164,14 +1168,14 @@
 
           <div class="hystmodal" id="review-modal-1" aria-hidden="true">
             <div class="hystmodal__wrap">
-              <div class="hystmodal__window inviteUs__certificateImgModal" role="dialog" aria-modal="true">
-                <button data-hystclose class="hystmodal__close inviteUs__certificateModal__close button__close">
+              <div class="hystmodal__window pictureModal" role="dialog" aria-modal="true">
+                <button data-hystclose class="hystmodal__close pictureModal__close button__close">
                   <svg><use href="#cross"></use></svg>
                 </button>
                   <img
                     src="assets/img/reviews/reviews-1.png"
                     alt="review"
-                    class="inviteUs__certificateImgModal__img"
+                    class="pictureModal__img"
                   />
               </div>
             </div>
@@ -1179,14 +1183,14 @@
   
           <div class="hystmodal" id="review-modal-2" aria-hidden="true">
             <div class="hystmodal__wrap">
-              <div class="hystmodal__window inviteUs__certificateImgModal" role="dialog" aria-modal="true">
-                <button data-hystclose class="hystmodal__close inviteUs__certificateModal__close button__close">
+              <div class="hystmodal__window pictureModal" role="dialog" aria-modal="true">
+                <button data-hystclose class="hystmodal__close pictureModal__close button__close">
                   <svg><use href="#cross"></use></svg>
                 </button>
                 <img
                   src="assets/img/reviews/reviews-2.png"
                   alt="review"
-                  class="inviteUs__certificateImgModal__img"
+                  class="pictureModal__img"
                 />
               </div>
             </div>
@@ -1194,14 +1198,14 @@
   
           <div class="hystmodal" id="review-modal-3" aria-hidden="true">
             <div class="hystmodal__wrap">
-              <div class="hystmodal__window inviteUs__certificateImgModal" role="dialog" aria-modal="true">
-                <button data-hystclose class="hystmodal__close inviteUs__certificateModal__close button__close">
+              <div class="hystmodal__window pictureModal" role="dialog" aria-modal="true">
+                <button data-hystclose class="hystmodal__close pictureModal__close button__close">
                   <svg><use href="#cross"></use></svg>
                 </button>
                 <img
                   src="assets/img/reviews/reviews-3.png"
                   alt="review"
-                  class="inviteUs__certificateImgModal__img"
+                  class="pictureModal__img"
                 />
               </div>
             </div>
@@ -1209,14 +1213,14 @@
   
           <div class="hystmodal" id="review-modal-4" aria-hidden="true">
             <div class="hystmodal__wrap">
-              <div class="hystmodal__window inviteUs__certificateImgModal" role="dialog" aria-modal="true">
-                <button data-hystclose class="hystmodal__close inviteUs__certificateModal__close button__close">
+              <div class="hystmodal__window pictureModal" role="dialog" aria-modal="true">
+                <button data-hystclose class="hystmodal__close pictureModal__close button__close">
                   <svg><use href="#cross"></use></svg>
                 </button>
                   <img
                     src="assets/img/reviews/reviews-4.png"
                     alt="certificate"
-                    class="inviteUs__certificateImgModal__img"
+                    class="pictureModal__img"
                   />
               </div>
             </div>
@@ -1224,14 +1228,14 @@
   
           <div class="hystmodal" id="review-modal-5" aria-hidden="true">
             <div class="hystmodal__wrap">
-              <div class="hystmodal__window inviteUs__certificateImgModal" role="dialog" aria-modal="true">
-                <button data-hystclose class="hystmodal__close inviteUs__certificateModal__close button__close">
+              <div class="hystmodal__window pictureModal" role="dialog" aria-modal="true">
+                <button data-hystclose class="hystmodal__close pictureModal__close button__close">
                   <svg><use href="#cross"></use></svg>
                 </button>
                 <img
                   src="assets/img/reviews/reviews-2.png"
                   alt="certificate"
-                  class="inviteUs__certificateImgModal__img"
+                  class="pictureModal__img"
                 />
               </div>
             </div>
@@ -1239,14 +1243,14 @@
   
           <div class="hystmodal" id="review-modal-6" aria-hidden="true">
             <div class="hystmodal__wrap">
-              <div class="hystmodal__window inviteUs__certificateImgModal" role="dialog" aria-modal="true">
-                <button data-hystclose class="hystmodal__close inviteUs__certificateModal__close button__close">
+              <div class="hystmodal__window pictureModal" role="dialog" aria-modal="true">
+                <button data-hystclose class="hystmodal__close pictureModal__close button__close">
                   <svg><use href="#cross"></use></svg>
                 </button>
                 <img
                   src="assets/img/reviews/reviews-3.png"
                   alt="certificate"
-                  class="inviteUs__certificateImgModal__img"
+                  class="pictureModal__img"
                 />
               </div>
             </div>
@@ -1519,70 +1523,70 @@
 
     <div class="hystmodal" id="certificates-modal" aria-hidden="true">
       <div class="hystmodal__wrap">
-        <div class="hystmodal__window inviteUs__certificatesModal" role="dialog" aria-modal="true">
+        <div class="hystmodal__window certificatesModal" role="dialog" aria-modal="true">
           <button data-hystclose class="hystmodal__close feedbackModal__close button__close">
             <svg><use href="#cross"></use></svg>
           </button>
           <!-- Ваш HTML код модального окна -->
-          <div class="inviteUs__certificatesModal__title">Сертификаты</div>
+          <div class="certificatesModal__title">Сертификаты</div>
 
-          <div class="swiper inviteUs__swiper">
-            <div class="swiper-wrapper inviteUs__swiperContainer">
+          <div class="swiper certificatesModal__swiper">
+            <div class="swiper-wrapper certificatesModal__swiperContainer">
               <button
                 data-certificatemodal="#certificate1-img-modal"
                 data-hystclose
-                class="swiper-slide inviteUs__swiperSlide"
+                class="swiper-slide certificatesModal__swiperSlide"
               >
-                <img src="assets/img/certificates/certificate-1.png" alt="" class="inviteUs__swiperSlide__img" />
+                <img src="assets/img/certificates/certificate-1.png" alt="" class="certificatesModal__img">
               </button>
 
               <button
                 data-certificatemodal="#certificate2-img-modal"
                 data-hystclose
-                class="swiper-slide inviteUs__swiperSlide"
+                class="swiper-slide certificatesModal__swiperSlide"
               >
-                <img src="assets/img/certificates/certificate-2.png" alt="" class="inviteUs__swiperSlide__img" />
+                <img src="assets/img/certificates/certificate-2.png" alt="" class="certificatesModal__img">
               </button>
 
               <button
                 data-certificatemodal="#certificate3-img-modal"
                 data-hystclose
-                class="swiper-slide inviteUs__swiperSlide"
+                class="swiper-slide certificatesModal__swiperSlide"
               >
-                <img src="assets/img/certificates/certificate-3.png" alt="" class="inviteUs__swiperSlide__img" />
+                <img src="assets/img/certificates/certificate-3.png" alt="" class="certificatesModal__img">
               </button>
 
               <button
                 data-certificatemodal="#certificate4-img-modal"
                 data-hystclose
-                class="swiper-slide inviteUs__swiperSlide"
+                class="swiper-slide certificatesModal__swiperSlide"
               >
-                <img src="assets/img/certificates/certificate-4.png" alt="" class="inviteUs__swiperSlide__img" />
+                <img src="assets/img/certificates/certificate-4.png" alt="" class="certificatesModal__img">
               </button>
 
               <button
                 data-certificatemodal="#certificate5-img-modal"
                 data-hystclose
-                class="swiper-slide inviteUs__swiperSlide"
+                class="swiper-slide certificatesModal__swiperSlide"
               >
-                <img src="assets/img/certificates/certificate-5.png" alt="" class="inviteUs__swiperSlide__img" />
+                <img src="assets/img/certificates/certificate-5.png" alt="" class="certificatesModal__img">
               </button>
 
               <button
                 data-certificatemodal="#certificate6-img-modal"
                 data-hystclose
-                class="swiper-slide inviteUs__swiperSlide"
+                class="swiper-slide certificatesModal__swiperSlide"
               >
-                <img src="assets/img/certificates/certificate-6.png" alt="" class="inviteUs__swiperSlide__img" />
+                <img src="assets/img/certificates/certificate-6.png" alt="" class="certificatesModal__img">
               </button>
             </div>
           </div>
-          <div class="inviteUs__swiperPagination"></div>
+          <div class="certificatesModal__swiperPagination"></div>
 
           <button class="inviteUs__swiperPrev">
             <svg><use href="#arrow"></use></svg>
           </button>
-          <button class="inviteUs__swiperNext">
+          <button class="certificatesModal__swiperNext">
             <svg><use href="#arrow"></use></svg>
           </button>
         </div>
@@ -1591,18 +1595,18 @@
 
     <div class="hystmodal" id="certificate1-img-modal" aria-hidden="true">
       <div class="hystmodal__wrap">
-        <div class="hystmodal__window inviteUs__certificateImgModal" role="dialog" aria-modal="true">
+        <div class="hystmodal__window pictureModal" role="dialog" aria-modal="true">
           <button
             data-certificates="#certificates-modal"
             data-hystclose
-            class="hystmodal__close inviteUs__certificateModal__close button__close"
+            class="hystmodal__close pictureModal__close button__close"
           >
             <svg><use href="#cross"></use></svg>
           </button>
           <img
             src="assets/img/certificates/certificate-1.png"
             alt="certificate"
-            class="inviteUs__certificateImgModal__img"
+            class="pictureModal__img"
           />
         </div>
       </div>
@@ -1610,18 +1614,18 @@
 
     <div class="hystmodal" id="certificate2-img-modal" aria-hidden="true">
       <div class="hystmodal__wrap">
-        <div class="hystmodal__window inviteUs__certificateImgModal" role="dialog" aria-modal="true">
+        <div class="hystmodal__window pictureModal" role="dialog" aria-modal="true">
           <button
             data-certificates="#certificates-modal"
             data-hystclose
-            class="hystmodal__close inviteUs__certificateModal__close button__close"
+            class="hystmodal__close pictureModal__close button__close"
           >
             <svg><use href="#cross"></use></svg>
           </button>
           <img
             src="assets/img/certificates/certificate-2.png"
             alt="certificate"
-            class="inviteUs__certificateImgModal__img"
+            class="pictureModal__img"
           />
         </div>
       </div>
@@ -1629,18 +1633,18 @@
 
     <div class="hystmodal" id="certificate3-img-modal" aria-hidden="true">
       <div class="hystmodal__wrap">
-        <div class="hystmodal__window inviteUs__certificateImgModal" role="dialog" aria-modal="true">
+        <div class="hystmodal__window pictureModal" role="dialog" aria-modal="true">
           <button
             data-certificates="#certificates-modal"
             data-hystclose
-            class="hystmodal__close inviteUs__certificateModal__close button__close"
+            class="hystmodal__close pictureModal__close button__close"
           >
             <svg><use href="#cross"></use></svg>
           </button>
           <img
             src="assets/img/certificates/certificate-3.png"
             alt="certificate"
-            class="inviteUs__certificateImgModal__img"
+            class="pictureModal__img"
           />
         </div>
       </div>
@@ -1648,18 +1652,18 @@
 
     <div class="hystmodal" id="certificate4-img-modal" aria-hidden="true">
       <div class="hystmodal__wrap">
-        <div class="hystmodal__window inviteUs__certificateImgModal" role="dialog" aria-modal="true">
+        <div class="hystmodal__window pictureModal" role="dialog" aria-modal="true">
           <button
             data-certificates="#certificates-modal"
             data-hystclose
-            class="hystmodal__close inviteUs__certificateModal__close button__close"
+            class="hystmodal__close pictureModal__close button__close"
           >
             <svg><use href="#cross"></use></svg>
           </button>
           <img
             src="assets/img/certificates/certificate-4.png"
             alt="certificate"
-            class="inviteUs__certificateImgModal__img"
+            class="pictureModal__img"
           />
         </div>
       </div>
@@ -1667,18 +1671,18 @@
 
     <div class="hystmodal" id="certificate5-img-modal" aria-hidden="true">
       <div class="hystmodal__wrap">
-        <div class="hystmodal__window inviteUs__certificateImgModal" role="dialog" aria-modal="true">
+        <div class="hystmodal__window pictureModal" role="dialog" aria-modal="true">
           <button
             data-certificates="#certificates-modal"
             data-hystclose
-            class="hystmodal__close inviteUs__certificateModal__close button__close"
+            class="hystmodal__close pictureModal__close button__close"
           >
             <svg><use href="#cross"></use></svg>
           </button>
           <img
             src="assets/img/certificates/certificate-5.png"
             alt="certificate"
-            class="inviteUs__certificateImgModal__img"
+            class="pictureModal__img"
           />
         </div>
       </div>
@@ -1686,18 +1690,18 @@
 
     <div class="hystmodal" id="certificate6-img-modal" aria-hidden="true">
       <div class="hystmodal__wrap">
-        <div class="hystmodal__window inviteUs__certificateImgModal" role="dialog" aria-modal="true">
+        <div class="hystmodal__window pictureModal" role="dialog" aria-modal="true">
           <button
             data-certificates="#certificates-modal"
             data-hystclose
-            class="hystmodal__close inviteUs__certificateModal__close button__close"
+            class="hystmodal__close pictureModal__close button__close"
           >
             <svg><use href="#cross"></use></svg>
           </button>
           <img
             src="assets/img/certificates/certificate-6.png"
             alt="certificate"
-            class="inviteUs__certificateImgModal__img"
+            class="pictureModal__img"
           />
         </div>
       </div>
