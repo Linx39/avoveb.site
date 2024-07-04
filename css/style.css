@@ -230,55 +230,63 @@ body {
 
 .container {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1640px;
     margin: 0 auto;
-    padding: 0
+    padding: 0 100px;
 }
 
 @media (max-width: 1700px) {
     .container {
-        max-width: 1160px;
+        max-width: 1340px;
+        padding: 0 90px;
     }
 }
 
 @media (max-width: 1200px) {
     .container {
-        max-width: 976px;
+        max-width: 1024px;
+        padding: 0 24px;
+
     }
 }
 
 @media (max-width: 1060px) {
     .container {
-        max-width: calc(100% - 48px);
+        /* max-width: calc(100% - 48px); */
+        max-width: 100%;
+        width: 100%;
+        padding: 0 24px;
     }
 }
 
-@media (max-width: 920px) { /*убрать !!!!!!!*/
+/* @media (max-width: 920px) {
     .container {
         max-width: calc(100% - 48px);
     }
 }
 
-@media (max-width: 730px) {/*убрать !!!!!!!!*/
+@media (max-width: 730px) {
     .container {
         max-width: calc(100% - 48px);
     }
-}
+} */
 
 @media (max-width: 624px) {
     .container {
-        max-width: calc(100% - 40px);
+        /* max-width: calc(100% - 40px); */
+        padding: 0 20px;
     }
 
     .container__mobile {
-        max-width: var(--xs-column);
+        max-width: 398px;
         margin: 0 auto;
     }
 }
 
 @media (max-width: 430px) {
     .container {
-        max-width: calc(100% - 32px);
+        /* max-width: calc(100% - 32px); */
+        padding: 0 16px;
     }
 }
 
@@ -2435,9 +2443,7 @@ body {
     }
 }
 
-.services {
-    position: relative
-}
+/* Временно вынесла отдельно */
 
 .services__bgItem {
     position: absolute;
@@ -2458,61 +2464,44 @@ body {
     right: 122px
 }
 
+.services {
+    position: relative;
+    padding: 140px 0;
+}
+
+.services__title {
+    margin-bottom: 32px;
+}
+
 .services__subtitle {
-    margin-top: 32px;
+    margin-bottom: 8px;
     font-weight: 700;
-    font-size: 20px;
-    line-height: 140%;
     text-align: center;
-    color: var(--brown-pallet-700)
 }
 
 .services__description {
+    max-width: 948px;
     margin: 0 auto;
-    margin-top: 8px;
-    max-width: 740px;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 140%;
+    margin-bottom: 40px;
+
     text-align: center;
-    color: var(--brown-pallet-700)
 }
 
 .services__items {
-    margin-top: 56px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    gap: 32px
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--lg-gap);
 }
 
 .services__item {
     position: relative;
-    width: calc(25% - 24px);
-    height: 425px;
-    padding-bottom: 40px;
-    border-radius: 20px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: start;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap
+
+    border-radius: var(--lg-radius);
 }
 
 .services__item:hover {
-    -webkit-box-shadow: 0 7px 20px 0 rgba(185, 138, 68, 0.2);
     box-shadow: 0 7px 20px 0 rgba(185, 138, 68, 0.2);
     background-color: var(--brown-pallet-100);
 }
@@ -2522,63 +2511,58 @@ body {
     height: 241px
 }
 
-.services__item__circle {
+.services__item__decor {
     position: absolute;
     top: -15px;
     right: -16px;
+
     width: 64px;
     height: 64px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    border-radius: 100%;
-    background-color: var(--brown-pallet-400)
-}
+    padding: 10px;
 
-.services__item__circleText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
     font-weight: 700;
     font-size: 20px;
     line-height: 20px;
     text-align: center;
+    color: var(--brown-pallet-100);
+    background-color: var(--brown-pallet-400);
 }
 
-.services__item__circleImg {
-    width: 48px;
-    height: 48px;
+.services__item__decor svg {
+    width: 42px;
+    height: 39px;
+}
+
+.services__item__bottom {
+    display: flex;
+    flex-direction: column;
+    justify-self: stretch;
+    padding: 32px 24px 40px;
 }
 
 .services__item__title {
+    flex-grow: 1;
+    
     margin: 0 auto;
-    margin-top: 32px;
-    font-family: var(--second-family);
-    font-weight: 700;
+    margin-bottom: 8px;
+
     font-size: 32px;
-    line-height: 125%;
+    line-height: 40px;
     text-align: center;
-    color: var(--brown-pallet-600)
 }
 
-.services__item__bottomText {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    border-bottom: 1px dashed var(--brown-pallet-400);
-    font-weight: 400;
+.services__item__info {
+
     font-size: 16px;
-    line-height: 150%;
+    line-height: 24px;
     text-align: center;
-    color: var(--brown-pallet-400)
+    color: #B98A44;
 }
 
 @media (max-width: 1700px) {
@@ -2605,7 +2589,7 @@ body {
         height: auto
     }
 
-    .services__item__circle {
+    .services__item__decor {
         width: 54px;
         height: 54px
     }
@@ -2665,14 +2649,14 @@ body {
         height: auto
     }
 
-    .services__item__circle {
+    .services__item__decor {
         top: -12px;
         right: -12px
     }
 }
 
 @media (max-width: 1060px) {
-    .services__item__circle {
+    .services__item__decor {
         width: 48px;
         height: 48px
     }
@@ -2709,7 +2693,7 @@ body {
         bottom: 32px
     }
 
-    .services__item__circle {
+    .services__item__decor {
         width: 60px;
         height: 60px
     }
@@ -2732,7 +2716,7 @@ body {
         bottom: 16px
     }
 
-    .services__item__circle {
+    .services__item__decor {
         width: 44px;
         height: 44px
     }
