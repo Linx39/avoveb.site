@@ -385,21 +385,21 @@
           <p class="price__amount title title_light">15 000 РУБ <span>/ час</span></p>
           <p class="price__amountSubtitle text text_light">Минимальный заказ - 4 часа</p>
 
-          <div class="price__included">
-            <div class="price__includedItem">
-              <div class="price__includedItem__icon price__includedItem__icon_leaf">
+          <div class="price__included tickets">
+            <div class="price__item tickets__item">
+              <div class="price__item__decor tickets__item__decor tickets__item__decor__leaf">
                 <svg><use href="#leaf"></use></svg>
               </div>
-              <p class="price__includedItem__text text">
+              <p class="price__item__text tickets__item__text text">
                 Все расходные материалы: веники, травы, сенный матрас и спа-средства включены в стоимость выезда.
               </p>
             </div>
 
-            <div class="price__includedItem">
-              <div class="price__includedItem__icon price__includedItem__icon_geo">
+            <div class="price__item tickets__item">
+              <div class="price__item__decor tickets__item__decor tickets__item__decor_geo">
                 <svg><use href="#geo"></use></svg>
               </div>
-              <p class="price__includedItem__text text">
+              <p class="price__item__text tickets__item__text text">
                 Бесплатная зона выезда до 50 км от МКАД. Живете дальше? Напишите нам!
               </p>
             </div>
@@ -407,13 +407,14 @@
 
           <div class="price__contacts">
             <a data-feedback="#feedback-modal" class="price__contacts__button button button_right button__long">Оставить заявку</a>
-            <a href="index.html#" class="price__contacts__socialButton__icon socialButton socialButton_telegram">
-              <svg><use href="#telegram"></use></svg>
-            </a>
-
-            <a href="index.html#" class="price__contacts__socialButton socialButton socialButton_whatsapp">
-              <svg><use href="#whatsapp"></use></svg>
-            </a>
+            <div class="price__socialButtons">
+              <a href="index.html#" class="price__socialButton socialButton socialButton_telegram">
+                <svg><use href="#telegram"></use></svg>
+              </a>
+              <a href="index.html#" class="price__contacts__socialButton socialButton socialButton_whatsapp">
+                <svg><use href="#whatsapp"></use></svg>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -1018,7 +1019,7 @@
 
             <div class="guarantees__contacts">
               <a data-feedback="#feedback-modal" class="button price__contacts__button">Оставить заявку</a>
-              <a href="index.html#" class="price__contacts__socialButton__icon sidebar__socialLink">
+              <a href="index.html#" class="price__socialButton sidebar__socialLink">
                 <svg class="sidebar__socialLink__img sidebar__socialLink__img_telegram"><use href="#telegram"></use></svg>
               </a>
 
