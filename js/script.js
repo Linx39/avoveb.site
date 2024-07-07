@@ -21,27 +21,19 @@ new Swiper(".reviews__swiper", {
       slidesPerView: 1,
       spaceBetween: 20,
     },
-    576: {
-      slidesPerView: 1,
-      spaceBetween: 20,
-    },
-    750: {
+    830: {
       slidesPerView: 2,
       spaceBetween: 20,
     },
-    890: {
+    1060: {
       slidesPerView: 3,
       spaceBetween: 20,
-    },
-    1024: {
-      slidesPerView: 3,
-      spaceBetween: 21,
     },
     1200: {
       slidesPerView: 3,
       spaceBetween: 28,
     },
-    1500: {
+    1700: {
       slidesPerView: 3,
       spaceBetween: 32,
     },
