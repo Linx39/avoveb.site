@@ -693,6 +693,7 @@ body {
 .tickets__item {
     display: flex;
     align-items: center;
+    justify-content: start;
     gap: 16px;
     
     box-shadow: 0 4px 20px 0 rgba(26, 12, 9, 0.4);
