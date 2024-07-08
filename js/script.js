@@ -1,27 +1,19 @@
 new Swiper(".reviews__swiper", {
-  navigation: {
-    prevEl: ".reviews__swiper__buttonPrev",
-    nextEl: ".reviews__swiper__buttonNext",
-  },
-
-  pagination: {
-    el: ".reviews__swiper__pagination",
-    clickable: true,
-  },
+  watchSlidesProgress: true,
+  slideVisibleClass: 'review__slide_visible',
+  loop: true,
 
   // autoplay: {
   //   delay: 3000,
   //   pauseOnMouseEnter: true,
   // },
 
-  loop: true,
-
   breakpoints: {
     320: {
       slidesPerView: 1,
       spaceBetween: 20,
     },
-    830: {
+    624: {
       slidesPerView: 2,
       spaceBetween: 20,
     },
@@ -37,6 +29,18 @@ new Swiper(".reviews__swiper", {
       slidesPerView: 3,
       spaceBetween: 32,
     },
+  },
+
+  navigation: {
+    prevEl: ".reviews__swiper__buttonPrev",
+    nextEl: ".reviews__swiper__buttonNext",
+  },
+
+  pagination: {
+    el: ".reviews__swiper__pagination",
+    bulletClass: 'reviews__swiper__bullet',
+    bulletActiveClass: 'reviews__swiper__bullet_current',
+    clickable: true,
   },
 });
 

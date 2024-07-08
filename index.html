@@ -129,6 +129,18 @@
       <symbol id="review-bg" viewBox="0 0 459 413" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M459 68.4664C459 61.117 451.349 56 444 56C421.909 56 404 38.0914 404 16C404 8.23537 398.634 0 390.869 0H20C8.9543 0 0 8.95431 0 20V393C0 404.046 8.9543 413 20 413H439C450.046 413 459 404.046 459 393V68.4664Z"/>
       </symbol>
+
+      <!-- <symbol id="review-bg" viewBox="0 0 368 331" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M368 78.7073C368 68.7196 355.988 62 346 62C323.909 62 306 44.0914 306 22C306 12.0122 299.28 0 289.293 0H20C8.95431 0 0 8.9543 0 20V311C0 322.046 8.9543 331 20 331H348C359.046 331 368 322.046 368 311V78.7073Z">
+      </symbol> -->
+
+      <!-- <symbol id="review-bg" viewBox="0 0 350 311" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M350 85.9576C350 74.1128 333.845 66 322 66C298.804 66 280 47.196 280 24C280 13.2269 272.753 0 261.98 0H20C8.95431 0 0 8.95431 0 20V291C0 302.046 8.9543 311 20 311H330C341.046 311 350 302.046 350 291V85.9576Z"/>
+      </symbol> -->
+
+      <!-- <symbol id="review-bg" viewBox="0 0 288 219" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M288 63.1396C288 55.9732 278.004 51.3014 270.944 52.5313C269.175 52.8394 267.356 53 265.5 53C248.103 53 234 38.897 234 21.5C234 19.7215 234.147 17.9775 234.431 16.2794C235.582 9.37773 231.052 0 224.055 0H8C3.58172 0 0 3.58172 0 8V211C0 215.418 3.58173 219 8 219H280C284.418 219 288 215.418 288 211V63.1396Z"/>
+      </symbol> -->
     </svg>
 
     <header class="header">
@@ -533,7 +545,7 @@
             </div>
 
             <div class="guarantees__item guarantees__item_bottom item">
-              <h3 class="guarantees__item__title subtitle">Безопасность и конфиденциальность</h3>
+              <h3 class="guarantees__item__title subtitle">Безопасность и конфиденциаль&shy;ность</h3>
               <p class="guarantees__item__text text">
                 Всё, что было в бане — останется в бане. Мы не фотографируем людей в бане и гарантируем
                 конфиденциальность личной информации.
@@ -557,12 +569,12 @@
         </section>
 
         <section id="reviews" class="reviews">
-          <h2 class="title reviews__title">Отзывы</h2>
+          <h2 class="title reviews__title container">Отзывы</h2>
 
-          <div class="reviews__swiperContainer container">
-            <div class="reviews__swiper swiper">
+          <!-- <div class="reviews__container"> -->
+            <div class="reviews__swiper swiper container container__mobile">
               <div class="reviews__list swiper-wrapper">                
-                <div class="swiper-slide">
+                <div class="review__slide swiper-slide">
                   <a data-feedback="#review-modal-1" class="reviews__card">
                     <svg class="reviews__card__bg">
                       <use href="#review-bg"></use>
@@ -577,7 +589,7 @@
                     <img class="reviews__card__img" src="assets/img/reviews/reviews-1.png" alt="Отзыв">
                   </a>
                 </div>
-                <div class="swiper-slide">
+                <div class="review__slide swiper-slide">
                   <a data-feedback="#review-modal-2" class="reviews__card">
                     <svg class="reviews__card__bg">
                       <use href="#review-bg"></use>
@@ -592,7 +604,7 @@
                     <img class="reviews__card__img" src="assets/img/reviews/reviews-2.png" alt="Отзыв">
                   </a>
                 </div>
-                <div class="swiper-slide">
+                <div class="review__slide swiper-slide">
                   <a data-feedback="#review-modal-3" class="reviews__card">
                     <svg class="reviews__card__bg">
                       <use href="#review-bg"></use>
@@ -607,7 +619,7 @@
                     <img class="reviews__card__img" src="assets/img/reviews/reviews-3.png" alt="Отзыв">
                   </a>
                 </div>
-                <div class="swiper-slide">
+                <div class="review__slide swiper-slide">
                   <a data-feedback="#review-modal-4" class="reviews__card">
                     <svg class="reviews__card__bg">
                       <use href="#review-bg"></use>
@@ -622,7 +634,7 @@
                     <img class="reviews__card__img" src="assets/img/reviews/reviews-4.png" alt="Отзыв">
                   </a>
                 </div>
-                <div class="swiper-slide">
+                <div class="review__slide swiper-slide">
                   <a data-feedback="#review-modal-5" class="reviews__card">
                     <svg class="reviews__card__bg">
                       <use href="#review-bg"></use>
@@ -637,7 +649,7 @@
                     <img class="reviews__card__img" src="assets/img/reviews/reviews-2.png" alt="Отзыв">
                   </a>
                 </div>
-                <div class="swiper-slide">
+                <div class="review__slide swiper-slide">
                   <a data-feedback="#review-modal-6" class="reviews__card">
                     <svg class="reviews__card__bg">
                       <use href="#review-bg"></use>
@@ -653,20 +665,24 @@
                   </a>
                 </div>
               </div>
+
+              <div class="reviews__swiper__controls">
+                <button class="reviews__swiper__buttonPrev">
+                  <svg style="width: 27px; height: 48px; transform: translateX(-10%);">
+                    <use href="#arrow"></use>
+                  </svg>
+                </button>
+    
+                <div class="reviews__swiper__pagination swiper-pagination"></div>
+    
+                <button class="reviews__swiper__buttonNext">
+                  <svg style="width: 27px; height: 48px; transform: rotate(180deg) translateX(-10%);">
+                    <use href="#arrow"></use>
+                  </svg>
+                </button>
+              </div>
             </div>
-
-            <div class="reviews__swiper__controls">
-              <button class="reviews__swiper__buttonPrev">
-                <svg><use href="#arrow"></use></svg>
-              </button>
-
-              <div class="swiper-pagination reviews__swiper__pagination"></div>
-
-              <button class="reviews__swiper__buttonNext">
-                <svg><use href="#arrow"></use></svg>
-              </button>
-            </div>
-          </div>
+          <!-- </div> -->
 
           <div class="hystmodal" id="review-modal-1" aria-hidden="true">
             <div class="hystmodal__wrap">
