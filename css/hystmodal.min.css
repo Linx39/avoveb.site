@@ -23,10 +23,12 @@
   transition: opacity 0.6s;
   background-color: #000;
 }
+
 .hystmodal__shadow--show {
   pointer-events: auto;
   opacity: 0.6;
 }
+
 .hystmodal {
   top: 0;
   bottom: 0;
@@ -40,14 +42,17 @@
   z-index: 99;
   visibility: hidden;
 }
+
 .hystmodal--active {
   opacity: 1;
 }
+
 .hystmodal--active,
 .hystmodal--moved {
   pointer-events: auto;
   visibility: visible;
 }
+
 .hystmodal__wrap {
   flex-shrink: 0;
   flex-grow: 0;
@@ -59,6 +64,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .hystmodal__window {
   /* margin: 50px 0; */
   margin: auto 0;
@@ -73,10 +79,12 @@
   transform: scale(0.9);
   opacity: 0;
 }
+
 .hystmodal--active .hystmodal__window {
   transform: scale(1);
   opacity: 1;
 }
+
 .hystmodal__close {
   position: absolute;
   z-index: 10;
@@ -95,6 +103,7 @@
   cursor: pointer;
   outline: 0;
 }
+
 .hystmodal__close:focus {
   outline: #afb3b9 dotted 2px;
   outline-offset: 2px;

@@ -100,32 +100,32 @@ const close = document.querySelector(".sidebar__close");
 const sidebarLinks = document.querySelectorAll(".sidebar__listItem");
 const layout = document.querySelector(".layout");
 
-function sidebarManipulation(action) {
-  if (action == "open") {
-    layout.classList.add("layout_visible");
-    setTimeout(() => {
-      layout.classList.add("layout_visible2");
-      setTimeout(() => {
-        sidebar.classList.add("sidebar_opened");
-      }, 10);
-    }, 10);
-  } else if (action == "close") {
-    sidebar.classList.remove("sidebar_opened");
-    layout.classList.remove("layout_visible2");
+// function sidebarManipulation(action) {
+//   if (action == "open") {
+//     layout.classList.add("layout_visible");
+//     setTimeout(() => {
+//       layout.classList.add("layout_visible2");
+//       setTimeout(() => {
+//         sidebar.classList.add("sidebar_opened");
+//       }, 10);
+//     }, 10);
+//   } else if (action == "close") {
+//     sidebar.classList.remove("sidebar_opened");
+//     layout.classList.remove("layout_visible2");
 
-    setTimeout(() => {
-      layout.classList.remove("layout_visible");
-    }, 300);
-  }
-}
+//     setTimeout(() => {
+//       layout.classList.remove("layout_visible");
+//     }, 300);
+//   }
+// }
 
-burger.addEventListener("click", () => {
-  sidebarManipulation("open");
-});
+// burger.addEventListener("click", () => {
+//   sidebarManipulation("open");
+// });
 
-close.addEventListener("click", () => {
-  sidebarManipulation("close");
-});
+// close.addEventListener("click", () => {
+//   sidebarManipulation("close");
+// });
 
 sidebarLinks.forEach((sidebarLink) => {
   sidebarLink.addEventListener("click", (e) => {
@@ -133,13 +133,22 @@ sidebarLinks.forEach((sidebarLink) => {
   });
 });
 
-layout.addEventListener("click", (e) => {
-  if (e.target.classList.contains("layout")) {
-    sidebarManipulation("close");
-  }
-});
+// layout.addEventListener("click", (e) => {
+//   if (e.target.classList.contains("layout")) {
+//     sidebarManipulation("close");
+//   }
+// });
 
 // Модальные окна
+const onOpenModal = (modal) => {
+  console.log(modal.starter);
+  return modal.starter;
+}
+
+const sidebarModal = new HystModal({
+  linkAttributeName: "sidebar-modal",
+})
+
 const certificatesModal = new HystModal({
   linkAttributeName: "data-certificates",
 });
@@ -152,8 +161,25 @@ const feedbackModal = new HystModal({
   linkAttributeName: "data-feedback",
 });
 
+// const feedbackModal = new HystModal({
+//   linkAttributeName: false,
+// });
+
+const services = document.querySelectorAll('.servicesModal');
+
+// services.forEach(modal => {
+//   const btn = modal.querySelector('.servicesModal__button');
+//   btn.addEventListener('click', () => {
+//     console.log(btn);
+//     feedbackModal.config.linkAttributeName = 'data-feedback';
+//     feedbackModal.init;
+//     feedbackModal.open('#feedback-modal')
+//   })
+// })
+
 const servicesModal = new HystModal({
   linkAttributeName: "data-services",
+  beforeOpen: onOpenModal,
 });
 
 const successModal = new HystModal({
@@ -169,4 +195,21 @@ feedbackForm.addEventListener("submit", (e) => {
   e.preventDefault();
   feedbackModal.close("#feedback-modal");
   successModal.open("#success-modal");
+});
+
+// Блок этапы
+const STAGES_ITEM_CURRENT_CLASS = 'stages__item_current';
+const stagesItems = document.querySelectorAll('.stages__item');
+
+stagesItems.forEach(item => {
+  const itemNumber = item.querySelector('.stages__item__number');
+
+  itemNumber.addEventListener('click', () => {
+    const itemCurrent = document.querySelector(`.${STAGES_ITEM_CURRENT_CLASS}`);
+
+    if(item !== itemCurrent) {
+      itemCurrent.classList.remove(STAGES_ITEM_CURRENT_CLASS);
+      item.classList.add(STAGES_ITEM_CURRENT_CLASS);
+    }
+  })
 });

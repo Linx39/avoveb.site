@@ -3760,6 +3760,8 @@ body {
 
     background-color: #FFFAEE;
     box-shadow: 0px 7px 20px 0px #B98A4433;
+
+    transition: background-color 1.5s;
 }
 
 .stages__item_1 {
@@ -3782,6 +3784,8 @@ body {
 .stages__item_current {
     color: #F8F1E1;
     background-color: #A7B76B;
+
+    transition: background-color 1.5s;
 }
 
 .stages__item_current .stages__item__title {
@@ -3806,6 +3810,8 @@ body {
     line-height: 40px;
     color: #F8F1E1;
     background-color: #A7B76B;
+
+    cursor: pointer;
 }
 
 .stages__item_current .stages__item__number {
@@ -4013,13 +4019,16 @@ body {
 .sidebar {
     width: 699px;
     height: 100%;
+    margin: 0;
+    margin-left: auto;
     padding: 32px 180px 68px 120px;
-    position: fixed;
-    right: 0;
+    /* position: fixed; */
+    /* right: 0; */
     overflow-y: scroll;
-    right: -100%;
+    /* right: -100%; */
     -webkit-transition: all 0.3s;
-    transition: all 0.3s
+    transition: all 0.3s;
+    background-color: transparent;
 }
 
 .sidebar::-webkit-scrollbar {
@@ -4869,13 +4878,6 @@ body {
     }
 }
 
-/* @media (max-width:820px) and (orientation:landscape) {
-    .feedbackModal {
-        max-height: 95vh;
-        margin: 0
-    }
-} */
-
 .servicesModal {
     width: 1440px;
     min-height: auto;
@@ -5328,7 +5330,7 @@ body {
     }
 }
 
-@media (max-width:420px) {
+@media (max-width:430px) {
     .servicesModal__title {
         margin-bottom: 20px;
 
@@ -5423,7 +5425,7 @@ body {
 }
 
 
-/* Блок модального кна сертификаты */
+/* Блок модального окна сертификаты */
 
 .certificatesModal {
     border-radius: 60px;
