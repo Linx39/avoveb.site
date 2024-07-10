@@ -93,23 +93,23 @@ new Swiper(".inviteUs__swiper", {
 //   });
 // }
 
-// const sidebar = document.querySelector('.sidebar');
-// const links = sidebar.querySelectorAll('a[href^="#"]');
-// const header = document.querySelector('.header');
+const sidebar = document.querySelector('.sidebar');
+const links = sidebar.querySelectorAll('a[href^="#"]');
+const header = document.querySelector('.header');
 
-// links.forEach(link => {
-//   const id = link.getAttribute('href');
-//   const element = document.querySelector(id);
+links.forEach(link => {
+  const id = link.getAttribute('href');
+  const element = document.querySelector(id);
 
-//   link.addEventListener('click', (evt) => {
-//     // evt.preventDefault();
-//     // element.scrollIntoView({
-//     //   behavior: 'smooth'
-//     // });
-//     const headerHeigt = header.clientHeight;
-//     element.style.scrollMarginTop = `${headerHeigt}px`;
-//   });  
-// });
+  link.addEventListener('click', (evt) => {
+    // evt.preventDefault();
+    // element.scrollIntoView({
+    //   behavior: 'smooth'
+    // });
+    const headerHeigt = header.clientHeight;
+    element.style.scrollMarginTop = `${headerHeigt}px`;
+  });  
+});
 
 // Логика сайдбара.
 // const sidebar = document.querySelector(".sidebar");
@@ -164,7 +164,7 @@ const onOpenModal = (modal) => {
 }
 
 const sidebarModal = new HystModal({
-  linkAttributeName: "sidebar-modal",
+  linkAttributeName: "data-sidebar",
 })
 
 const certificatesModal = new HystModal({
