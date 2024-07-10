@@ -1,5 +1,4 @@
 .hystmodal,
-.hystmodal__opened,
 .hystmodal__shadow {
   position: fixed;
   right: 0;
@@ -8,8 +7,16 @@
 }
 
 .hystmodal__opened {
+  overflow-y: hidden;
+}
+
+.hystmodal__opened .header {
   overflow-y: scroll;
 }
+
+/* .hystmodal__opened .benefits::after {
+  overflow-y: scroll;
+} */
 
 .hystmodal__shadow {
   border: none;
@@ -30,9 +37,10 @@
 }
 
 .hystmodal {
+  position: fixed;
   top: 0;
   bottom: 0;
-  overflow-y: auto;
+  overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   opacity: 1;
   pointer-events: none;

@@ -80,25 +80,47 @@ new Swiper(".inviteUs__swiper", {
 });
 
 // плавный скролл к якорю
-const smoothLinks = document.querySelectorAll('a[href^="#"]');
-for (let smoothLink of smoothLinks) {
-  smoothLink.addEventListener("click", function (e) {
-    e.preventDefault();
-    const id = smoothLink.getAttribute("href");
+// const smoothLinks = document.querySelectorAll('a[href^="#"]');
+// for (let smoothLink of smoothLinks) {
+//   smoothLink.addEventListener("click", function (e) {
+//     e.preventDefault();
+//     const id = smoothLink.getAttribute("href");
 
-    document.querySelector(id).scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
+//     document.querySelector(id).scrollIntoView({
+//       behavior: "smooth",
+//       block: "start",
+//     });
+//   });
+// }
+
+const sidebar = document.querySelector('.sidebar');
+const links = sidebar.querySelectorAll('a[href^="#"]');
+const header = document.querySelector('.header');
+
+links.forEach(link => {
+  const id = link.getAttribute('href');
+  const element = document.querySelector(id);
+
+  link.addEventListener('click', (evt) => {
+    // evt.preventDefault();
+    // element.scrollIntoView({
+    //   behavior: 'smooth'
+    // });
+    const headerHeigt = header.clientHeight;
+    element.style.scrollMarginTop = `${headerHeigt}px`;
   });
-}
+
+  
+ 
+  
+});
 
 // Логика сайдбара.
-const sidebar = document.querySelector(".sidebar");
-const burger = document.querySelector(".header__hamburgerButton");
-const close = document.querySelector(".sidebar__close");
-const sidebarLinks = document.querySelectorAll(".sidebar__listItem");
-const layout = document.querySelector(".layout");
+// const sidebar = document.querySelector(".sidebar");
+// const burger = document.querySelector(".header__hamburgerButton");
+// const close = document.querySelector(".sidebar__close");
+// const sidebarLinks = document.querySelectorAll(".sidebar__listItem");
+// const layout = document.querySelector(".layout");
 
 // function sidebarManipulation(action) {
 //   if (action == "open") {
@@ -127,11 +149,11 @@ const layout = document.querySelector(".layout");
 //   sidebarManipulation("close");
 // });
 
-sidebarLinks.forEach((sidebarLink) => {
-  sidebarLink.addEventListener("click", (e) => {
-    sidebarManipulation("close");
-  });
-});
+// sidebarLinks.forEach((sidebarLink) => {
+//   sidebarLink.addEventListener("click", (e) => {
+//     sidebarManipulation("close");
+//   });
+// });
 
 // layout.addEventListener("click", (e) => {
 //   if (e.target.classList.contains("layout")) {
@@ -161,25 +183,8 @@ const feedbackModal = new HystModal({
   linkAttributeName: "data-feedback",
 });
 
-// const feedbackModal = new HystModal({
-//   linkAttributeName: false,
-// });
-
-const services = document.querySelectorAll('.servicesModal');
-
-// services.forEach(modal => {
-//   const btn = modal.querySelector('.servicesModal__button');
-//   btn.addEventListener('click', () => {
-//     console.log(btn);
-//     feedbackModal.config.linkAttributeName = 'data-feedback';
-//     feedbackModal.init;
-//     feedbackModal.open('#feedback-modal')
-//   })
-// })
-
 const servicesModal = new HystModal({
   linkAttributeName: "data-services",
-  beforeOpen: onOpenModal,
 });
 
 const successModal = new HystModal({
