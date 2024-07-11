@@ -95,7 +95,7 @@ new Swiper(".inviteUs__swiper", {
 
 // Логика сайдбара.
 // const sidebar = document.querySelector(".sidebar");
-// const burger = document.querySelector(".header__hamburgerButton");
+// const burger = document.querySelector(".header__menu__button");
 // const close = document.querySelector(".sidebar__close");
 // const sidebarLinks = document.querySelectorAll(".sidebar__listItem");
 // const layout = document.querySelector(".layout");
@@ -147,10 +147,7 @@ const links = sidebar.querySelectorAll('.sidebar__list__link');
 const getElementByLink = (link) => document.querySelector(link.getAttribute('href'));
 
 const setScrollMarginTop = () => {
-  links.forEach(link => {
-    // const id = link.getAttribute('href');
-    // const element = document.querySelector(id);
-    
+  links.forEach(link => {    
     const element = getElementByLink(link);
     const headerHeigt = header.clientHeight;
     element.style.scrollMarginTop = `${headerHeigt}px`;
@@ -168,9 +165,6 @@ window.addEventListener('resize', () => {
 links.forEach(link => {
   link.addEventListener('click', (evt) => {
     evt.preventDefault();
-    // const id = link.getAttribute('href');
-    // const element = document.querySelector(id);
-
     const element = getElementByLink(link);
 
     sidebarModal.close();
@@ -181,6 +175,23 @@ links.forEach(link => {
     });
   });
 })
+
+// Сдвиг main относительно фиксированной шапки
+const main = document.querySelector('.main');
+
+const setMainMarginTop = () => {
+  const headerHeigt = header.clientHeight;
+  main.style.marginTop = `${headerHeigt}px`;
+}
+
+window.addEventListener('load', () => {
+  setMainMarginTop();
+})
+
+window.addEventListener('resize', () => {
+  setMainMarginTop();
+});
+
 
 // Модальные окна
 const sidebarModal = new HystModal({

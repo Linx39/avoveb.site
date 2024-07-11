@@ -56,6 +56,8 @@ a {
     box-sizing: border-box;
     text-decoration: none;
     cursor: pointer;
+    font: inherit;
+    color: inherit;
 }
 
 a:hover {
@@ -630,23 +632,6 @@ legend {
 }
 
 .socialButton {
-    display: block;
-    width: 56px;
-    height: 56px;
-    background-color: var(--brown-pallet-100);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    border-radius: 50%
-}
-
-.socialButton {
     flex-shrink: 0;
 
     display: flex;
@@ -1020,121 +1005,97 @@ legend {
     fill: var(--brown-pallet-500);
 }
 
-.phone-light:hover {
+.phone__light:hover {
     color: var(--green-pallet-500);
 }
 
-.phone-light:active {
+.phone__light:active {
     color: var(--green-pallet-500);
     opacity: .8;
 }
 
-.phone-dark:hover {
+.phone__dark:hover {
     color: var(--brown-pallet-500);
 }
 
-.phone-dark:active {
+.phone__dark:active {
     color: var(--brown-pallet-500);
     opacity: .8;
 }
 
-
+/* Шапка */
 .header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+
     /* width: 100%; */
     min-height: 143px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-shadow: 0 4px 20px 0 rgba(26, 12, 9, 0.4);
-    box-shadow: 0 4px 20px 0 rgba(26, 12, 9, 0.4);
-    background: var(--brown-pallet-600);
-    z-index: 10;
+    padding: 25px 0;
 
     color: var(--brown-pallet-100);
     background-color: var(--brown-pallet-600);
+    
+    box-shadow: 0 4px 20px 0 rgba(26, 12, 9, 0.4);
 }
 
-.header__placeholder {
-    width: 100%;
-    height: 143px
-}
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    column-gap: 40px;
 
-.header__wrapper {
     width: 100%;
     max-width: 1920px;
     margin: 0 auto;
     padding: 0 64px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;    
-    -webkit-column-gap: 30px;
-    -moz-column-gap: 30px;
-    column-gap: 30px;
 }
 
-.header__logo {
-    display: -webkit-box;
-    display: -ms-flexbox;
+.header__company {
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-column-gap: 19px;
-    -moz-column-gap: 19px;
-    column-gap: 19px
+    flex-wrap: wrap;
+    gap: 28px;
 }
 
-.header__logoImg {
+.header__logo__img {
     width: 213px;
     height: 57px
 }
 
-.header__logoText {
-    width: 291px;
-    font-weight: 500;
+.header__logo__text {
+    width: 300px;
+
     font-size: 20px;
-    line-height: 140%;
-    color: #F8F1E1;
+    line-height: 28px;
+    font-weight: 500;
 }
 
-.header__info {
-    justify-self: end;
-    /* width: 555px; */
-    display: -webkit-box;
-    display: -ms-flexbox;
+.header__nav {
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-column-gap: 21px;
-    -moz-column-gap: 21px;
-    column-gap: 21px;
+    gap: 28px;
 }
 
 .header__phone {
-    flex-shrink: 0;
+    width: 290px;
+    text-align: right;
+}
 
-    font-family: var(--second-family);
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 32px;
-    color: var(--brown-pallet-100)
+.header__buttons__container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .header__link {
+    flex-shrink: 0;
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1142,300 +1103,186 @@ legend {
     height: 56px;
 }
 
-.header__contactImg {
+.header__link svg {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.header__link svg {
     fill: var(--brown-pallet-300);
 }
 
-.header__contactImg:hover {
+.header__link svg:hover {
     fill: var(--green-pallet-500);
 }
 
-.header__contactImg:active {
+.header__link svg:active {
     fill: var(--green-pallet-500);
     opacity: .8;
 }
 
-.header__contactImg-telegram {
-    width: 51px;
-    height: 46px;
-}
+.header__sidebar__button {
+    flex-shrink: 0;
 
-.header__contactImg-whatsapp {
-    width: 46px;
-    height: 46px;
-}
-
-.header__hamburgerButton {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 74px;
-    height: 74px;
+    width: 70px;
+    height: 70px;
+    margin-left: 8px;
 }
 
-.header__hamburgerImg {
-    width: 56px;
-    height: 31px;
+.header__sidebar__button svg { 
+    max-width: 100%;
+    max-height: 100%;
+    
     stroke: var(--brown-pallet-100);
 }
 
-.header__hamburgerImg:hover {
+.header__sidebar__button:hover svg {
     stroke: var(--green-pallet-500);
 }
 
-.header__hamburgerImg:active {
+.header__sidebar__button:active svg {
     stroke: var(--green-pallet-500);
     opacity: .8;
 }
 
 @media (max-width: 1700px) {
-    .header__wrapper {
-        padding: 0 40px
-    }
-
-    .header__info {
-        -webkit-column-gap: 20px;
-        -moz-column-gap: 20px;
-        column-gap: 20px;
-    }
-
-    .header__phone {
-        font-size: 28px;
-        font-weight: 600;
-    }
-
-    .header__logoText {
-        font-weight: 400
-    }
-
-    .header__hamburgerButton {
-        width: 71px;
-        height: 69px
-    }
-
-    .header__hamburgerImg {
-        width: 54px;
-        height: 29px
+    .header__container {
+        padding: 0 44px;
     }
 }
 
 @media (max-width: 1200px) {
-    .header {
-        /* min-height: 177px; */
+    .header__container {
+        column-gap: 30px;
+        padding: 0 24px;
     }
 
-    .header__placeholder {
-        height: 89px
+    .header__company {
+        gap: 20px;
     }
 
-    .header__wrapper {
-        padding: 0 30px;
-    }
-
-    .header__logoText {
+    .header__logo__text {
+        width: 240px;
+    
         font-size: 16px;
-        width: 229px;
-        font-weight: 400
+        line-height: 20px;
+        font-weight: 500;
+    }
+
+    .header__nav {        
+        gap: 20px;
     }
 
     .header__phone {
-        font-size: 26px
+        width: 255px;
     }
 
-    .header__info {
-        max-width: 440px;
-        -webkit-column-gap: 20px;
-        -moz-column-gap: 20px;
-        column-gap: 20px
+    .header__buttons__container {
+        gap: 12px;
     }
 
     .header__link {
-        width: 40px;
-        height: 40px;
+        width: 48px;
+        height: 48px;
     }
 
-    .header__contactImg-telegram {
-        width: 37px;
-        height: 32px;
-    }
-    
-    .header__contactImg-whatsapp {
-        width: 32px;
-        height: 32px;
-    }
-
-    .header__hamburgerButton {
+    .header__sidebar__button {
         width: 60px;
-        height: 60px
-    }
-
-    .header__hamburgerImg {
-        width: 45px;
-        height: 25px
-    }
-}
-
-@media (max-width: 1060px) {
-    .header {
-        min-height: 120px
-    }
-
-    .header__logoText {
-        font-size: 15px
-    }
-
-    .header__phone {
-        font-size: 20px
-    }
-
-    .header__info {
-        /* width: 370px; */
-        -webkit-column-gap: 18px;
-        -moz-column-gap: 18px;
-        column-gap: 18px
+        height: 60px;
     }
 }
 
 @media (max-width: 920px) {
-    .header {
-        min-height: 120px
+    .header__company {
+        flex-direction: column;
+        row-gap: 8px;
     }
 
-    .header__logo {
-        width: 229px;
-        -ms-flex-wrap: wrap;
+    .header__nav {
+        flex-direction: column;
         flex-wrap: wrap;
-        row-gap: 7px
-    }
-
-    .header__info {
-        max-width: 250px;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        -webkit-box-pack: end;
-        -ms-flex-pack: end;
-        justify-content: end
+        align-items: end;
+        row-gap: 16px;
     }
 
     .header__phone {
-        -webkit-box-ordinal-group: 5;
-        -ms-flex-order: 4;
-        order: 4
-    }
-}
-
-@media (max-width: 920px) and (orientation:landscape) {
-    .header {
-        min-height: 70px
-    }
-
-    .header__logoImg {
-        width: 160px;
-        height: auto
-    }
-
-    .header__logoText {
-        display: none
-    }
-
-    .header__info {
-        -webkit-column-gap: 12px;
-        -moz-column-gap: 12px;
-        column-gap: 12px;
-        -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-        /* width: 336px */
-    }
-
-    .header__hamburgerImg {
-        width: 44px;
-        height: 44px
-    }
-
-    .header__phone {
-        -webkit-box-ordinal-group: unset;
-        -ms-flex-order: unset;
-        order: unset;
-        font-size: 18px;
+        order: 1;
     }
 }
 
 @media (max-width: 760px) {
     .header {
         min-height: 80px;
-        border-radius: 0;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
+        padding: 10px 0;
     }
 
-    .header__placeholder {
-        height: 80px
+    .header__container {
+        gap: 10px;
     }
 
-    .header__wrapper {
-        /* height: 48px; */
-        padding: 0 15px;
+    .header__logo__img {
+        width: 165px;
+        height: auto;
     }
 
-    .header__logo {
-        width: 111px;
-        height: 30px
+    .header__logo__text {
+        display: none;
     }
 
-    .header__logoImg {
-        width: 111px;
-        height: 30px
-    }
-
-    .header__logoText {
-        display: none
-    }
-
-    .header__info {
-        max-width: 160px;
-        -webkit-column-gap: 10px;
-        -moz-column-gap: 10px;
-        column-gap: 10px;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap
-    }
-
-    .header__hamburgerButton {
-        width: 34px;
-        height: 34px
-    }
-
-    .header__hamburgerImg {
-        width: 33px;
-        height: 19px
+    .header__nav {
+        row-gap: 16px;
     }
 
     .header__phone {
-        font-size: 14px;
-        line-height: 16px;
-        margin-top: 3px;
-        -webkit-box-ordinal-group: 5;
-        -ms-flex-order: 4;
-        order: 4
+        width: 180px;
+
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .header__buttons__container {
+        gap: 8px;
     }
 
     .header__link {
-        width: 32px;
-        height: 32px;
+        width: 36px;
+        height: 36px;
     }
 
-    .header__contactImg-telegram {
-        width: 37px;
-        height: 28px;
+    .header__sidebar__button {
+        width: 42px;
+        height: 42px;
     }
-    
-    .header__contactImg-whatsapp {
+}
+
+@media (max-width: 430px) {
+    .header__logo__img {
+        width: 111px;
+        height: 30px;
+    }
+
+    .header__logo__text {
+        display: none;
+    }
+
+    .header__phone {
+        width: 125px;
+
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .header__link {
         width: 28px;
         height: 28px;
+    }
+
+    .header__sidebar__button {
+        width: 32px;
+        height: 32px;
     }
 }
 
