@@ -93,27 +93,6 @@ new Swiper(".inviteUs__swiper", {
 //   });
 // }
 
-const sidebar = document.querySelector('.sidebar');
-const links = sidebar.querySelectorAll('a[href^="#"]');
-const header = document.querySelector('.header');
-
-const setScrollMarginTop = () => {
-  links.forEach(link => {
-    const id = link.getAttribute('href');
-    const element = document.querySelector(id);
-    const headerHeigt = header.clientHeight;
-    element.style.scrollMarginTop = `${headerHeigt}px`;
-  });
-}
-
-window.addEventListener('load', () => {
-  setScrollMarginTop();
-})
-
-window.addEventListener('resize', () => {
-  setScrollMarginTop();
-});
-
 // Логика сайдбара.
 // const sidebar = document.querySelector(".sidebar");
 // const burger = document.querySelector(".header__hamburgerButton");
@@ -160,12 +139,50 @@ window.addEventListener('resize', () => {
 //   }
 // });
 
-// Модальные окна
-const onOpenModal = (modal) => {
-  console.log(modal.starter);
-  return modal.starter;
+// Сайдбар
+const sidebar = document.querySelector('.sidebar');
+const links = sidebar.querySelectorAll('a[href^="#"]');
+const header = document.querySelector('.header');
+
+const getElementByLink = (link) => document.querySelector(link.getAttribute('href'));
+
+const setScrollMarginTop = () => {
+  links.forEach(link => {
+    // const id = link.getAttribute('href');
+    // const element = document.querySelector(id);
+    
+    const element = getElementByLink(link);
+    const headerHeigt = header.clientHeight;
+    element.style.scrollMarginTop = `${headerHeigt}px`;
+  });
 }
 
+window.addEventListener('load', () => {
+  setScrollMarginTop();
+})
+
+window.addEventListener('resize', () => {
+  setScrollMarginTop();
+});
+
+links.forEach(link => {
+  link.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    // const id = link.getAttribute('href');
+    // const element = document.querySelector(id);
+
+    const element = getElementByLink(link);
+
+    sidebarModal.close();
+
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  });
+})
+
+// Модальные окна
 const sidebarModal = new HystModal({
   linkAttributeName: "data-sidebar",
 })

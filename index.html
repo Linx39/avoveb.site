@@ -165,6 +165,69 @@
       </div>
     </header>
 
+    <!-- Сайдбар -->
+    <div class="hystmodal" id="sidebar-modal" aria-hidden="true">
+      <div class="hystmodal__wrap">
+        <div class="sidebar hystmodal__window" role="dialog" aria-modal="true">
+          <style>
+            .sidebar {
+              background-image: url("assets/img/sidebar-bg.png");
+              background-repeat: no-repeat;
+              background-size: cover;
+            }
+          </style>
+
+          <div class="sidebar__topRow">
+            <img src="assets/img/logo-dark.png" alt="logo" class="sidebar__logo" />
+            <button class="sidebar__close feedbackModal__close button__close hystmodal__close" data-hystclose>
+              <svg><use href="#cross"></use></svg>
+            </button>
+          </div>
+
+          <ul class="sidebar__list">
+            <li class="sidebar__listItem">
+              <a href="#promo" class="sidebar__list__link">Это актуально</a>
+            </li>
+            <li class="sidebar__listItem">
+              <a href="#offer" class="sidebar__list__link">О нас</a>
+            </li>
+            <li class="sidebar__listItem">
+              <a href="#price" class="sidebar__list__link">Стоимость</a>
+            </li>
+            <li class="sidebar__listItem">
+              <a href="#services" class="sidebar__list__link">Услуги</a>
+            </li>
+            <li class="sidebar__listItem">
+              <a href="#guarantees" class="sidebar__list__link">Гарантии</a>
+            </li>
+            <li class="sidebar__listItem">
+              <a href="#reviews" class="sidebar__list__link">Отзывы</a>
+            </li>
+            <li class="sidebar__listItem">
+              <a href="#stages" class="sidebar__list__link">Этапы</a>
+            </li>
+            <li class="sidebar__listItem">
+              <a href="#footer" class="sidebar__list__link">Контакты</a>
+            </li>
+          </ul>
+
+          <a href="tel:79263906734" class="sidebar__phone phone-dark">+7-926-390-67-34</a>
+
+          <div class="sidebar__social">
+            <a href="index.html#" class="sidebar__socialLink">
+              <svg class="sidebar__socialLink__img sidebar__socialLink__img_telegram"><use href="#telegram"></use></svg>
+            </a>
+
+            <a href="index.html#" class="sidebar__socialLink">
+              <svg class="sidebar__socialLink__img sidebar__socialLink__img_whatsapp"><use href="#whatsapp"></use></svg>
+            </a>
+          </div>
+
+          <a href="index.html#" class="sidebar__privacy">Политика конфиденциальности</a>
+        </div>
+      </div>
+    </div>
+
     <div class="header__placeholder"></div>
 
     <main class="main">
@@ -786,71 +849,7 @@
       </div>
     </footer>
 
-    <!-- Сайдбар -->
-    <div class="hystmodal" id="sidebar-modal" aria-hidden="true">
-      <div class="hystmodal__wrap">
-        <div class="sidebar hystmodal__window" role="dialog" aria-modal="true">
-          <style>
-            .sidebar {
-              background-image: url("assets/img/sidebar-bg.png");
-              background-repeat: no-repeat;
-              background-size: cover;
-            }
-          </style>
-
-          <div class="sidebar__topRow">
-            <img src="assets/img/logo-dark.png" alt="logo" class="sidebar__logo" />
-            <button class="sidebar__close feedbackModal__close button__close hystmodal__close" data-hystclose>
-              <svg><use href="#cross"></use></svg>
-            </button>
-          </div>
-
-          <ul class="sidebar__list">
-            <li class="sidebar__listItem">
-              <a href="#promo" class="sidebar__list__link" data-hystclose>Это актуально</a>
-            </li>
-            <li class="sidebar__listItem">
-              <a href="#offer" class="sidebar__list__link" data-hystclose>О нас</a>
-            </li>
-            <li class="sidebar__listItem">
-              <a href="#price" class="sidebar__list__link" data-hystclose>Стоимость</a>
-            </li>
-            <li class="sidebar__listItem">
-              <a href="#services" class="sidebar__list__link" data-hystclose>Услуги</a>
-            </li>
-            <li class="sidebar__listItem">
-              <a href="#guarantees" class="sidebar__list__link" data-hystclose>Гарантии</a>
-            </li>
-            <li class="sidebar__listItem">
-              <a href="#reviews" class="sidebar__list__link" data-hystclose>Отзывы</a>
-            </li>
-            <li class="sidebar__listItem">
-              <a href="#stages" class="sidebar__list__link" data-hystclose>Этапы</a>
-            </li>
-            <li class="sidebar__listItem">
-              <a href="#footer" class="sidebar__list__link" data-hystclose>Контакты</a>
-            </li>
-          </ul>
-
-          <a href="tel:79263906734" class="sidebar__phone phone-dark">+7-926-390-67-34</a>
-
-          <div class="sidebar__social">
-            <a href="index.html#" class="sidebar__socialLink">
-              <svg class="sidebar__socialLink__img sidebar__socialLink__img_telegram"><use href="#telegram"></use></svg>
-            </a>
-
-            <a href="index.html#" class="sidebar__socialLink">
-              <svg class="sidebar__socialLink__img sidebar__socialLink__img_whatsapp"><use href="#whatsapp"></use></svg>
-            </a>
-          </div>
-
-          <a href="index.html#" class="sidebar__privacy">Политика конфиденциальности</a>
-        </div>
-      </div>
-    </div>
-
     <!-- Модальные окна услуги -->
-
     <div class="hystmodal" id="services-modal-1" aria-hidden="true">
       <div class="hystmodal__wrap">
         <div class="hystmodal__window feedbackModal servicesModal services-modal-1" role="dialog" aria-modal="true">
