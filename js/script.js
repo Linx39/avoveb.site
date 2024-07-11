@@ -13,12 +13,12 @@ new Swiper(".reviews__swiper", {
       slidesPerView: 1,
       spaceBetween: 20,
     },
-    624: {
+    730: {
       slidesPerView: 2,
       spaceBetween: 20,
     },
-    1060: {
-      slidesPerView: 3,
+    920: {
+      slidesPerView: 2,
       spaceBetween: 20,
     },
     1200: {
