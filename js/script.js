@@ -140,9 +140,9 @@ new Swiper(".inviteUs__swiper", {
 // });
 
 // Сайдбар
-const sidebar = document.querySelector('.sidebar');
-const links = sidebar.querySelectorAll('a[href^="#"]');
 const header = document.querySelector('.header');
+const sidebar = document.querySelector('.sidebar');
+const links = sidebar.querySelectorAll('.sidebar__list__link');
 
 const getElementByLink = (link) => document.querySelector(link.getAttribute('href'));
 
