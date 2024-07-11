@@ -157,30 +157,30 @@ const setScrollMarginTop = () => {
   });
 }
 
-// window.addEventListener('load', () => {
-//   setScrollMarginTop();
-// })
+window.addEventListener('load', () => {
+  setScrollMarginTop();
+})
 
-// window.addEventListener('resize', () => {
-//   setScrollMarginTop();
-// });
+window.addEventListener('resize', () => {
+  setScrollMarginTop();
+});
 
-// links.forEach(link => {
-//   link.addEventListener('click', (evt) => {
-//     evt.preventDefault();
-//     // const id = link.getAttribute('href');
-//     // const element = document.querySelector(id);
+links.forEach(link => {
+  link.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    // const id = link.getAttribute('href');
+    // const element = document.querySelector(id);
 
-//     const element = getElementByLink(link);
+    const element = getElementByLink(link);
 
-//     sidebarModal.close();
+    sidebarModal.close();
 
-//     element.scrollIntoView({
-//       behavior: "smooth",
-//       block: "start",
-//     });
-//   });
-// })
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  });
+})
 
 // Модальные окна
 const sidebarModal = new HystModal({
