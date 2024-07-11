@@ -157,13 +157,13 @@ const setScrollMarginTop = () => {
   });
 }
 
-window.addEventListener('load', () => {
-  setScrollMarginTop();
-})
+// window.addEventListener('load', () => {
+//   setScrollMarginTop();
+// })
 
-window.addEventListener('resize', () => {
-  setScrollMarginTop();
-});
+// window.addEventListener('resize', () => {
+//   setScrollMarginTop();
+// });
 
 links.forEach(link => {
   link.addEventListener('click', (evt) => {
