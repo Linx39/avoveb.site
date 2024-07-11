@@ -97,18 +97,21 @@ const sidebar = document.querySelector('.sidebar');
 const links = sidebar.querySelectorAll('a[href^="#"]');
 const header = document.querySelector('.header');
 
-links.forEach(link => {
-  const id = link.getAttribute('href');
-  const element = document.querySelector(id);
-
-  link.addEventListener('click', (evt) => {
-    // evt.preventDefault();
-    // element.scrollIntoView({
-    //   behavior: 'smooth'
-    // });
+const setScrollMarginTop = () => {
+  links.forEach(link => {
+    const id = link.getAttribute('href');
+    const element = document.querySelector(id);
     const headerHeigt = header.clientHeight;
     element.style.scrollMarginTop = `${headerHeigt}px`;
-  });  
+  });
+}
+
+window.addEventListener('load', () => {
+  setScrollMarginTop();
+})
+
+window.addEventListener('resize', () => {
+  setScrollMarginTop();
 });
 
 // Логика сайдбара.

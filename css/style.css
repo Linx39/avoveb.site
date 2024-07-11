@@ -343,15 +343,15 @@ legend {
 
 @media (max-width: 830px) {
     .subtitle {
-        font-size: 22px;
-        line-height: 26px;
+        font-size: 26px;
+        line-height: 32px;
     }
 }
 
 @media (max-width: 624px) {
     .subtitle {
-        font-size: 28px;
-        line-height: 32px;
+        font-size: 24px;
+        line-height: 28px;
     }
 }
 
@@ -3331,7 +3331,7 @@ legend {
     }
 }
 
-@media (max-width: 624px) {
+@media (max-width: 730px) {
     .guarantees {
     }
 
@@ -3351,6 +3351,8 @@ legend {
     .guarantees__item_top {    
         grid-column: span 1;
         grid-row: span 1;
+
+        aspect-ratio: unset;
     }
     
     .guarantees__item_bottom {  
