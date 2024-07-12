@@ -177,7 +177,7 @@ links.forEach(link => {
 })
 
 // Сдвиг main относительно фиксированной шапки
-const main = document.querySelector('.main');
+const main = document.querySelector('.page__main');
 
 const setMainMarginTop = () => {
   const headerHeigt = header.clientHeight - 5;
