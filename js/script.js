@@ -180,7 +180,7 @@ links.forEach(link => {
 const main = document.querySelector('.main');
 
 const setMainMarginTop = () => {
-  const headerHeigt = header.clientHeight;
+  const headerHeigt = header.clientHeight - 5;
   main.style.marginTop = `${headerHeigt}px`;
 }
 
