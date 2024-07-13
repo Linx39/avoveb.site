@@ -142,7 +142,7 @@ new Swiper(".inviteUs__swiper", {
 // Сайдбар
 const header = document.querySelector('.header');
 const sidebar = document.querySelector('.sidebar');
-const links = sidebar.querySelectorAll('.sidebar__list__link');
+const links = sidebar.querySelectorAll('.sidebar__listLink');
 
 const getElementByLink = (link) => document.querySelector(link.getAttribute('href'));
 
@@ -234,9 +234,9 @@ const STAGES_ITEM_CURRENT_CLASS = 'stages__item_current';
 const stagesItems = document.querySelectorAll('.stages__item');
 
 stagesItems.forEach(item => {
-  const itemNumber = item.querySelector('.stages__item__number');
+  // const itemNumber = item.querySelector('.stages__item__number');
 
-  itemNumber.addEventListener('click', () => {
+  item.addEventListener('click', () => {
     const itemCurrent = document.querySelector(`.${STAGES_ITEM_CURRENT_CLASS}`);
 
     if(item !== itemCurrent) {
