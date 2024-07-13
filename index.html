@@ -152,18 +152,18 @@
         </div>
 
         <nav class="header__nav">
-          <a class="header__phone phone__light" href="tel:+79263906734">+7-926-390-67-34</a>
+          <a class="header__phone" href="tel:+79263906734">+7-926-390-67-34</a>
 
-          <div class="header__buttons__container">
+          <div class="header__buttons">
             <div class="header__social">
-              <a class="header__socialButton" href="https://t.me/olga_rsh">
+              <a class="header__social__button" href="https://t.me/olga_rsh">
                 <svg style="width: 51px; height: 46px;"><use href="#telegram"></use></svg>
               </a>
-              <a class="header__socialButton" href="https://wa.me/79832276997?text=Здравствуйте,%20хочу%20заказать%20услугу.">
+              <a class="header__social__button" href="https://wa.me/79832276997?text=Здравствуйте,%20хочу%20заказать%20услугу.">
                 <svg style="width: 46px; height: 46px;"><use href="#whatsapp"></use></svg>
               </a>
             </div>
-            <button class="header__sidebarButton" data-sidebar="#sidebar-modal">
+            <button class="header__sidebar__button header__link" data-sidebar="#sidebar-modal">
               <svg  style="width: 60px; height: 34px;"><use href="#burger"></use></svg>
             </button>
           </div>
@@ -179,7 +179,7 @@
             <svg><use href="#sidebar-bg"></use></svg>
           </div>
 
-          <button class="sidebar__closeButton closeButton" type="button" data-hystclose>
+          <button class="sidebar__close__button closeButton" type="button" data-hystclose>
             <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
           </button>
 
@@ -187,34 +187,34 @@
             <img class="logo" src="assets/img/logo-dark.png" width="213" height="57" alt="Логотип">
 
             <ul class="sidebar__list subtitle">
-              <li class="sidebar__listItem">
-                <a href="#promo" class="sidebar__listLink">Это актуально</a>
+              <li class="sidebar__item">
+                <a href="#promo" class="sidebar__link">Это актуально</a>
               </li>
-              <li class="sidebar__listItem">
-                <a href="#offer" class="sidebar__listLink">О нас</a>
+              <li class="sidebar__item">
+                <a href="#offer" class="sidebar__link">О нас</a>
               </li>
-              <li class="sidebar__listItem">
-                <a href="#price" class="sidebar__listLink">Стоимость</a>
+              <li class="sidebar__item">
+                <a href="#price" class="sidebar__link">Стоимость</a>
               </li>
-              <li class="sidebar__listItem">
-                <a href="#services" class="sidebar__listLink">Услуги</a>
+              <li class="sidebar__item">
+                <a href="#services" class="sidebar__link">Услуги</a>
               </li>
-              <li class="sidebar__listItem">
-                <a href="#guarantees" class="sidebar__listLink">Гарантии</a>
+              <li class="sidebar__item">
+                <a href="#guarantees" class="sidebar__link">Гарантии</a>
               </li>
-              <li class="sidebar__listItem">
-                <a href="#reviews" class="sidebar__listLink">Отзывы</a>
+              <li class="sidebar__item">
+                <a href="#reviews" class="sidebar__link">Отзывы</a>
               </li>
-              <li class="sidebar__listItem">
-                <a href="#stages" class="sidebar__listLink">Этапы</a>
+              <li class="sidebar__item">
+                <a href="#stages" class="sidebar__link">Этапы</a>
               </li>
-              <li class="sidebar__listItem">
-                <a href="#footer" class="sidebar__listLink">Контакты</a>
+              <li class="sidebar__item">
+                <a href="#footer" class="sidebar__link">Контакты</a>
               </li>
             </ul>
 
             <div class="sidebar__contacts">
-              <a class="sidebar__phone phone_dark subtitle" href="tel:79263906734">+7-926-390-67-34</a>            
+              <a class="sidebar__phone subtitle" href="tel:79263906734">+7-926-390-67-34</a>            
               <div class="sidebar__social">
                 <a href="index.html#" class="socialButton">
                   <svg style="width: 36px; height: 32px; transform: translateX(-6%);"><use href="#telegram"></use></svg>
@@ -234,18 +234,18 @@
     <!-- <div class="header__placeholder"></div> -->
 
     <main class="page__main">
-      <section id="promo" class="promo wrapper__pading__large">
+      <section id="promo" class="promo">
         <img src="assets/img/promo-wave.png" alt="" class="promo__wave" >
         <img src="assets/img/promo-wave-768.png" alt="" class="promo__wave promo__wave_768">
         <img src="assets/img/promo-wave-320.svg" alt="" class="promo__wave promo__wave_320">
 
-        <img class="promo__bg__img" src="assets/img/promo-bg-1920.png" alt="Изображение девушки в бане">
-        <!-- <video class="promo__bg__video" loop="" muted="" autoplay="" poster="video/plane.jpg.html">
+        <img class="promo__bg" src="assets/img/promo-bg-1920.png" alt="Изображение девушки в бане">
+        <video class="promo__bg__video" loop="" muted="" autoplay="" poster="video/plane.jpg.html">
           <source src="https://vkusbani.ru/wp-content/uploads/2019/03/video-bg.mp4" type="video/mp4" />
           <source src="https://vkusbani.ru/wp-content/uploads/2019/03/video-bg.webm" type="video/webm" />
-        </video> -->
+        </video>
 
-        <div class="promo__wrapper container">
+        <div class="promo__container container">
           <div class="promo__content">
             <h2 class="promo__title title">
               Ощутите вкус настоящей бани <br><span>с семьей профессиональных банщиков</span>
@@ -258,7 +258,7 @@
 
             <a class="promo__button">
               Посмотреть видеоролик
-              <span class="promo__button__icon__container">
+              <span class="promo__button__icon">
                 <svg style="width: 11px; height: 12px;"><use href="#play"></use></svg>
               </span>
             </a>
@@ -275,15 +275,15 @@
         <img src="assets/img/bg-items/bg-item-6.svg" alt="" class="container__top__item container__top__item_6">
         <img src="assets/img/bg-items/bg-item-11.svg" alt="" class="container__top__item container__top__item_7">
 
-        <section id="offer" class="offer wrapper__pading__small">
+        <section id="offer" class="offer">
           <div class="container">
             <h2 class="offer__title title">Пригласите нас, если:</h2>
 
-            <div class="offer__list container__mobile font__light">
+            <div class="offer__list container__mobile">
               <div class="offer__card card">
                 <img class="offer__card__img card__img" src="assets/img/offer/offer-1-1920.png" alt="Люди в бане">
                   
-                <div class="offer__card__bottom">
+                <div class="offer__card__description">
                   <div class="offer__card__circle">
                     <svg style="width: 55px; height: 40px;"><use href="#people"></use></svg>
                   </div>
@@ -294,8 +294,8 @@
               <div class="offer__card card">
                 <img class="offer__card__img card__img" src="assets/img/offer/offer-2-1920.png" alt="Женщина с цветами">
 
-                <div class="offer__card__bottom">
-                  <div class="offer__card__circle offer__card__circle_likeImg">
+                <div class="offer__card__description">
+                  <div class="offer__card__circle">
                     <svg style="width: 45px; height: 40px;"><use href="#like"></use></svg>
                   </div>
                   <p class="offer__card__text">
@@ -308,8 +308,8 @@
               <div class="offer__card card">                
                 <img class="offer__card__img card__img" src="assets/img/offer/offer-3-1920.png" alt="Люди в бане">
                   
-                <div class="offer__card__bottom">
-                  <div class="offer__card__circle offer__card__circle_giftImg">
+                <div class="offer__card__description">
+                  <div class="offer__card__circle">
                     <svg style="width: 40px; height: 39px;"><use href="#gift"></use></svg>
                   </div>
                   <p class="offer__card__text">Желаете сделать здоровый и оригинальный подарок близким.</p>
@@ -319,7 +319,7 @@
           </div>
         </section>
 
-        <section class="personal wrapper__padding__combo">
+        <section class="personal">
           <div class="container">
             <h3 class="personal__title title">
               Пармейстеры с богатым опытом работы
@@ -344,25 +344,25 @@
                 Здравы» 2019 года.
               </p>              
 
-              <img class="personal__group personal__img item item_img" src="assets/img/personal/personal-1920.png" alt="Пармейстеры">
+              <img class="personal__img promo__button__icon item_img" src="assets/img/personal/personal-1920.png" alt="Пармейстеры">
 
               <div class="personal__buttons">
                 <a class="personal__button button button_left button_special" data-certificates="#certificates-modal">Сертификаты</a>
 
-                <a class="personal__button button button_right button_light button_special">Видеоролик о нас</a>
+                <a class="personal__button button button_right button_special button_light">Видеоролик о нас</a>
               </div>
             </div>
           </div>
         </section>
       </div>
 
-      <section id="price" class="price wrapper__pading__large">
+      <section id="price" class="price">
         <div class="price__container container">
           <h2 class="price__title title">Стоимость</h2>
           <p class="price__amount title">15 000 РУБ <span>/ час</span></p>
           <p class="price__amount__text">Минимальный заказ - 4 часа</p>
 
-          <div class="price__list tickets font__dark">
+          <div class="price__list tickets">
             <div class="price__item tickets__item item">
               <div class="price__item__decor price__item__decor_leaf tickets__item__decor">
                 <svg style="width: 46px; height: 39px"><use href="#leaf"></use></svg>
@@ -396,7 +396,7 @@
         </div>
       </section>
 
-      <section id="services" class="services wrapper__padding__combo">
+      <section id="services" class="services">
         <img src="assets/img/bg-items/bg-item-5.svg" alt="" class="services__bgItem">
         <img src="assets/img/bg-items/bg-item-7.svg" alt="" class="services__bgItem">
 
@@ -502,7 +502,7 @@
         </div>
       </section>
 
-      <section id="benefits" class="benefits wrapper__pading__large">
+      <section id="benefits" class="benefits">
         <img src="assets/img/benefits-wave-top.png" alt="" class="benefits__wave benefits__wave_top" />
         <img src="assets/img/benefits-wave-bottom.png" alt="" class="benefits__wave benefits__wave_bottom" />
 
@@ -521,7 +521,7 @@
           <h2 class="benefits__title title">Преимущества</h2>
           <p class="benefits__text">Баня на дому с банщиками – это очевидные преимущества Вашего парения</p>
 
-          <div class="benefits__list tickets font__dark">
+          <div class="benefits__list tickets">
             <div class="benefits__item tickets__item item">
               <div class="benefits__item__decor tickets__item__decor">
                 <svg style="width: 46px; height: 38px"><use href="#house"></use></svg>
@@ -582,10 +582,10 @@
       </section>
 
       <div class="container__bottom">
-        <section id="guarantees" class="guarantees wrapper__pading__small">     
+        <section id="guarantees" class="guarantees">     
           <div class="guarantees__container container">
             <div class="guarantees__item guarantees_item_main item item_img">
-              <h2 class="guarantees__main__title title font__light">Мы гарантируем</h2>
+              <h2 class="guarantees__main__title title">Мы гарантируем</h2>
               <img class="guarantees__main__img item item_img" src="assets/img/providers-2.png" alt="">
             </div>
 
@@ -629,7 +629,7 @@
           </div>
         </section>
 
-        <section id="reviews" class="reviews wrapper__pading__small">
+        <section id="reviews" class="reviews">
           <h2 class="title reviews__title container">Отзывы</h2>
 
           <div class="reviews__swiper swiper container container__mobile">
@@ -744,7 +744,7 @@
           </div>
         </section>
 
-        <section id="stages" class="stages wrapper__padding__combo">
+        <section id="stages" class="stages">
           <img src="assets/img/bg-items/bg-item-7.svg" alt="" class="stages__bgItem">
           <img src="assets/img/bg-items/bg-item-6.svg" alt="" class="stages__bgItem">
           <img src="assets/img/bg-items/bg-item-4.svg" alt="" class="stages__bgItem">

@@ -142,14 +142,14 @@ new Swiper(".inviteUs__swiper", {
 // Сайдбар
 const header = document.querySelector('.header');
 const sidebar = document.querySelector('.sidebar');
-const links = sidebar.querySelectorAll('.sidebar__listLink');
+const links = sidebar.querySelectorAll('.sidebar__link');
 
 const getElementByLink = (link) => document.querySelector(link.getAttribute('href'));
 
 const setScrollMarginTop = () => {
   links.forEach(link => {    
     const element = getElementByLink(link);
-    const headerHeigt = header.clientHeight;
+    const headerHeigt = header.clientHeight - 5;
     element.style.scrollMarginTop = `${headerHeigt}px`;
   });
 }
