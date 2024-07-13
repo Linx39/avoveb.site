@@ -2797,6 +2797,7 @@ legend {
 
     color: var(--brown-pallet-100);
     background-color: var(--brown-pallet-600);
+
     background-image: url("../assets/img/benefits-bg/benefits-bg-1920.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -2898,7 +2899,10 @@ legend {
     }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 430px) { 
+    .benefits {
+        background-image: url("../assets/img/benefits-bg/benefits-bg-768.png");
+    }  
 
 }
 
