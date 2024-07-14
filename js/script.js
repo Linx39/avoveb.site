@@ -18,7 +18,7 @@ new Swiper(".reviews__swiper", {
       spaceBetween: 20,
     },
     920: {
-      slidesPerView: 2,
+      slidesPerView: 3,
       spaceBetween: 20,
     },
     1200: {

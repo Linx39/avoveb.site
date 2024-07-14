@@ -956,7 +956,7 @@ legend {
 }
 
 .header__social__button svg {
-    /* max-width: 85%; */
+    max-width: 85%;
     max-height: 85%;
 }
 
@@ -1137,7 +1137,7 @@ legend {
 .sidebar {
     position: relative;
     min-height: 100%;
-    padding: 32px 80px 32px 120px;
+    padding: 46px 44px 70px 46px;
 
     color: var(--brown-pallet-600);
     background-color: transparent;
@@ -1162,27 +1162,32 @@ legend {
     fill: var(--brown-pallet-100);
 }
 
-.sidebar__close__button {
-    position: absolute;
-    top: 32px;
-    right: 32px;
+.sidebar__head {
+    position: relative;
     z-index: 6;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 130px;   
 }
 
-.sidebar__content {
+.sidebar__close__button {
+}
+
+.sidebar__wrapper {
     position: relative;
     z-index: 5;
 
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 42px;
     min-height: 100%;
 }
 
 .sidebar__list {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 24px;
 
     text-align: left;
 }
@@ -1199,8 +1204,6 @@ legend {
 }
 
 .sidebar__contacts {
-    flex-grow: 1;
-    align-content: center;
 }
 
 .sidebar__phone {
@@ -1217,53 +1220,15 @@ legend {
 
 @media (max-width: 1700px) {
     .sidebar {        
-        padding: 28px 76px 28px 126px;
+        padding: 40px 44px 40px 120px;
     }
 
-    .sidebar__close__button {
-        top: 28px;
-        right: 28px;
-    }
-}
-
-@media (max-width: 1200px) {
-    .sidebar {        
-        padding: 24px 68px 24px 90px;
+    .sidebar__wrapper {
+        gap: 34px;
     }
 
-    .sidebar__close__button {
-        top: 24px;
-        right: 24px;
-    }
-
-    .sidebar__content {
-        gap: 20px;
-    }
-
-    .sidebar__list {
-        gap: 10px;
-    }
-}
-
-@media (max-width: 920px) {
-    .sidebar {        
-        padding: 24px 68px 24px 90px;
-    }
-
-    .sidebar__close__button {
-        top: 24px;
-        right: 24px;
-    }
-}
-
-@media (max-width: 760px) {
-    .sidebar {        
-        padding: 20px 52px 20px 68px;
-    }
-
-    .sidebar__close__button {
-        top: 12px;
-        right: 12px;
+    .sidebar__head {
+        gap: 110px;
     }
 
     .sidebar__list {
@@ -1271,14 +1236,75 @@ legend {
     }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 1200px) {
     .sidebar {        
-        padding: 20px 52px 20px 68px;
+        padding: 34px 40px 34px 90px;
     }
 
-    .sidebar__close__button {
-        top: 12px;
-        right: 12px;
+    .sidebar__wrapper {
+        gap: 30px;
+    }
+
+    .sidebar__head {
+        gap: 85px;
+    }
+
+    .sidebar__list {
+        gap: 14px;
+    }
+}
+
+@media (max-width: 920px) {
+    .sidebar {        
+        padding: 28px 40px 28px 40px;
+    }
+
+    .sidebar__wrapper {
+        gap: 30px;
+    }
+
+    .sidebar__head {
+        gap: 70px;
+    }
+
+    .sidebar__list {
+        gap: 14px;
+    }
+}
+
+@media (max-width: 760px) {
+    .sidebar {        
+        padding: 20px 16px 20px 68px;
+    }
+
+    .sidebar__wrapper {
+        gap: 26px;
+    }
+
+    .sidebar__head {
+        gap: 60px;
+    }
+
+    .sidebar__list {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 430px) {
+    .sidebar {        
+        padding: 28px 16px 28px 68px;
+    }
+
+    .sidebar__wrapper {
+        gap: 20px;
+    }
+
+    .sidebar__head {
+        gap: 60px;
+    }
+
+    .sidebar__list {
+        gap: 16px;
     }
 }
 
@@ -2666,7 +2692,7 @@ legend {
     }
 
     .services__list {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: var(--sm-gap);
     }
 
