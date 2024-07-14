@@ -814,38 +814,34 @@
       <img src="assets/img/bg-items/bg-item-9.svg" alt="" class="footer__bgItem" />
       <img src="assets/img/bg-items/bg-item-10.svg" alt="" class="footer__bgItem" />
 
-      <style>
-        .footer {
-          background-image: url("assets/img/footer-bg.png");
-          background-repeat: no-repeat;
-          background-size: cover;
-        }
-      </style>
-      <div class="container">
-        <div class="title">Контакты</div>
+      <div class="footer__bg" style="background-image: url('assets/img/footer-bg/footer-bg-1920.png');"></div>
 
-        <div class="footer__subtitle">Пишите нам в WhatsApp, Telegram или звоните, мы всегда на связи</div>
+      <div class="footer__container container">
+        <div class="footer__title title">Контакты</div>
 
-        <div class="footer__links">          
-          <a href="index.html#" class="footer__link sidebar__socialLink">
-            <svg class="footer__link__img__telegram sidebar__socialLink__img sidebar__socialLink__img_telegram"><use href="#telegram"></use></svg>
+        <div class="footer__subtitle">
+          Пишите нам в WhatsApp, Telegram или звоните, <br>
+          мы всегда на связи
+        </div>
+
+        <div class="footer__social">           
+          <a href="#" class="footer__social__button socialButton">
+            <svg style="width: 36px; height: 32px; transform: translateX(-6%);"><use href="#telegram"></use></svg>
           </a>
-
-          <a href="index.html#" class="footer__link sidebar__socialLink">
-            <svg class="footer__link__img__whatsapp sidebar__socialLink__img sidebar__socialLink__img_whatsapp"><use href="#whatsapp"></use></svg>
+          <a href="#" class="footer__social__button socialButton">
+            <svg style="width: 36px; height: 36px; transform: translateX(1%);"><use href="#whatsapp"></use></svg>
           </a>
-
-          <a href="index.html#" class="footer__link sidebar__socialLink">
-            <svg class="footer__link__img__youtube sidebar__socialLink__img sidebar__socialLink__img_youtube"><use href="#youtube"></use></svg>
+          <a href="#" class="footer__social__button socialButton">
+            <svg style="width: 32px; height: 25px;"><use href="#youtube"></use></svg>
           </a>
         </div>
 
-        <a href="tel:79263906734" class="footer__phone phone-light">+7-926-390-67-34</a>
+        <a class="footer__phone subtitle" href="tel:79263906734">+7-926-390-67-34</a>
 
-        <div class="footer__description">
+        <p class="footer__description">
           Мы работаем по Москве и МО <br>
           Возможны выезды в регионы и за пределы РФ
-        </div>
+        </p>
       </div>
     </footer>
 
