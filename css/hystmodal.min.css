@@ -56,7 +56,7 @@
 }
 
 .hystmodal__window {
-  /* margin: 50px 0; */
+  margin: 30px 0;
   /* margin: auto 0; */
   flex-shrink: 0;
   flex-grow: 0;
@@ -129,7 +129,7 @@
   outline-offset: 2px;
 }
 
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
   .hystmodal__close {
     top: 10px;
     right: 10px;
@@ -140,7 +140,7 @@
   .hystmodal__window {
     margin: 0;
   }
-}
+} */
 
 @media (orientation: landscape) {
   .hystmodal__window {
