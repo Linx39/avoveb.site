@@ -140,6 +140,10 @@
       <symbol id="sidebar-bg" viewBox="0 0 471 1024" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M15.0012 0H474.501V1024H15.0012C15.0012 1024 -0.154088 938.986 0.00118504 884C0.208614 810.544 26.8586 771.447 28.0012 698C29.1389 624.865 9.88969 585.04 6.00118 512C0.683029 412.105 17.9899 355.991 15.0012 256C13.5048 205.938 7.00118 178.085 7.00118 128C7.00118 77.9154 15.0012 0 15.0012 0Z"/>
       </symbol>
+
+      <symbol id="check" viewBox="0 0 23 16" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22.1196 1.49406L8.11955 15.4941C8.03829 15.5754 7.94178 15.64 7.83556 15.684C7.72934 15.728 7.61548 15.7507 7.50049 15.7507C7.3855 15.7507 7.27164 15.728 7.16541 15.684C7.05919 15.64 6.96269 15.5754 6.88142 15.4941L0.756424 9.36906C0.592238 9.20488 0.5 8.98219 0.5 8.75C0.5 8.51781 0.592238 8.29512 0.756424 8.13094C0.92061 7.96675 1.14329 7.87451 1.37549 7.87451C1.60768 7.87451 1.83036 7.96675 1.99455 8.13094L7.50049 13.638L20.8814 0.255935C21.0456 0.0917497 21.2683 -0.000488283 21.5005 -0.000488281C21.7327 -0.00048828 21.9554 0.0917497 22.1196 0.255935C22.2837 0.420121 22.376 0.642805 22.376 0.874998C22.376 1.10719 22.2837 1.32988 22.1196 1.49406Z"/>
+      </symbol>
     </svg>
 
     <header class="header">
@@ -509,24 +513,26 @@
                     <span class="visually-hidden">Закрыть окно</span> 
                   </button>
         
-                  <div class="servicesModal__bg" style="background-image: url('assets/img/services-modal/services-modal-1-1920.png');"></div>
+                  <div class="servicesModal__bg modal__bg" style="background-image: url('assets/img/services-modal/services-modal-1-1440.png');"></div>
                   
-                  <div class="servicesModal__content">
-                    <h2 class="servicesModal__title title"><span class="title__span">Парение</span> Первый пар</h2>
-                    <p class="servicesModal__subtitle subtext">Длительность - 15 минут</p>
-        
-                    <div class="servicesModal__textWrapper">
-                      <div class="servicesModal__textWrapper__scroll scroll">
-                        <p class="servicesModal__text">
-                          Мягкое ознакомительное веничное парение без резких контрастных переходов с плавным погружением
-                          в мир банного удовольствия. Подходит тем, кто впервые пробует париться с банным мастером.
-                        </p>
+                  <div class="modal__wrapper">
+                    <div class="servicesModal__content">
+                      <h2 class="servicesModal__title title"><span class="title__span">Парение</span> Первый пар</h2>
+                      <p class="servicesModal__subtitle subtext">Длительность - 15 минут</p>
+          
+                      <div class="servicesModal__textWrapper">
+                        <div class="servicesModal__textWrapper__scroll scroll">
+                          <p class="servicesModal__text">
+                            Мягкое ознакомительное веничное парение без резких контрастных переходов с плавным погружением
+                            в мир банного удовольствия. Подходит тем, кто впервые пробует париться с банным мастером.
+                          </p>
+                        </div>
                       </div>
+          
+                      <a class="servicesModal__button button button_left button_modal" data-feedback="#feedback-modal">
+                        Хочу попробовать!
+                      </a>
                     </div>
-        
-                    <a class="servicesModal__button button button_left button_modal" data-feedback="#feedback-modal">
-                      Хочу попробовать!
-                    </a>
                   </div>
                 </div>
               </div>
@@ -540,33 +546,35 @@
                     <span class="visually-hidden">Закрыть окно</span> 
                   </button>
         
-                  <div class="servicesModal__bg" style="background-image: url('assets/img/services-modal/services-modal-2-1440.png');"></div>
+                  <div class="servicesModal__bg modal__bg" style="background-image: url('assets/img/services-modal/services-modal-2-1440.png');"></div>
                 
-                  <div class="servicesModal__content">
-                    <h2 class="servicesModal__title title"><span class="title__span">Парение</span> Классическое</h2>
-                    <p class="servicesModal__subtitle subtext">Длительность - 30 минут</p>
-        
-                    <div class="servicesModal__textWrapper">
-                      <div class="servicesModal__textWrapper__scroll scroll">
-                        <p class="servicesModal__text">
-                          Парение начинается с качественного согревания ног, что доставляет особое удовольствие
-                          ценителям бани.
-                        </p>        
-                        <p class="servicesModal__text">
-                          Классическое парение — это постепенный прогрев всего тела, когда оно методично пропаривается
-                          до состояния «хочу в купель».
-                        </p>        
-                        <p class="servicesModal__text">
-                          После контраста (по желанию может быть обливание на полке/окунание в купель/обливание из
-                          ведра) вы возвращаетесь обратно в парную, где совершается догрев тела на мягком или ярком пару
-                          с массажно-растирочными движениями.
-                        </p>
+                  <div class="modal__wrapper">
+                    <div class="servicesModal__content">
+                      <h2 class="servicesModal__title title"><span class="title__span">Парение</span> Классическое</h2>
+                      <p class="servicesModal__subtitle subtext">Длительность - 30 минут</p>
+          
+                      <div class="servicesModal__textWrapper">
+                        <div class="servicesModal__textWrapper__scroll scroll">
+                          <p class="servicesModal__text">
+                            Парение начинается с качественного согревания ног, что доставляет особое удовольствие
+                            ценителям бани.
+                          </p>        
+                          <p class="servicesModal__text">
+                            Классическое парение — это постепенный прогрев всего тела, когда оно методично пропаривается
+                            до состояния «хочу в купель».
+                          </p>        
+                          <p class="servicesModal__text">
+                            После контраста (по желанию может быть обливание на полке/окунание в купель/обливание из
+                            ведра) вы возвращаетесь обратно в парную, где совершается догрев тела на мягком или ярком пару
+                            с массажно-растирочными движениями.
+                          </p>
+                        </div>
                       </div>
+        
+                      <a class="servicesModal__button button button_left button_modal" data-feedback="#feedback-modal">
+                        Хочу попробовать!
+                      </a>
                     </div>
-      
-                    <a class="servicesModal__button button button_left button_modal" data-feedback="#feedback-modal">
-                      Хочу попробовать!
-                    </a>
                   </div>
                 </div>
               </div>
@@ -580,41 +588,43 @@
                     <span class="visually-hidden">Закрыть окно</span> 
                   </button>
 
-                  <div class="servicesModal__bg" style="background-image: url('assets/img/services-modal/services-modal-3-1920.png');"></div>
+                  <div class="servicesModal__bg modal__bg" style="background-image: url('assets/img/services-modal/services-modal-3-1440.png');"></div>
 
-                  <div class="servicesModal__content">
-                    <h2 class="servicesModal__title title"><span>Парение</span> Гурме</h2>
-                    <p class="servicesModal__subtitle subtext">Длительность - 40 мин</p>
-        
-                    <div class="servicesModal__textWrapper">
-                      <div class="servicesModal__textWrapper__scroll scroll">
-                        <p class="servicesModal__text">
-                          Персональное парение, которое рождается во взаимодействии гостя и пармастера. Оно абсолютно
-                          уникально для каждого.
-                        </p>        
-                        <p class="servicesModal__text">
-                          Изысканный и глубокий процесс для тех, кто давно ходит в баню и любит ее.
-                        </p>        
-                        <p class="servicesModal__text">
-                          Парение-гурме основано на желании создать для Вас впечатляющий банный опыт, исходя из ваших
-                          пожеланий и предпочтений которые и становятся частью процесса.
-                        </p>        
-                        <p class="servicesModal__text">
-                          Длительное парение, тщательный прогрев всего тела, нескончаемая череда самых вкусных и
-                          приятных припарок, пасов, компрессов и других изысканных банных приемов. Контрастная процедура
-                          на ваш выбор. Догрев тела в парной или холодное парение на улице. Всё самое вкусное из мира
-                          банного искусства в этом парении для Вас!
-                        </p>        
-                        <p class="servicesModal__text">
-                          Парение-гурме основано на желании создать для Вас впечатляющий банный опыт, исходя из ваших
-                          пожеланий и предпочтений которые и становятся частью процесса.
-                        </p>
+                  <div class="modal__wrapper">
+                    <div class="servicesModal__content">
+                      <h2 class="servicesModal__title title"><span>Парение</span> Гурме</h2>
+                      <p class="servicesModal__subtitle subtext">Длительность - 40 мин</p>
+          
+                      <div class="servicesModal__textWrapper">
+                        <div class="servicesModal__textWrapper__scroll scroll">
+                          <p class="servicesModal__text">
+                            Персональное парение, которое рождается во взаимодействии гостя и пармастера. Оно абсолютно
+                            уникально для каждого.
+                          </p>        
+                          <p class="servicesModal__text">
+                            Изысканный и глубокий процесс для тех, кто давно ходит в баню и любит ее.
+                          </p>        
+                          <p class="servicesModal__text">
+                            Парение-гурме основано на желании создать для Вас впечатляющий банный опыт, исходя из ваших
+                            пожеланий и предпочтений которые и становятся частью процесса.
+                          </p>        
+                          <p class="servicesModal__text">
+                            Длительное парение, тщательный прогрев всего тела, нескончаемая череда самых вкусных и
+                            приятных припарок, пасов, компрессов и других изысканных банных приемов. Контрастная процедура
+                            на ваш выбор. Догрев тела в парной или холодное парение на улице. Всё самое вкусное из мира
+                            банного искусства в этом парении для Вас!
+                          </p>        
+                          <p class="servicesModal__text">
+                            Парение-гурме основано на желании создать для Вас впечатляющий банный опыт, исходя из ваших
+                            пожеланий и предпочтений которые и становятся частью процесса.
+                          </p>
+                        </div>
                       </div>
+          
+                      <a class="servicesModal__button button button_left button_modal" data-feedback="#feedback-modal">
+                        Хочу попробовать!
+                      </a>
                     </div>
-        
-                    <a class="servicesModal__button button button_left button_modal" data-feedback="#feedback-modal">
-                      Хочу попробовать!
-                    </a>
                   </div>
                 </div>
               </div>
@@ -628,30 +638,33 @@
                     <span class="visually-hidden">Закрыть окно</span> 
                   </button>
                   
-                  <div class="servicesModal__bg" style="background-image: url('assets/img/services-modal/services-modal-4-1920.png');"></div>
+                  <div class="servicesModal__bg modal__bg" style="background-image: url('assets/img/services-modal/services-modal-4-1440.png');"></div>
       
-                  <div class="servicesModal__content">
-                    <h2 class="servicesModal__title title"><span>Парение</span> Коллективное</h2>
-                    <p class="servicesModal__subtitle subtext">Длительность - 30 мин</p>
-        
-                    <div class="servicesModal__textWrapper">
-                      <div class="servicesModal__textWrapper__scroll scroll">
-                        <p class="servicesModal__text">
-                          Предложим интересную авторскую программу коллективного парения исходя из ваших задач,
-                          количества человек и возможностей банного пространства.
-                        </p>        
-                        <p class="servicesModal__text">
-                          Например, это может быть "пассивный" вариант парения, когда пармастер работает веером,
-                          распаривает ароматные травы, согревает всех гостей нежным теплом. Или же активная программа,
-                          когда под руководством мастера все гости принимают участие в парении, согреваясь березовыми
-                          вениками. Парная наполняется радостью, улыбками и яркими эмоциями.
-                        </p>
+                  
+                  <div class="modal__wrapper">
+                    <div class="servicesModal__content">
+                      <h2 class="servicesModal__title title"><span>Парение</span> Коллективное</h2>
+                      <p class="servicesModal__subtitle subtext">Длительность - 30 мин</p>
+          
+                      <div class="servicesModal__textWrapper">
+                        <div class="servicesModal__textWrapper__scroll scroll">
+                          <p class="servicesModal__text">
+                            Предложим интересную авторскую программу коллективного парения исходя из ваших задач,
+                            количества человек и возможностей банного пространства.
+                          </p>        
+                          <p class="servicesModal__text">
+                            Например, это может быть "пассивный" вариант парения, когда пармастер работает веером,
+                            распаривает ароматные травы, согревает всех гостей нежным теплом. Или же активная программа,
+                            когда под руководством мастера все гости принимают участие в парении, согреваясь березовыми
+                            вениками. Парная наполняется радостью, улыбками и яркими эмоциями.
+                          </p>
+                        </div>
                       </div>
+          
+                      <a class="servicesModal__button button button_left button_modal" data-feedback="#feedback-modal">
+                        Хочу попробовать!
+                      </a>
                     </div>
-        
-                    <a class="servicesModal__button button button_left button_modal" data-feedback="#feedback-modal">
-                      Хочу попробовать!
-                    </a>
                   </div>
                 </div>
               </div>
@@ -665,29 +678,32 @@
                     <span class="visually-hidden">Закрыть окно</span> 
                   </button>
 
-                  <div class="servicesModal__bg" style="background-image: url('assets/img/services-modal/services-modal-5-1920.png');"></div>
+                  <div class="servicesModal__bg modal__bg" style="background-image: url('assets/img/services-modal/services-modal-5-1440.png');"></div>
 
-                  <div class="servicesModal__content">
-                    <h2 class="servicesModal__title title">Медовая ладка</h2>
-                    <div class="servicesModal__subtitle subtext">Длительность - 40 мин</div>
-        
-                    <div class="servicesModal__textWrapper">
-                      <div class="servicesModal__textWrapper__scroll scroll">
-                        <p class="servicesModal__text">
-                          Теплый мед буквально проваливается сквозь теплую, голодную после хорошего парения кожу,
-                          напитывая ее полезными компонентами.
-                        </p>        
-                        <p class="servicesModal__text">
-                          Осмысленное проведение этого ритуала мастером, когда мед внимательно провожается в распаренное
-                          тело, позволяет тщательно промассировать и проработать всё тело от пяток до макушки.
-                        </p>        
-                        <p class="servicesModal__text">Так достигается изумительный результат</p>
+                  
+                  <div class="modal__wrapper">
+                    <div class="servicesModal__content">
+                      <h2 class="servicesModal__title title">Медовая ладка</h2>
+                      <div class="servicesModal__subtitle subtext">Длительность - 40 мин</div>
+          
+                      <div class="servicesModal__textWrapper">
+                        <div class="servicesModal__textWrapper__scroll scroll">
+                          <p class="servicesModal__text">
+                            Теплый мед буквально проваливается сквозь теплую, голодную после хорошего парения кожу,
+                            напитывая ее полезными компонентами.
+                          </p>        
+                          <p class="servicesModal__text">
+                            Осмысленное проведение этого ритуала мастером, когда мед внимательно провожается в распаренное
+                            тело, позволяет тщательно промассировать и проработать всё тело от пяток до макушки.
+                          </p>        
+                          <p class="servicesModal__text">Так достигается изумительный результат</p>
+                        </div>
                       </div>
+          
+                      <a class="servicesModal__button button button_left button_modal" data-feedback="#feedback-modal">
+                        Хочу попробовать!
+                      </a>
                     </div>
-        
-                    <a class="servicesModal__button button button_left button_modal" data-feedback="#feedback-modal">
-                      Хочу попробовать!
-                    </a>
                   </div>
                 </div>
               </div>
@@ -701,34 +717,37 @@
                     <span class="visually-hidden">Закрыть окно</span> 
                   </button>
 
-                  <div class="servicesModal__bg" style="background-image: url('assets/img/services-modal/services-modal-6-1920.png');"></div>
+                  <div class="servicesModal__bg modal__bg" style="background-image: url('assets/img/services-modal/services-modal-6-1440.png');"></div>
 
-                  <div class="servicesModal__content">
-                    <h2 class="servicesModal__title title">Очищение солью</h2>
-                    <p class="servicesModal__subtitle subtext">Длительность - 30 мин</p>
-        
-                    <div class="servicesModal__textWrapper">
-                      <div class="servicesModal__textWrapper__scroll scroll">
-                        <p class="servicesModal__text">
-                          Соль для банных гурманов — особый компонент, помогающий не только очистить поверхность кожи,
-                          но и ярче ощутить наслаждение и обновление.
-                        </p>
-        
-                        <p class="servicesModal__text">
-                          Она обладает уникальной способностью "поглощать информацию", что позволяет освобождать тело от
-                          негативных эмоций и тягостных мыслей.
-                        </p>
-        
-                        <p class="servicesModal__text">
-                          Постепенное нанесение соли на всё тело, нежный пиллинг и качественное очищение на всех
-                          уровнях.
-                        </p>
+                  
+                  <div class="modal__wrapper">
+                    <div class="servicesModal__content">
+                      <h2 class="servicesModal__title title">Очищение солью</h2>
+                      <p class="servicesModal__subtitle subtext">Длительность - 30 мин</p>
+          
+                      <div class="servicesModal__textWrapper">
+                        <div class="servicesModal__textWrapper__scroll scroll">
+                          <p class="servicesModal__text">
+                            Соль для банных гурманов — особый компонент, помогающий не только очистить поверхность кожи,
+                            но и ярче ощутить наслаждение и обновление.
+                          </p>
+          
+                          <p class="servicesModal__text">
+                            Она обладает уникальной способностью "поглощать информацию", что позволяет освобождать тело от
+                            негативных эмоций и тягостных мыслей.
+                          </p>
+          
+                          <p class="servicesModal__text">
+                            Постепенное нанесение соли на всё тело, нежный пиллинг и качественное очищение на всех
+                            уровнях.
+                          </p>
+                        </div>
                       </div>
+          
+                      <a class="servicesModal__button button button_left button_modal" data-feedback="#feedback-modal">
+                        Хочу попробовать!
+                      </a>
                     </div>
-        
-                    <a class="servicesModal__button button button_left button_modal" data-feedback="#feedback-modal">
-                      Хочу попробовать!
-                    </a>
                   </div>
                 </div>
               </div>
@@ -742,29 +761,31 @@
                     <span class="visually-hidden">Закрыть окно</span> 
                   </button>
 
-                  <div class="servicesModal__bg" style="background-image: url('assets/img/services-modal/services-modal-7-1920.png');"></div>
-
-                  <div class="servicesModal__content">
-                    <h2 class="servicesModal__title title">Березовая помывка</h2>
-                    <p class="servicesModal__subtitle subtext">Длительность - 30 мин</p>
-        
-                    <div class="servicesModal__textWrapper">
-                      <div class="servicesModal__textWrapper__scroll scroll">
-                        <p class="servicesModal__text">
-                          Пушистый березовый веник + ароматное хвойное или дегтярное мыло - традиционный атрибут
-                          настоящей бани.
-                        </p>        
-                        <p class="servicesModal__text">
-                          Шелковистая пена наносится на тело распаренным веником и начинается магия — все мышцы
-                          проминаются, растягиваются и массируются. Поверхность кожи очищается на 100%. Вы испытываете
-                          полное расслабление и настоящее удовольствие от чистоты тела.
-                        </p>
+                  <div class="servicesModal__bg modal__bg" style="background-image: url('assets/img/services-modal/services-modal-7-1440.png');"></div>
+                  
+                  <div class="modal__wrapper">
+                    <div class="servicesModal__content">
+                      <h2 class="servicesModal__title title">Березовая помывка</h2>
+                      <p class="servicesModal__subtitle subtext">Длительность - 30 мин</p>
+          
+                      <div class="servicesModal__textWrapper">
+                        <div class="servicesModal__textWrapper__scroll scroll">
+                          <p class="servicesModal__text">
+                            Пушистый березовый веник + ароматное хвойное или дегтярное мыло - традиционный атрибут
+                            настоящей бани.
+                          </p>        
+                          <p class="servicesModal__text">
+                            Шелковистая пена наносится на тело распаренным веником и начинается магия — все мышцы
+                            проминаются, растягиваются и массируются. Поверхность кожи очищается на 100%. Вы испытываете
+                            полное расслабление и настоящее удовольствие от чистоты тела.
+                          </p>
+                        </div>
                       </div>
+          
+                      <a class="servicesModal__button button button_left button_modal" data-feedback="#feedback-modal">
+                        Хочу попробовать!
+                      </a>
                     </div>
-        
-                    <a class="servicesModal__button button button_left button_modal" data-feedback="#feedback-modal">
-                      Хочу попробовать!
-                    </a>
                   </div>
                 </div>
               </div>
@@ -773,32 +794,34 @@
             <div class="hystmodal" id="services-modal-8" aria-hidden="true">
               <div class="hystmodal__wrap">
                 <div class="servicesModal modal hystmodal__window  services-modal-8" role="dialog" aria-modal="true">
-                  <button data-hystclose class="modal__closeButton closeButton">
+                  <button class="modal__closeButton closeButton" data-hystclose>
                     <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                     <span class="visually-hidden">Закрыть окно</span> 
                   </button>
                  
-                  <div class="servicesModal__bg" style="background-image: url('assets/img/services-modal/services-modal-8-1920.png');"></div>
+                  <div class="servicesModal__bg modal__bg" style="background-image: url('assets/img/services-modal/services-modal-8-1440.png');"></div>
 
-                  <div class="servicesModal__content">
-                    <h2 class="servicesModal__title title">Пилинг тела</h2>
-                    <p class="servicesModal__subtitle subtext">Длительность - 20 мин</p>
-        
-                    <div class="servicesModal__textWrapper">
-                      <div class="servicesModal__textWrapper__scroll scroll">
-                        <p class="servicesModal__text">
-                          Внимательная работа мастера с Вашим телом, приправленная нежными частицами скраба, ароматными
-                          маслами, качественным медом – вот рецепт лучшего пилинга для тела.
-                        </p>        
-                        <p class="servicesModal__text">
-                          Почувствуйте приятное послевкусие обновления – бодрость, чистоту, гладкость и нежность кожи.
-                        </p>
+                  <div class="modal__wrapper">
+                    <div class="servicesModal__content">
+                      <h2 class="servicesModal__title title">Пилинг тела</h2>
+                      <p class="servicesModal__subtitle subtext">Длительность - 20 мин</p>
+          
+                      <div class="servicesModal__textWrapper">
+                        <div class="servicesModal__textWrapper__scroll scroll">
+                          <p class="servicesModal__text">
+                            Внимательная работа мастера с Вашим телом, приправленная нежными частицами скраба, ароматными
+                            маслами, качественным медом – вот рецепт лучшего пилинга для тела.
+                          </p>        
+                          <p class="servicesModal__text">
+                            Почувствуйте приятное послевкусие обновления – бодрость, чистоту, гладкость и нежность кожи.
+                          </p>
+                        </div>
                       </div>
+          
+                      <a class="servicesModal__button button button_left button_modal" data-feedback="#feedback-modal">
+                        Хочу попробовать!
+                      </a>
                     </div>
-        
-                    <a class="servicesModal__button button button_left button_modal" data-feedback="#feedback-modal">
-                      Хочу попробовать!
-                    </a>
                   </div>
                 </div>
               </div>
@@ -1152,38 +1175,41 @@
     <!-- Модальное окно обратной связи -->
     <div class="hystmodal" id="feedback-modal" aria-hidden="true">
       <div class="hystmodal__wrap">
-        <div class="hystmodal__window feedbackModal" role="dialog" aria-modal="true">
+        <div class="feedbackModal modal hystmodal__window" role="dialog" aria-modal="true">
           <button data-hystclose class="modal__closeButton closeButton">
-            Закрыть                    
-            <svg><use href="#cross"></use></svg>
+            <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
+            <span class="visually-hidden">Закрыть окно</span> 
           </button>
 
-          <div class="feedbackModal__content">
-            <h2 class="feedbackModal__title">Оставить заявку</h2>
-            <p class="feedbackModal__text">После составления заявки мы с Вами свяжемся для уточнения деталей</p>
+          <div class="feedbackModal__bg modal__bg" style="background-image: url('assets/img/feedback/feedback-bg-1440.png');"></div>
 
-            <form action="index.html" class="feedbackModal__form">
-              <input name="username" type="text" class="feedbackModal__input" placeholder="Имя" required />
-              <input name="userphone" type="text" class="feedbackModal__input" placeholder="Номер телефона" required />
+          <div class="modal__wrapper">
+            <div class="feedbackModal__content feedback">
+              <h2 class="feedback__title title">Оставить заявку</h2>
+              <p class="feedback__description">После составления заявки мы с Вами свяжемся для уточнения деталей</p>
 
-              <!-- <div class="feedbackModal__success">Форма успешно отправлена!</div> -->
+              <form class="feedback__form" action="index.html" method="post">
+                <div class="feedback__form__group">
+                  <label class="feedback__form__label" for="username">
+                    <input class="feedback__form__input" name="username" id="username" type="text" placeholder="Имя" required>
+                  </label>
 
-              <div class="feedbackModal__privatedataWrapper">
-                <input
-                  type="checkbox"
-                  class="feedbackModal__privatedata__chekbox"
-                  id="feedback-modal-chekbox"
-                  name="privacy"
-                  value="yes"
-                  required
-                />
-                <label for="feedback-modal-chekbox" class="feedbackModal__privatedata__chekboxLabel">
-                  Я даю своё согласие на обработку персональных данных
-                </label>
-              </div>
+                  <label class="feedback__form__label" for="userphone">
+                    <input class="feedback__form__input" name="userphone" id="userphone" type="tel" placeholder="Номер телефона" required>
+                  </label>
 
-              <button type="submit" class="button feedbackModal__button">Оставить заявку</button>
-            </form>
+                  <label class="feedback__form__control" for="privacy">
+                    <input class="feedback__form__control__input visually-hidden" type="checkbox" name="privacy" id="privacy" required tabindex="-1">
+                    <span class="feedback__form__control__mark" tabindex="0">
+                      <svg style="width: 23px; height: 16px;"><use href="#check"></use></svg>
+                    </span>
+                    Я даю своё согласие на обработку персональных данных
+                  </label>
+                </div>
+
+                <button class="feedback__form__button button button_left button_modal" type="submit">Хочу попробовать!</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
