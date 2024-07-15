@@ -192,6 +192,16 @@ window.addEventListener('resize', () => {
   setMainMarginTop();
 });
 
+/* Закрытие модального окна услуг перед открытием формы заявки */
+const servicesModals = document.querySelectorAll('.servicesModal');
+
+servicesModals.forEach(item => {
+  const servicesModalButton = item.querySelector('.servicesModal__button');
+  servicesModalButton.addEventListener('click', () => {
+   servicesModal.close();
+  })
+
+})
 
 // Модальные окна
 const sidebarModal = new HystModal({
@@ -206,12 +216,12 @@ const certificateModal = new HystModal({
   linkAttributeName: "data-certificatemodal",
 });
 
-const feedbackModal = new HystModal({
-  linkAttributeName: "data-feedback",
-});
-
 const servicesModal = new HystModal({
   linkAttributeName: "data-services",
+});
+
+const feedbackModal = new HystModal({
+  linkAttributeName: "data-feedback",
 });
 
 const successModal = new HystModal({
@@ -223,11 +233,11 @@ const feedbackForm = document.querySelector(".feedbackModal__form");
 // const feedbackSuccessText = document.querySelector(".feedbackModal__success");
 const feedbackInputs = document.querySelectorAll(".feedbackModal__input");
 
-feedbackForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  feedbackModal.close("#feedback-modal");
-  successModal.open("#success-modal");
-});
+// feedbackForm.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   feedbackModal.close("#feedback-modal");
+//   successModal.open("#success-modal");
+// });
 
 // Блок этапы
 const STAGES_ITEM_CURRENT_CLASS = 'stages__item_current';
