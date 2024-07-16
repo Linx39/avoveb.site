@@ -13,7 +13,7 @@ new Swiper(".reviews__swiper", {
       slidesPerView: 1,
       spaceBetween: 20,
     },
-    730: {
+    760: {
       slidesPerView: 2,
       spaceBetween: 20,
     },
@@ -38,60 +38,54 @@ new Swiper(".reviews__swiper", {
 
   pagination: {
     el: ".reviews__swiper__pagination",
-    bulletClass: 'reviews__swiper__bullet',
-    bulletActiveClass: 'reviews__swiper__bullet_current',
+    bulletClass: 'bullet',
+    bulletActiveClass: 'bullet_current',
     clickable: true,
   },
 });
 
-new Swiper(".inviteUs__swiper", {
-  navigation: {
-    prevEl: ".inviteUs__swiperPrev",
-    nextEl: ".inviteUs__swiperNext",
-  },
-  pagination: {
-    el: ".inviteUs__swiperPagination",
-    clickable: true,
-  },
-  slidesPerView: 3,
-  slidesPerGroup: 3,
-  autoHeight: true,
-
+new Swiper(".certificates__swiper", {
   loop: true,
+
   breakpoints: {
     320: {
-      slidesPerGroup: 2,
-      slidesPerView: 2,
+      slidesPerGroup: 1,
+      slidesPerView: 1,
       spaceBetween: 12,
     },
-    750: {
-      autoHeight: false,
+    760: {
       slidesPerGroup: 2,
       slidesPerView: 2,
       spaceBetween: 20,
     },
-    1200: {
-      autoHeight: true,
+    920: {
       slidesPerGroup: 3,
       slidesPerView: 3,
-      // spaceBetween: 60,
+      spaceBetween: 20,
+    },
+    1200: {
+      slidesPerGroup: 3,
+      slidesPerView: 3,
+      spaceBetween: 28,
+    },
+    1700: {
+      slidesPerGroup: 3,
+      slidesPerView: 3,
+      spaceBetween: 32,
     },
   },
+
+  navigation: {
+    prevEl: ".certificates__swiper__buttonPrev",
+    nextEl: ".certificates__swiper__buttonNext",
+  },
+  pagination: {
+    el: ".certificates__swiper__pagination",
+    bulletClass: 'bullet',
+    bulletActiveClass: 'bullet_current',
+    clickable: true,
+  },
 });
-
-// плавный скролл к якорю
-// const smoothLinks = document.querySelectorAll('a[href^="#"]');
-// for (let smoothLink of smoothLinks) {
-//   smoothLink.addEventListener("click", function (e) {
-//     e.preventDefault();
-//     const id = smoothLink.getAttribute("href");
-
-//     document.querySelector(id).scrollIntoView({
-//       behavior: "smooth",
-//       block: "start",
-//     });
-//   });
-// }
 
 // Логика сайдбара.
 // const sidebar = document.querySelector(".sidebar");
@@ -193,15 +187,38 @@ window.addEventListener('resize', () => {
 });
 
 /* Закрытие модального окна услуг перед открытием формы заявки */
-const servicesModals = document.querySelectorAll('.servicesModal');
+// const servicesModalElements = document.querySelectorAll('.servicesModal');
 
-servicesModals.forEach(item => {
-  const servicesModalButton = item.querySelector('.servicesModal__button');
-  servicesModalButton.addEventListener('click', () => {
-   servicesModal.close();
-  })
+// servicesModalElements.forEach(item => {
+//   const servicesModalButton = item.querySelector('.servicesModal__button');
+//   servicesModalButton.addEventListener('click', () => {
+//    servicesModal.close();
+//   })
+// })
 
-})
+/* Закрытие/открытие модального окна сертификатов перед открытием/закрытием увеличенной картинки */
+const certificatesModalElement = document.querySelector('.certificatesModal');
+const certificatesModalButtons = certificatesModalElement.querySelectorAll('.certificates__card');
+
+// certificatesModalButtons.forEach(btn => {
+//   btn.addEventListener('click', () => {
+//     certificatesModal.close();
+//   })
+// })
+
+// const pictureModalElements = document.querySelectorAll('.pictureModal');
+// pictureModalElements.forEach(item => {
+//   const btn = item.querySelector('.pictureModal__close');
+
+//   btn.addEventListener('click', () => {
+//     console.log(certificatesModal.config);
+//     console.log(servicesModal.isOpened);
+
+//     certificatesModal.isOpened = true;
+//     console.log(servicesModal.isOpened);
+//     // certificatesModal.open('#certificates-modal');
+//   })
+// })
 
 // Модальные окна
 const sidebarModal = new HystModal({
@@ -212,8 +229,8 @@ const certificatesModal = new HystModal({
   linkAttributeName: "data-certificates",
 });
 
-const certificateModal = new HystModal({
-  linkAttributeName: "data-certificatemodal",
+const pictureModal = new HystModal({
+  linkAttributeName: "data-picturemodal",
 });
 
 const servicesModal = new HystModal({
