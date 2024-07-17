@@ -573,33 +573,6 @@ legend {
     opacity: .8;
 }
 
-/* Логотип */
-.logo {
-    width: 213px;
-    height: 57px
-}
-
-@media (max-width: 1200px) {
-    .logo {
-        width: 198px;
-        height: 53px;
-    }
-}
-
-@media (max-width: 760px) {
-    .logo {
-        width: 148px;
-        height: 40px;
-    }
-}
-
-@media (max-width: 460px) {
-    .logo {
-        width: 120px;
-        height: 33px;
-    }
-}
-
 /* Декоративные круги */
 .circle {
     width: 64px;
@@ -1111,15 +1084,61 @@ legend {
     }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 760px) {
     .phone {
-        gap: 6px;
-        font-size: 15px;
+        gap: 8px;
+        font-size: 16px;
     }
 
     .phone__icon {
-        width: 15px;
-        height: 15px;
+        width: 16px;
+        height: 16px;
+    }
+}
+
+@media (max-width: 460px) {
+    .phone {
+        gap: 6px;
+        /* font-size: 15px; */
+    }
+
+    .phone__icon {
+        /* width: 15px;
+        height: 15px; */
+    }
+}
+
+/* Логотип */
+.logo {
+    width: 213px;
+    height: 57px
+}
+
+@media (max-width: 1200px) {
+    .logo {
+        width: 198px;
+        height: 53px;
+    }
+}
+
+@media (max-width: 960px) {
+    .logo {
+        width: 180px;
+        height: 48px;
+    }
+}
+
+@media (max-width: 760px) {
+    .logo {
+        width: 148px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 460px) {
+    .logo {
+        width: 120px;
+        height: 33px;
     }
 }
 
@@ -1273,7 +1292,7 @@ legend {
 
 @media (max-width: 960px) {
     .header {
-        min-height: 112px;
+        min-height: 80px;
         padding: 15px 0;
     }
 
@@ -1317,18 +1336,37 @@ legend {
 
 @media (max-width: 760px) {
     .header {
+        min-height: 90px;
         padding: 10px 0;
+    }
+
+    .header__container {
+        gap: 15px;
+        padding: 0 10px;
     }
 
     .header__nav {
         flex-direction: column;
         align-items: end;       
+        gap: 14px;
+    }
+
+    .header__buttons {
         gap: 16px;
     }
 
     .header__phone {
         order: 1;
         margin-top: 0;
+    }
+
+    .header__social {
+        gap: 8px;
+    }
+
+    .header__button {
+        width: 36px;
+        height: 36px;
     }
 }
 
