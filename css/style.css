@@ -30,6 +30,7 @@
     --lg-gap: 32px;
     --md-gap: 28px;
     --sm-gap: 20px;
+    --xs-gap: 16px;
 
     --lg-column-3: calc((100% - 2 * var(--lg-gap)) / 3);
     --md-column-3: calc((100% - 2 * var(--md-gap)) / 3);
@@ -230,7 +231,7 @@ legend {
     }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 960px) {
     .page__body {
         font-size: 16px;
         line-height: 20px;
@@ -272,7 +273,7 @@ legend {
     }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 960px) {
     .title {
         font-size: 28px;
         line-height: 34px;
@@ -321,15 +322,8 @@ legend {
 
 @media (max-width: 960px) {
     .maintitle {
-        font-size: 40px;
-        line-height: 48px;
-    }
-}
-
-@media (max-width: 760px) {
-    .maintitle {
-        font-size: 28px;
-        line-height: 32px;
+        font-size: 32px;
+        line-height: 36px;
     }
 }
 
@@ -348,7 +342,7 @@ legend {
 .subtitle {
     font-family: var(--second-family);
     font-size: 32px;
-    line-height: 125%;
+    line-height: 40px;
     font-weight: 700;
     text-align: center;
     text-wrap: balance;
@@ -357,24 +351,28 @@ legend {
 @media (max-width: 1700px) {
     .subtitle {
         font-size: 32px;
+        line-height: 40px;
     }
 }
 
 @media (max-width: 1200px) {
     .subtitle {
         font-size: 28px;
+        line-height: 32px;
     }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 960px) {
     .subtitle {
-        font-size: 22px;
+        font-size: 24px;
+        line-height: 28px;
     }
 }
 
 @media (max-width: 460px) {
     .subtitle {
         font-size: 20px;
+        line-height: 24px;
     }
 }
 
@@ -390,37 +388,35 @@ legend {
 
 .maintext {
     font-size: 24px;
-    line-height: 117%;
+    line-height: 28px;
     font-weight: 600;
 }
 
 @media (max-width: 1700px) {
     .maintext {
         font-size: 22px;
+        line-height: 26px;
     }
 }
 
 @media (max-width: 1200px) {
     .maintext {
         font-size: 20px;
+        line-height: 24px;
     }
 }
 
 @media (max-width: 960px) {
     .maintext {
         font-size: 20px;
-    }
-}
-
-@media (max-width: 760px) {
-    .maintext {
-        font-size: 18px;
+        line-height: 24px;
     }
 }
 
 @media (max-width: 460px) {
     .maintext {
         font-size: 16px;
+        line-height: 20px;
     }
 }
 
@@ -452,10 +448,6 @@ legend {
 }
 
 @media (max-width: 760px) {
-    .container {
-        padding: 0 20px;
-    }
-
     .container__mobile {
         max-width: var(--mobile-container);
         margin: 0 auto;
@@ -540,8 +532,8 @@ legend {
 
 @media (max-width: 960px) {
     .button_special {
-        width: 100%;
-        max-width: var(--sm-column-2);
+        /* width: 100%;
+        max-width: var(--sm-column-2); */
     }
 }
 
@@ -822,20 +814,27 @@ legend {
     border-radius: var(--lg-radius);
 }
 
-.item_img {
-    padding: 0;
+@media (max-width: 1200px) {
+    .item {
+        padding: 20px;
+    }
 }
 
 @media (max-width: 960px) {
     .item {
+        padding: 16px;
         border-radius: var(--md-radius);
     }
 }
 
 @media (max-width: 760px) {
-    .item {
+    .item { 
         border-radius: var(--sm-radius);
     }
+}
+
+.item_img {
+    padding: 0;
 }
 
 /* Элементы - карточки */
@@ -908,22 +907,21 @@ legend {
 }
 
 @media (max-width: 960px) {
+    .tickets { 
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        gap: var(--xs-gap);
+    }
 }
 
 @media (max-width: 760px) {
     .tickets { 
         grid-template-columns: 1fr;
         grid-auto-rows: auto;
-        gap: 16px;
     }
 
     .tickets_secondary { 
         row-gap: 12px;
-    }
-    
-    .tickets__item {
-        padding: 20px; 
-        border-radius: var(--sm-radius);
     }
 }
 
@@ -1047,7 +1045,7 @@ legend {
 
     font-family: var(--second-family);
     font-size: 32px;
-    line-height: 125%;
+    line-height: 40px;
     font-weight: 700;
     text-align: right;
 }
@@ -1081,6 +1079,7 @@ legend {
     .phone {
         gap: 10px;
         font-size: 26px;
+        line-height: 32px;
     }
 
     .phone__icon {
@@ -1093,6 +1092,7 @@ legend {
     .phone {
         gap: 8px;
         font-size: 22px;
+        line-height: 28px;
     }
 
     .phone__icon {
@@ -1105,6 +1105,7 @@ legend {
     .phone {
         gap: 8px;
         font-size: 16px;
+        line-height: 20px;
     }
 
     .phone__icon {
@@ -1116,12 +1117,6 @@ legend {
 @media (max-width: 460px) {
     .phone {
         gap: 6px;
-        /* font-size: 15px; */
-    }
-
-    .phone__icon {
-        /* width: 15px;
-        height: 15px; */
     }
 }
 
@@ -2332,8 +2327,8 @@ legend {
         text-align: center;
     }
 
-    .offer__card {
-        /* min-width: 250px; */
+    .offer__list {
+        gap: var(--xs-gap);
     }
 
     .offer__card__img {
@@ -2412,12 +2407,12 @@ legend {
 
 .personal__buttons {
     grid-column: 1 / -1;
-    margin-top: 24px;
+    gap: var(--lg-gap);
 
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 30px;
+    margin-top: 24px;
 }
 
 @media (max-width: 1700px) {
@@ -2433,7 +2428,8 @@ legend {
         gap: var(--md-gap);
     }
 
-    .personal__buttons {    
+    .personal__buttons {  
+        gap: var(--md-gap);  
         margin-top: 48px;
     }
 }
@@ -2452,7 +2448,7 @@ legend {
     }
 
     .personal__buttons {
-        gap: 20px;
+        gap: var(--sm-gap);
         margin-top: 12px;
     }
 }
@@ -2468,15 +2464,16 @@ legend {
 
     .personal__list {
         grid-template-columns: 1fr 1fr;
+        gap: var(--xs-gap);
     }
 
     .personal__item {  
-        min-height: 128px;
+        min-height: 100px;
     }
 
     .personal__img {
-        grid-column: 1 / -1;
-        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+        grid-row: 1 / 5;
 
         width: 100%;
         /* height: 487px; */
@@ -2484,6 +2481,7 @@ legend {
     }
 
     .personal__buttons {
+        gap: var(--xs-gap);
         margin-top: 8px;
     }
 }
@@ -2507,9 +2505,10 @@ legend {
     }
 
     .personal__img {
+        grid-column: 1 / -1;
         grid-row: 3 / 4;
         /* height: 195px; */
-        aspect-ratio: 3 / 2;
+        aspect-ratio: unset;
     }
 
     .personal__buttons {
@@ -2931,6 +2930,7 @@ legend {
     
     .services__list {
         grid-template-columns: repeat(2, 1fr);
+        gap: var(--xs-gap);
     }
 }
 
@@ -3346,6 +3346,7 @@ legend {
 
     .guarantees__container {
         grid-template-columns: repeat(2, 1fr);
+        gap: var(--xs-gap);
     }
 
     .guarantees_item_main {
@@ -3983,9 +3984,13 @@ legend {
     }
 }
 
-@media (max-width: 920x) { 
+@media (max-width: 960x) { 
     .stages {
         padding: 80px 0 ;         
+    }
+    
+    .stages__list {
+        gap: var(--xs-gap);
     }
      
 }

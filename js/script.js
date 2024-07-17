@@ -15,9 +15,9 @@ new Swiper(".reviews__swiper", {
     },
     760: {
       slidesPerView: 2,
-      spaceBetween: 20,
+      spaceBetween: 16,
     },
-    920: {
+    960: {
       slidesPerView: 3,
       spaceBetween: 20,
     },
@@ -56,9 +56,9 @@ new Swiper(".certificates__swiper", {
     760: {
       slidesPerGroup: 2,
       slidesPerView: 2,
-      spaceBetween: 20,
+      spaceBetween: 16,
     },
-    920: {
+    960: {
       slidesPerGroup: 3,
       slidesPerView: 3,
       spaceBetween: 20,
