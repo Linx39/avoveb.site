@@ -2333,7 +2333,7 @@ legend {
     }
 
     .offer__card {
-        min-width: 250px;
+        /* min-width: 250px; */
     }
 
     .offer__card__img {
@@ -2341,13 +2341,13 @@ legend {
     }
 
     .offer__card__description {
-        padding: 24px 20px;
+        padding: 22px 16px;
     }
 
     .offer__card__circle {
-        width: 48px;
-        height: 48px;
-        left: 20px;
+        width: 44px;
+        height: 44px;
+        left: 16px;
     }
 }
 
@@ -2366,19 +2366,13 @@ legend {
 
     .offer__card__description {
         min-height: 128px;
-        padding: 24px 16px;
     }
 
-    .offer__card__circle {
-        left: 16px;
-    }
 }
 
 @media (max-width: 460px) {
     .offer__card__description {
         min-height: 96px;
-        padding: 24px 16px;
-        aspect-ratio: unset;
     }
 }
 
