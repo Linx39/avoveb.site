@@ -806,9 +806,6 @@ legend {
 
 /* Элементы блоков */
 .item {
-    display: flex;
-    justify-content: center;
-
     padding: 24px;
     border-radius: var(--lg-radius);
 }
@@ -2394,6 +2391,8 @@ legend {
 }
 
 .personal__item {
+    display: flex;
+    align-items: center;
     min-height: 168px;
     background: var(--green-pallet-200);
 }
