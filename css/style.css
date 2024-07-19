@@ -236,8 +236,8 @@ legend {
 
 @media (max-width: 960px) {
     .page__body {
-        font-size: 16px;
-        line-height: 20px;
+        font-size: 14px;
+        line-height: 18px;
     }
 }
 
@@ -272,14 +272,6 @@ legend {
 @media (max-width: 960px) {
     .container {
         padding: 0 20px;
-    }
-}
-
-@media (max-width: 760px) {
-    .container__mobile {
-        /* max-width: var(--tablet-container); */
-        /* max-width: 720px; */
-        /* margin: 0 auto; */
     }
 }
 
@@ -324,8 +316,8 @@ legend {
 
 @media (max-width: 960px) {
     .title {
-        font-size: 28px;
-        line-height: 34px;
+        font-size: 24px;
+        line-height: 28px;
     }
 }
 
@@ -371,8 +363,8 @@ legend {
 
 @media (max-width: 960px) {
     .maintitle {
-        font-size: 32px;
-        line-height: 36px;
+        font-size: 28px;
+        line-height: 32px;
     }
 }
 
@@ -413,15 +405,15 @@ legend {
 
 @media (max-width: 960px) {
     .subtitle {
-        font-size: 24px;
-        line-height: 28px;
+        font-size: 22px;
+        line-height: 26px;
     }
 }
 
 @media (max-width: 560px) {
     .subtitle {
-        font-size: 20px;
-        line-height: 24px;
+        font-size: 22px;
+        line-height: 26px;
     }
 }
 
@@ -432,6 +424,7 @@ legend {
 @media (max-width: 560px) {
     .subtitle span {
         font-size: 16px;
+        line-height: 20px;
     }
 }
 
@@ -457,8 +450,8 @@ legend {
 
 @media (max-width: 960px) {
     .maintext {
-        font-size: 20px;
-        line-height: 24px;
+        font-size: 16px;
+        line-height: 20px;
     }
 }
 
@@ -474,12 +467,11 @@ legend {
     justify-content: center;
     align-items: center;
 
-    width: 336px;
     min-height: 56px;
     padding: 10px 24px;
 
     font-size: 20px;
-    line-height: 120%;
+    line-height: 24px;
     font-weight: 800;
     text-align: center;
 
@@ -487,7 +479,7 @@ legend {
     background-color: var(--green-pallet-500);
     border-radius: var(--sm-radius);
 
-    transition: background-color 0.2s;
+    /* transition: background-color 0.2s; */
 }
 
 .button_left {
@@ -500,7 +492,7 @@ legend {
 
 @media (max-width: 1200px) {
     .button {
-        width: 350px;
+        /* width: 350px; */
     }
 }
 
@@ -508,69 +500,19 @@ legend {
     .button {
         min-height: 48px;
 
-        font-size: 18px;
-    }
-}
-
-@media (max-width: 760px) {
-    .button {
-        width: 100%;
-        border-radius: var(--xs-radius);
+        font-size: 14px;
+        line-height: 16px;
     }
 }
 
 @media (max-width: 560px) {
     .button {
-        min-height: 40px;
-
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 1200px) {
-    .button_long {
-        width: 100%;
-        max-width: 575px;
-    }
-}
-
-@media (max-width: 760px) {
-    .button_long {
-        width: 100%;
-        max-width: unset;
-    }
-}
-
-@media (max-width: 960px) {
-    .button_special {
-        /* width: 100%;
-        max-width: var(--sm-column-2); */
-    }
-}
-
-@media (max-width: 760px) {
-    .button_special {
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 1200px) {
-    .button_modal {
-        width: 100%;
-        min-height: 48px;
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 760px) {
-    .button_modal {
-        min-height: 40px;
-        font-size: 14px;
+        border-radius: var(--xs-radius);
     }
 }
 
 .button:hover {
-    background-color: var(--green-pallet-300)
+    background-color: var(--green-pallet-300);
 }
 
 .button:active {
@@ -591,6 +533,146 @@ legend {
 .button_light:active {
     background-color: var(--green-pallet-100-50);
     opacity: .8;
+}
+
+/* Кнопки соцсетей */
+.socialButton {
+    flex-shrink: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+
+    background-color: var(--brown-pallet-100);
+    border-radius: 50%;
+}
+
+.socialButton svg {
+    max-width: 68%;
+    max-height: 64%;
+    fill: var(--green-pallet-500);
+}
+
+.socialButton:hover svg {
+    fill: var(--green-pallet-300);
+}
+
+.socialButton:active svg {
+    fill: var(--green-pallet-300);
+    opacity: .8;
+}
+
+@media (max-width: 960px) {
+    .socialButton {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+/* Блок контакты для секции Прайс и Гарантии */
+.contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--lg-gap);
+}
+
+.contacts__button {
+    width: 100%;
+    max-width: 336px;
+}
+
+.contacts__social {  
+    flex-shrink: 0;  
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: center;
+    justify-content: center; */
+    gap: 18px;
+}
+
+@media (max-width: 1700px) {
+    .contacts {
+        gap: var(--md-gap);
+    }
+}
+
+@media (max-width: 1200px) {
+    .contacts {
+        gap: var(--sm-gap);
+    }
+
+    .contacts__button {
+        max-width: 557px;
+    }
+}
+
+@media (max-width: 960px) {
+    .contacts {
+        gap: var(--xs-gap);
+    }
+
+    .contacts__social {
+        gap: 14px;
+    }
+}
+
+@media (max-width: 560px) {
+    .contacts {
+        flex-direction: column;
+    }
+
+    .contacts__button {
+        max-width: unset;
+    }
+}
+
+.buttonsGroup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--lg-gap);
+
+}
+
+.buttonsGroup__button {
+    width: 100%;
+    max-width: 336px;
+}
+
+@media (max-width: 1700px) {
+    .buttonsGroup {
+        gap: var(--md-gap);
+    }
+}
+
+@media (max-width: 1200px) {
+    .buttonsGroup {
+        gap: var(--sm-gap);
+    }
+
+    .buttonsGroup__button {
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 960px) {
+    .buttonsGroup {
+        gap: var(--xs-gap);
+    }
+}
+
+@media (max-width: 560px) {
+    .buttonsGroup {
+        flex-direction: column;
+        gap: 8px;        
+    }
+
+    .buttonsGroup__button {
+        max-width: unset;
+    }
 }
 
 /* Декоративные круги */
@@ -749,72 +831,6 @@ legend {
     }
 }
 
-/* Кнопки соцсетей */
-.socialButton {
-    flex-shrink: 0;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 56px;
-    height: 56px;
-
-    background-color: var(--brown-pallet-100);
-    border-radius: 50%;
-}
-
-.socialButton svg {
-    max-width: 65%;
-    max-height: 65%;
-    fill: var(--green-pallet-500);
-}
-
-.socialButton:hover svg {
-    fill: var(--green-pallet-300);
-}
-
-.socialButton:active svg {
-    fill: var(--green-pallet-300);
-    opacity: .8;
-}
-
-/* Блок контакты для секции Прайс и Гарантии */
-.contacts {
-    display: flex;
-    justify-content: center;
-    gap: 19px;
-}
-
-.contacts__social {
-    flex-shrink: 0;
-    
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 19px;
-}
-
-@media (max-width: 1200px) {
-    .contacts {
-        gap: 26px;
-    }
-}
-
-@media (max-width: 960px) {
-    .contacts {
-        gap: 32px;
-    }
-}
-
-@media (max-width: 760px) {
-    .contacts {
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
-    }
-}
-
 /* Элементы блоков */
 .item {
     padding: 24px;
@@ -966,7 +982,7 @@ legend {
     background: var(--brown-pallet-400);
 }
 
-@media (max-width: 760px) {
+@media (max-width: 960px) {
     .bullet {
         width: 12px;
         height: 12px
@@ -985,7 +1001,7 @@ legend {
     max-width: 190px;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 960px) {
     .pagination {
         gap: 8px;
     }
@@ -1027,7 +1043,7 @@ legend {
     }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 960px) {
     .buttonNext,
     .buttonPrev {
         width: 40px;
@@ -2322,6 +2338,7 @@ legend {
     }
     
     .offer__title {
+        margin-bottom: 16px;
         text-align: center;
     }
 
@@ -2347,10 +2364,6 @@ legend {
 @media (max-width: 760px) {
     .offer {
         padding: 60px 0 0;
-    }
-
-    .offer__title {
-        margin-bottom: 16px;
     }
     
     .offer__card {
@@ -2394,6 +2407,7 @@ legend {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: var(--lg-gap);
+    margin-bottom: 24px;
 }
 
 .personal__item {
@@ -2414,13 +2428,6 @@ legend {
 }
 
 .personal__buttons {
-    grid-column: 1 / -1;
-    gap: var(--lg-gap);
-
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 24px;
 }
 
 @media (max-width: 1500px) {
@@ -2434,11 +2441,7 @@ legend {
 
     .personal__list {
         gap: var(--md-gap);
-    }
-
-    .personal__buttons {  
-        gap: var(--md-gap);  
-        margin-top: 48px;
+        margin-bottom: 48px;
     }
 }
 
@@ -2453,11 +2456,7 @@ legend {
 
     .personal__list{
         gap: var(--sm-gap);
-    }
-
-    .personal__buttons {
-        gap: var(--sm-gap);
-        margin-top: 12px;
+        margin-bottom: 32px;
     }
 }
 
@@ -2472,15 +2471,11 @@ legend {
 
     .personal__list {
         gap: var(--xs-gap);
+        margin-bottom: 16px;
     }
 
     .personal__item {  
         min-height: auto;
-    }
-
-    .personal__buttons {
-        gap: var(--xs-gap);
-        margin-top: 8px;
     }
 }
 
@@ -2496,15 +2491,6 @@ legend {
     .personal__img {
         grid-column: 1 / 2;
         grid-row: 1 / 3;
-    }
-
-    .personal__buttons {
-        justify-self: stretch;
-
-        flex-direction: column;
-        gap: 8px;
-
-        margin-bottom: 8px;
     }
 }
 
@@ -2663,42 +2649,26 @@ legend {
     }
     
     .price__title {
-        margin-bottom: 32px;
+        margin-bottom: 16px;
     }
     
     .price__amount {
-        margin-bottom: 24px;
+        margin-bottom: 12px;
     }
     
     .price__amount__text {
-        margin-bottom: 32px;
+        margin-bottom: 24px;
     }
     
     .price__list {  
-        margin-bottom: 32px;
+        margin-bottom: 24px;
     }
 }
 
 @media (max-width: 760px) { 
     .price {        
         padding: 60px 0;
-    }   
-
-    .price__title {
-        margin-bottom: 12px;
-    }
-    
-    .price__amount {
-        margin-bottom: 12px;
-    }
-    
-    .price__amount__text {
-        margin-bottom: 24px;
-    }
-    
-    .price__list { 
-        margin-bottom: 24px;
-    }
+    }  
 }
 
 @media (max-width: 560px) {
@@ -2758,7 +2728,7 @@ legend {
 /* Услуги */
 .services {
     position: relative;
-    padding: 140px 0;
+    padding: 70px 0;
 }
 
 .services__title {
@@ -2828,8 +2798,6 @@ legend {
 
 .services__card__title {
     flex-grow: 1;
-    
-    margin: 0 auto;
 }
 
 .services__card__info {
@@ -2918,18 +2886,17 @@ legend {
         margin-bottom: 8;
     }
     
+    .services__text {
+        max-width: 100%;
+        margin-bottom: 16x;
+    }
+    
     .services__list {
         gap: var(--xs-gap);
     }
 
     .services__card__bottom {
-        min-height: 120px;
         padding: 16px 10px;
-    }
-    
-    .services__text {
-        max-width: 100%;
-        margin-bottom: 24x;
     }
     
     .services__card__info {
@@ -2945,6 +2912,10 @@ legend {
     
     .services__list {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services__card__bottom {
+        min-height: 120px;
     }
 }
 
@@ -3145,7 +3116,6 @@ legend {
             url("../assets/img/guarantees-bg/guarantees-bg-1440@2x.png") type("image/png") 2x
         );
         background-size: 100% auto;
-        /* background-position: top 12% center; */
     }
 }
 
@@ -3243,7 +3213,7 @@ legend {
     
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: top center;
 }
 
 .guarantees__main__title {
@@ -3333,21 +3303,25 @@ legend {
         aspect-ratio: 100 / 98;
     } */
 
-    .guarantees__main__title {
-       
+    .guarantees__main__title { 
+        left: 0;
+        right: 0;      
         bottom: 16px;
+    }
+    
+    .guarantees__contacts {
+        margin-top: 8px;
     }
 }
 
 
 @media (max-width: 760px) {
     .guarantees {  
-        padding: 80px 0 0; 
+        padding: 60px 0 0; 
     }
 
     .guarantees__list {
         grid-template-columns: repeat(2, 1fr);
-        gap: var(--xs-gap);
     }
     
     .guarantees__item {    
@@ -3365,23 +3339,6 @@ legend {
     
     .guarantees__item_bottom {  
         grid-column: span 1;
-    }
-
-    .guarantees__main__title {
-        left: 0;
-        right: 0;
-        bottom: 16px;
-    }
-}
-
-@media (max-width: 760px) {
-    .guarantees {  
-        padding: 60px 0 0; 
-    }
-
-    .guarantees__contacts {
-        margin-top: 8px;
-        margin-bottom: 18px;
     }
 }
 
@@ -3620,13 +3577,12 @@ legend {
     }
     
     .reviews__title {
-        margin-bottom: 12px;
+        margin-bottom: 4px;
     }
 
     .reviews__list {
-        margin-bottom: 20px;
-    }
-    
+        margin-bottom: 16px;
+    }    
 
     .reviews__card__circle {
         transform: translateX(25%) translateY(-25%);  
@@ -3636,18 +3592,6 @@ legend {
 @media (max-width: 760px) {   
     .reviews {
         padding: 60px 0 0; 
-    }
-     
-    .reviews__title {
-        margin-bottom: 4px;
-    }
-
-    .reviews__swiper {
-        max-width: calc(var(--tablet-container) + 40px);
-    }
-
-    .reviews__list {
-        margin-bottom: 16px;
     }
 }
 
@@ -4246,34 +4190,12 @@ legend {
     }
 
     .footer__title {
-        margin-bottom: 24px;
-    }
-
-    .footer__subtitle {
-        margin-bottom: 40px;
-    }
-    
-    .footer__social {    
-        margin-bottom: 32px;
-    }
-    
-    .footer__phone {
-        margin-bottom: 24px;
-    }
-}
-
-@media (max-width: 760px) {
-    .footer {
-        padding: 60px 0;
-    }
-
-    .footer__title {
         margin-bottom: 12px;
     }
 
     .footer__subtitle {
         margin-bottom: 24px;
-    }
+    }    
     
     .footer__social {   
         gap: 20px; 
@@ -4287,6 +4209,12 @@ legend {
     
     .footer__phone {
         margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 760px) {
+    .footer {
+        padding: 60px 0;
     }
 }
 
@@ -4357,6 +4285,10 @@ legend {
     padding: 140px 0;
 }
 
+.modal__bottomButton {
+    width: 336px;
+}
+
 @media (max-width: 1500px) {
     .modal {
         grid-template-columns: 36% 64%;
@@ -4376,8 +4308,7 @@ legend {
 }
 
 @media (max-width: 1200px) {
-    .modal {
-        
+    .modal {        
         width: 860px;
 
         border-radius: 20px;
@@ -4418,6 +4349,12 @@ legend {
     }
 }
 
+@media (max-width: 520px) {
+
+    .modal__bottomButton {
+        width: 100%;
+    }
+}
 
 
 /* Модальное окно сертификаты */
@@ -4775,6 +4712,9 @@ legend {
 }
 
 .feedback__form {
+    display: flex;
+    flex-direction: column;
+
     color: #D8AB72;
 }
 
@@ -4855,6 +4795,10 @@ legend {
 
 .feedback__form__control__input:checked + .feedback__form__control__mark svg {
   display: block;
+}
+
+.feedback__submitButton {
+    align-self: center;
 }
 
 @media (max-width: 1200px) {
