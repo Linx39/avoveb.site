@@ -1,3 +1,72 @@
+const initServisesSwiper = () => {
+  const servisesSwiper = new Swiper('.services__swiper', {
+    watchSlidesProgress: true,
+    slideVisibleClass: 'services__slide_visible',
+    loop: true,
+
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 16,
+      },
+
+      560: {
+        slidesPerView: 2,
+        spaceBetween: 16,
+      },
+
+      760: {
+        slidesPerView: 3,
+        spaceBetween: 16,
+      },
+
+      960: {
+        maxBackfaceHiddenSlides: 0,
+      },
+    },
+
+    navigation: {
+      prevEl: ".services__swiper__buttonPrev",
+      nextEl: ".services__swiper__buttonNext",
+    },
+  
+    pagination: {
+      el: ".services__swiper__pagination",
+      bulletClass: 'bullet',
+      bulletActiveClass: 'bullet_current',
+      clickable: true,
+    },
+  });
+
+  return servisesSwiper;
+};
+
+let isSwiperInit = false;
+let servisesSwiper = Swiper;
+
+const setSwiperMode = () => {
+  const isDisabledSwiperWidth = window.matchMedia(`(min-width: 960px)`).matches;
+
+  if (!isDisabledSwiperWidth && !isSwiperInit){
+    servisesSwiper = initServisesSwiper();
+    isSwiperInit = true;
+  }
+
+  if (isDisabledSwiperWidth && isSwiperInit) {
+    servisesSwiper.destroy();
+    isSwiperInit = false;
+  }
+};
+
+window.addEventListener('load', () => {
+  setSwiperMode();
+});
+
+window.addEventListener('resize', () => {
+  setSwiperMode();
+});
+
+
 new Swiper(".reviews__swiper", {
   watchSlidesProgress: true,
   slideVisibleClass: 'review__slide_visible',
@@ -91,52 +160,6 @@ new Swiper(".certificates__swiper", {
   },
 });
 
-// Логика сайдбара.
-// const sidebar = document.querySelector(".sidebar");
-// const burger = document.querySelector(".header__menu__button");
-// const close = document.querySelector(".sidebar__close");
-// const sidebarLinks = document.querySelectorAll(".sidebar__listItem");
-// const layout = document.querySelector(".layout");
-
-// function sidebarManipulation(action) {
-//   if (action == "open") {
-//     layout.classList.add("layout_visible");
-//     setTimeout(() => {
-//       layout.classList.add("layout_visible2");
-//       setTimeout(() => {
-//         sidebar.classList.add("sidebar_opened");
-//       }, 10);
-//     }, 10);
-//   } else if (action == "close") {
-//     sidebar.classList.remove("sidebar_opened");
-//     layout.classList.remove("layout_visible2");
-
-//     setTimeout(() => {
-//       layout.classList.remove("layout_visible");
-//     }, 300);
-//   }
-// }
-
-// burger.addEventListener("click", () => {
-//   sidebarManipulation("open");
-// });
-
-// close.addEventListener("click", () => {
-//   sidebarManipulation("close");
-// });
-
-// sidebarLinks.forEach((sidebarLink) => {
-//   sidebarLink.addEventListener("click", (e) => {
-//     sidebarManipulation("close");
-//   });
-// });
-
-// layout.addEventListener("click", (e) => {
-//   if (e.target.classList.contains("layout")) {
-//     sidebarManipulation("close");
-//   }
-// });
-
 // Сайдбар
 const header = document.querySelector('.header');
 const sidebar = document.querySelector('.sidebar');
@@ -201,8 +224,8 @@ window.addEventListener('resize', () => {
 // })
 
 /* Закрытие/открытие модального окна сертификатов перед открытием/закрытием увеличенной картинки */
-const certificatesModalElement = document.querySelector('.certificatesModal');
-const certificatesModalButtons = certificatesModalElement.querySelectorAll('.certificates__card');
+// const certificatesModalElement = document.querySelector('.certificatesModal');
+// const certificatesModalButtons = certificatesModalElement.querySelectorAll('.certificates__card');
 
 // certificatesModalButtons.forEach(btn => {
 //   btn.addEventListener('click', () => {
