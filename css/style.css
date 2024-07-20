@@ -740,7 +740,7 @@ legend {
 }
 
 .circle__text,
-.circle__svg {
+.circle__icon {
     position: absolute;
     inset: 0;
 
@@ -755,14 +755,11 @@ legend {
     border-radius: 50%;
 }
 
-.circle__svg {
+.circle__icon {
     padding: 0;
 }
 
-.circle__svg svg {
-    max-width: 65%;
-    max-height: 60%;
-
+.circle__icon svg {
     fill: var(--brown-pallet-100);
 }
 
@@ -771,15 +768,21 @@ legend {
         width: 56px;
         height: 56px; 
 
-        font-size: 17px;
-        line-height: 17px;
+        font-size: 18px;
+        line-height: 18px;
         
         transform: translateX(30%) translateY(-30%);
     }
 }
 
 @media (max-width: 1200px) {
-    .circle {
+    .circle {        
+        width: 52px;
+        height: 52px;
+
+        font-size: 16px;
+        line-height: 16px;
+
         transform: translateX(20%) translateY(-20%);
     }
 }
@@ -792,37 +795,24 @@ legend {
         padding-bottom: 14.5%;
         aspect-ratio: 1 / 1;
 
-        /* width: 64px;
-        height: 64px; */
+        font-size: 11px;
+        line-height: 11px;        
 
-        font-size: 12px;
-        line-height: 12px;        
-
-        transform: translateX(5%) translateY(-5%);  
-        
-        /* width: 52px;
-        height: 52px;
-
-        font-size: 15px;
-        line-height: 15px; */
-    }
-
-    .circle__text {
-        padding: 15px;
+        transform: translateX(5%) translateY(-5%);
     }
 }
 
 @media (max-width: 760px) {
     .circle {
-        /* font-size: 12px;
-        line-height: 12px; */
+        font-size: 12px;
+        line-height: 12px;
     }
 }
 
 @media (max-width: 560px) {
     .circle {
-        /* font-size: 10px;
-        line-height: 10px; */
+        font-size: 14px;
+        line-height: 14px;
     }
 }
 
@@ -2448,6 +2438,11 @@ legend {
     position: absolute;
 }
 
+.services__card__circle svg {    
+    max-width: 65%;
+    max-height: 65%;
+}
+
 .services__card__bottom {
     flex-grow: 1;
     
@@ -2601,8 +2596,7 @@ legend {
 }
 
 @media (max-width: 560px) {   
-    .services_swiper {
-        padding: 16px 0;
+    .services__swiper {
         max-width: calc(var(--mobile-container) + 32px);
     }
 }
@@ -3044,6 +3038,11 @@ legend {
     opacity: .8;
 }
 
+.reviews__card__circle__icon svg {
+    max-width: 44%;
+    max-height: 44%;
+}
+
 .reviews__card__img {
     max-width: 100%;
     width: 100%;
@@ -3081,6 +3080,8 @@ legend {
     } 
 
     .reviews__card__circle {
+        /* width: 48px;
+        height: 48px; */
         transform: translateX(35%) translateY(-35%);
     }
 }
@@ -3663,8 +3664,17 @@ legend {
         width: 720px;
     }
 
+    .modal__closeButton {
+        top: 24px;
+        right: 24px;
+    }
+
     .modal__wrapper {
-        padding: calc(2 * var(--xs-padding)) 0;
+        padding: calc(var(--xs-padding)) 0;
+    }
+
+    .modal__bottomButton {
+        min-height: 40px;
     }
 }
 
@@ -3964,7 +3974,46 @@ legend {
     }
 }
 
+@media (max-width: 960px) {
+    .servicesModal__content {
+        padding: 0 55px;
+    } 
+
+    .servicesModal__title {
+        margin-bottom: 12px;
+    }
+
+    .servicesModal__title br {
+        display: none;
+    }
+
+    .servicesModal__subtitle {
+        margin-bottom: 16px;
+    }   
+
+    .servicesModal__textWrapper {
+        padding-bottom: 16px;
+    }
+    
+    .servicesModal__textWrapper::after {
+        height: 48px;
+    }
+       
+    .servicesModal__textWrapper__scroll {
+        /* height: 260px;
+        padding-bottom: 28px; */
+        height: 128px;
+        padding-bottom: 29px;
+    }
+}
+
 @media (max-width: 760px) {
+    .servicesModal__content {
+        padding: 0 30px;
+    } 
+}
+
+@media (max-width: 560px) {
     .servicesModal {
         grid-template-columns: 1fr;
     }
@@ -3974,24 +4023,10 @@ legend {
     }
 
     .servicesModal__content {
-        padding: 0 20px;
+        padding: 0 24px;
     } 
 
     .servicesModal__title {
-        margin-bottom: 20px;
-    }
-
-    .servicesModal__subtitle {
-        margin-bottom: 20px;
-    }   
-
-    .servicesModal__textWrapper {
-        padding-bottom: 20px;
-    }
-    
-    .servicesModal__textWrapper::after {
-        /* height: 48px; */
-        display: none;
     }
     
     
@@ -4001,10 +4036,10 @@ legend {
         height: auto;
         padding-bottom: 28px;
     }
-}
-
-@media (max-width: 560px) {
-    .servicesModal__title {
+    
+    .servicesModal__textWrapper::after {
+        /* height: 48px; */
+        display: none;
     }
 }
 
