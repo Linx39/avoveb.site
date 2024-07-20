@@ -11,7 +11,7 @@ const initServisesSwiper = () => {
       },
 
       560: {
-        slidesPerView: 2,
+        slidesPerView: 3,
         spaceBetween: 16,
       },
 
@@ -83,7 +83,7 @@ new Swiper(".reviews__swiper", {
       spaceBetween: 20,
     },
     560: {
-      slidesPerView: 2,
+      slidesPerView: 3,
       spaceBetween: 16,
     },
     760: {
@@ -92,7 +92,7 @@ new Swiper(".reviews__swiper", {
     },
     960: {
       slidesPerView: 3,
-      spaceBetween: 20,
+      spaceBetween: 16,
     },
     1200: {
       slidesPerView: 3,
