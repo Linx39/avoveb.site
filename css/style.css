@@ -3889,6 +3889,7 @@ legend {
 
     .servicesModal__textWrapper {
         padding-bottom: 18px;
+        overflow: auto;
     }
 
     .servicesModal__textWrapper__scroll {
