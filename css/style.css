@@ -562,7 +562,7 @@ legend {
 
 .button_light {
     color: var(--green-pallet-500);
-    background-color: var(--white-pallet-100-40);
+    background-color: var(--brown-pallet-100);
     border: 1px solid var(--green-pallet-500);
 }
 
@@ -847,10 +847,10 @@ legend {
     fill: var(--brown-pallet-500);
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1200px) {
     .closeButton {
-        width: 44px;
-        height: 44px
+        width: 40px;
+        height: 40px
     }
 }
 
@@ -3557,6 +3557,10 @@ legend {
 }
 
 /* Скролл */
+.scroll::-webkit-scrollbar {
+    width: 8px;
+}
+
 .scroll::-webkit-scrollbar-track {
     background-color: rgba(0, 0, 0, 0.13);
     border-radius: 4px;
@@ -3567,14 +3571,24 @@ legend {
     border-radius: 4px;
 }
 
-.scroll::-webkit-scrollbar {
-    width: 8px;
-}
-
 @-moz-document url-prefix() {
     .scroll {
         scrollbar-width: thin;
         scrollbar-color: rgba(0, 0, 0, 0.13) rgba(0, 0, 0, 0.42);
+    }
+}
+
+@media (max-width: 1200px) {
+    .scroll::-webkit-scrollbar {
+        width: 6px;
+    }
+    
+    .scroll::-webkit-scrollbar-track {
+        border-radius: 3px;
+    }
+    
+    .scroll::-webkit-scrollbar-thumb {
+        border-radius: 3px;
     }
 }
 
@@ -3590,8 +3604,7 @@ legend {
     position: relative;
 
     display: grid;
-    grid-template-columns: 40% 60%;
-
+    grid-template-columns: 40% 10% 1fr 80px;
     width: 1440px;
 
     background-color: var(--brown-pallet-100);
@@ -3604,19 +3617,19 @@ legend {
 
 .modal__closeButton {
     position: absolute;
-
-    top: 60px;
-    right: 60px;
+    top: 80px;
+    right: 80px;
     z-index: 2;
 }
 
 .modal__bg {
     background-repeat: no-repeat;
-    background-position: center right;
+    background-position: top right;
     background-size: cover;
 }
 
 .modal__wrapper {
+    grid-column: 3 / 4;
     padding: calc(2 * var(--xl-padding)) 0;
 }
 
@@ -3626,7 +3639,7 @@ legend {
 
 @media (max-width: 1500px) {
     .modal {
-        grid-template-columns: 36% 64%;
+        grid-template-columns: 38% 12% 1fr 60px;
         width: 1160px;
 
         border-radius: 40px;
@@ -3643,7 +3656,7 @@ legend {
 }
 
 @media (max-width: 1200px) {
-    .modal {        
+    .modal {    
         width: 860px;
 
         border-radius: 20px;
@@ -3651,7 +3664,7 @@ legend {
 
     .modal__closeButton {
         top: 40px;
-        right: 40px;
+        right: 30px;
     }
 
     .modal__wrapper {
@@ -3661,12 +3674,13 @@ legend {
 
 @media (max-width: 960px) {
     .modal {
+        grid-template-columns: 30% 10% 1fr 40px;
         width: 720px;
     }
 
     .modal__closeButton {
-        top: 24px;
-        right: 24px;
+        top: 20px;
+        right: 20px;
     }
 
     .modal__wrapper {
@@ -3675,14 +3689,14 @@ legend {
 
     .modal__bottomButton {
         min-height: 40px;
+        width: 100%;
     }
 }
 
 @media (max-width: 760px) {
     .modal {
-        grid-template-columns: 1fr;
+        grid-template-columns: 24px 1fr 24px;
         width: calc(100% - 32px);
-        max-width: var(--mobile-container);
 
         border-radius: 20px;
     }
@@ -3691,198 +3705,24 @@ legend {
         top: 16px;
         right: 16px;
     }
+
+    .modal__bg {
+        display: none;
+    }
+
+    .modal__wrapper {
+        grid-column: 2 / 3;
+    }
 }
 
 @media (max-width: 520px) {
-    .modal__bottomButton {
-        width: 100%;
+    .modal {
+        grid-template-columns: 16px 1fr 16px;        
+        max-width: var(--mobile-container);
     }
 }
-
-
-/* Модальное окно сертификаты */
-.certificatesModal {
-    padding: 80px 0;
-}
-
-.certificatesModal__wrapper {
-    padding: 0 80px;
-}
-
-@media (max-width: 1500px) {
-    .certificatesModal {
-        padding: 60px 0;
-    }
-
-    .certificatesModal__wrapper {
-        padding: 0 24px;
-    }
-}
-
-@media (max-width: 1200px) {
-    .certificatesModal {
-        padding: 44px 0;
-    }
-
-    .certificatesModal__wrapper {
-        padding: 0 24px;
-    }
-}
-
-@media (max-width: 960px) {
-    .certificatesModal {
-    }
-}
-
-@media (max-width: 760px) {
-    .certificatesModal {
-        padding: 22px 0;
-    }
-
-    .certificatesModal__wrapper {
-        padding: 0 16px;
-    }
-}
-
-@media (max-width: 560px) {
-    .certificatesModal {
-    }
-}
-
-/* Сертификаты */
-.certificates {
-    position: relative;
-    padding: 0 192px;
-}
-
-.certificates__title {
-    margin-bottom: 48px;
-    text-align: left;
-}
-
-.certificates__swiper {
-    position: relative;
-}
-
-.certificates__list {
-    display: flex;
-    align-items: stretch;
-    margin-bottom: 58px;
-}
-
-.certificates__slide {
-    height: auto;
-}
-
-.certificates__card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-.certificates__card img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
-
-}
-
-.certificates__swiper__controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.certificates__swiper__buttonPrev,
-.certificates__swiper__buttonNext {
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-
-    transform: translateY(-50%);
-}
-
-.certificates__swiper__buttonPrev {
-    left: 80px;
-}
-
-.certificates__swiper__buttonNext {
-    right: 80px;
-}
-
-@media (max-width: 1500px) {    
-    .certificates {
-        padding: 0 102px;
-    }
-
-    .certificates__title {
-        margin-bottom: 40px;
-    }
-
-    .certificates__list {
-        margin-bottom: 48px;
-    }
-
-    .certificates__swiper__buttonPrev {
-        left: 20px;
-    }
-    
-    .certificates__swiper__buttonNext {
-        right: 20px;
-    }
-}
-
-@media (max-width: 1200px) {    
-    .certificates {
-        padding: 0 22px;
-    }
-
-    .certificates__title {
-        margin-bottom: 20px;
-    }
-
-    .certificates__list {
-        margin-bottom: 24px;
-    }
-
-    .certificates__swiper__controls {
-        justify-content: space-between;
-    }
-
-    .certificates__swiper__buttonPrev,
-    .certificates__swiper__buttonNext {
-        position: static;
-        flex-shrink: 0;
-        transform: none;
-    }
-}
-
-@media (max-width: 760px) {    
-    .certificates {
-        padding: 0 16px;
-    }
-
-    .certificates__title {
-        margin-bottom: 18px;
-    }
-
-    .certificates__list {
-        margin-bottom: 32px;
-    }
-}
-
-
 
 /* Модальное окно услуги */
-.servicesModal {
-}
-
-.servicesModal__content {
-    padding: 0 80px 0 166px;
-}
-
 .servicesModal__title {
     text-align: left;
     margin-bottom: 32px;
@@ -3894,7 +3734,6 @@ legend {
 }
 
 .servicesModal__textWrapper {
-    flex-grow: 1;
     position: relative;
     padding-bottom: 32px;
     
@@ -3917,7 +3756,7 @@ legend {
 .servicesModal__textWrapper__scroll {
     position: relative;
 
-    height: 256px;
+    height: 264px;
     padding-bottom: 52px;
     padding-right: 20px;
 
@@ -3925,28 +3764,16 @@ legend {
 }
 
 .servicesModal__text:not(:last-of-type) {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
 }
 
 @media (max-width: 1500px) {
-    .servicesModal__content {
-        padding: 0 60px 0 175px;
-    }
-
     .servicesModal__textWrapper__scroll {
-        height: 168px;
-    }
-
-    .servicesModal__text:not(:last-of-type) {
-        margin-bottom: 20px;
+        height: 182px;
     }
 }
 
 @media (max-width: 1200px) {
-    .servicesModal__content {
-        padding: 0 60px 0 71px;
-    } 
-
     .servicesModal__title {
         margin-bottom: 24px;
     }
@@ -3964,23 +3791,19 @@ legend {
     }
 
     .servicesModal__textWrapper__scroll {
-        height: 144px;
+        height: 156px;
         padding-bottom: 40px;  
-        padding-right: 10px; 
+        padding-right: 8px; 
     }
 
     .servicesModal__text:not(:last-of-type) {
-        margin-bottom: 16px;
+        margin-bottom: 10px;
     }
 }
 
 @media (max-width: 960px) {
-    .servicesModal__content {
-        padding: 0 55px;
-    } 
-
     .servicesModal__title {
-        margin-bottom: 12px;
+        margin-bottom: 16px;
     }
 
     .servicesModal__title br {
@@ -3996,49 +3819,35 @@ legend {
     }
     
     .servicesModal__textWrapper::after {
-        height: 48px;
+        height: 40px;
     }
        
     .servicesModal__textWrapper__scroll {
-        /* height: 260px;
-        padding-bottom: 28px; */
-        height: 128px;
-        padding-bottom: 29px;
+        height: 118px;
+        padding-bottom: 20px;
+        padding-right: 4px;
+    }
+
+    .servicesModal__text:not(:last-of-type) {
+        margin-bottom: 6px;
     }
 }
 
-@media (max-width: 760px) {
-    .servicesModal__content {
-        padding: 0 30px;
-    } 
+@media (max-width: 760px) { 
 }
 
-@media (max-width: 560px) {
-    .servicesModal {
-        grid-template-columns: 1fr;
+@media (max-width: 560px) {  
+    .servicesModal__title br {
+        display: block;
     }
 
-    .servicesModal__bg {
-        display: none;
-    }
-
-    .servicesModal__content {
-        padding: 0 24px;
-    } 
-
-    .servicesModal__title {
-    }
-    
-    
     .servicesModal__textWrapper__scroll {
-        /* height: 260px;
-        padding-bottom: 28px; */
         height: auto;
-        padding-bottom: 28px;
+        padding-bottom: 0;
+        padding-right: 0;
     }
     
     .servicesModal__textWrapper::after {
-        /* height: 48px; */
         display: none;
     }
 }
@@ -4234,6 +4043,179 @@ legend {
 }
 
 @media (max-width: 560px) {
+}
+
+/* Модальное окно сертификаты */
+.certificatesModal {
+    padding: 80px 0;
+}
+
+.certificatesModal__wrapper {
+    padding: 0 80px;
+}
+
+@media (max-width: 1500px) {
+    .certificatesModal {
+        padding: 60px 0;
+    }
+
+    .certificatesModal__wrapper {
+        padding: 0 24px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .certificatesModal {
+        padding: 44px 0;
+    }
+
+    .certificatesModal__wrapper {
+        padding: 0 24px;
+    }
+}
+
+@media (max-width: 960px) {
+    .certificatesModal {
+    }
+}
+
+@media (max-width: 760px) {
+    .certificatesModal {
+        padding: 22px 0;
+    }
+
+    .certificatesModal__wrapper {
+        padding: 0 16px;
+    }
+}
+
+@media (max-width: 560px) {
+    .certificatesModal {
+    }
+}
+
+/* Сертификаты */
+.certificates {
+    position: relative;
+    padding: 0 192px;
+}
+
+.certificates__title {
+    margin-bottom: 48px;
+    text-align: left;
+}
+
+.certificates__swiper {
+    position: relative;
+}
+
+.certificates__list {
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 58px;
+}
+
+.certificates__slide {
+    height: auto;
+}
+
+.certificates__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.certificates__card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+
+}
+
+.certificates__swiper__controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.certificates__swiper__buttonPrev,
+.certificates__swiper__buttonNext {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+
+    transform: translateY(-50%);
+}
+
+.certificates__swiper__buttonPrev {
+    left: 80px;
+}
+
+.certificates__swiper__buttonNext {
+    right: 80px;
+}
+
+@media (max-width: 1500px) {    
+    .certificates {
+        padding: 0 102px;
+    }
+
+    .certificates__title {
+        margin-bottom: 40px;
+    }
+
+    .certificates__list {
+        margin-bottom: 48px;
+    }
+
+    .certificates__swiper__buttonPrev {
+        left: 20px;
+    }
+    
+    .certificates__swiper__buttonNext {
+        right: 20px;
+    }
+}
+
+@media (max-width: 1200px) {    
+    .certificates {
+        padding: 0 22px;
+    }
+
+    .certificates__title {
+        margin-bottom: 20px;
+    }
+
+    .certificates__list {
+        margin-bottom: 24px;
+    }
+
+    .certificates__swiper__controls {
+        justify-content: space-between;
+    }
+
+    .certificates__swiper__buttonPrev,
+    .certificates__swiper__buttonNext {
+        position: static;
+        flex-shrink: 0;
+        transform: none;
+    }
+}
+
+@media (max-width: 760px) {    
+    .certificates {
+        padding: 0 16px;
+    }
+
+    .certificates__title {
+        margin-bottom: 18px;
+    }
+
+    .certificates__list {
+        margin-bottom: 32px;
+    }
 }
 
 /* Модальное окно с изображением */
