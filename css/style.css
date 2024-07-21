@@ -3695,6 +3695,10 @@ legend {
         width: calc(100% - 32px);
     }
 
+    .modal__content {
+        padding: calc(2 * var(--xs-padding)) 0;
+    }
+
     .modal__bottomButton {
         min-height: 48px;
     }
@@ -4072,9 +4076,9 @@ legend {
     }
 
     .feedback__form__group {
-        gap: 12px;
+        gap: 16px;
     
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
 
     .feedback__form__control {
@@ -4344,18 +4348,15 @@ legend {
 .pictureModal {
     position: relative;
     padding: 0 80px;
-    /* background-color: #a7b76b; */
     background-color: transparent;
 }
 
 .pictureModal__content_vertical {
     width: 551px;
-    /* height: 776px; */
 }
 
 .pictureModal__content_horizontal {
     width: 713px;
-    /* height: 528px; */
 }
 
 .pictureModal__content img {
@@ -4384,79 +4385,71 @@ legend {
     opacity: .8;
 }
 
-@media (max-width:  1500px) {
+@media (max-width: 1500px) {
     .pictureModal__content_vertical {
         width: 551px;
-        /* height: 553px; */
     }
     
     .pictureModal__content_horizontal {
-        width: 663px;
-        /* height: 490px; */
+        width: 713px;
     }
 }
 
-@media (max-width:  1200px) {
+@media (max-width: 1200px) {
     .pictureModal__content_vertical {
-        width: 393px;
-        /* height: 553px; */
+        width: 440px;
     }
     
     .pictureModal__content_horizontal {
-        width: 561px;
-        /* height: 409px; */
+        width: 628px;
     }
 }
 
 @media (max-width: 960px) {
-    .pictureModal {
-        padding: 80px 0;
+    .pictureModal {        
+        width: 50%;
+        padding: 0 56px;
     }
-
+    
     .pictureModal__content_vertical {
-        width: 551px;
+        width: 100%;
         /* height: 776px; */
     }
     
     .pictureModal__content_horizontal {
-        width: 688px;
+        width: 100%;
         /* height: 512px; */
     }
 }
 
 @media (max-width: 760px) {
-    .pictureModal {
-        padding: 56px 0;
-    }
-
     .pictureModal__content_vertical {
-        width: 366px;
+        /* width: 366px; */
         /* height: 512px; */
     }
     
     .pictureModal__content_horizontal {
-        width: 366px;
+        /* width: 366px; */
         /* height: 272px; */
     }
 }
 
 @media (max-width: 560px) {
-    .pictureModal {
+    .pictureModal {        
+        width: calc(100% - 32px);
         padding: 56px 0;
     }
 
     .pictureModal__content_vertical {
-        width: 256px;
-        /* height: 358px; */
+        width: 100%;
     }
     
     .pictureModal__content_horizontal {
-        width: 256px;
-        /* height: 190px; */
+        width: 100%;
     }
 }
 
-/* Обертки для фона*/
+/* Обертки для фона */
 .wrapperSections {
     padding-bottom: var(--xl-padding);
 }
