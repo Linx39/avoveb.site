@@ -4157,17 +4157,9 @@ legend {
     padding: 80px 0;
 }
 
-.certificatesModal__wrapper {
-    padding: 0 80px;
-}
-
 @media (max-width: 1500px) {
     .certificatesModal {
         padding: 60px 0;
-    }
-
-    .certificatesModal__wrapper {
-        padding: 0 24px;
     }
 }
 
@@ -4175,29 +4167,25 @@ legend {
     .certificatesModal {
         padding: 44px 0;
     }
-
-    .certificatesModal__wrapper {
-        padding: 0 24px;
-    }
 }
 
 @media (max-width: 960px) {
     .certificatesModal {
+        width: 550px;
+        padding: 22px 0;
     }
 }
 
 @media (max-width: 760px) {
     .certificatesModal {
+        width: 490px;
         padding: 22px 0;
-    }
-
-    .certificatesModal__wrapper {
-        padding: 0 16px;
     }
 }
 
 @media (max-width: 560px) {
     .certificatesModal {
+        width: calc(100% - 32px);
     }
 }
 
@@ -4214,12 +4202,12 @@ legend {
 
 .certificates__swiper {
     position: relative;
+    margin-bottom: 58px;
 }
 
 .certificates__list {
     display: flex;
     align-items: stretch;
-    margin-bottom: 58px;
 }
 
 .certificates__slide {
@@ -4238,7 +4226,6 @@ legend {
     height: 100%;
     object-fit: contain;
     object-position: center;
-
 }
 
 .certificates__swiper__controls {
@@ -4273,7 +4260,7 @@ legend {
         margin-bottom: 40px;
     }
 
-    .certificates__list {
+    .certificates__swiper {
         margin-bottom: 48px;
     }
 
@@ -4288,15 +4275,57 @@ legend {
 
 @media (max-width: 1200px) {    
     .certificates {
-        padding: 0 22px;
+        padding: 0 82px;
     }
 
     .certificates__title {
         margin-bottom: 20px;
     }
 
-    .certificates__list {
+    .certificates__swiper {
         margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 960px) {  
+    .certificates {
+        padding: 0 62px;
+    }
+
+    .certificates__title {
+        margin-bottom: 12px;
+    }
+
+    .certificates__swiper {
+        margin-bottom: 16px;
+    }
+}
+
+@media (max-width: 760px) {    
+    .certificates {
+        padding: 0 56px;
+    }
+
+    .certificates__swiper__buttonPrev {
+        left: 10px;
+    }
+    
+    .certificates__swiper__buttonNext {
+        right: 10px;
+    }
+}
+
+@media (max-width: 560px) {   
+    .certificates {
+        padding: 0 16px;
+    }
+
+    .certificates__title {
+        margin-bottom: 18px;
+    }
+
+    .certificates__swiper {
+        margin-bottom: 32px;
     }
 
     .certificates__swiper__controls {
@@ -4308,20 +4337,6 @@ legend {
         position: static;
         flex-shrink: 0;
         transform: none;
-    }
-}
-
-@media (max-width: 760px) {    
-    .certificates {
-        padding: 0 16px;
-    }
-
-    .certificates__title {
-        margin-bottom: 18px;
-    }
-
-    .certificates__list {
-        margin-bottom: 32px;
     }
 }
 

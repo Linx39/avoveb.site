@@ -122,28 +122,33 @@ new Swiper(".certificates__swiper", {
 
   breakpoints: {
     320: {
-      slidesPerGroup: 1,
-      slidesPerView: 1,
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 12,
+    },
+    560: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
       spaceBetween: 12,
     },
     760: {
-      slidesPerGroup: 2,
-      slidesPerView: 2,
-      spaceBetween: 16,
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+      spaceBetween: 8,
     },
     960: {
-      slidesPerGroup: 3,
       slidesPerView: 3,
+      slidesPerGroup: 3,
       spaceBetween: 20,
     },
     1200: {
-      slidesPerGroup: 3,
       slidesPerView: 3,
+      slidesPerGroup: 3,
       spaceBetween: 28,
     },
     1700: {
-      slidesPerGroup: 3,
       slidesPerView: 3,
+      slidesPerGroup: 3,
       spaceBetween: 32,
     },
   },
