@@ -47,7 +47,7 @@
     --md-radius: 16px;
     --xs-radius: 12px;
 
-    --xl-button-radius: 16px;
+    --xl-button-radius: 12px;
     --md-button-radius: 12px;
     --xs-button-radius: 8px;
 
@@ -3720,6 +3720,10 @@ legend {
         grid-template-columns: 16px 1fr 16px;        
         max-width: var(--mobile-container);
     }
+
+    .modal__wrapper {
+        padding: calc(2 * var(--xs-padding)) 0;
+    }
 }
 
 /* Модальное окно услуги */
@@ -3879,16 +3883,17 @@ legend {
 }
 
 .feedback__form__label {
-    border-radius: 12px;
+    border-radius: var(--xl-button-radius);
     border: 1px solid currentColor;
 }
 
 .feedback__form__input {
     display: flex;
-   justify-content: center;
+    justify-content: center;
 
     width: 100%;
-    padding: 14px 32px;
+    min-height: 54px;
+    padding: 10px 32px;
 }
 
 .feedback__form__input:hover {
@@ -3968,6 +3973,10 @@ legend {
         margin-bottom: 32px;
     }
 
+    .feedback__form__label {
+        border-radius: var(--md-button-radius);
+    }
+
     .feedback__form__control {
         font-size: 14px;
     }
@@ -3978,32 +3987,66 @@ legend {
     }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 960px) {
     .feedback__title {
-        margin-bottom: 16px;
+        margin-bottom: 10px;
     }
     
     .feedback__description {
-        margin-bottom: 24px;
+        margin-bottom: 14px;
     }
 
     .feedback__form__group {
-        gap: 16px;
+        gap: 8px;
     
-        margin-bottom: 24px;
-    }
-
-    .feedback__form__control {
-        font-size: 12px;
-    }
-
-    .feedback__form__control__mark {
-        width: 24px;
-        height: 24px;
+        margin-bottom: 14px;
     }
 
     .feedback__form__label {
-        border-radius: 10px;
+        border-radius: var(--xs-button-radius);
+    }
+
+    .feedback__form__input {
+        min-height: 38px;
+        padding: 6px 24px;
+    }
+
+    .feedback__form__control {
+        font-size: 10px;
+    }
+
+    .feedback__form__control__mark {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+@media (max-width: 560px) {
+    .feedback__title {
+        margin-bottom: 12px;
+    }
+    
+    .feedback__description {
+        margin-bottom: 20px;
+    }
+
+    .feedback__form__group {
+        gap: 12px;
+    
+        margin-bottom: 20px;
+    }
+
+    .feedback__form__control {
+        font-size: 14px;
+    }
+
+    .feedback__form__control__mark {
+        width: 20px;
+        height: 20px;
+    }
+
+    .feedback__submitButton {
+        min-height: 48px;
     }
 }
 
@@ -4014,21 +4057,18 @@ legend {
 }
 
 .feedbackModal__content {
-    padding-right: 192px;
-    padding-left: 168px;
+   width: 512px;
 }
 
 @media (max-width: 1500px) {
     .feedbackModal__content {
-        padding-right: 136px;
-        padding-left: 95px;
+       width: 460px;
     }
 }
 
 @media (max-width: 1200px) {
     .feedbackModal__content {
-        padding-right: 55px;
-        padding-left: 35px;
+        width: 360px;
     }
 }
 
@@ -4036,13 +4076,21 @@ legend {
 }
 
 @media (max-width: 760px) {
+    .feedbackModal {
+        width: calc(100% - 32px);
+        max-width: var(--mobile-container);
+    }
+
     .feedbackModal__content {
-        padding-right: 20px;
-        padding-left: 20px;
+        margin: 0 auto;
     }
 }
 
 @media (max-width: 560px) {
+
+    .feedbackModal__content {
+        width: auto;
+    }
 }
 
 /* Модальное окно сертификаты */
