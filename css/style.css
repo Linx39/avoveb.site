@@ -2974,7 +2974,7 @@ legend {
 }
 
 .reviews__list {
-    margin-bottom: 12px;
+    margin-bottom: 32px;
 }
 
 .review__slide {
@@ -3061,7 +3061,7 @@ legend {
     }
 
     .reviews__list {
-        margin-bottom: 8px;
+        margin-bottom: 28px;
     }
     
     .reviews__card__circle {
@@ -3078,7 +3078,7 @@ legend {
     }   
 
     .reviews__list {
-        margin-bottom: 12px;
+        margin-bottom: 24px;
     } 
 
     .reviews__card__circle {
