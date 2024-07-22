@@ -3569,10 +3569,6 @@ legend {
 }
 
 /* Скролл */
-.scroll::-webkit-scrollbar {
-    width: 8px;
-}
-
 .scroll::-webkit-scrollbar-track {
     background-color: rgba(0, 0, 0, 0.13);
     border-radius: 4px;
@@ -3582,6 +3578,10 @@ legend {
     background-color: rgba(0, 0, 0, 0.42);
     border-radius: 4px;
 }
+.scroll::-webkit-scrollbar {
+    width: 8px;
+}
+
 
 @-moz-document url-prefix() {
     .scroll {
@@ -3590,7 +3590,7 @@ legend {
     }
 }
 
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
     .scroll::-webkit-scrollbar {
         width: 6px;
     }
@@ -3602,7 +3602,7 @@ legend {
     .scroll::-webkit-scrollbar-thumb {
         border-radius: 3px;
     }
-}
+} */
 
 /* Общий контейнер для модальных окон */
 .hystmodal__shadow--show {
@@ -3762,7 +3762,7 @@ legend {
 
 @media (max-width: 760px) {
     .productModal {        
-        display: block;;
+        display: block;
     }
 
     .productModal__bg {
@@ -3910,15 +3910,15 @@ legend {
         padding-bottom: 18px;
         
     }
+    
+    .product__textWrapper::after {
+        display: none;
+    }
 
     .product__textWrapper__scroll {
         height: auto;
         padding-bottom: 0;
         padding-right: 0;
-    }
-    
-    .product__textWrapper::after {
-        display: none;
     }
 }
 
