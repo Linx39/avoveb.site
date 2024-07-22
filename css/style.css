@@ -825,7 +825,7 @@ legend {
     height: 48px;
 }
 
-.closeButton:focus-visible {
+.closeButton:focus-within {
     outline: none;
 }
 
@@ -839,7 +839,8 @@ legend {
     fill: var(--brown-pallet-700);
 }
 
-.closeButton:hover svg {
+.closeButton:hover svg,
+.closeButton:focus-within svg {
     fill: var(--brown-pallet-500);
 }
 
@@ -1057,7 +1058,8 @@ legend {
     }
 }
 
-.sliderButton_green:hover {
+.sliderButton_green:hover,
+.sliderButton_green:focus-within  {
     opacity: .7;;
 }
 
@@ -1069,7 +1071,8 @@ legend {
     fill: var(--brown-pallet-100);
 }
 
-.sliderButton_brown:hover {
+.sliderButton_brown:hover,
+.sliderButton_brown:focus-within {
     opacity: .7;;
 }
 
@@ -1474,10 +1477,10 @@ legend {
     }
 }
 
-/* Сайдбар */
-.sidebar {
+/* Модальное окно сайдбар */
+.sidebarModal {
     position: relative;
-    min-height: 100%;
+    height: 100%;
     padding: 32px 44px 32px 120px;
 
     color: var(--brown-pallet-600);
@@ -1487,37 +1490,54 @@ legend {
     margin-left: auto; /*!!!*/
 }
 
-.sidebar__bg {
+.sidebarModal__bg {
     position: absolute;
     inset: 0;
     z-index: 1;
-/* 
-    width: 100%;
-    height: 100%; */
 }
 
-.sidebar__bg svg {
+.sidebarModal__bg svg {
     width: 100%;
     height: 100%;
 
     fill: var(--brown-pallet-100);
 }
 
-.sidebar__wrapper {
+.sidebarModal__content {
     position: relative;
     z-index: 5;
 
+    min-width: 400px;
+}
+
+@media (max-width: 1200px) {
+    .sidebarModal {        
+        padding: 28px 36px 28px 100px;
+    }
+
+    .sidebarModal__content {
+        min-width: 340px;
+    }
+}
+
+@media (max-width: 960px) {
+    .sidebarModal {        
+        padding: 24px 28px 24px 66px;
+    }
+
+    .sidebarModal__content {
+        min-width: 220px;
+    }
+}
+
+/* Сайдбар */
+.sidebar {
     display: flex;
     flex-direction: column;
     gap: 42px;
-    min-width: 400px;
-    min-height: 100%;
 }
 
 .sidebar__head {
-    position: relative;
-    z-index: 6;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1558,13 +1578,8 @@ legend {
 }
 
 @media (max-width: 1200px) {
-    .sidebar {        
-        padding: 28px 36px 28px 100px;
-    }
-
-    .sidebar__wrapper {
+    .sidebar {
         gap: 34px;
-        min-width: 340px;
     }
 
     .sidebar__list {
@@ -1577,13 +1592,8 @@ legend {
 }
 
 @media (max-width: 960px) {
-    .sidebar {        
-        padding: 24px 28px 24px 66px;
-    }
-
-    .sidebar__wrapper {
+    .sidebar {
         gap: 28px;
-        min-width: 220px;
     }
 
     .sidebar__list {
@@ -3705,40 +3715,92 @@ legend {
 }
 
 /* Модальное окно услуги */
-.servicesModal {
+.productModal {
     display: grid;
     grid-template-columns: 40% 60%;
 }
 
-.servicesModal__bg {
+.productModal__bg {
     background-repeat: no-repeat;
     background-position: top right;
     background-size: cover;
 }
 
-.servicesModal__content {
+.productModal__content {
     padding-left: 160px;
     padding-right: 80px;
 }
 
-.servicesModal__title {
+@media (max-width: 1500px) {
+    .productModal {        
+        grid-template-columns: 35% 65%;
+    }
+
+    .productModal__content {
+        padding-left: 120px;
+        padding-right: 60px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .productModal__content {
+        padding-left: 80px;
+        padding-right: 40px;
+    }
+}
+
+@media (max-width: 960px) {
+    .productModal {        
+        grid-template-columns: 30% 70%;
+    }
+
+    .productModal__content {
+        padding-left: 60px;
+        padding-right: 30px;
+    }
+}
+
+@media (max-width: 760px) {
+    .productModal {        
+        display: block;;
+    }
+
+    .productModal__bg {
+        display: none;
+    }
+    
+    .productModal__content {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media (max-width: 560px) {    
+    .productModal__content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/* Продукты */
+.product__title {
     text-align: left;
     margin-bottom: 32px;
 }
 
-.servicesModal__subtitle {
+.product__subtitle {
     color: var(--brown-pallet-400);
     margin-bottom: 32px;
 }
 
-.servicesModal__textWrapper {
+.product__textWrapper {
     position: relative;
     padding-bottom: 32px;
     
     overflow: hidden;
 }
 
-.servicesModal__textWrapper::after {
+.product__textWrapper::after {
     position: absolute;
     content: "";
     left: 0;
@@ -3751,7 +3813,7 @@ legend {
     background: linear-gradient(0deg, var(--brown-pallet-100) 50%, rgba(248, 241, 225, 0) 100%);
 }
 
-.servicesModal__textWrapper__scroll {
+.product__textWrapper__scroll {
     position: relative;
 
     height: 264px;
@@ -3761,145 +3823,166 @@ legend {
     overflow-y: auto;
 }
 
-.servicesModal__text:not(:last-of-type) {
+.product__text:not(:last-of-type) {
     margin-bottom: 16px;
 }
 
 @media (max-width: 1500px) {
-    .servicesModal {        
-        grid-template-columns: 35% 65%;
-    }
-
-    .servicesModal__content {
-        padding-left: 120px;
-        padding-right: 60px;
-    }
-
-    .servicesModal__textWrapper__scroll {
+    .product__textWrapper__scroll {
         height: 182px;
     }
 }
 
 @media (max-width: 1200px) {
-    .servicesModal__content {
-        padding-left: 80px;
-        padding-right: 40px;
-    }
-
-    .servicesModal__title {
+    .product__title {
         margin-bottom: 24px;
     }
 
-    .servicesModal__subtitle {
+    .product__subtitle {
         margin-bottom: 24px;
     }   
 
-    .servicesModal__textWrapper {
+    .product__textWrapper {
         padding-bottom: 24px;
     }
     
-    .servicesModal__textWrapper::after {
+    .product__textWrapper::after {
         height: 64px;
     }
 
-    .servicesModal__textWrapper__scroll {
+    .product__textWrapper__scroll {
         height: 156px;
         padding-bottom: 40px;  
         padding-right: 8px; 
     }
 
-    .servicesModal__text:not(:last-of-type) {
+    .product__text:not(:last-of-type) {
         margin-bottom: 10px;
     }
 }
 
 @media (max-width: 960px) {
-    .servicesModal {        
-        grid-template-columns: 30% 70%;
-    }
-
-    .servicesModal__content {
-        padding-left: 60px;
-        padding-right: 30px;
-    }
-
-    .servicesModal__title {
+    .product__title {
         margin-bottom: 14px;
     }
 
-    .servicesModal__title br {
+    .product__title br {
         display: none;
     }
 
-    .servicesModal__subtitle {
+    .product__subtitle {
         margin-bottom: 14px;
     }   
 
-    .servicesModal__textWrapper {
+    .product__textWrapper {
         padding-bottom: 14px;
     }
     
-    .servicesModal__textWrapper::after {
+    .product__textWrapper::after {
         height: 40px;
     }
        
-    .servicesModal__textWrapper__scroll {
+    .product__textWrapper__scroll {
         height: 118px;
         padding-bottom: 20px;
         padding-right: 4px;
     }
 
-    .servicesModal__text:not(:last-of-type) {
+    .product__text:not(:last-of-type) {
         margin-bottom: 6px;
     }
 }
 
-@media (max-width: 760px) {
-    .servicesModal {        
-        grid-template-columns: 1fr;
-    }
-
-    .servicesModal__bg {
-        display: none;
-    }
-    
-    .servicesModal__content {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-}
-
-@media (max-width: 560px) {    
-    .servicesModal__content {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .servicesModal__title {
+@media (max-width: 560px) {  
+    .product__title {
         margin-bottom: 18px;
     }
 
-    .servicesModal__title br {
+    .product__title br {
         display: block;
     }
 
-    .servicesModal__subtitle {
+    .product__subtitle {
         margin-bottom: 18px;
     }   
 
-    .servicesModal__textWrapper {
+    .product__textWrapper {
         padding-bottom: 18px;
-        overflow: auto;
+        
     }
 
-    .servicesModal__textWrapper__scroll {
+    .product__textWrapper__scroll {
         height: auto;
         padding-bottom: 0;
         padding-right: 0;
     }
     
-    .servicesModal__textWrapper::after {
+    .product__textWrapper::after {
         display: none;
+    }
+}
+
+/* Модальное окно обратной связи */
+.feedbackModal {
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.feedbackModal__bg {
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: cover;
+}
+
+.feedbackModal__content {
+    padding-left: 176px;
+    padding-right: 176px;
+}
+
+@media (max-width: 1500px) {
+    .feedbackModal {
+        grid-template-columns: 35% 65%;
+    }
+
+    .feedbackModal__content {
+        padding-left: 135px;
+        padding-right: 105px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .feedbackModal__content {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+@media (max-width: 960px) {
+    .feedbackModal {
+        grid-template-columns: 25% 75%;
+    }
+
+    .feedbackModal__content {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+}
+
+@media (max-width: 760px) {
+    .feedbackModal {
+        grid-template-columns: 1fr;
+    }
+
+    .feedbackModal__content {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media (max-width: 560px) {
+    .feedbackModal__content {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
@@ -4092,71 +4175,6 @@ legend {
     }
 }
 
-
-/* Модальное окно с формой обратной связи */
-.feedbackModal {
-    display: grid;
-    grid-template-columns: 40% 60%;
-}
-
-.feedbackModal__bg {
-    background-repeat: no-repeat;
-    background-position: top right;
-    background-size: cover;
-}
-
-.feedbackModal__content {
-    padding-left: 176px;
-    padding-right: 176px;
-}
-
-@media (max-width: 1500px) {
-    .feedbackModal {
-        grid-template-columns: 35% 65%;
-    }
-
-    .feedbackModal__content {
-        padding-left: 135px;
-        padding-right: 105px;
-    }
-}
-
-@media (max-width: 1200px) {
-    .feedbackModal__content {
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-}
-
-@media (max-width: 960px) {
-    .feedbackModal {
-        grid-template-columns: 25% 75%;
-    }
-
-    .feedbackModal__content {
-        padding-left: 70px;
-        padding-right: 70px;
-    }
-}
-
-@media (max-width: 760px) {
-    .feedbackModal {
-        grid-template-columns: 1fr;
-    }
-
-    .feedbackModal__content {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-}
-
-@media (max-width: 560px) {
-    .feedbackModal__content {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-}
-
 /* Модальное окно сертификаты */
 .certificatesModal {
     padding: 80px 0;
@@ -4231,6 +4249,11 @@ legend {
     height: 100%;
     object-fit: contain;
     object-position: center;
+}
+
+.certificates__card:focus-within {
+    outline: none;
+    opacity: .6;
 }
 
 .certificates__swiper__controls {
