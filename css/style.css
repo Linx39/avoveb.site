@@ -551,8 +551,10 @@ legend {
     }
 }
 
-.button:hover {
+.button:hover,
+.button:focus-visible {
     background-color: var(--green-pallet-300);
+    outline: none;
 }
 
 .button:active {
@@ -566,7 +568,8 @@ legend {
     border: 1px solid var(--green-pallet-500);
 }
 
-.button_light:hover {
+.button_light:hover,
+.button_light:focus-visible {
     background-color: var(--green-pallet-100-50)
 }
 
@@ -589,13 +592,18 @@ legend {
     border-radius: 50%;
 }
 
+.socialButton:focus-visible {
+    outline: none;
+}
+
 .socialButton svg {
     max-width: 68%;
     max-height: 64%;
     fill: var(--green-pallet-500);
 }
 
-.socialButton:hover svg {
+.socialButton:hover svg,
+.socialButton:focus-visible svg  {
     fill: var(--green-pallet-300);
 }
 
@@ -825,7 +833,7 @@ legend {
     height: 48px;
 }
 
-.closeButton:focus-within {
+.closeButton:focus-visible {
     outline: none;
 }
 
@@ -840,7 +848,7 @@ legend {
 }
 
 .closeButton:hover svg,
-.closeButton:focus-within svg {
+.closeButton:focus-visible svg {
     fill: var(--brown-pallet-500);
 }
 
@@ -994,10 +1002,11 @@ legend {
     cursor: pointer;
 }
 
-.bullet:hover {
+.bullet:hover,
+.bullet:focus-visible {
     background: var(--brown-pallet-400);
     opacity: .8;
-
+    outline: none;
 }
 
 .bullet:active {
@@ -1059,7 +1068,7 @@ legend {
 }
 
 .sliderButton_green:hover,
-.sliderButton_green:focus-within  {
+.sliderButton_green:focus-visible  {
     opacity: .7;;
 }
 
@@ -1072,7 +1081,7 @@ legend {
 }
 
 .sliderButton_brown:hover,
-.sliderButton_brown:focus-within {
+.sliderButton_brown:focus-visible {
     opacity: .7;;
 }
 
@@ -1178,6 +1187,10 @@ legend {
     max-width: 88%;
     max-height: 88%;
     fill: currentColor;    
+}
+
+.phone:focus-visible {
+    outline: 1px solid currentColor;
 }
 
 @media (max-width: 1200px) {
@@ -1316,6 +1329,10 @@ legend {
     height: 60px;
 }
 
+.header__button:focus-visible {
+    outline: 1px solid currentColor;
+}
+
 .header__social__button svg {
     max-width: 79%;
     max-height: 74%;
@@ -1360,15 +1377,12 @@ legend {
     }
 
     .header__phone {
+        order: 1;
         margin-top: 0;
     }
 
     .header__buttons {
         gap: 16px;
-    }
-
-    .header__phone {
-        order: 1;
     }
 
     .header__button {
@@ -1552,17 +1566,6 @@ legend {
     text-align: left;
 }
 
-.sidebar__link:hover,
-.sidebar__phone:hover {
-    color: var(--brown-pallet-500);
-}
-
-.sidebar__link:active,
-.sidebar__phone:active {
-    color: var(--brown-pallet-500);
-    opacity: .8;
-}
-
 .sidebar__contacts {
     display: flex;
     flex-direction: column;
@@ -1575,6 +1578,23 @@ legend {
 
 .sidebar__privacy {
     color: var(--brown-pallet-400);
+}
+
+.sidebar__link:hover,
+.sidebar__link:focus-visible,
+.sidebar__phone:hover,
+.sidebar__phone:focus-visible,
+.sidebar__privacy:hover,
+.sidebar__privacy:focus-visible {
+    color: var(--brown-pallet-500);
+    outline: none;
+}
+
+.sidebar__link:active,
+.sidebar__phone:active,
+.sidebar__privacy:active {
+    color: var(--brown-pallet-500);
+    opacity: .8;
 }
 
 @media (max-width: 1200px) {
@@ -1764,6 +1784,10 @@ legend {
     font-weight: 800;
 }
 
+.promo__button:focus-visible {
+    outline: none;
+}
+
 .promo__button::after {
     position: absolute;
     content: "";
@@ -1776,7 +1800,8 @@ legend {
     opacity: 0;
 }
 
-.promo__button:hover::after {
+.promo__button:hover::after,
+.promo__button:focus-visible::after {
     transition: opacity .5s;
     opacity: .5;
 }
@@ -2428,7 +2453,7 @@ legend {
 }
 
 .services__card:hover,
-.services__card:focus-within {
+.services__card:focus-visible {
     box-shadow: 0 7px 20px 0 rgba(185, 138, 68, 0.5);
     background-color: rgba(185, 138, 68, 0.1);
     outline: none;
@@ -3021,7 +3046,12 @@ legend {
     fill: var(--green-pallet-200);
 }
 
-.reviews__card:hover .reviews__card__bg {
+.reviews__card:focus-visible {
+    outline: none;
+}
+
+.reviews__card:hover .reviews__card__bg,
+.reviews__card:focus-visible .reviews__card__bg {
     fill: var(--green-pallet-300);
     opacity: .6;
 }
@@ -3311,10 +3341,10 @@ legend {
     background-size: contain;
     background-position: center;
 
-    /* mask-image: url("../assets/img/stages/mask.svg");
+    /* mask-image: url("../assets/img/stages/stages-mask.svg");
     mask-repeat: no-repeat;
     mask-size: 50%;
-    mask-position: center;; */
+    mask-position: center; */
 }
 
 @media (max-width: 1500px) {   
@@ -4031,7 +4061,7 @@ legend {
     background-color: var(--white-pallet-100-40);
 }
 
-.feedback__form__input:focus-within {
+.feedback__form__input:focus-visible {
     /* border-radius: inherit; */
     background-color: var(--white-pallet-100-50);
     outline: none;
@@ -4064,9 +4094,10 @@ legend {
   border-radius: 4px;
 }
 
-.feedback__form__control:hover .feedback__form__control__mark,
-.feedback__form__control:focus-within .feedback__form__control__mark {
-  outline: none;
+.feedback__form__control__mark:hover,
+.feedback__form__control__mark:focus-visible {
+    background-color: #C8D39D;
+    outline: none;
 }
 
 .feedback__form__control__mark svg {
@@ -4253,7 +4284,7 @@ legend {
     object-position: center;
 }
 
-.certificates__card:focus-within {
+.certificates__card:focus-visible {
     outline: none;
     opacity: .6;
 }
