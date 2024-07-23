@@ -4477,12 +4477,33 @@ legend {
 
 /* Обертки для фона */
 .wrapperSections {
+    position: relative;
     padding-bottom: var(--xl-padding);
+}
+
+.wrapperSections__bg {
+    position: absolute;
+    inset: 0;
+    z-index: -2;   
+}
+
+.wrapperSections__bg svg {
+    width: 100%;
+    height: 100%;
+    fill: var(--brown-pallet-200);
+}
+
+.wrapperSections_bottom .wrapperSections__bg svg {
+    height: 60%;
 }
 
 @media (max-width: 1500px) {
     .wrapperSections {
         padding-bottom: var(--lg-padding);
+    }
+
+    .wrapperSections_bottom .wrapperSections__bg svg {
+        height: 90%;
     }
 }
 
@@ -4490,47 +4511,26 @@ legend {
     .wrapperSections {
         padding-bottom: var(--md-padding);
     }
+
+    .wrapperSections_top .wrapperSections__bg {
+        height: 50%;
+    }
 }
 
 @media (max-width: 960px) {
     .wrapperSections {
         padding-bottom: var(--xs-padding);
     }
-}
 
-.wrapperBgTop {
-    position: relative;
-}
-
-.wrapperBgTop__bg {
-    position: absolute;
-    inset: 0;
-    z-index: -2;    
-}
-
-.wrapperBgTop__bg svg {
-    width: 100%;
-    height: 100%;
-
-    fill: var(--brown-pallet-200);
-}
-
-@media (max-width: 1500px) {
-    .wrapperBgTop {
+    .wrapperSections_bottom .wrapperSections__bg svg {
+        height: 60%;
     }
 }
 
-@media (max-width: 1200px) {
-    .wrapperBgTop {
+@media (max-width: 560px) {
+    .wrapperSections_bottom .wrapperSections__bg svg {
+        height: 70%;
     }
-}
-
-@media (max-width: 960px) {
-    .wrapperBgTop {
-    }
-}
-
-@media (max-width:  760px) {
 }
 
 
@@ -5015,40 +5015,3 @@ legend {
         display: none;
     }
 }
-
-
-
-
-
-.wrapperBgBottom {
-    position: relative;
-}
-
-.wrapperBgBottom__bg {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 37%;
-    z-index: -2;    
-}
-
-.wrapperBgBottom__bg svg {
-    width: 100%;
-    height: 100%;
-
-    fill: var(--brown-pallet-200);
-}
-
-@media (max-width:1500px) {
-}
-
-@media (max-width: 1200px) {
-}
-
-@media (max-width: 960px) {
-}
-
-@media (max-width:  760px) {
-}
-
