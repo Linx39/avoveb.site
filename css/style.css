@@ -1562,6 +1562,7 @@ legend {
     display: flex;
     flex-direction: column;
     gap: 42px;
+    height: 100%;
 }
 
 .sidebar__head {
@@ -1572,6 +1573,8 @@ legend {
 }
 
 .sidebar__list {
+    flex-grow: 1;
+
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -1580,6 +1583,8 @@ legend {
 }
 
 .sidebar__contacts {
+    flex-grow: 1;
+    
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -4492,7 +4497,7 @@ legend {
     .pictureModal__content_horizontal {
         /* width: 300px; */
         width: auto;
-        height: calc(2 * 100vh / 3 - 20px);
+        height: calc(2 * 100vh / 3);
         
         /* height: calc(100vh - 20px); */
     }
@@ -4586,6 +4591,100 @@ legend {
 
 
 /* Декоративные элементы фона */
+.sidebar__decorContainer {
+    position: absolute;
+
+    inset: 0;
+}
+
+.sidebar__decor {
+    position: absolute;
+    content: "";
+    z-index: 1;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.sidebar__decor_branch-5 {
+    top: 15%;
+    right: 10px;
+
+    width: 150px;
+    height: 138px;
+    background-image: url("../assets/img/decor-item/branch-5.svg");
+}
+
+.sidebar__decor_flower {
+    top: 45%;
+    right: 130px;
+
+    width: 47px;
+    height: 54px;
+    background-image: url("../assets/img/decor-item/flower.svg");
+    transform: rotate(-162deg);
+}
+
+.sidebar__decor_branch-2 {
+    top: 75%;
+    right: 30px;
+
+    width: 81px;
+    height: 73px;
+    background-image: url("../assets/img/decor-item/branch-2.svg");
+}
+
+.sidebar__decor_hogweed-2 {
+    top: 83%;
+    left: 10px;
+
+    width: 125px;
+    height: 132px;
+    background-image: url("../assets/img/decor-item/hogweed-2.svg");
+}
+
+@media (max-width: 1200px) {
+    .sidebar__decor_branch-5 {    
+        width: 118px;
+        height: 109px;
+    }
+
+    .sidebar__decor_flower {    
+        width: 77px;
+        height: 88px;
+    }
+}
+
+@media (max-width: 960px) {
+    .sidebar__decor_branch-5 { 
+        top: 50%;
+        right: 30px;   
+        width: 118px;
+        height: 109px;
+    }
+
+    .sidebar__decor_flower {
+        top: 18%;
+        right: 40px;    
+        width: 77px;
+        height: 88px;
+    }
+
+    .sidebar__decor_branch-2 {
+        top: 78%;
+        right: 30px;
+    }
+    
+    .sidebar__decor_hogweed-2 {
+        top: 83%;
+        left: 10px;
+    
+        width: 57px;
+        height: 60px;
+    }
+}
+
 .offer__decorContainer {
     position: relative;
 }
