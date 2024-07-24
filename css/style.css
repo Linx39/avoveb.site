@@ -4711,7 +4711,7 @@ legend {
 @media (max-width: 1200px) {  
     .offer__decor_flower {
         top: unset;
-        bottom: -173px;
+        bottom: -153px;
         left: 0;
 
         width: 136px;
@@ -4756,32 +4756,50 @@ legend {
     }
 }
 
+@media (max-width: 960px) {  
+    .offer__decor_branch-2 {
+        inset: unset;
+        top: -36px;
+        right: 20px;
+
+        width: 81px;
+        height: 73px;
+    }
+
+    .offer__decor_branch-1 {
+        display: none;
+    }
+}
+
 @media (max-width: 560px) {  
     .offer__decor_flower {
-        display: none;
+        /* display: none; */
+        left: 25px;
+        bottom: -90px;
+        width: 54px;
+        height: 60px;
     }
 
     .offer__decor_branch-2 {
-        display: none;
+        top: -46px;
+        right: 10px;
+        /* display: none; */
     }
 
     .offer__decor_mitten {
         display: none;
     }
 
-    .offer__decor_branch-1 {
-        display: none;
-    } 
-
     .offer__decor_broom-2 {
-        display: block;
+        display: none;
+        /* display: block;
         top: -50px;
         left: 38%;
 
         width: 81px;
         height: 71px;
 
-        transform: rotate(107deg);
+        transform: rotate(107deg); */
     }  
 }
 
