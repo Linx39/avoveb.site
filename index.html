@@ -186,7 +186,7 @@
                 <svg style="width: 44px; height: 44px;"><use href="#whatsapp"></use></svg>
               </a>
             </div>
-            <button class="header__sidebar__button header__button" data-sidebar="#sidebar-modal" type="button">
+            <button class="header__sidebar__button header__button" data-sidebar="#sidebar" type="button">
               <svg  style="width: 60px; height: 34px;"><use href="#burger"></use></svg>
             </button>
           </div>
@@ -195,7 +195,7 @@
     </header>
 
     <!-- Сайдбар -->
-    <div class="hystmodal" id="sidebar-modal" aria-hidden="true">
+    <div class="hystmodal" id="sidebar" aria-hidden="true">
       <div class="hystmodal__wrap">
         <div class="sidebarModal hystmodal__window" role="dialog" aria-modal="true">
           <div class="sidebarModal__bg">
@@ -373,7 +373,7 @@
             </div>
 
             <div class="personal__buttons buttonsGroup">
-              <a class="buttonsGroup__button button button_left" data-certificates="#certificates-modal" href="#certificates-modal">Сертификаты</a>
+              <a class="buttonsGroup__button button button_left" data-certificates="#certificates" href="#certificates">Сертификаты</a>
 
               <a class="buttonsGroup__button button button_right button_light" href="#">Видеоролик о нас</a>
             </div>
@@ -382,10 +382,10 @@
       </div>
 
       <section class="certificatesSlide">   
-        <div class="hystmodal" id="certificates-modal" aria-hidden="true">
+        <div class="hystmodal" id="certificates" aria-hidden="true">
           <div class="hystmodal__wrap">
             <div class="certificatesModal modal hystmodal__window" role="dialog" aria-modal="true">
-              <button class="certificatesModal__closeButton modal__closeButton closeButton" data-hystclose>
+              <button class="certificatesModal__closeButton modal__closeButton closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
@@ -396,32 +396,32 @@
                 <div class="certificates__swiper swiper">
                   <div class="certificates__list swiper-wrapper">
                     <div class="certificates__slide swiper-slide">
-                      <a class="certificates__card" data-picturemodal="#certificate-1-modal" data-hystclose href="#certificate-1-modal">
+                      <a class="certificates__card" data-sertificate="#certificate-1" data-hystclose href="#certificate-1">
                         <img class="certificates__img" src="assets/img/certificates/certificate-1.png" alt="Сетификат">
                       </a>
                     </div>
                     <div class="certificates__slide swiper-slide">
-                      <a class="certificates__card" data-picturemodal="#certificate-2-modal" data-hystclose href="#certificate-2-modal">
+                      <a class="certificates__card" data-sertificate="#certificate-2" data-hystclose href="#certificate-2">
                         <img class="certificates__img" src="assets/img/certificates/certificate-2.png" alt="Сетификат">
                       </a>
                     </div>
                     <div class="certificates__slide swiper-slide">
-                      <a class="certificates__card" data-picturemodal="#certificate-3-modal" data-hystclose href="#certificate-3-modal">
+                      <a class="certificates__card" data-sertificate="#certificate-3" data-hystclose href="#certificate-3">
                         <img class="certificates__img" src="assets/img/certificates/certificate-3.png" alt="Сетификат">
                       </a>
                     </div>
                     <div class="certificates__slide swiper-slide">
-                      <a class="certificates__card" data-picturemodal="#certificate-4-modal" data-hystclose href="#certificate-4-modal">
+                      <a class="certificates__card" data-sertificate="#certificate-4" data-hystclose href="#certificate-4">
                         <img class="certificates__img" src="assets/img/certificates/certificate-4.png" alt="Сетификат">
                       </a>
                     </div>
                     <div class="certificates__slide swiper-slide">
-                      <a class="certificates__card" data-picturemodal="#certificate-5-modal" data-hystclose href="#certificate-5-modal">
+                      <a class="certificates__card" data-sertificate="#certificate-5" data-hystclose href="#certificate-5">
                         <img class="certificates__img" src="assets/img/certificates/certificate-5.png" alt="Сетификат">
                       </a>
                     </div>
                     <div class="certificates__slide swiper-slide">
-                      <a class="certificates__card" data-picturemodal="#certificate-6-modal" data-hystclose href="#certificate-6-modal">
+                      <a class="certificates__card" data-sertificate="#certificate-6" data-hystclose href="#certificate-6">
                         <img class="certificates__img" src="assets/img/certificates/certificate-6.png" alt="Сетификат">
                       </a>
                     </div>
@@ -429,7 +429,7 @@
                 </div>             
 
                 <div class="certificates__swiper__controls slider__controls">
-                  <button class="certificates__swiper__buttonPrev sliderButton sliderButton_brown" tabindex="0">
+                  <button class="certificates__swiper__buttonPrev sliderButton sliderButton_brown" type="button">
                     <svg style="width: 30px; height: 55px; transform: translateX(-10%);">
                       <use href="#arrow"></use>
                     </svg>
@@ -437,7 +437,7 @@
       
                   <div class="certificates__swiper__pagination slider__pagination swiper-pagination"></div>
       
-                  <button class="certificates__swiper__buttonNext sliderButton sliderButton_brown" tabindex="0">
+                  <button class="certificates__swiper__buttonNext sliderButton sliderButton_brown" type="button">
                     <svg style="width: 30px; height: 55px; transform: rotate(180deg) translateX(-10%);">
                       <use href="#arrow"></use>
                     </svg>
@@ -449,10 +449,10 @@
         </div>
 
         <!-- Модальные окна сертификатов -->
-        <div class="hystmodal" id="certificate-1-modal" aria-hidden="true">
+        <div class="hystmodal" id="certificate-1" aria-hidden="true">
           <div class="hystmodal__wrap">
             <div class="pictureModal hystmodal__window" role="dialog" aria-modal="true">          
-              <button class="pictureModal__close closeButton" data-hystclose>
+              <button class="pictureModal__close closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
@@ -463,10 +463,10 @@
           </div>
         </div>
         
-        <div class="hystmodal" id="certificate-2-modal" aria-hidden="true">
+        <div class="hystmodal" id="certificate-2" aria-hidden="true">
           <div class="hystmodal__wrap">
             <div class="pictureModal hystmodal__window" role="dialog" aria-modal="true">          
-              <button class="pictureModal__close closeButton" data-hystclose>
+              <button class="pictureModal__close closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
@@ -477,10 +477,10 @@
           </div>
         </div>
 
-        <div class="hystmodal" id="certificate-3-modal" aria-hidden="true">
+        <div class="hystmodal" id="certificate-3" aria-hidden="true">
           <div class="hystmodal__wrap">
             <div class="pictureModal hystmodal__window" role="dialog" aria-modal="true">          
-              <button class="pictureModal__close closeButton" data-hystclose>
+              <button class="pictureModal__close closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
@@ -491,10 +491,10 @@
           </div>
         </div>
 
-        <div class="hystmodal" id="certificate-4-modal" aria-hidden="true">
+        <div class="hystmodal" id="certificate-4" aria-hidden="true">
           <div class="hystmodal__wrap">
             <div class="pictureModal hystmodal__window" role="dialog" aria-modal="true">          
-              <button class="pictureModal__close closeButton" data-hystclose>
+              <button class="pictureModal__close closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
@@ -505,10 +505,10 @@
           </div>
         </div>
         
-        <div class="hystmodal" id="certificate-5-modal" aria-hidden="true">
+        <div class="hystmodal" id="certificate-5" aria-hidden="true">
           <div class="hystmodal__wrap">
             <div class="pictureModal hystmodal__window" role="dialog" aria-modal="true">          
-              <button class="pictureModal__close closeButton" data-hystclose>
+              <button class="pictureModal__close closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
@@ -519,10 +519,10 @@
           </div>
         </div>
         
-        <div class="hystmodal" id="certificate-6-modal" aria-hidden="true">
+        <div class="hystmodal" id="certificate-6" aria-hidden="true">
           <div class="hystmodal__wrap">
             <div class="pictureModal hystmodal__window" role="dialog" aria-modal="true">          
-              <button class="pictureModal__close closeButton" data-hystclose>
+              <button class="pictureModal__close closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
@@ -560,7 +560,7 @@
           </div>
 
           <div class="price__contacts contacts">
-            <a class="contacts__button button button_left" data-picturemodal="#feedback-modal" href="#feedback-modal">Оставить заявку</a>
+            <a class="contacts__button button button_left" data-feedback="#feedback" href="#feedback">Оставить заявку</a>
             <div class="contacts__social socialList">
               <a href="index.html#" class="price__socialButton socialButton">
                 <svg style="width: 38px; height: 35px; transform: translateX(-6%) translateY(2%);"><use href="#telegram"></use></svg>
@@ -575,10 +575,10 @@
 
       <section class="feedbackForm">   
         <!-- Модальное окно обратной связи -->
-        <div class="hystmodal" id="feedback-modal" aria-hidden="true">
+        <div class="hystmodal" id="feedback" aria-hidden="true">
           <div class="hystmodal__wrap">
             <div class="feedbackModal modal hystmodal__window" role="dialog" aria-modal="true">
-              <button data-hystclose class="modal__closeButton closeButton">
+              <button class="modal__closeButton closeButton" data-hystclose>
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
@@ -633,7 +633,7 @@
             <div class="services__swiper slider container swiper">
               <div class="services__list swiper-wrapper">
                 <div class="services__slide swiper-slide">
-                  <a data-services="#services-1-modal" class="services__card card" href="#services-1-modal">
+                  <a class="services__card card" data-services="#services-1" href="#services-1">
                     <div class="services__card__circle circle"><span class="circle__text">15 мин</span></div>
 
                     <img class="services__card__img card__img" src="assets/img/services/services-1.png" alt="Ребенок в сауне">
@@ -645,7 +645,7 @@
                   </a>
                 </div>
                 <div class="services__slide swiper-slide">
-                  <a data-services="#services-2-modal" class="services__card card" href="#services-2-modal">
+                  <a class="services__card card" data-services="#services-2" href="#services-2">
                     <div class="services__card__circle circle"><span class="circle__text">30 мин</span></div>
 
                     <img class="services__card__img card__img" src="assets/img/services/services-2.png" alt="Ребенок в сауне">
@@ -657,7 +657,7 @@
                   </a>
                 </div>
                 <div class="services__slide swiper-slide">
-                  <a data-services="#services-3-modal" class="services__card card" href="#services-3-modal">
+                  <a class="services__card card" data-services="#services-3" href="#services-3">
                     <div class="services__card__circle circle"><span class="circle__text">40 мин</span></div> 
                     <img class="services__card__img card__img" src="assets/img/services/services-3.png" alt="Ребенок в сауне">
                     <div class="services__card__bottom">
@@ -667,7 +667,7 @@
                   </a>
                 </div>
                 <div class="services__slide swiper-slide">
-                  <a data-services="#services-4-modal" class="services__card card" href="#services-4-modal">
+                  <a class="services__card card" data-services="#services-4" href="#services-4">
                     <div class="services__card__circle circle">
                       <span class="services__card__circle__icon circle__icon">
                         <svg style="width: 42px; height: 40px;"><use href="#chat"></use></svg>
@@ -683,7 +683,7 @@
                   </a>
                 </div>
                 <div class="services__slide swiper-slide">
-                  <a data-services="#services-5-modal" class="services__card card" href="#services-5-modal">
+                  <a class="services__card card" data-services="#services-5" href="#services-5">
                     <div class="services__card__circle circle"><span class="circle__text">40 мин</span></div> 
 
                     <img class="services__card__img card__img" src="assets/img/services/services-5.png" alt="Ребенок в сауне">
@@ -695,7 +695,7 @@
                   </a>
                 </div>
                 <div class="services__slide swiper-slide">
-                  <a data-services="#services-6-modal" class="services__card card" href="#services-6-modal">
+                  <a class="services__card card" data-services="#services-6" href="#services-6">
                     <div class="services__card__circle circle"><span class="circle__text">30 мин</span></div>
                     
                     <img class="services__card__img card__img" src="assets/img/services/services-6.png" alt="Ребенок в сауне">
@@ -707,7 +707,7 @@
                   </a>
                 </div>
                 <div class="services__slide swiper-slide">
-                  <a data-services="#services-7-modal" class="services__card card" href="#services-7-modal">
+                  <a class="services__card card" data-services="#services-7" href="#services-7">
                     <div class="services__card__circle circle"><span class="circle__text">30 мин</span></div>  
 
                     <img class="services__card__img card__img" src="assets/img/services/services-7.png" alt="Ребенок в сауне">
@@ -719,7 +719,7 @@
                   </a>
                 </div>
                 <div class="services__slide swiper-slide">
-                  <a data-services="#services-8-modal" class="services__card card" href="#services-8-modal">
+                  <a class="services__card card" data-services="#services-8" href="#services-8">
                     <div class="services__card__circle circle"><span class="circle__text">20 мин</span></div>
                     
                     <img class="services__card__img card__img" src="assets/img/services/services-8.png" alt="Ребенок в сауне">
@@ -751,10 +751,10 @@
           </div>
 
           <div class="services__modal">  
-            <div class="hystmodal" id="services-1-modal" aria-hidden="true">
+            <div class="hystmodal" id="services-1" aria-hidden="true">
               <div class="hystmodal__wrap">
-                <div class="productModal modal hystmodal__window " role="dialog" aria-modal="true">
-                  <button class="modal__closeButton closeButton" data-hystclose>
+                <div class="productModal modal hystmodal__window" role="dialog" aria-modal="true">
+                  <button class="modal__closeButton closeButton" data-hystclose type="button">
                     <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                     <span class="visually-hidden">Закрыть окно</span> 
                   </button>
@@ -774,17 +774,17 @@
                       </div>
                     </div>   
 
-                    <a class="modal__bottomButton button button_left" href="#feedback-modal" data-feedback="#feedback-modal" data-hystclose>
+                    <a class="modal__bottomButton button button_left" href="#feedback" data-feedback="#feedback" data-hystclose>
                       Хочу попробовать!
                     </a>
                   </div>
                 </div>
               </div>
             </div>        
-            <div class="hystmodal" id="services-2-modal" aria-hidden="true">
+            <div class="hystmodal" id="services-2" aria-hidden="true">
               <div class="hystmodal__wrap">
                 <div class="productModal modal hystmodal__window" role="dialog" aria-modal="true">
-                  <button class="modal__closeButton closeButton" data-hystclose>
+                  <button class="modal__closeButton closeButton" data-hystclose type="button">
                     <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                     <span class="visually-hidden">Закрыть окно</span> 
                   </button>
@@ -813,17 +813,17 @@
                       </div>
                     </div>
       
-                    <a class="modal__bottomButton button button_left" href="#feedback-modal" data-feedback="#feedback-modal" data-hystclose>
+                    <a class="modal__bottomButton button button_left" href="#feedback" data-feedback="#feedback" data-hystclose>
                       Хочу попробовать!
                     </a>
                   </div>
                 </div>
               </div>
             </div>        
-            <div class="hystmodal" id="services-3-modal" aria-hidden="true">
+            <div class="hystmodal" id="services-3" aria-hidden="true">
               <div class="hystmodal__wrap">
                 <div class="productModal modal hystmodal__window" role="dialog" aria-modal="true">
-                  <button data-hystclose class="modal__closeButton closeButton">
+                  <button class="modal__closeButton closeButton" data-hystclose type="button">
                     <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                     <span class="visually-hidden">Закрыть окно</span> 
                   </button>
@@ -860,17 +860,17 @@
                       </div>
                     </div>
         
-                    <a class="modal__bottomButton button button_left" href="#feedback-modal" data-feedback="#feedback-modal" data-hystclose>
+                    <a class="modal__bottomButton button button_left" href="#feedback" data-feedback="#feedback" data-hystclose>
                       Хочу попробовать!
                     </a>
                   </div>
                 </div>
               </div>
             </div>        
-            <div class="hystmodal" id="services-4-modal" aria-hidden="true">
+            <div class="hystmodal" id="services-4" aria-hidden="true">
               <div class="hystmodal__wrap">
                 <div class="productModal modal hystmodal__window" role="dialog" aria-modal="true">
-                  <button data-hystclose class="modal__closeButton closeButton">
+                  <button class="modal__closeButton closeButton" data-hystclose type="button">
                     <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                     <span class="visually-hidden">Закрыть окно</span> 
                   </button>
@@ -896,17 +896,17 @@
                       </div>
                     </div>
         
-                    <a class="modal__bottomButton button button_left" href="#feedback-modal" data-feedback="#feedback-modal" data-hystclose>
+                    <a class="modal__bottomButton button button_left" href="#feedback" data-feedback="#feedback" data-hystclose>
                       Хочу попробовать!
                     </a>
                   </div>
                 </div>
               </div>
             </div>        
-            <div class="hystmodal" id="services-5-modal" aria-hidden="true">
+            <div class="hystmodal" id="services-5" aria-hidden="true">
               <div class="hystmodal__wrap">
                 <div class="productModal modal hystmodal__window" role="dialog" aria-modal="true">
-                  <button data-hystclose class="modal__closeButton closeButton">
+                  <button class="modal__closeButton closeButton" data-hystclose type="button">
                     <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                     <span class="visually-hidden">Закрыть окно</span> 
                   </button>
@@ -931,17 +931,17 @@
                       </div>
                     </div>
         
-                    <a class="modal__bottomButton button button_left" href="#feedback-modal" data-feedback="#feedback-modal" data-hystclose>
+                    <a class="modal__bottomButton button button_left" href="#feedback" data-feedback="#feedback" data-hystclose>
                       Хочу попробовать!
                     </a>
                   </div>
                 </div>
               </div>
             </div>        
-            <div class="hystmodal" id="services-6-modal" aria-hidden="true">
+            <div class="hystmodal" id="services-6" aria-hidden="true">
               <div class="hystmodal__wrap">
                 <div class="productModal modal hystmodal__window" role="dialog" aria-modal="true">
-                  <button data-hystclose class="modal__closeButton closeButton">
+                  <button class="modal__closeButton closeButton" data-hystclose type="button">
                     <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                     <span class="visually-hidden">Закрыть окно</span> 
                   </button>
@@ -971,17 +971,17 @@
                       </div>
                     </div>
         
-                    <a class="modal__bottomButton button button_left" href="#feedback-modal" data-feedback="#feedback-modal" data-hystclose>
+                    <a class="modal__bottomButton button button_left" href="#feedback" data-feedback="#feedback" data-hystclose>
                       Хочу попробовать!
                     </a>
                   </div>
                 </div>
               </div>
             </div>        
-            <div class="hystmodal" id="services-7-modal" aria-hidden="true">
+            <div class="hystmodal" id="services-7" aria-hidden="true">
               <div class="hystmodal__wrap">
                 <div class="productModal modal hystmodal__window" role="dialog" aria-modal="true">
-                  <button data-hystclose class="modal__closeButton closeButton">
+                  <button class="modal__closeButton closeButton" data-hystclose type="button">
                     <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                     <span class="visually-hidden">Закрыть окно</span> 
                   </button>
@@ -1006,17 +1006,17 @@
                       </div>
                     </div>
         
-                    <a class="modal__bottomButton button button_left" href="#feedback-modal" data-feedback="#feedback-modal" data-hystclose>
+                    <a class="modal__bottomButton button button_left" href="#feedback" data-feedback="#feedback" data-hystclose>
                       Хочу попробовать!
                     </a>
                   </div>
                 </div>
               </div>
             </div>        
-            <div class="hystmodal" id="services-8-modal" aria-hidden="true">
+            <div class="hystmodal" id="services-8" aria-hidden="true">
               <div class="hystmodal__wrap">
                 <div class="productModal modal hystmodal__window" role="dialog" aria-modal="true">
-                  <button class="modal__closeButton closeButton" data-hystclose>
+                  <button class="modal__closeButton closeButton" data-hystclose type="button">
                     <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                     <span class="visually-hidden">Закрыть окно</span> 
                   </button>
@@ -1039,7 +1039,7 @@
                       </div>
                     </div>
         
-                    <a class="modal__bottomButton button button_left" href="#feedback-modal" data-feedback="#feedback-modal" data-hystclose>
+                    <a class="modal__bottomButton button button_left" href="#feedback" data-feedback="#feedback" data-hystclose>
                       Хочу попробовать!
                     </a>
                   </div>
@@ -1161,7 +1161,7 @@
               <div class="guarantees__item guarantees__item__bg item item_img" style="background-image: url('assets/img/flowers.png')"></div>
 
               <div class="guarantees__contacts contacts">
-                <a class="contacts__button button button_left" data-feedback="#feedback-modal" href="#feedback-modal">Оставить заявку</a>
+                <a class="contacts__button button button_left" data-feedback="#feedback" href="#feedback">Оставить заявку</a>
                 <div class="contacts__social socialList">
                   <a href="index.html#" class="socialButton">
                     <svg style="width: 38px; height: 35px; transform: translateX(-6%) translateY(2%);"><use href="#telegram"></use></svg>
@@ -1177,12 +1177,11 @@
 
         <section class="reviews wrapperPadding" id="reviews">
           <h2 class="reviews__title title container">Отзывы</h2>
-
           
           <div class="reviews__swiper slider container swiper">
             <div class="reviews__list swiper-wrapper">                
               <div class="review__slide swiper-slide">
-                <a class="reviews__card" data-picturemodal="#review-1-modal" href="#review-1-modal">
+                <a class="reviews__card" data-review="#review-1" href="#review-1">
                   <svg class="reviews__card__bg">
                     <use href="#review-bg"></use>
                   </svg> 
@@ -1195,7 +1194,7 @@
                 </a>
               </div>
               <div class="review__slide swiper-slide">
-                <a class="reviews__card" data-picturemodal="#review-2-modal" href="#review-2-modal">
+                <a class="reviews__card" data-review="#review-2" href="#review-2">
                   <svg class="reviews__card__bg">
                     <use href="#review-bg"></use>
                   </svg> 
@@ -1208,7 +1207,7 @@
                 </a>
               </div>
               <div class="review__slide swiper-slide">
-                <a class="reviews__card" data-picturemodal="#review-3-modal" href="#review-3-modal">
+                <a class="reviews__card" data-review="#review-3" href="#review-3">
                   <svg class="reviews__card__bg">
                     <use href="#review-bg"></use>
                   </svg>
@@ -1221,7 +1220,7 @@
                 </a>
               </div>
               <div class="review__slide swiper-slide">
-                <a class="reviews__card" data-picturemodal="#review-4-modal" href="#review-4-modal">
+                <a class="reviews__card" data-review="#review-4" href="#review-4">
                   <svg class="reviews__card__bg">
                     <use href="#review-bg"></use>
                   </svg>
@@ -1234,7 +1233,7 @@
                 </a>
               </div>
               <div class="review__slide swiper-slide">
-                <a class="reviews__card" data-picturemodal="#review-5-modal" href="#review-5-modal">
+                <a class="reviews__card" data-review="#review-5" href="#review-5">
                   <svg class="reviews__card__bg">
                     <use href="#review-bg"></use>
                   </svg>
@@ -1267,10 +1266,10 @@
            
           <!-- Модальные окна отзывов -->
           <div class="reviews__modal">  
-            <div class="hystmodal" id="review-1-modal" aria-hidden="true">
+            <div class="hystmodal" id="review-1" aria-hidden="true">
               <div class="hystmodal__wrap">
                 <div class="pictureModal hystmodal__window" role="dialog" aria-modal="true">
-                  <button class="pictureModal__close closeButton" data-hystclose>
+                  <button class="pictureModal__close closeButton" data-hystclose type="button">
                     <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                     <span class="visually-hidden">Закрыть окно</span> 
                   </button>
@@ -1280,10 +1279,10 @@
                 </div>
               </div>
             </div>            
-            <div class="hystmodal" id="review-2-modal" aria-hidden="true">
+            <div class="hystmodal" id="review-2" aria-hidden="true">
               <div class="hystmodal__wrap">
                 <div class="pictureModal hystmodal__window" role="dialog" aria-modal="true">
-                  <button class="pictureModal__close closeButton" data-hystclose>
+                  <button class="pictureModal__close closeButton" data-hystclose type="button">
                     <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                     <span class="visually-hidden">Закрыть окно</span> 
                   </button>
@@ -1293,10 +1292,10 @@
                 </div>
               </div>
             </div>            
-            <div class="hystmodal" id="review-3-modal" aria-hidden="true">
+            <div class="hystmodal" id="review-3" aria-hidden="true">
               <div class="hystmodal__wrap">
                 <div class="pictureModal hystmodal__window" role="dialog" aria-modal="true">
-                  <button class="pictureModal__close closeButton" data-hystclose>
+                  <button class="pictureModal__close closeButton" data-hystclose type="button">
                     <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                     <span class="visually-hidden">Закрыть окно</span> 
                   </button>
@@ -1306,10 +1305,10 @@
                 </div>
               </div>
             </div>            
-            <div class="hystmodal" id="review-4-modal" aria-hidden="true">
+            <div class="hystmodal" id="review-4" aria-hidden="true">
               <div class="hystmodal__wrap">
                 <div class="pictureModal hystmodal__window" role="dialog" aria-modal="true">
-                  <button class="pictureModal__close closeButton" data-hystclose>
+                  <button class="pictureModal__close closeButton" data-hystclose type="button">
                     <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                     <span class="visually-hidden">Закрыть окно</span> 
                   </button>
@@ -1319,10 +1318,10 @@
                 </div>
               </div>
             </div>            
-            <div class="hystmodal" id="review-5-modal" aria-hidden="true">
+            <div class="hystmodal" id="review-5" aria-hidden="true">
               <div class="hystmodal__wrap">
                 <div class="pictureModal hystmodal__window" role="dialog" aria-modal="true">
-                  <button class="pictureModal__close closeButton" data-hystclose>
+                  <button class="pictureModal__close closeButton" data-hystclose type="button">
                     <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                     <span class="visually-hidden">Закрыть окно</span> 
                   </button>

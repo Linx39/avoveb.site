@@ -30,7 +30,8 @@
     --xl-padding: 60px;
     --lg-padding: 50px;
     --md-padding: 40px;
-    --xs-padding: 30px;
+    --sm-padding: 30px;
+    --xs-padding: 40px;
     
     --xl-gap: 32px;
     --lg-gap: 28px;
@@ -265,6 +266,12 @@ legend {
 
 @media (max-width: 960px) {
     .wrapperPadding {
+        padding: var(--sm-padding) 0;
+    }
+}
+
+@media (max-width: 560px) {
+    .wrapperPadding {
         padding: var(--xs-padding) 0;
     }
 }
@@ -286,6 +293,12 @@ legend {
 }
 
 @media (max-width: 960px) {
+    .wrapperPaddingBig {
+        padding: calc(2 * var(--sm-padding)) 0;
+    }
+}
+
+@media (max-width: 560px) {
     .wrapperPaddingBig {
         padding: calc(2 * var(--xs-padding)) 0;
     }
@@ -3706,7 +3719,7 @@ legend {
     }
 
     .modal__content {
-        padding: calc(var(--xs-padding)) 0;
+        padding: calc(var(--sm-padding)) 0;
     }
 
     .modal__bottomButton {
@@ -3736,7 +3749,7 @@ legend {
     }
 
     .modal__content {
-        padding: calc(2 * var(--xs-padding)) 0;
+        padding: var(--xs-padding) 0;
     }
 
     .modal__bottomButton {
@@ -4433,7 +4446,8 @@ legend {
     fill: var(--brown-pallet-500);
 }
 
-.pictureModal__close:hover svg {
+.pictureModal__close:hover svg,
+.pictureModal__close:focus-visible svg {
     fill: var(--brown-pallet-400);
 }
 
@@ -4550,7 +4564,7 @@ legend {
 
 @media (max-width: 960px) {
     .wrapperSections {
-        padding-bottom: var(--xs-padding);
+        padding-bottom: var(--sm-padding);
     }
 
     .wrapperSections_bottom .wrapperSections__bg svg {
@@ -4559,6 +4573,10 @@ legend {
 }
 
 @media (max-width: 560px) {
+    .wrapperSections {
+        padding-bottom: var(--xs-padding);
+    }
+
     .wrapperSections_bottom .wrapperSections__bg svg {
         height: 70%;
     }
@@ -4757,13 +4775,13 @@ legend {
 
     .offer__decor_broom-2 {
         display: block;
-        top: -70px;
-        left: 50%;
+        top: -50px;
+        left: 38%;
 
         width: 81px;
         height: 71px;
 
-        transform: translateX(-50%) rotate(107deg);
+        transform: rotate(107deg);
     }  
 }
 
@@ -4798,7 +4816,7 @@ legend {
 
 .services__decor_branch-1 {
     top: -9px;
-    left: 50px;
+    left: 120px;
 
     width: 86px;
     height: 126px;

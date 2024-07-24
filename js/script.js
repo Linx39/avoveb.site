@@ -170,6 +170,7 @@ new Swiper(".certificates__swiper", {
   },
 });
 
+
 // Сайдбар
 const header = document.querySelector('.header');
 const sidebar = document.querySelector('.sidebar');
@@ -233,7 +234,8 @@ window.addEventListener('resize', () => {
 //   })
 // })
 
-/* Закрытие/открытие модального окна сертификатов перед открытием/закрытием увеличенной картинки */
+
+// Закрытие модального окна сертификатов
 // const certificatesModalElement = document.querySelector('.certificatesModal');
 // const certificatesModalButtons = certificatesModalElement.querySelectorAll('.certificates__card');
 
@@ -243,21 +245,25 @@ window.addEventListener('resize', () => {
 //   })
 // })
 
-// const pictureModalElements = document.querySelectorAll('.pictureModal');
-// pictureModalElements.forEach(item => {
+
+/* Закрытие модального окна увеличенной картинки */
+// const picture = document.querySelectorAll('.pictureModal');
+// const picture = document.querySelectorAll('.picture');
+// picture.forEach(item => {
 //   const btn = item.querySelector('.pictureModal__close');
+//   btn.addEventListener('click', () => {    
+//     // pictureModal.close();
+//     // certificatesModal.open();
+//   })
 
-//   btn.addEventListener('click', () => {
-//     console.log(certificatesModal.config);
-//     console.log(servicesModal.isOpened);
-
-//     certificatesModal.isOpened = true;
-//     console.log(servicesModal.isOpened);
-//     // certificatesModal.open('#certificates-modal');
+//   const wrap = item.querySelector('.picture__wrap');
+//   wrap.addEventListener('click', () => {    
+//     // pictureModal.close();
+//     // certificatesModal.open();
 //   })
 // })
 
-// Модальные окна
+// Инициализация модальных окон
 const sidebarModal = new HystModal({
   linkAttributeName: "data-sidebar",
 })
@@ -266,8 +272,13 @@ const certificatesModal = new HystModal({
   linkAttributeName: "data-certificates",
 });
 
+const certificateModal = new HystModal({
+  linkAttributeName: "data-sertificate",
+  afterClose: () => certificatesModal.open(),
+});
+
 const pictureModal = new HystModal({
-  linkAttributeName: "data-picturemodal",
+  linkAttributeName: "data-review",
 });
 
 const servicesModal = new HystModal({
@@ -282,16 +293,6 @@ const successModal = new HystModal({
   linkAttributeName: "data-success",
 });
 
-// Проверка формы обратной связи
-const feedbackForm = document.querySelector(".feedbackModal__form");
-// const feedbackSuccessText = document.querySelector(".feedbackModal__success");
-const feedbackInputs = document.querySelectorAll(".feedbackModal__input");
-
-// feedbackForm.addEventListener("submit", (e) => {
-//   e.preventDefault();
-//   feedbackModal.close("#feedback-modal");
-//   successModal.open("#success-modal");
-// });
 
 // Блок этапы
 const STAGES_ITEM_CURRENT_CLASS = 'stages__item_current';
