@@ -27,11 +27,10 @@
     --white-pallet-100-40: rgba(255, 255, 255, 0.4);
     --white-pallet-100-50: rgba(255, 255, 255, 0.5);
 
-    --xl-padding: 60px;
-    --lg-padding: 50px;
-    --md-padding: 40px;
-    --sm-padding: 30px;
-    --xs-padding: 40px;
+    --xl-padding: 120px;
+    --lg-padding: 100px;
+    --md-padding: 80px;
+    --xs-padding: 60px;
     
     --xl-gap: 32px;
     --lg-gap: 28px;
@@ -266,41 +265,7 @@ legend {
 
 @media (max-width: 960px) {
     .wrapperPadding {
-        padding: var(--sm-padding) 0;
-    }
-}
-
-@media (max-width: 560px) {
-    .wrapperPadding {
         padding: var(--xs-padding) 0;
-    }
-}
-
-.wrapperPaddingBig {
-    padding: calc(2 * var(--xl-padding)) 0;
-}
-
-@media (max-width: 1500px) {
-    .wrapperPaddingBig {
-        padding: calc(2 * var(--lg-padding)) 0;
-    }
-}
-
-@media (max-width: 1200px) {
-    .wrapperPaddingBig {
-        padding: calc(2 * var(--md-padding)) 0;
-    }
-}
-
-@media (max-width: 960px) {
-    .wrapperPaddingBig {
-        padding: calc(2 * var(--sm-padding)) 0;
-    }
-}
-
-@media (max-width: 560px) {
-    .wrapperPaddingBig {
-        padding: calc(2 * var(--xs-padding)) 0;
     }
 }
 
@@ -1945,6 +1910,11 @@ legend {
 
 /* Преимущества */
 .offer {
+    padding-bottom: 0;
+}
+
+.offer__container {
+    position: relative;
 }
 
 .offer__title {
@@ -2805,6 +2775,7 @@ legend {
 /* Блок Гарантии */
 .guarantees {
     position: relative; 
+    padding-bottom: 0;
 }
 
 .guarantees__list {
@@ -3017,6 +2988,9 @@ legend {
 }
 
 /* Отзывы */
+.reviews {
+    padding-bottom: 0;
+}
 .reviews__title {
     margin-bottom: 36px;
 }
@@ -3673,8 +3647,9 @@ legend {
     right: 60px;
     z-index: 2;
 }
+
 .modal__content {
-    padding: calc(2 * var(--xl-padding)) 0;
+    padding: var(--xl-padding) 0;
 }
 
 .modal__bottomButton {
@@ -3693,7 +3668,7 @@ legend {
     }
 
     .modal__content {
-        padding: calc(2 * var(--lg-padding)) 0;
+        padding: var(--lg-padding) 0;
     }
 }
 
@@ -3709,7 +3684,7 @@ legend {
     }
 
     .modal__content {
-        padding: calc(2 * var(--md-padding)) 0;
+        padding: var(--md-padding) 0;
     }
 }
 
@@ -3724,7 +3699,7 @@ legend {
     }
 
     .modal__content {
-        padding: calc(var(--sm-padding)) 0;
+        padding: calc(var(--xs-padding) / 2) 0;
     }
 
     .modal__bottomButton {
@@ -4528,65 +4503,40 @@ legend {
 }
 
 /* Обертки для фона */
-.wrapperSections {
-    position: relative;
-    padding-bottom: var(--xl-padding);
+.wrapperTop,
+.wrapperBottom {
+    position: relative
 }
 
-.wrapperSections__bg {
+.wrapperTop__bg,
+.wrapperBottom__bg {
     position: absolute;
     inset: 0;
     z-index: -2;   
 }
 
-.wrapperSections__bg svg {
+.wrapperTop__bg svg {
     width: 100%;
     height: 100%;
     fill: var(--brown-pallet-200);
 }
 
-.wrapperSections_bottom .wrapperSections__bg svg {
-    height: 60%;
+.wrapperBottom__bg svg {
+    width: 100%;
+    height: 115%;
+    fill: var(--brown-pallet-200);
 }
 
 @media (max-width: 1500px) {
-    .wrapperSections {
-        padding-bottom: var(--lg-padding);
-    }
-
-    .wrapperSections_bottom .wrapperSections__bg svg {
-        height: 90%;
-    }
 }
 
 @media (max-width: 1200px) {
-    .wrapperSections {
-        padding-bottom: var(--md-padding);
-    }
-
-    .wrapperSections_top .wrapperSections__bg {
-        height: 50%;
-    }
 }
 
 @media (max-width: 960px) {
-    .wrapperSections {
-        padding-bottom: var(--sm-padding);
-    }
-
-    .wrapperSections_bottom .wrapperSections__bg svg {
-        height: 60%;
-    }
 }
 
 @media (max-width: 560px) {
-    .wrapperSections {
-        padding-bottom: var(--xs-padding);
-    }
-
-    .wrapperSections_bottom .wrapperSections__bg svg {
-        height: 70%;
-    }
 }
 
 
@@ -4685,11 +4635,12 @@ legend {
     }
 }
 
-.offer__decorContainer {
-    position: relative;
+.offer__bg {
+    position: absolute;
+    inset: 0;
 }
 
-.offer__decor {
+.offer__bg__item {
     position: absolute;
     content: "";
     z-index: -1;
@@ -4699,7 +4650,7 @@ legend {
     background-size: contain;
 }
 
-.offer__decor_flower {
+.offer__bg__item__flower {
     top: -29px;
     left: -48px;
 
@@ -4708,7 +4659,7 @@ legend {
     background-image: url("../assets/img/decor-item/flower.svg");
 }
 
-.offer__decor_branch-2 {
+.offer__bg__item__branch-2 {
     bottom: 122px;
     left: -37px;
 
@@ -4717,16 +4668,16 @@ legend {
     background-image: url("../assets/img/decor-item/branch-2.svg");
 }
 
-.offer__decor_mitten {
-    top: -59px;
-    right: -82px;
+.offer__bg__item__mitten {
+    top: -109px;
+    right: -72px;
 
     width: 217px;
     height: 202px;
     background-image: url("../assets/img/decor-item/mitten.svg");
 }
 
-.offer__decor_branch-1 {
+.offer__bg__item__branch-1 {
     bottom: 209px;
     right: 14px;
 
@@ -4735,7 +4686,7 @@ legend {
     background-image: url("../assets/img/decor-item/branch-1.svg");
 }
 
-.offer__decor_broom-1 {
+.offer__bg__item__broom-1 {
     bottom: -236px;
     left: 120px;
 
@@ -4744,7 +4695,7 @@ legend {
     background-image: url("../assets/img/decor-item/broom-1.svg");
 }
 
-.offer__decor_cap {
+.offer__bg__item__cap {
     bottom: -149px;
     right: 165px;
 
@@ -4753,14 +4704,14 @@ legend {
     background-image: url("../assets/img/decor-item/cap.svg");
 }
 
-.offer__decor_broom-2 {
+.offer__bg__item__broom-2 {
     display: none;
 
     background-image: url("../assets/img/decor-item/broom-2.svg");
 }
 
 @media (max-width: 1500px) {  
-    .offer__decor_flower {
+    .offer__bg__item__flower {
         top: 40px;
         left: -18px;
 
@@ -4768,40 +4719,40 @@ legend {
         height: 60px;
     }
 
-    .offer__decor_branch-2 {
+    .offer__bg__item__branch-2 {
         bottom: 98px;
-        left: -34px;
+        left: -24px;
 
         width: 65px;
         height: 58px;
     }
 
-    .offer__decor_mitten {
-        top: -29px;
+    .offer__bg__item__mitten {
+        top: -59px;
         right: 3px;
 
         width: 147px;
         height: 136px;
     }
 
-    .offer__decor_branch-1 {
+    .offer__bg__item__branch-1 {
         bottom: 65px;
-        right: 4px;
+        right: -4px;
 
         width: 86px;
         height: 126px;
     }
 
-    .offer__decor_broom-1 {
-        bottom: -235px;
+    .offer__bg__item__broom-1 {
+        bottom: -215px;
         left: 53px;
 
         width: 246px;
         height: 214px;
     }
 
-    .offer__decor_cap {
-        bottom: -129px;
+    .offer__bg__item__cap {
+        bottom: -109px;
         right: 178px;
 
         width: 112px;
@@ -4810,7 +4761,7 @@ legend {
 }
 
 @media (max-width: 1200px) {  
-    .offer__decor_flower {
+    .offer__bg__item__flower {
         top: unset;
         bottom: -153px;
         left: 0;
@@ -4821,86 +4772,75 @@ legend {
         transform: rotate(-18deg);
     }
 
-    .offer__decor_branch-2 {
+    .offer__bg__item__branch-2 {
         inset: unset;
         top: -37px;
-        right: 87px;
+        right: 63px;
 
         width: 103px;
         height: 93px;
     }
 
-    .offer__decor_mitten {
+    .offer__bg__item__mitten {
         inset: unset;
-        bottom: -161px;
+        bottom: -162px;
         right: 0;
 
         width: 167px;
         height: 156px;
     }
 
-    .offer__decor_branch-1 {
+    .offer__bg__item__branch-1 {
         inset: unset;
         bottom: -84px;
-        left: 234px;
+        left: 210px;
 
         width: 81px;
         height: 73px;
     }
 
-    .offer__decor_broom-1 {
+    .offer__bg__item__broom-1 {
         display: none;
     }
 
-    .offer__decor_cap {
+    .offer__bg__item__cap {
         display: none;
     }
 }
 
 @media (max-width: 960px) {  
-    .offer__decor_branch-2 {
-        inset: unset;
-        top: -36px;
-        right: 20px;
-
+    .offer__bg__item__branch-2 {
         width: 81px;
         height: 73px;
     }
 
-    .offer__decor_branch-1 {
+    .offer__bg__item__branch-1 {
         display: none;
     }
 }
 
 @media (max-width: 560px) {  
-    .offer__decor_flower {
-        /* display: none; */
-        left: 25px;
-        bottom: -90px;
-        width: 54px;
-        height: 60px;
-    }
-
-    .offer__decor_branch-2 {
-        top: -46px;
-        right: 10px;
-        /* display: none; */
-    }
-
-    .offer__decor_mitten {
+    .offer__bg__item__flower {
         display: none;
     }
 
-    .offer__decor_broom-2 {
+    .offer__bg__item__branch-2 {
         display: none;
-        /* display: block;
-        top: -50px;
-        left: 38%;
+    }
+
+    .offer__bg__item__mitten {
+        display: none;
+    }
+
+    .offer__bg__item__broom-2 {
+        display: block;
+        top: -60px;
+        left: 50%;
 
         width: 81px;
         height: 71px;
 
-        transform: rotate(107deg); */
+        transform: translateX(-50%) rotate(107deg);
     }  
 }
 

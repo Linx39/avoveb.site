@@ -269,7 +269,7 @@
     </div>
 
     <main class="page__main">
-      <section class="promo wrapperPaddingBig" id="promo">
+      <section class="promo wrapperPadding" id="promo">
         <img src="assets/img/promo-bg/promo-wave.png" alt="" class="promo__wave" >
         <img src="assets/img/promo-bg/promo-wave-768.png" alt="" class="promo__wave promo__wave_768">
         <img src="assets/img/promo-bg/promo-wave-320.svg" alt="" class="promo__wave promo__wave_320">
@@ -300,21 +300,23 @@
         </div>
       </section>
 
-      <div class="wrapperSections wrapperSections_top">          
-        <div class="wrapperSections__bg">
+      <div class="wrapperTop">          
+        <div class="wrapperTop__bg">
           <svg><use href="#top-bg"></use></svg>
         </div>
 
         <section class="offer wrapperPadding" id="offer">
-          <div class="container offer__decorContainer">
-            <div class="offer__decor offer__decor_flower"></div>
-            <div class="offer__decor offer__decor_branch-2"></div>
-            <div class="offer__decor offer__decor_mitten"></div>
-            <div class="offer__decor offer__decor_branch-1"></div>
-            <div class="offer__decor offer__decor_broom-1"></div>
-            <div class="offer__decor offer__decor_cap"></div>
-            <div class="offer__decor offer__decor_broom-2"></div>
-
+          <div class="offer__container container">
+            <div class="offer__bg">
+              <div class="offer__bg__item offer__bg__item__flower"></div>
+              <div class="offer__bg__item offer__bg__item__branch-2"></div>
+              <div class="offer__bg__item offer__bg__item__mitten"></div>
+              <div class="offer__bg__item offer__bg__item__branch-1"></div>
+              <div class="offer__bg__item offer__bg__item__broom-1"></div>
+              <div class="offer__bg__item offer__bg__item__cap"></div>
+              <div class="offer__bg__item offer__bg__item__broom-2"></div>
+            </div>
+  
             <h2 class="offer__title title">Пригласите нас, если:</h2>
 
             <div class="offer__list container__mobile">
@@ -541,7 +543,7 @@
         </div>
       </section>
 
-      <section class="price wrapperPaddingBig" id="price">
+      <section class="price wrapperPadding" id="price">
         <div class="price__container container">
           <h2 class="price__title title">Стоимость</h2>
           <p class="price__amount maintext">15 000 РУБ <span>/ час</span></p>
@@ -621,443 +623,443 @@
         </div>
       </section>
 
-      <div class="wrapperSections">
-        <section class="services wrapperPadding" id="services">  
-          <div class="services__container services__decorContainer">
+      <section class="services wrapperPadding" id="services">  
+        <div class="services__container services__decorContainer">
+          <div class="services__container">
             <div class="services__decor services__decor_branch-1"></div>
             <div class="services__decor services__decor_branch-3"></div>
             <div class="services__decor services__decor_cap"></div>
+          </div>
 
-            <div class="services__head container">
-              <h2 class="services__title title">Услуги</h2>
-              <h3 class="services__subtitle">Парения и СПА-процедуры</h3>
-              <p class="services__text">
-                Составим для Вас персональную программу в зависимости от настроения, пожеланий, времени дня и физического
-                состояния
-              </p>
+          <div class="services__head container">
+            <h2 class="services__title title">Услуги</h2>
+            <h3 class="services__subtitle">Парения и СПА-процедуры</h3>
+            <p class="services__text">
+              Составим для Вас персональную программу в зависимости от настроения, пожеланий, времени дня и физического
+              состояния
+            </p>
+          </div>
+
+          <div class="services__swiper slider container swiper">
+            <div class="services__list swiper-wrapper">
+              <div class="services__slide swiper-slide">
+                <a class="services__card card" data-services="#services-1" href="#services-1">
+                  <div class="services__card__circle circle"><span class="circle__text">15 мин</span></div>
+
+                  <img class="services__card__img card__img" src="assets/img/services/services-1.png" alt="Ребенок в сауне">
+
+                  <div class="services__card__bottom">
+                    <h4 class="services__card__title subtitle">Парение<br> Первый пар</h4>
+                    <div class="services__card__info">Подробнее</div>
+                  </div>
+                </a>
+              </div>
+              <div class="services__slide swiper-slide">
+                <a class="services__card card" data-services="#services-2" href="#services-2">
+                  <div class="services__card__circle circle"><span class="circle__text">30 мин</span></div>
+
+                  <img class="services__card__img card__img" src="assets/img/services/services-2.png" alt="Ребенок в сауне">
+
+                  <div class="services__card__bottom">
+                    <h4 class="services__card__title subtitle">Парение<br> классическое</h4>
+                    <div class="services__card__info">Подробнее</div>
+                  </div>
+                </a>
+              </div>
+              <div class="services__slide swiper-slide">
+                <a class="services__card card" data-services="#services-3" href="#services-3">
+                  <div class="services__card__circle circle"><span class="circle__text">40 мин</span></div> 
+                  <img class="services__card__img card__img" src="assets/img/services/services-3.png" alt="Ребенок в сауне">
+                  <div class="services__card__bottom">
+                    <h4 class="services__card__title subtitle">Парение-Гурме</h4>
+                    <div class="services__card__info">Подробнее</div>
+                  </div>
+                </a>
+              </div>
+              <div class="services__slide swiper-slide">
+                <a class="services__card card" data-services="#services-4" href="#services-4">
+                  <div class="services__card__circle circle">
+                    <span class="services__card__circle__icon circle__icon">
+                      <svg style="width: 42px; height: 40px;"><use href="#chat"></use></svg>
+                    </span>
+                  </div>    
+                    
+                  <img class="services__card__img card__img" src="assets/img/services/services-4.png" alt="Ребенок в сауне">
+                  
+                  <div class="services__card__bottom">
+                    <h4 class="services__card__title subtitle">Парение<br> Коллективное</h4>
+                    <div class="services__card__info">Подробнее</div>
+                  </div>
+                </a>
+              </div>
+              <div class="services__slide swiper-slide">
+                <a class="services__card card" data-services="#services-5" href="#services-5">
+                  <div class="services__card__circle circle"><span class="circle__text">40 мин</span></div> 
+
+                  <img class="services__card__img card__img" src="assets/img/services/services-5.png" alt="Ребенок в сауне">
+
+                  <div class="services__card__bottom">
+                    <h4 class="services__card__title subtitle">Медовая<br> ладка</h4>
+                    <div class="services__card__info">Подробнее</div>
+                  </div>
+                </a>
+              </div>
+              <div class="services__slide swiper-slide">
+                <a class="services__card card" data-services="#services-6" href="#services-6">
+                  <div class="services__card__circle circle"><span class="circle__text">30 мин</span></div>
+                  
+                  <img class="services__card__img card__img" src="assets/img/services/services-6.png" alt="Ребенок в сауне">
+
+                  <div class="services__card__bottom">
+                    <h4 class="services__card__title subtitle">Очищение<br> солью</h4>
+                    <div class="services__card__info">Подробнее</div>
+                  </div>
+                </a>
+              </div>
+              <div class="services__slide swiper-slide">
+                <a class="services__card card" data-services="#services-7" href="#services-7">
+                  <div class="services__card__circle circle"><span class="circle__text">30 мин</span></div>  
+
+                  <img class="services__card__img card__img" src="assets/img/services/services-7.png" alt="Ребенок в сауне">
+                    
+                  <div class="services__card__bottom">
+                    <h4 class="services__card__title subtitle">Березовая<br> помывка</h4>
+                    <div class="services__card__info">Подробнее</div>
+                  </div>
+                </a>
+              </div>
+              <div class="services__slide swiper-slide">
+                <a class="services__card card" data-services="#services-8" href="#services-8">
+                  <div class="services__card__circle circle"><span class="circle__text">20 мин</span></div>
+                  
+                  <img class="services__card__img card__img" src="assets/img/services/services-8.png" alt="Ребенок в сауне">
+                    
+                  <div class="services__card__bottom">
+                    <h4 class="services__card__title subtitle">Пилинг<br> тела</h4>
+                    <div class="services__card__info">Подробнее</div>
+                  </div>
+                </a>
+              </div>
             </div>
 
-            <div class="services__swiper slider container swiper">
-              <div class="services__list swiper-wrapper">
-                <div class="services__slide swiper-slide">
-                  <a class="services__card card" data-services="#services-1" href="#services-1">
-                    <div class="services__card__circle circle"><span class="circle__text">15 мин</span></div>
+            <div class="services__swiper__controls slider__controls">
+              <button class="services__swiper__buttonPrev slider__controls__buttonPrev sliderButton sliderButton_green">
+                <svg style="width: 27px; height: 48px; transform: translateX(-10%);">
+                  <use href="#arrow"></use>
+                </svg>
+              </button>  
 
-                    <img class="services__card__img card__img" src="assets/img/services/services-1.png" alt="Ребенок в сауне">
+              <div class="services__swiper__pagination slider__pagination swiper-pagination"></div>  
 
-                    <div class="services__card__bottom">
-                      <h4 class="services__card__title subtitle">Парение<br> Первый пар</h4>
-                      <div class="services__card__info">Подробнее</div>
-                    </div>
-                  </a>
-                </div>
-                <div class="services__slide swiper-slide">
-                  <a class="services__card card" data-services="#services-2" href="#services-2">
-                    <div class="services__card__circle circle"><span class="circle__text">30 мин</span></div>
+              <button class="services__swiper__buttonNext slider__controls__buttonNext sliderButton sliderButton_green">
+                <svg style="width: 27px; height: 48px; transform: rotate(180deg) translateX(-10%);">
+                  <use href="#arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
 
-                    <img class="services__card__img card__img" src="assets/img/services/services-2.png" alt="Ребенок в сауне">
-
-                    <div class="services__card__bottom">
-                      <h4 class="services__card__title subtitle">Парение<br> классическое</h4>
-                      <div class="services__card__info">Подробнее</div>
-                    </div>
-                  </a>
-                </div>
-                <div class="services__slide swiper-slide">
-                  <a class="services__card card" data-services="#services-3" href="#services-3">
-                    <div class="services__card__circle circle"><span class="circle__text">40 мин</span></div> 
-                    <img class="services__card__img card__img" src="assets/img/services/services-3.png" alt="Ребенок в сауне">
-                    <div class="services__card__bottom">
-                      <h4 class="services__card__title subtitle">Парение-Гурме</h4>
-                      <div class="services__card__info">Подробнее</div>
-                    </div>
-                  </a>
-                </div>
-                <div class="services__slide swiper-slide">
-                  <a class="services__card card" data-services="#services-4" href="#services-4">
-                    <div class="services__card__circle circle">
-                      <span class="services__card__circle__icon circle__icon">
-                        <svg style="width: 42px; height: 40px;"><use href="#chat"></use></svg>
-                      </span>
-                    </div>    
-                      
-                    <img class="services__card__img card__img" src="assets/img/services/services-4.png" alt="Ребенок в сауне">
-                    
-                    <div class="services__card__bottom">
-                      <h4 class="services__card__title subtitle">Парение<br> Коллективное</h4>
-                      <div class="services__card__info">Подробнее</div>
-                    </div>
-                  </a>
-                </div>
-                <div class="services__slide swiper-slide">
-                  <a class="services__card card" data-services="#services-5" href="#services-5">
-                    <div class="services__card__circle circle"><span class="circle__text">40 мин</span></div> 
-
-                    <img class="services__card__img card__img" src="assets/img/services/services-5.png" alt="Ребенок в сауне">
-
-                    <div class="services__card__bottom">
-                      <h4 class="services__card__title subtitle">Медовая<br> ладка</h4>
-                      <div class="services__card__info">Подробнее</div>
-                    </div>
-                  </a>
-                </div>
-                <div class="services__slide swiper-slide">
-                  <a class="services__card card" data-services="#services-6" href="#services-6">
-                    <div class="services__card__circle circle"><span class="circle__text">30 мин</span></div>
-                    
-                    <img class="services__card__img card__img" src="assets/img/services/services-6.png" alt="Ребенок в сауне">
-
-                    <div class="services__card__bottom">
-                      <h4 class="services__card__title subtitle">Очищение<br> солью</h4>
-                      <div class="services__card__info">Подробнее</div>
-                    </div>
-                  </a>
-                </div>
-                <div class="services__slide swiper-slide">
-                  <a class="services__card card" data-services="#services-7" href="#services-7">
-                    <div class="services__card__circle circle"><span class="circle__text">30 мин</span></div>  
-
-                    <img class="services__card__img card__img" src="assets/img/services/services-7.png" alt="Ребенок в сауне">
-                      
-                    <div class="services__card__bottom">
-                      <h4 class="services__card__title subtitle">Березовая<br> помывка</h4>
-                      <div class="services__card__info">Подробнее</div>
-                    </div>
-                  </a>
-                </div>
-                <div class="services__slide swiper-slide">
-                  <a class="services__card card" data-services="#services-8" href="#services-8">
-                    <div class="services__card__circle circle"><span class="circle__text">20 мин</span></div>
-                    
-                    <img class="services__card__img card__img" src="assets/img/services/services-8.png" alt="Ребенок в сауне">
-                      
-                    <div class="services__card__bottom">
-                      <h4 class="services__card__title subtitle">Пилинг<br> тела</h4>
-                      <div class="services__card__info">Подробнее</div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-
-              <div class="services__swiper__controls slider__controls">
-                <button class="services__swiper__buttonPrev slider__controls__buttonPrev sliderButton sliderButton_green">
-                  <svg style="width: 27px; height: 48px; transform: translateX(-10%);">
-                    <use href="#arrow"></use>
-                  </svg>
-                </button>  
-
-                <div class="services__swiper__pagination slider__pagination swiper-pagination"></div>  
-
-                <button class="services__swiper__buttonNext slider__controls__buttonNext sliderButton sliderButton_green">
-                  <svg style="width: 27px; height: 48px; transform: rotate(180deg) translateX(-10%);">
-                    <use href="#arrow"></use>
-                  </svg>
+        <div class="services__modal">  
+          <div class="hystmodal" id="services-1" aria-hidden="true">
+            <div class="hystmodal__wrap">
+              <div class="productModal modal hystmodal__window" role="dialog" aria-modal="true">
+                <button class="modal__closeButton closeButton" data-hystclose type="button">
+                  <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
+                  <span class="visually-hidden">Закрыть окно</span> 
                 </button>
+                
+                <div class="productModal__bg" style="background-image: url('assets/img/services-modal/services-modal-1-1920.png');"></div>
+                                
+                <div class="productModal__content product modal__content">
+                  <h2 class="product__title maintitle"><span>Парение</span> <br>Первый пар</h2>
+                  <p class="product__subtitle maintext">Длительность - 15 минут</p> 
+
+                  <div class="product__textWrapper">
+                    <div class="product__textWrapper__scroll scroll">
+                      <p class="product__text">
+                        Мягкое ознакомительное веничное парение без резких контрастных переходов с плавным погружением
+                        в мир банного удовольствия. Подходит тем, кто впервые пробует париться с банным мастером.
+                      </p>
+                    </div>
+                  </div>   
+
+                  <a class="modal__bottomButton button button_left" href="#feedback" data-feedback="#feedback" data-hystclose>
+                    Хочу попробовать!
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-
-          <div class="services__modal">  
-            <div class="hystmodal" id="services-1" aria-hidden="true">
-              <div class="hystmodal__wrap">
-                <div class="productModal modal hystmodal__window" role="dialog" aria-modal="true">
-                  <button class="modal__closeButton closeButton" data-hystclose type="button">
-                    <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
-                    <span class="visually-hidden">Закрыть окно</span> 
-                  </button>
-                  
-                  <div class="productModal__bg" style="background-image: url('assets/img/services-modal/services-modal-1-1920.png');"></div>
-                                  
-                  <div class="productModal__content product modal__content">
-                    <h2 class="product__title maintitle"><span>Парение</span> <br>Первый пар</h2>
-                    <p class="product__subtitle maintext">Длительность - 15 минут</p> 
-
-                    <div class="product__textWrapper">
-                      <div class="product__textWrapper__scroll scroll">
-                        <p class="product__text">
-                          Мягкое ознакомительное веничное парение без резких контрастных переходов с плавным погружением
-                          в мир банного удовольствия. Подходит тем, кто впервые пробует париться с банным мастером.
-                        </p>
-                      </div>
-                    </div>   
-
-                    <a class="modal__bottomButton button button_left" href="#feedback" data-feedback="#feedback" data-hystclose>
-                      Хочу попробовать!
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>        
-            <div class="hystmodal" id="services-2" aria-hidden="true">
-              <div class="hystmodal__wrap">
-                <div class="productModal modal hystmodal__window" role="dialog" aria-modal="true">
-                  <button class="modal__closeButton closeButton" data-hystclose type="button">
-                    <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
-                    <span class="visually-hidden">Закрыть окно</span> 
-                  </button>
-                  
-                  <div class="productModal__bg" style="background-image: url('assets/img/services-modal/services-modal-2-1920.png');"></div>
+          </div>        
+          <div class="hystmodal" id="services-2" aria-hidden="true">
+            <div class="hystmodal__wrap">
+              <div class="productModal modal hystmodal__window" role="dialog" aria-modal="true">
+                <button class="modal__closeButton closeButton" data-hystclose type="button">
+                  <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
+                  <span class="visually-hidden">Закрыть окно</span> 
+                </button>
                 
-                  <div class="productModal__content product modal__content">
-                    <h2 class="product__title maintitle"><span>Парение</span> <br>Классическое</h2>
-                    <p class="product__subtitle maintext">Длительность - 30 минут</p>
-        
-                    <div class="product__textWrapper">
-                      <div class="product__textWrapper__scroll scroll">
-                        <p class="product__text">
-                          Парение начинается с качественного согревания ног, что доставляет особое удовольствие
-                          ценителям бани.
-                        </p>        
-                        <p class="product__text">
-                          Классическое парение — это постепенный прогрев всего тела, когда оно методично пропаривается
-                          до состояния «хочу в купель».
-                        </p>        
-                        <p class="product__text">
-                          После контраста (по желанию может быть обливание на полке/окунание в купель/обливание из
-                          ведра) вы возвращаетесь обратно в парную, где совершается догрев тела на мягком или ярком пару
-                          с массажно-растирочными движениями.
-                        </p>
-                      </div>
-                    </div>
+                <div class="productModal__bg" style="background-image: url('assets/img/services-modal/services-modal-2-1920.png');"></div>
+              
+                <div class="productModal__content product modal__content">
+                  <h2 class="product__title maintitle"><span>Парение</span> <br>Классическое</h2>
+                  <p class="product__subtitle maintext">Длительность - 30 минут</p>
       
-                    <a class="modal__bottomButton button button_left" href="#feedback" data-feedback="#feedback" data-hystclose>
-                      Хочу попробовать!
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>        
-            <div class="hystmodal" id="services-3" aria-hidden="true">
-              <div class="hystmodal__wrap">
-                <div class="productModal modal hystmodal__window" role="dialog" aria-modal="true">
-                  <button class="modal__closeButton closeButton" data-hystclose type="button">
-                    <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
-                    <span class="visually-hidden">Закрыть окно</span> 
-                  </button>
-                  
-                  <div class="productModal__bg" style="background-image: url('assets/img/services-modal/services-modal-3-1920.png');"></div>
-
-                  <div class="productModal__content product modal__content">
-                    <h2 class="product__title maintitle"><span>Парение</span> <br>Гурме</h2>
-                    <p class="product__subtitle maintext">Длительность - 40 мин</p>
-        
-                    <div class="product__textWrapper">
-                      <div class="product__textWrapper__scroll scroll">
-                        <p class="product__text">
-                          Персональное парение, которое рождается во взаимодействии гостя и пармастера. Оно абсолютно
-                          уникально для каждого.
-                        </p>        
-                        <p class="product__text">
-                          Изысканный и глубокий процесс для тех, кто давно ходит в баню и любит ее.
-                        </p>        
-                        <p class="product__text">
-                          Парение-гурме основано на желании создать для Вас впечатляющий банный опыт, исходя из ваших
-                          пожеланий и предпочтений которые и становятся частью процесса.
-                        </p>        
-                        <p class="product__text">
-                          Длительное парение, тщательный прогрев всего тела, нескончаемая череда самых вкусных и
-                          приятных припарок, пасов, компрессов и других изысканных банных приемов. Контрастная процедура
-                          на ваш выбор. Догрев тела в парной или холодное парение на улице. Всё самое вкусное из мира
-                          банного искусства в этом парении для Вас!
-                        </p>        
-                        <p class="product__text">
-                          Парение-гурме основано на желании создать для Вас впечатляющий банный опыт, исходя из ваших
-                          пожеланий и предпочтений которые и становятся частью процесса.
-                        </p>
-                      </div>
+                  <div class="product__textWrapper">
+                    <div class="product__textWrapper__scroll scroll">
+                      <p class="product__text">
+                        Парение начинается с качественного согревания ног, что доставляет особое удовольствие
+                        ценителям бани.
+                      </p>        
+                      <p class="product__text">
+                        Классическое парение — это постепенный прогрев всего тела, когда оно методично пропаривается
+                        до состояния «хочу в купель».
+                      </p>        
+                      <p class="product__text">
+                        После контраста (по желанию может быть обливание на полке/окунание в купель/обливание из
+                        ведра) вы возвращаетесь обратно в парную, где совершается догрев тела на мягком или ярком пару
+                        с массажно-растирочными движениями.
+                      </p>
                     </div>
-        
-                    <a class="modal__bottomButton button button_left" href="#feedback" data-feedback="#feedback" data-hystclose>
-                      Хочу попробовать!
-                    </a>
                   </div>
+    
+                  <a class="modal__bottomButton button button_left" href="#feedback" data-feedback="#feedback" data-hystclose>
+                    Хочу попробовать!
+                  </a>
                 </div>
               </div>
-            </div>        
-            <div class="hystmodal" id="services-4" aria-hidden="true">
-              <div class="hystmodal__wrap">
-                <div class="productModal modal hystmodal__window" role="dialog" aria-modal="true">
-                  <button class="modal__closeButton closeButton" data-hystclose type="button">
-                    <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
-                    <span class="visually-hidden">Закрыть окно</span> 
-                  </button>
-                  
-                  <div class="productModal__bg" style="background-image: url('assets/img/services-modal/services-modal-4-1920.png');"></div>
+            </div>
+          </div>        
+          <div class="hystmodal" id="services-3" aria-hidden="true">
+            <div class="hystmodal__wrap">
+              <div class="productModal modal hystmodal__window" role="dialog" aria-modal="true">
+                <button class="modal__closeButton closeButton" data-hystclose type="button">
+                  <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
+                  <span class="visually-hidden">Закрыть окно</span> 
+                </button>
+                
+                <div class="productModal__bg" style="background-image: url('assets/img/services-modal/services-modal-3-1920.png');"></div>
+
+                <div class="productModal__content product modal__content">
+                  <h2 class="product__title maintitle"><span>Парение</span> <br>Гурме</h2>
+                  <p class="product__subtitle maintext">Длительность - 40 мин</p>
       
-                  <div class="productModal__content product modal__content">
-                    <h2 class="product__title maintitle"><span>Парение</span> <br>Коллективное</h2>
-                    <p class="product__subtitle maintext">Длительность - 30 мин</p>
-        
-                    <div class="product__textWrapper">
-                      <div class="product__textWrapper__scroll scroll">
-                        <p class="product__text">
-                          Предложим интересную авторскую программу коллективного парения исходя из ваших задач,
-                          количества человек и возможностей банного пространства.
-                        </p>        
-                        <p class="product__text">
-                          Например, это может быть "пассивный" вариант парения, когда пармастер работает веером,
-                          распаривает ароматные травы, согревает всех гостей нежным теплом. Или же активная программа,
-                          когда под руководством мастера все гости принимают участие в парении, согреваясь березовыми
-                          вениками. Парная наполняется радостью, улыбками и яркими эмоциями.
-                        </p>
-                      </div>
+                  <div class="product__textWrapper">
+                    <div class="product__textWrapper__scroll scroll">
+                      <p class="product__text">
+                        Персональное парение, которое рождается во взаимодействии гостя и пармастера. Оно абсолютно
+                        уникально для каждого.
+                      </p>        
+                      <p class="product__text">
+                        Изысканный и глубокий процесс для тех, кто давно ходит в баню и любит ее.
+                      </p>        
+                      <p class="product__text">
+                        Парение-гурме основано на желании создать для Вас впечатляющий банный опыт, исходя из ваших
+                        пожеланий и предпочтений которые и становятся частью процесса.
+                      </p>        
+                      <p class="product__text">
+                        Длительное парение, тщательный прогрев всего тела, нескончаемая череда самых вкусных и
+                        приятных припарок, пасов, компрессов и других изысканных банных приемов. Контрастная процедура
+                        на ваш выбор. Догрев тела в парной или холодное парение на улице. Всё самое вкусное из мира
+                        банного искусства в этом парении для Вас!
+                      </p>        
+                      <p class="product__text">
+                        Парение-гурме основано на желании создать для Вас впечатляющий банный опыт, исходя из ваших
+                        пожеланий и предпочтений которые и становятся частью процесса.
+                      </p>
                     </div>
-        
-                    <a class="modal__bottomButton button button_left" href="#feedback" data-feedback="#feedback" data-hystclose>
-                      Хочу попробовать!
-                    </a>
                   </div>
+      
+                  <a class="modal__bottomButton button button_left" href="#feedback" data-feedback="#feedback" data-hystclose>
+                    Хочу попробовать!
+                  </a>
                 </div>
               </div>
-            </div>        
-            <div class="hystmodal" id="services-5" aria-hidden="true">
-              <div class="hystmodal__wrap">
-                <div class="productModal modal hystmodal__window" role="dialog" aria-modal="true">
-                  <button class="modal__closeButton closeButton" data-hystclose type="button">
-                    <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
-                    <span class="visually-hidden">Закрыть окно</span> 
-                  </button>
-                  
-                  <div class="productModal__bg" style="background-image: url('assets/img/services-modal/services-modal-5-1920.png');"></div>
-
-                  <div class="productModal__content product modal__content">
-                    <h2 class="product__title maintitle">Медовая ладка</h2>
-                    <div class="product__subtitle maintext">Длительность - 40 мин</div>
-        
-                    <div class="product__textWrapper">
-                      <div class="product__textWrapper__scroll scroll">
-                        <p class="product__text">
-                          Теплый мед буквально проваливается сквозь теплую, голодную после хорошего парения кожу,
-                          напитывая ее полезными компонентами.
-                        </p>        
-                        <p class="product__text">
-                          Осмысленное проведение этого ритуала мастером, когда мед внимательно провожается в распаренное
-                          тело, позволяет тщательно промассировать и проработать всё тело от пяток до макушки.
-                        </p>        
-                        <p class="product__text">Так достигается изумительный результат</p>
-                      </div>
+            </div>
+          </div>        
+          <div class="hystmodal" id="services-4" aria-hidden="true">
+            <div class="hystmodal__wrap">
+              <div class="productModal modal hystmodal__window" role="dialog" aria-modal="true">
+                <button class="modal__closeButton closeButton" data-hystclose type="button">
+                  <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
+                  <span class="visually-hidden">Закрыть окно</span> 
+                </button>
+                
+                <div class="productModal__bg" style="background-image: url('assets/img/services-modal/services-modal-4-1920.png');"></div>
+    
+                <div class="productModal__content product modal__content">
+                  <h2 class="product__title maintitle"><span>Парение</span> <br>Коллективное</h2>
+                  <p class="product__subtitle maintext">Длительность - 30 мин</p>
+      
+                  <div class="product__textWrapper">
+                    <div class="product__textWrapper__scroll scroll">
+                      <p class="product__text">
+                        Предложим интересную авторскую программу коллективного парения исходя из ваших задач,
+                        количества человек и возможностей банного пространства.
+                      </p>        
+                      <p class="product__text">
+                        Например, это может быть "пассивный" вариант парения, когда пармастер работает веером,
+                        распаривает ароматные травы, согревает всех гостей нежным теплом. Или же активная программа,
+                        когда под руководством мастера все гости принимают участие в парении, согреваясь березовыми
+                        вениками. Парная наполняется радостью, улыбками и яркими эмоциями.
+                      </p>
                     </div>
-        
-                    <a class="modal__bottomButton button button_left" href="#feedback" data-feedback="#feedback" data-hystclose>
-                      Хочу попробовать!
-                    </a>
                   </div>
+      
+                  <a class="modal__bottomButton button button_left" href="#feedback" data-feedback="#feedback" data-hystclose>
+                    Хочу попробовать!
+                  </a>
                 </div>
               </div>
-            </div>        
-            <div class="hystmodal" id="services-6" aria-hidden="true">
-              <div class="hystmodal__wrap">
-                <div class="productModal modal hystmodal__window" role="dialog" aria-modal="true">
-                  <button class="modal__closeButton closeButton" data-hystclose type="button">
-                    <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
-                    <span class="visually-hidden">Закрыть окно</span> 
-                  </button>
-                  
-                  <div class="productModal__bg" style="background-image: url('assets/img/services-modal/services-modal-6-1920.png');"></div>
+            </div>
+          </div>        
+          <div class="hystmodal" id="services-5" aria-hidden="true">
+            <div class="hystmodal__wrap">
+              <div class="productModal modal hystmodal__window" role="dialog" aria-modal="true">
+                <button class="modal__closeButton closeButton" data-hystclose type="button">
+                  <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
+                  <span class="visually-hidden">Закрыть окно</span> 
+                </button>
+                
+                <div class="productModal__bg" style="background-image: url('assets/img/services-modal/services-modal-5-1920.png');"></div>
 
-                  <div class="productModal__content product modal__content">
-                    <h2 class="product__title maintitle">Очищение солью</h2>
-                    <p class="product__subtitle maintext">Длительность - 30 мин</p>
-        
-                    <div class="product__textWrapper">
-                      <div class="product__textWrapper__scroll scroll">
-                        <p class="product__text">
-                          Соль для банных гурманов — особый компонент, помогающий не только очистить поверхность кожи,
-                          но и ярче ощутить наслаждение и обновление.
-                        </p>
-        
-                        <p class="product__text">
-                          Она обладает уникальной способностью "поглощать информацию", что позволяет освобождать тело от
-                          негативных эмоций и тягостных мыслей.
-                        </p>
-        
-                        <p class="product__text">
-                          Постепенное нанесение соли на всё тело, нежный пиллинг и качественное очищение на всех
-                          уровнях.
-                        </p>
-                      </div>
+                <div class="productModal__content product modal__content">
+                  <h2 class="product__title maintitle">Медовая ладка</h2>
+                  <div class="product__subtitle maintext">Длительность - 40 мин</div>
+      
+                  <div class="product__textWrapper">
+                    <div class="product__textWrapper__scroll scroll">
+                      <p class="product__text">
+                        Теплый мед буквально проваливается сквозь теплую, голодную после хорошего парения кожу,
+                        напитывая ее полезными компонентами.
+                      </p>        
+                      <p class="product__text">
+                        Осмысленное проведение этого ритуала мастером, когда мед внимательно провожается в распаренное
+                        тело, позволяет тщательно промассировать и проработать всё тело от пяток до макушки.
+                      </p>        
+                      <p class="product__text">Так достигается изумительный результат</p>
                     </div>
-        
-                    <a class="modal__bottomButton button button_left" href="#feedback" data-feedback="#feedback" data-hystclose>
-                      Хочу попробовать!
-                    </a>
                   </div>
+      
+                  <a class="modal__bottomButton button button_left" href="#feedback" data-feedback="#feedback" data-hystclose>
+                    Хочу попробовать!
+                  </a>
                 </div>
               </div>
-            </div>        
-            <div class="hystmodal" id="services-7" aria-hidden="true">
-              <div class="hystmodal__wrap">
-                <div class="productModal modal hystmodal__window" role="dialog" aria-modal="true">
-                  <button class="modal__closeButton closeButton" data-hystclose type="button">
-                    <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
-                    <span class="visually-hidden">Закрыть окно</span> 
-                  </button>
-                  
-                  <div class="productModal__bg" style="background-image: url('assets/img/services-modal/services-modal-7-1920.png');"></div>
-                  
-                  <div class="productModal__content product modal__content">
-                    <h2 class="product__title maintitle">Березовая помывка</h2>
-                    <p class="product__subtitle maintext">Длительность - 30 мин</p>
-        
-                    <div class="product__textWrapper">
-                      <div class="product__textWrapper__scroll scroll">
-                        <p class="product__text">
-                          Пушистый березовый веник + ароматное хвойное или дегтярное мыло - традиционный атрибут
-                          настоящей бани.
-                        </p>        
-                        <p class="product__text">
-                          Шелковистая пена наносится на тело распаренным веником и начинается магия — все мышцы
-                          проминаются, растягиваются и массируются. Поверхность кожи очищается на 100%. Вы испытываете
-                          полное расслабление и настоящее удовольствие от чистоты тела.
-                        </p>
-                      </div>
+            </div>
+          </div>        
+          <div class="hystmodal" id="services-6" aria-hidden="true">
+            <div class="hystmodal__wrap">
+              <div class="productModal modal hystmodal__window" role="dialog" aria-modal="true">
+                <button class="modal__closeButton closeButton" data-hystclose type="button">
+                  <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
+                  <span class="visually-hidden">Закрыть окно</span> 
+                </button>
+                
+                <div class="productModal__bg" style="background-image: url('assets/img/services-modal/services-modal-6-1920.png');"></div>
+
+                <div class="productModal__content product modal__content">
+                  <h2 class="product__title maintitle">Очищение солью</h2>
+                  <p class="product__subtitle maintext">Длительность - 30 мин</p>
+      
+                  <div class="product__textWrapper">
+                    <div class="product__textWrapper__scroll scroll">
+                      <p class="product__text">
+                        Соль для банных гурманов — особый компонент, помогающий не только очистить поверхность кожи,
+                        но и ярче ощутить наслаждение и обновление.
+                      </p>
+      
+                      <p class="product__text">
+                        Она обладает уникальной способностью "поглощать информацию", что позволяет освобождать тело от
+                        негативных эмоций и тягостных мыслей.
+                      </p>
+      
+                      <p class="product__text">
+                        Постепенное нанесение соли на всё тело, нежный пиллинг и качественное очищение на всех
+                        уровнях.
+                      </p>
                     </div>
-        
-                    <a class="modal__bottomButton button button_left" href="#feedback" data-feedback="#feedback" data-hystclose>
-                      Хочу попробовать!
-                    </a>
                   </div>
+      
+                  <a class="modal__bottomButton button button_left" href="#feedback" data-feedback="#feedback" data-hystclose>
+                    Хочу попробовать!
+                  </a>
                 </div>
               </div>
-            </div>        
-            <div class="hystmodal" id="services-8" aria-hidden="true">
-              <div class="hystmodal__wrap">
-                <div class="productModal modal hystmodal__window" role="dialog" aria-modal="true">
-                  <button class="modal__closeButton closeButton" data-hystclose type="button">
-                    <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
-                    <span class="visually-hidden">Закрыть окно</span> 
-                  </button>
-
-                  <div class="productModal__bg" style="background-image: url('assets/img/services-modal/services-modal-8-1920.png');"></div>
-
-                  <div class="productModal__content product modal__content">
-                    <h2 class="product__title maintitle">Пилинг тела</h2>
-                    <p class="product__subtitle maintext">Длительность - 20 мин</p>
-        
-                    <div class="product__textWrapper">
-                      <div class="product__textWrapper__scroll scroll">
-                        <p class="product__text">
-                          Внимательная работа мастера с Вашим телом, приправленная нежными частицами скраба, ароматными
-                          маслами, качественным медом – вот рецепт лучшего пилинга для тела.
-                        </p>        
-                        <p class="product__text">
-                          Почувствуйте приятное послевкусие обновления – бодрость, чистоту, гладкость и нежность кожи.
-                        </p>
-                      </div>
+            </div>
+          </div>        
+          <div class="hystmodal" id="services-7" aria-hidden="true">
+            <div class="hystmodal__wrap">
+              <div class="productModal modal hystmodal__window" role="dialog" aria-modal="true">
+                <button class="modal__closeButton closeButton" data-hystclose type="button">
+                  <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
+                  <span class="visually-hidden">Закрыть окно</span> 
+                </button>
+                
+                <div class="productModal__bg" style="background-image: url('assets/img/services-modal/services-modal-7-1920.png');"></div>
+                
+                <div class="productModal__content product modal__content">
+                  <h2 class="product__title maintitle">Березовая помывка</h2>
+                  <p class="product__subtitle maintext">Длительность - 30 мин</p>
+      
+                  <div class="product__textWrapper">
+                    <div class="product__textWrapper__scroll scroll">
+                      <p class="product__text">
+                        Пушистый березовый веник + ароматное хвойное или дегтярное мыло - традиционный атрибут
+                        настоящей бани.
+                      </p>        
+                      <p class="product__text">
+                        Шелковистая пена наносится на тело распаренным веником и начинается магия — все мышцы
+                        проминаются, растягиваются и массируются. Поверхность кожи очищается на 100%. Вы испытываете
+                        полное расслабление и настоящее удовольствие от чистоты тела.
+                      </p>
                     </div>
-        
-                    <a class="modal__bottomButton button button_left" href="#feedback" data-feedback="#feedback" data-hystclose>
-                      Хочу попробовать!
-                    </a>
                   </div>
+      
+                  <a class="modal__bottomButton button button_left" href="#feedback" data-feedback="#feedback" data-hystclose>
+                    Хочу попробовать!
+                  </a>
                 </div>
               </div>
-            </div>    
-          </div>
-        </section>
-      </div>
+            </div>
+          </div>        
+          <div class="hystmodal" id="services-8" aria-hidden="true">
+            <div class="hystmodal__wrap">
+              <div class="productModal modal hystmodal__window" role="dialog" aria-modal="true">
+                <button class="modal__closeButton closeButton" data-hystclose type="button">
+                  <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
+                  <span class="visually-hidden">Закрыть окно</span> 
+                </button>
 
-      <section class="advantages wrapperPaddingBig" id="advantages">
+                <div class="productModal__bg" style="background-image: url('assets/img/services-modal/services-modal-8-1920.png');"></div>
+
+                <div class="productModal__content product modal__content">
+                  <h2 class="product__title maintitle">Пилинг тела</h2>
+                  <p class="product__subtitle maintext">Длительность - 20 мин</p>
+      
+                  <div class="product__textWrapper">
+                    <div class="product__textWrapper__scroll scroll">
+                      <p class="product__text">
+                        Внимательная работа мастера с Вашим телом, приправленная нежными частицами скраба, ароматными
+                        маслами, качественным медом – вот рецепт лучшего пилинга для тела.
+                      </p>        
+                      <p class="product__text">
+                        Почувствуйте приятное послевкусие обновления – бодрость, чистоту, гладкость и нежность кожи.
+                      </p>
+                    </div>
+                  </div>
+      
+                  <a class="modal__bottomButton button button_left" href="#feedback" data-feedback="#feedback" data-hystclose>
+                    Хочу попробовать!
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>    
+        </div>
+      </section>
+
+      <section class="advantages wrapperPadding" id="advantages">
         <img src="assets/img/advantages-bg/advantages-wave-top.png" alt="" class="advantages__wave advantages__wave_top" />
         <img src="assets/img/advantages-bg/advantages-wave-bottom.png" alt="" class="advantages__wave advantages__wave_bottom" />
 
@@ -1131,8 +1133,8 @@
         </div>
       </section>
 
-      <div class="wrapperSections wrapperSections_bottom">                 
-        <div class="wrapperSections__bg">
+      <div class="wrapperBottom">                 
+        <div class="wrapperBottom__bg">
           <svg><use href="#bottom-bg"></use></svg>
         </div>
 
@@ -1340,71 +1342,71 @@
             </div>
           </div>
         </section>
+      </div>
 
-        <section class="stages wrapperPadding" id="stages">  
-          <div class="container stages__decorContainer">
-            <div class="stages__decor stages__decor_branch-3"></div>
-            <div class="stages__decor stages__decor_mitten"></div>
-            <div class="stages__decor stages__decor_cap"></div>
-            <div class="stages__decor stages__decor_broom-2"></div>
+      <section class="stages wrapperPadding" id="stages">  
+        <div class="container stages__decorContainer">
+          <div class="stages__decor stages__decor_branch-3"></div>
+          <div class="stages__decor stages__decor_mitten"></div>
+          <div class="stages__decor stages__decor_cap"></div>
+          <div class="stages__decor stages__decor_broom-2"></div>
 
-            <h2 class="stages__title title">Этапы заказа</h2>
+          <h2 class="stages__title title">Этапы заказа</h2>
+
+          <div class="stages__list container__mobile"> 
+            <div class="stages__item stages__item_1 stages__item_current item">
+              <span class="stages__item__number">1</span>
+              <h3 class="stages__item__title subtitle">Консультация</h3>
+              <p class="stages__item__text">
+                Позвоните нам, оставьте заявку на сайте или напишите в WhatApp/Telegram.
+              </p>
+
+              <ul class="stages__item__list">
+                <li class="stages__item__listItem">Уточним ваше месторасположение;</li>
+                <li class="stages__item__listItem">Посоветуем бани для аренды, если у Вас нет своей;</li>
+                <li class="stages__item__listItem">Согласуем дату, время и программу парения;</li>
+                <li class="stages__item__listItem">Ответим на другие вопросы.</li>
+              </ul>
+            </div>  
+
+            <div class="stages__item stages__item_2 item">
+              <span class="stages__item__number">2</span>
+              <h3 class="stages__item__title subtitle">Бронирование</h3>
+              <p class="stages__item__text">
+                В качестве бронирования вносится оплата в размере 15 000 р. - 1 час оказания услуги.
+              </p>
+              <p class="stages__item__text">
+                Минимальный заказ - 4 часа.
+              </p>
+              <p class="stages__item__text">
+                Оплата бронирования возвращается в случае отмены заказа более чем за 1 сутки.
+              </p>
+            </div>  
+
+            <div class="stages__item stages__item_3 item">
+              <span class="stages__item__number">3</span>
+              <h3 class="stages__item__title subtitle">Мероприятие</h3>
   
-            <div class="stages__list container__mobile"> 
-              <div class="stages__item stages__item_1 stages__item_current item">
-                <span class="stages__item__number">1</span>
-                <h3 class="stages__item__title subtitle">Консультация</h3>
-                <p class="stages__item__text">
-                  Позвоните нам, оставьте заявку на сайте или напишите в WhatApp/Telegram.
-                </p>
+              <p class="stages__item__text">
+                Мы приедем на локацию вовремя, нам понадобится около 20-30 минут для подготовки бани.
+              </p>
   
-                <ul class="stages__item__list">
-                  <li class="stages__item__listItem">Уточним ваше месторасположение;</li>
-                  <li class="stages__item__listItem">Посоветуем бани для аренды, если у Вас нет своей;</li>
-                  <li class="stages__item__listItem">Согласуем дату, время и программу парения;</li>
-                  <li class="stages__item__listItem">Ответим на другие вопросы.</li>
-                </ul>
-              </div>  
+              <p class="stages__item__text">
+                После окончания банной программы и остановки оплачиваемого времени 
+                мы неспешно соберёмся и уберём за собой.
+              </p>
+            </div>
 
-              <div class="stages__item stages__item_2 item">
-                <span class="stages__item__number">2</span>
-                <h3 class="stages__item__title subtitle">Бронирование</h3>
-                <p class="stages__item__text">
-                  В качестве бронирования вносится оплата в размере 15 000 р. - 1 час оказания услуги.
-                </p>
-                <p class="stages__item__text">
-                  Минимальный заказ - 4 часа.
-                </p>
-                <p class="stages__item__text">
-                  Оплата бронирования возвращается в случае отмены заказа более чем за 1 сутки.
-                </p>
-              </div>  
-
-              <div class="stages__item stages__item_3 item">
-                <span class="stages__item__number">3</span>
-                <h3 class="stages__item__title subtitle">Мероприятие</h3>
-    
-                <p class="stages__item__text">
-                  Мы приедем на локацию вовремя, нам понадобится около 20-30 минут для подготовки бани.
-                </p>
-    
-                <p class="stages__item__text">
-                  После окончания банной программы и остановки оплачиваемого времени 
-                  мы неспешно соберёмся и уберём за собой.
-                </p>
-              </div>
-
-              <div class="stages__list__decor">
-                <!-- <div class="stages__list__img" style="background-image: url('assets/img/stages/stages-box.png');"></div> -->
-                <div class="stages__list__img"></div>
-              </div>
+            <div class="stages__list__decor">
+              <!-- <div class="stages__list__img" style="background-image: url('assets/img/stages/stages-box.png');"></div> -->
+              <div class="stages__list__img"></div>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
 
-    <footer class="footer wrapperPaddingBig" id="footer">
+    <footer class="footer wrapperPadding" id="footer">
       <div class="footer__bg" style="background-image: url('assets/img/footer-bg/footer-bg-1920.png');"></div>
 
       <div class="footer__container container footer__decorContainer">
