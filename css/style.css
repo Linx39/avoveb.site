@@ -223,6 +223,7 @@ legend {
     font-size: 20px;
     line-height: 28px;
     font-weight: 500;
+    -webkit-text-size-adjust: 100%;
 
     color: var(--brown-pallet-600);
     background-color: var(--brown-pallet-100);
@@ -2462,11 +2463,18 @@ legend {
     object-fit: cover;
     object-position: center;
 
-/* clip-path: url(#mask); */
+clip-path: url("#mask");
+
     /* mask-image: url(#mask);
     mask-repeat: no-repeat;
-    mask-size: 100%;
+    mask-size: 400px 200px;
     mask-position: center; */
+}
+
+.mask__svg {
+    /* position: absolute; */
+    width: 0;
+    height: 0;
 }
 
 .services__card__circle {
