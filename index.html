@@ -390,7 +390,7 @@
                 Здравы» 2019 года.
               </p>   
               
-              <div class="aboutUs__img item item_img">
+              <div class="aboutUs__img itemImg">
                 <picture>
                   <source type="image/webp" media="(max-width: 960px)" srcset="assets/img/aboutUs/aboutUs-small.webp 1x, assets/img/aboutUs/aboutUs-small@2x.webp 2x, assets/img/aboutUs/aboutUs-small@3x.webp 3x">
                   <source type="image/webp" media="(max-width: 1500px)" srcset="assets/img/aboutUs/aboutUs-middle.webp 1x, assets/img/aboutUs/aboutUs-middle@2x.webp 2x, assets/img/aboutUs/aboutUs-middle@3x.webp 3x">
@@ -399,14 +399,7 @@
                   <source media="(max-width: 1500px)" src="assets/img/aboutUs/aboutUs-middle.png">
                   <img src="assets/img/aboutUs/aboutUs-large.png" alt="Фото компании.">
                 </picture>
-              </div>  
-
-              <!-- <picture>
-                <source type="image/webp" srcset="assets/img/offer/offer-3.webp 1x, assets/img/offer/offer-3@2x.webp 2x, assets/img/offer/offer-3@3x.webp 3x">
-                <img class="offer__card__img card__img" src="assets/img/offer/offer-3.png" alt="Изображение парения.">
-              </picture>
-
-              <img class="aboutUs__img item item_img" src="assets/img/aboutUs/aboutUs-768.png" alt="Пармейстеры"> -->
+              </div> 
             </div>
 
             <div class="aboutUs__buttons buttonsGroup">
@@ -614,7 +607,6 @@
       </section>
 
       <section class="feedbackForm">   
-        <!-- Модальное окно обратной связи -->
         <div class="hystmodal" id="feedback" aria-hidden="true">
           <div class="hystmodal__wrap">
             <div class="feedbackModal modal hystmodal__window" role="dialog" aria-modal="true">
@@ -1211,9 +1203,17 @@
         <section class="guarantees wrapperPadding" id="guarantees">
           <div class="guarantees__container container">    
             <div class="guarantees__list">
-              <div class="guarantees__item guarantees_item_main item item_img">
-                <h2 class="guarantees__main__title title">Мы гарантируем</h2>
-                <img class="guarantees__main__img item item_img" src="assets/img/providers-2.png" alt="">
+              <div class="guarantees__main itemImg">
+                <h2 class="guarantees__title title">Мы гарантируем</h2>                
+
+                <picture>
+                  <source type="image/webp" media="(max-width: 960px)" srcset="assets/img/guarantees/guarantees-small.webp 1x, assets/img/guarantees/guarantees-small@2x.webp 2x, assets/img/guarantees/guarantees-small@3x.webp 3x">
+                  <source type="image/webp" media="(max-width: 1500px)" srcset="assets/img/guarantees/guarantees-middle.webp 1x, assets/img/guarantees/guarantees-middle@2x.webp 2x, assets/img/guarantees/guarantees-middle@3x.webp 3x">
+                  <source type="image/webp" srcset="assets/img/guarantees/guarantees-large.webp 1x, assets/img/guarantees/guarantees-large@2x.webp 2x, assets/img/guarantees/guarantees-large@3x.webp 3x">
+                  <source media="(max-width: 960px)" src="assets/img/guarantees/guarantees-small.png">
+                  <source media="(max-width: 1500px)" src="assets/img/guarantees/guarantees-middle.png">
+                  <img src="assets/img/guarantees/guarantees-large.png" alt="Фото компании.">
+                </picture>
               </div>
               <div class="guarantees__item guarantees__item_top item">
                 <h3 class="guarantees__item__title subtitle">Персональный подход</h3>
@@ -1237,7 +1237,7 @@
                 </p>
               </div>
 
-              <div class="guarantees__item guarantees__item__bg item item_img" style="background-image: url('assets/img/flowers.png')"></div>
+              <div class="guarantees__bg itemImg"></div>
 
               <div class="guarantees__contacts contacts">
                 <a class="contacts__button button button_left" data-feedback="#feedback" href="#feedback">Оставить заявку</a>

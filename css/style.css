@@ -861,7 +861,11 @@ legend {
     border-radius: var(--xl-radius);
 }
 
-.item_img img {
+.itemImg {
+    border-radius: var(--xl-radius);
+}
+
+.itemImg img {
     border-radius: var(--xl-radius);
 }
 
@@ -871,7 +875,11 @@ legend {
         border-radius: var(--md-radius);
     }
 
-    .item_img img {
+    .itemImg {
+        border-radius: var(--md-radius);
+    }
+
+    .itemImg img {
         border-radius: var(--md-radius);
     }
 }
@@ -882,13 +890,13 @@ legend {
         border-radius: var(--xs-radius);
     }
 
-    .item_img img {
+    .itemImg {
         border-radius: var(--xs-radius);
     }
-}
 
-.item_img {
-    padding: 0;
+    .itemImg img {
+        border-radius: var(--xs-radius);
+    }
 }
 
 /* Элементы - карточки */
@@ -2807,11 +2815,14 @@ legend {
     grid-row: span 1;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
+
+    min-height: 182px;
+
     background-color: var(--green-pallet-200);
 }
 
-.guarantees_item_main {
+.guarantees__main {
     grid-column: span 5;
     grid-row: span 2;
 
@@ -2820,12 +2831,25 @@ legend {
     background-color: var(--brown-pallet-600);
 }
 
-.guarantees__item_top {    
-    min-height: 182px;
+.guarantees__title {
+    position: absolute;
+    left: 32px;
+    bottom: 32px;
+
+    color: var(--brown-pallet-100);
+}
+
+.guarantees__main img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
 }
 
 .guarantees__item_bottom {  
     grid-column: span 6;
+
+    min-height: auto;
 }
 
 .guarantees__item__title {
@@ -2834,28 +2858,14 @@ legend {
     text-align: left;
 }
 
-.guarantees__item__bg { 
+.guarantees__bg { 
     grid-column: span 4;
     grid-row: span 1;
     
+    background-image: url("../assets/img/flowers.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
-}
-
-.guarantees__main__title {
-    position: absolute;
-    left: 32px;
-    bottom: 32px;
-
-    color: var(--brown-pallet-100);
-}
-
-.guarantees__main__img {
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-    object-fit: cover;
 }
 
 .guarantees__contacts {
@@ -2864,9 +2874,6 @@ legend {
 }
 
 @media (max-width: 1500px) {
-    .guarantees {  
-    }
-
     .guarantees__list {
         gap: var(--lg-gap);
     }
@@ -2877,9 +2884,6 @@ legend {
 }
 
 @media (max-width: 1200px) {
-    .guarantees {  
-    }
-
     .guarantees__list {
         grid-template-columns: repeat(3, 1fr);
         gap: var(--md-gap);
@@ -2887,27 +2891,28 @@ legend {
     
     .guarantees__item {    
         grid-column: span 2;
+        min-height: auto;
     }
 
-    .guarantees_item_main {
+    .guarantees__main {
         grid-column: span 1;
     }
 
-    .guarantees__item_top {  
-        min-height: auto;
+    .guarantees__title {
+        left: 24px;
+        bottom: 24px;
     }
+
+    /* .guarantees__item_top {  
+        min-height: auto;
+    } */
     
     .guarantees__item_bottom {  
         grid-column: span 2;
     }
 
-    .guarantees__item__bg { 
+    .guarantees__bg { 
         grid-column: span 1;
-    }
-
-    .guarantees__main__title {
-        left: 24px;
-        bottom: 24px;
     }
 
     .guarantees__contacts {
@@ -2916,9 +2921,6 @@ legend {
 }
 
 @media (max-width: 960px) {
-    .guarantees { 
-    }
-
     .guarantees__list {
         gap: var(--xs-gap);
     }
@@ -2927,7 +2929,7 @@ legend {
         aspect-ratio: 100 / 98;
     } */
 
-    .guarantees__main__title { 
+    .guarantees__title { 
         left: 0;
         right: 0;      
         bottom: 16px;
@@ -2940,9 +2942,6 @@ legend {
 
 
 @media (max-width: 760px) {
-    .guarantees { 
-    }
-
     .guarantees__list {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -2951,7 +2950,7 @@ legend {
         justify-content: center;
     }
 
-    .guarantees_item_main {
+    .guarantees__main {
         grid-column: span 1;
     }
     
@@ -2966,9 +2965,6 @@ legend {
 }
 
 @media (max-width: 560px) {
-    .guarantees {  
-    }
-
     .guarantees__list {
         grid-template-columns: 1fr;
         gap: 12px;
@@ -2978,15 +2974,13 @@ legend {
         grid-column: span 1;
     }
 
-    .guarantees_item_main {
+    .guarantees__main {
         grid-column: span 1;
     }
     
     .guarantees__item_top {    
         grid-column: span 1;
         grid-row: span 1;
-
-        aspect-ratio: unset;
     }
     
     .guarantees__item_bottom {  
@@ -2998,7 +2992,7 @@ legend {
         margin-bottom: 18px;
     }
 
-    .guarantees__item__bg { 
+    .guarantees__bg { 
         order: 1;
         min-height: 72px;
         aspect-ratio: 4 / 1;
