@@ -463,12 +463,12 @@
       <section class="certificateModal">
         <div class="hystmodal" id="certificate-1" aria-hidden="true">
           <div class="hystmodal__wrap">
-            <div class="pictureModal hystmodal__window" role="dialog" aria-modal="true">          
-              <button class="pictureModal__close closeButton" data-hystclose type="button">
+            <div class="galleryModal hystmodal__window" role="dialog" aria-modal="true">          
+              <button class="galleryModal__close closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
-              <div class="pictureModal__content pictureModal__content_vertical">
+              <div class="galleryModal__content galleryModal__content_vertical">
                 <img src="assets/img/certificates/certificate-1.png" width="551" height="776" alt="Сертификат">
               </div>
             </div>
@@ -477,12 +477,12 @@
         
         <div class="hystmodal" id="certificate-2" aria-hidden="true">
           <div class="hystmodal__wrap">
-            <div class="pictureModal hystmodal__window" role="dialog" aria-modal="true">          
-              <button class="pictureModal__close closeButton" data-hystclose type="button">
+            <div class="galleryModal hystmodal__window" role="dialog" aria-modal="true">          
+              <button class="galleryModal__close closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
-              <div class="pictureModal__content pictureModal__content_vertical">
+              <div class="galleryModal__content galleryModal__content_vertical">
                 <img src="assets/img/certificates/certificate-2.png" width="551" height="776" alt="Сертификат">
               </div>
             </div>
@@ -491,12 +491,12 @@
 
         <div class="hystmodal" id="certificate-3" aria-hidden="true">
           <div class="hystmodal__wrap">
-            <div class="pictureModal hystmodal__window" role="dialog" aria-modal="true">          
-              <button class="pictureModal__close closeButton" data-hystclose type="button">
+            <div class="galleryModal hystmodal__window" role="dialog" aria-modal="true">          
+              <button class="galleryModal__close closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
-              <div class="pictureModal__content pictureModal__content_vertical">
+              <div class="galleryModal__content galleryModal__content_vertical">
                 <img src="assets/img/certificates/certificate-3.png" width="551" height="776" alt="Сертификат">
               </div>
             </div>
@@ -505,12 +505,12 @@
 
         <div class="hystmodal" id="certificate-4" aria-hidden="true">
           <div class="hystmodal__wrap">
-            <div class="pictureModal hystmodal__window" role="dialog" aria-modal="true">          
-              <button class="pictureModal__close closeButton" data-hystclose type="button">
+            <div class="galleryModal hystmodal__window" role="dialog" aria-modal="true">          
+              <button class="galleryModal__close closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
-              <div class="pictureModal__content pictureModal__content_horizontal">
+              <div class="galleryModal__content galleryModal__content_horizontal">
                 <img src="assets/img/certificates/certificate-4.png" width="713" height="528" alt="Сертификат">
               </div>
             </div>
@@ -519,12 +519,12 @@
         
         <div class="hystmodal" id="certificate-5" aria-hidden="true">
           <div class="hystmodal__wrap">
-            <div class="pictureModal hystmodal__window" role="dialog" aria-modal="true">          
-              <button class="pictureModal__close closeButton" data-hystclose type="button">
+            <div class="galleryModal hystmodal__window" role="dialog" aria-modal="true">          
+              <button class="galleryModal__close closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
-              <div class="pictureModal__content pictureModal__content_horizontal pictureModal__content_var1">
+              <div class="galleryModal__content galleryModal__content_horizontal galleryModal__content_var1">
                 <img src="assets/img/certificates/certificate-5.png" width="713" height="528" alt="Сертификат">
               </div>
             </div>
@@ -533,12 +533,12 @@
         
         <div class="hystmodal" id="certificate-6" aria-hidden="true">
           <div class="hystmodal__wrap">
-            <div class="pictureModal hystmodal__window" role="dialog" aria-modal="true">          
-              <button class="pictureModal__close closeButton" data-hystclose type="button">
+            <div class="galleryModal hystmodal__window" role="dialog" aria-modal="true">          
+              <button class="galleryModal__close closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
-              <div class="pictureModal__content pictureModal__content_horizontal">
+              <div class="galleryModal__content galleryModal__content_horizontal">
                 <img src="assets/img/certificates/certificate-6.png" width="713" height="528" alt="Сертификат">
               </div>
             </div>
@@ -656,8 +656,11 @@
               <a class="services__card card" data-services="#services-1" href="#services-1">
                 <div class="services__card__circle circle"><span class="circle__text">15 мин</span></div>
 
-                <img class="services__card__img card__img" src="assets/img/services/services-1-1.png" alt="Ребенок в сауне">
-
+                <picture>
+                  <source type="image/webp" srcset="assets/img/services/services-1.webp 1x, assets/img/services/services-1@2x.webp 2x, assets/img/services/services-1@3x.webp 3x">
+                  <img class="services__card__img card__img" src="assets/img/services/services-1.png" alt="Изображение парения.">
+                </picture>
+                
                 <div class="services__card__bottom">
                   <h4 class="services__card__title subtitle">Парение<br> Первый пар</h4>
                   <div class="services__card__info">Подробнее</div>
@@ -668,8 +671,11 @@
               <a class="services__card card" data-services="#services-2" href="#services-2">
                 <div class="services__card__circle circle"><span class="circle__text">30 мин</span></div>
 
-                <img class="services__card__img card__img" src="assets/img/services/services-2.png" alt="Ребенок в сауне">
-
+                <picture>
+                  <source type="image/webp" srcset="assets/img/services/services-2.webp 1x, assets/img/services/services-2@2x.webp 2x, assets/img/services/services-2@3x.webp 3x">
+                  <img class="services__card__img card__img" src="assets/img/services/services-2.png" alt="Изображение парения.">
+                </picture>
+                
                 <div class="services__card__bottom">
                   <h4 class="services__card__title subtitle">Парение<br> классическое</h4>
                   <div class="services__card__info">Подробнее</div>
@@ -679,7 +685,12 @@
             <div class="services__slide swiper-slide">
               <a class="services__card card" data-services="#services-3" href="#services-3">
                 <div class="services__card__circle circle"><span class="circle__text">40 мин</span></div> 
-                <img class="services__card__img card__img" src="assets/img/services/services-3.png" alt="Ребенок в сауне">
+                
+                <picture>
+                  <source type="image/webp" srcset="assets/img/services/services-3.webp 1x, assets/img/services/services-3@2x.webp 2x, assets/img/services/services-3@3x.webp 3x">
+                  <img class="services__card__img card__img" src="assets/img/services/services-3.png" alt="Изображение парения.">
+                </picture>
+                                
                 <div class="services__card__bottom">
                   <h4 class="services__card__title subtitle">Парение-Гурме</h4>
                   <div class="services__card__info">Подробнее</div>
@@ -694,8 +705,11 @@
                   </span>
                 </div>    
                   
-                <img class="services__card__img card__img" src="assets/img/services/services-4.png" alt="Ребенок в сауне">
-                
+                <picture>
+                  <source type="image/webp" srcset="assets/img/services/services-4.webp 1x, assets/img/services/services-4@2x.webp 2x, assets/img/services/services-4@3x.webp 3x">
+                  <img class="services__card__img card__img" src="assets/img/services/services-4.png" alt="Изображение парения.">
+                </picture>
+                                
                 <div class="services__card__bottom">
                   <h4 class="services__card__title subtitle">Парение<br> Коллективное</h4>
                   <div class="services__card__info">Подробнее</div>
@@ -706,8 +720,11 @@
               <a class="services__card card" data-services="#services-5" href="#services-5">
                 <div class="services__card__circle circle"><span class="circle__text">40 мин</span></div> 
 
-                <img class="services__card__img card__img" src="assets/img/services/services-5.png" alt="Ребенок в сауне">
-
+                <picture>
+                  <source type="image/webp" srcset="assets/img/services/services-5.webp 1x, assets/img/services/services-5@2x.webp 2x, assets/img/services/services-5@3x.webp 3x">
+                  <img class="services__card__img card__img" src="assets/img/services/services-5.png" alt="Изображение парения.">
+                </picture>
+                
                 <div class="services__card__bottom">
                   <h4 class="services__card__title subtitle">Медовая<br> ладка</h4>
                   <div class="services__card__info">Подробнее</div>
@@ -718,8 +735,11 @@
               <a class="services__card card" data-services="#services-6" href="#services-6">
                 <div class="services__card__circle circle"><span class="circle__text">30 мин</span></div>
                 
-                <img class="services__card__img card__img" src="assets/img/services/services-6.png" alt="Ребенок в сауне">
-
+                <picture>
+                  <source type="image/webp" srcset="assets/img/services/services-6.webp 1x, assets/img/services/services-6@2x.webp 2x, assets/img/services/services-6@3x.webp 3x">
+                  <img class="services__card__img card__img" src="assets/img/services/services-6.png" alt="Изображение парения.">
+                </picture>
+                
                 <div class="services__card__bottom">
                   <h4 class="services__card__title subtitle">Очищение<br> солью</h4>
                   <div class="services__card__info">Подробнее</div>
@@ -730,8 +750,11 @@
               <a class="services__card card" data-services="#services-7" href="#services-7">
                 <div class="services__card__circle circle"><span class="circle__text">30 мин</span></div>  
 
-                <img class="services__card__img card__img" src="assets/img/services/services-7.png" alt="Ребенок в сауне">
-                  
+                <picture>
+                  <source type="image/webp" srcset="assets/img/services/services-7.webp 1x, assets/img/services/services-7@2x.webp 2x, assets/img/services/services-7@3x.webp 3x">
+                  <img class="services__card__img card__img" src="assets/img/services/services-7.png" alt="Изображение парения.">
+                </picture>
+                                  
                 <div class="services__card__bottom">
                   <h4 class="services__card__title subtitle">Березовая<br> помывка</h4>
                   <div class="services__card__info">Подробнее</div>
@@ -742,8 +765,11 @@
               <a class="services__card card" data-services="#services-8" href="#services-8">
                 <div class="services__card__circle circle"><span class="circle__text">20 мин</span></div>
                 
-                <img class="services__card__img card__img" src="assets/img/services/services-8.png" alt="Ребенок в сауне">
-                  
+                <picture>
+                  <source type="image/webp" srcset="assets/img/services/services-8.webp 1x, assets/img/services/services-8@2x.webp 2x, assets/img/services/services-8@3x.webp 3x">
+                  <img class="services__card__img card__img" src="assets/img/services/services-8.png" alt="Изображение парения.">
+                </picture>
+                                  
                 <div class="services__card__bottom">
                   <h4 class="services__card__title subtitle">Пилинг<br> тела</h4>
                   <div class="services__card__info">Подробнее</div>
@@ -1290,12 +1316,12 @@
       <section class="reviewsModal">  
         <div class="hystmodal" id="review-1" aria-hidden="true">
           <div class="hystmodal__wrap">
-            <div class="pictureModal hystmodal__window" role="dialog" aria-modal="true">
-              <button class="pictureModal__close closeButton" data-hystclose type="button">
+            <div class="galleryModal hystmodal__window" role="dialog" aria-modal="true">
+              <button class="galleryModal__close closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
-              <div class="pictureModal__content pictureModal__content_horizontal">
+              <div class="galleryModal__content galleryModal__content_horizontal">
                 <img src="assets/img/reviews/reviews-1.png" alt="Отзыв">
               </div>
             </div>
@@ -1303,12 +1329,12 @@
         </div>            
         <div class="hystmodal" id="review-2" aria-hidden="true">
           <div class="hystmodal__wrap">
-            <div class="pictureModal hystmodal__window" role="dialog" aria-modal="true">
-              <button class="pictureModal__close closeButton" data-hystclose type="button">
+            <div class="galleryModal hystmodal__window" role="dialog" aria-modal="true">
+              <button class="galleryModal__close closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
-              <div class="pictureModal__content pictureModal__content_horizontal">
+              <div class="galleryModal__content galleryModal__content_horizontal">
                 <img src="assets/img/reviews/reviews-2.png" alt="Отзыв">
               </div>
             </div>
@@ -1316,12 +1342,12 @@
         </div>            
         <div class="hystmodal" id="review-3" aria-hidden="true">
           <div class="hystmodal__wrap">
-            <div class="pictureModal hystmodal__window" role="dialog" aria-modal="true">
-              <button class="pictureModal__close closeButton" data-hystclose type="button">
+            <div class="galleryModal hystmodal__window" role="dialog" aria-modal="true">
+              <button class="galleryModal__close closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
-              <div class="pictureModal__content pictureModal__content_horizontal">
+              <div class="galleryModal__content galleryModal__content_horizontal">
                 <img src="assets/img/reviews/reviews-3.png" alt="Отзыв">
               </div>
             </div>
@@ -1329,12 +1355,12 @@
         </div>            
         <div class="hystmodal" id="review-4" aria-hidden="true">
           <div class="hystmodal__wrap">
-            <div class="pictureModal hystmodal__window" role="dialog" aria-modal="true">
-              <button class="pictureModal__close closeButton" data-hystclose type="button">
+            <div class="galleryModal hystmodal__window" role="dialog" aria-modal="true">
+              <button class="galleryModal__close closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
-              <div class="pictureModal__content pictureModal__content_horizontal">
+              <div class="galleryModal__content galleryModal__content_horizontal">
                 <img src="assets/img/reviews/reviews-4.png" alt="Отзыв">
               </div>
             </div>
@@ -1342,12 +1368,12 @@
         </div>            
         <div class="hystmodal" id="review-5" aria-hidden="true">
           <div class="hystmodal__wrap">
-            <div class="pictureModal hystmodal__window" role="dialog" aria-modal="true">
-              <button class="pictureModal__close closeButton" data-hystclose type="button">
+            <div class="galleryModal hystmodal__window" role="dialog" aria-modal="true">
+              <button class="galleryModal__close closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
-              <div class="pictureModal__content pictureModal__content_horizontal">
+              <div class="galleryModal__content galleryModal__content_horizontal">
                 <img src="assets/img/reviews/reviews-1.png" alt="Отзыв">
               </div>
             </div>

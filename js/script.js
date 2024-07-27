@@ -247,18 +247,18 @@ window.addEventListener('resize', () => {
 
 
 /* Закрытие модального окна увеличенной картинки */
-// const picture = document.querySelectorAll('.pictureModal');
-// const picture = document.querySelectorAll('.picture');
-// picture.forEach(item => {
-//   const btn = item.querySelector('.pictureModal__close');
+// const gallery = document.querySelectorAll('.galleryModal');
+// const gallery = document.querySelectorAll('.gallery');
+// gallery.forEach(item => {
+//   const btn = item.querySelector('.galleryModal__close');
 //   btn.addEventListener('click', () => {    
-//     // pictureModal.close();
+//     // galleryModal.close();
 //     // certificatesModal.open();
 //   })
 
-//   const wrap = item.querySelector('.picture__wrap');
+//   const wrap = item.querySelector('.gallery__wrap');
 //   wrap.addEventListener('click', () => {    
-//     // pictureModal.close();
+//     // galleryModal.close();
 //     // certificatesModal.open();
 //   })
 // })
@@ -277,7 +277,7 @@ const certificateModal = new HystModal({
   afterClose: () => certificatesModal.open(),
 });
 
-const pictureModal = new HystModal({
+const galleryModal = new HystModal({
   linkAttributeName: "data-review",
 });
 
