@@ -323,7 +323,11 @@
 
             <div class="offer__list container__mobile">
               <div class="offer__card card">
-                <img class="offer__card__img card__img" src="assets/img/offer/offer-1-1920.png" alt="Люди в бане">
+
+                <picture>
+                  <source type="image/webp" srcset="assets/img/offer/offer-1.webp 1x, assets/img/offer/offer-1@2x.webp 2x, assets/img/offer/offer-1@3x.webp 3x">
+                  <img class="offer__card__img card__img" src="assets/img/offer/offer-1.png" alt="Изображение парения.">
+                </picture>
                   
                 <p class="offer__card__description">
                   <span class="offer__card__circle">
@@ -333,8 +337,11 @@
                 </p>
               </div>
               <div class="offer__card card">
-                <img class="offer__card__img card__img" src="assets/img/offer/offer-2-1920.png" alt="Женщина с цветами">
-
+                <picture>
+                  <source type="image/webp" srcset="assets/img/offer/offer-2.webp 1x, assets/img/offer/offer-2@2x.webp 2x, assets/img/offer/offer-2@3x.webp 3x">
+                  <img class="offer__card__img card__img" src="assets/img/offer/offer-2.png" alt="Изображение парения.">
+                </picture>
+                  
                 <p class="offer__card__description">
                   <span class="offer__card__circle">
                     <svg style="width: 45px; height: 40px;"><use href="#like"></use></svg>
@@ -344,8 +351,11 @@
                 </p>
               </div>
               <div class="offer__card card">                
-                <img class="offer__card__img card__img" src="assets/img/offer/offer-3-1920.png" alt="Люди в бане">
-                  
+                <picture>
+                  <source type="image/webp" srcset="assets/img/offer/offer-3.webp 1x, assets/img/offer/offer-3@2x.webp 2x, assets/img/offer/offer-3@3x.webp 3x">
+                  <img class="offer__card__img card__img" src="assets/img/offer/offer-3.png" alt="Изображение парения.">
+                </picture>
+                                    
                 <p class="offer__card__description">
                   <span class="offer__card__circle">
                     <svg style="width: 40px; height: 39px;"><use href="#gift"></use></svg>
@@ -378,9 +388,25 @@
               <p class="aboutUs__item item">
                 Елизавета Русанова — участница женского чемпионата по парению вениками среди профессионалов «Кубок
                 Здравы» 2019 года.
-              </p>              
+              </p>   
+              
+              <div class="aboutUs__img item item_img">
+                <picture>
+                  <source type="image/webp" media="(max-width: 960px)" srcset="assets/img/aboutUs/aboutUs-small.webp 1x, assets/img/aboutUs/aboutUs-small@2x.webp 2x, assets/img/aboutUs/aboutUs-small@3x.webp 3x">
+                  <source type="image/webp" media="(max-width: 1500px)" srcset="assets/img/aboutUs/aboutUs-middle.webp 1x, assets/img/aboutUs/aboutUs-middle@2x.webp 2x, assets/img/aboutUs/aboutUs-middle@3x.webp 3x">
+                  <source type="image/webp" srcset="assets/img/aboutUs/aboutUs-large.webp 1x, assets/img/aboutUs/aboutUs-large@2x.webp 2x, assets/img/aboutUs/aboutUs-large@3x.webp 3x">
+                  <source media="(max-width: 960px)" src="assets/img/aboutUs/aboutUs-small.png">
+                  <source media="(max-width: 1500px)" src="assets/img/aboutUs/aboutUs-middle.png">
+                  <img src="assets/img/aboutUs/aboutUs-large.png" alt="Фото компании.">
+                </picture>
+              </div>  
 
-              <img class="aboutUs__img item item_img" src="assets/img/aboutUs/aboutUs-768.png" alt="Пармейстеры">
+              <!-- <picture>
+                <source type="image/webp" srcset="assets/img/offer/offer-3.webp 1x, assets/img/offer/offer-3@2x.webp 2x, assets/img/offer/offer-3@3x.webp 3x">
+                <img class="offer__card__img card__img" src="assets/img/offer/offer-3.png" alt="Изображение парения.">
+              </picture>
+
+              <img class="aboutUs__img item item_img" src="assets/img/aboutUs/aboutUs-768.png" alt="Пармейстеры"> -->
             </div>
 
             <div class="aboutUs__buttons buttonsGroup">
@@ -667,6 +693,7 @@
                 </div>
               </a>
             </div>
+
             <div class="services__slide swiper-slide">
               <a class="services__card card" data-services="#services-2" href="#services-2">
                 <div class="services__card__circle circle"><span class="circle__text">30 мин</span></div>
@@ -682,6 +709,7 @@
                 </div>
               </a>
             </div>
+
             <div class="services__slide swiper-slide">
               <a class="services__card card" data-services="#services-3" href="#services-3">
                 <div class="services__card__circle circle"><span class="circle__text">40 мин</span></div> 
@@ -697,6 +725,7 @@
                 </div>
               </a>
             </div>
+
             <div class="services__slide swiper-slide">
               <a class="services__card card" data-services="#services-4" href="#services-4">
                 <div class="services__card__circle circle">
@@ -716,6 +745,7 @@
                 </div>
               </a>
             </div>
+
             <div class="services__slide swiper-slide">
               <a class="services__card card" data-services="#services-5" href="#services-5">
                 <div class="services__card__circle circle"><span class="circle__text">40 мин</span></div> 
@@ -731,6 +761,7 @@
                 </div>
               </a>
             </div>
+
             <div class="services__slide swiper-slide">
               <a class="services__card card" data-services="#services-6" href="#services-6">
                 <div class="services__card__circle circle"><span class="circle__text">30 мин</span></div>
@@ -746,6 +777,7 @@
                 </div>
               </a>
             </div>
+
             <div class="services__slide swiper-slide">
               <a class="services__card card" data-services="#services-7" href="#services-7">
                 <div class="services__card__circle circle"><span class="circle__text">30 мин</span></div>  
@@ -761,6 +793,7 @@
                 </div>
               </a>
             </div>
+
             <div class="services__slide swiper-slide">
               <a class="services__card card" data-services="#services-8" href="#services-8">
                 <div class="services__card__circle circle"><span class="circle__text">20 мин</span></div>

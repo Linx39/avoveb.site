@@ -861,9 +861,17 @@ legend {
     border-radius: var(--xl-radius);
 }
 
+.item_img img {
+    border-radius: var(--xl-radius);
+}
+
 @media (max-width: 1200px) {
     .item {
         padding: 20px;
+        border-radius: var(--md-radius);
+    }
+
+    .item_img img {
         border-radius: var(--md-radius);
     }
 }
@@ -873,6 +881,10 @@ legend {
         padding: 16px;
         border-radius: var(--xs-radius);
     }
+
+    .item_img img {
+        border-radius: var(--xs-radius);
+    }
 }
 
 .item_img {
@@ -880,13 +892,12 @@ legend {
 }
 
 /* Элементы - карточки */
-
 .card {
     border-radius: var(--xl-radius);
 }
 
 .card__img {
-    border-radius: inherit;
+    border-radius: var(--xl-radius);
 }
 
 /* Элементы блоков Преимущества и Стоимость */
@@ -2137,20 +2148,16 @@ legend {
 .aboutUs__img {
     grid-row: 1 / 3;
     grid-column: 2 / 3;
-    
+}
+
+.aboutUs__img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center top;
-}
-
-.aboutUs__buttons {
+    object-position: center;
 }
 
 @media (max-width: 1500px) {
-    .aboutUs {
-    }
-
     .aboutUs__title {
         margin-bottom: 48px;
     }
@@ -2162,9 +2169,6 @@ legend {
 }
 
 @media (max-width: 1200px) {
-    .aboutUs {
-    }
-
     .aboutUs__title {
         margin-bottom: 32px;
     }
@@ -2176,9 +2180,6 @@ legend {
 }
 
 @media (max-width: 960px) {
-    .aboutUs {
-    }
-
     .aboutUs__title {
         margin-bottom: 24px;
     }
@@ -2194,9 +2195,6 @@ legend {
 }
 
 @media (max-width: 760px) {
-    .aboutUs {
-    }
-
     .aboutUs__list {
         grid-template-columns: 1fr 1fr;
     }
@@ -2215,6 +2213,11 @@ legend {
 
     .aboutUs__item {  
         min-height: auto;
+    }    
+    
+    .aboutUs__img {
+        grid-row: 3 / 4;
+        aspect-ratio: 3 / 2;
     }
 }
 

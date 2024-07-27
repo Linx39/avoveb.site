@@ -81,20 +81,11 @@ export const optimizeImages = () => {
 
 export const createWebp = () => {
   return gulp.src([
-    `assets/img/services/*.png`,
+    `assets/img/aboutUs/*.png`,
   ])
     .pipe(webp({quality: 100}))
-    .pipe(gulp.dest(`assets/img/services`))
+    .pipe(gulp.dest(`assets/img/aboutUs`))
 }
-
-// export const createSprite = () => {
-//   return gulp.src(`${SOURCE_FOLDER}/img/sprite/*.svg`)
-//     .pipe(svgstore({
-//       inlineSvg: true
-//     }))
-//     .pipe(rename('sprite.svg'))
-//     .pipe(gulp.dest(`${PUBLIC_FOLDER}/img`));
-// }
 
 // Copy
 // export const copy = (done) => {
