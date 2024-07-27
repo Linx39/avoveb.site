@@ -4,10 +4,10 @@ const initServisesSwiper = () => {
     slideVisibleClass: 'services__slide_visible',
     loop: true,
     
-    autoplay: {
-      delay: 2000,
-      pauseOnMouseEnter: true,
-    },
+    // autoplay: {
+    //   delay: 2000,
+    //   pauseOnMouseEnter: true,
+    // },
 
     breakpoints: {
       320: {
@@ -77,10 +77,10 @@ new Swiper(".reviews__swiper", {
   slideVisibleClass: 'review__slide_visible',
   loop: true,
 
-  autoplay: {
-    delay: 2000,
-    pauseOnMouseEnter: true,
-  },
+  // autoplay: {
+  //   delay: 2000,
+  //   pauseOnMouseEnter: true,
+  // },
 
   breakpoints: {
     320: {
@@ -97,7 +97,7 @@ new Swiper(".reviews__swiper", {
     },
     960: {
       slidesPerView: 3,
-      spaceBetween: 16,
+      spaceBetween: 20,
     },
     1200: {
       slidesPerView: 3,
