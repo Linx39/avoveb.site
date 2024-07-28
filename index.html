@@ -270,12 +270,31 @@
 
     <main class="page__main">
       <section class="promo wrapperPadding" id="promo">
-        <img src="assets/img/promo-bg/promo-wave.png" alt="" class="promo__wave" >
-        <img src="assets/img/promo-bg/promo-wave-768.png" alt="" class="promo__wave promo__wave_768">
-        <img src="assets/img/promo-bg/promo-wave-320.svg" alt="" class="promo__wave promo__wave_320">
+        <svg style="position: absolute; width: 0; height: 0;">
+          <clipPath id="promo-mask-large" clipPathUnits="objectBoundingBox">
+            <path d="M0.527,0.953 C0.433,0.953,0.341,0.982,0.267,0.985 C0.194,0.987,0.13,1,-0.001,0.956 V0 H0.999 C0.999,0.314,0.999,0.95,0.999,0.98 C0.993,0.966,0.934,0.96,0.894,0.96 C0.854,0.96,0.788,1,0.737,1 C0.686,1,0.621,0.953,0.527,0.953"></path>
+          </clipPath>
+        </svg>
+        <svg style="position: absolute; width: 0; height: 0;">
+          <clipPath id="promo-mask-middle" clipPathUnits="objectBoundingBox">
+            <path d="M0,0 H1 V0.971 C1,0.971,0.979,0.978,0.875,0.992 C0.771,1,0.653,0.971,0.5,0.971 C0.379,0.971,0.285,1,0.187,0.998 C0.089,0.985,0,0.992,0,0.992 V0"></path>
+          </clipPath>
+        </svg>
+        <svg style="position: absolute; width: 0; height: 0;">
+          <clipPath id="promo-mask-small" clipPathUnits="objectBoundingBox">
+            <path d="M0,0 H1 V0.955 L0.828,0.98 C0.775,0.987,0.721,0.992,0.667,0.994 L0.59,0.997 C0.53,0.999,0.47,0.998,0.411,0.993 L0.371,0.99 C0.289,0.983,0.205,0.983,0.123,0.99 L0,1 V0"></path>
+          </clipPath>
+        </svg>
 
         <div class="promo__bg">
-          <img class="promo__bg__img" src="assets/img/promo-bg/promo-bg-1920.png" alt="Изображение девушки в бане">
+          <picture>
+            <source type="image/webp" media="(max-width: 460px)" srcset="assets/img/promo-bg/promo-bg-small.webp 1x">
+            <source type="image/webp" media="(max-width: 1200px)" srcset="assets/img/promo-bg/promo-bg-middle.webp 1x">
+            <source type="image/webp" srcset="assets/img/promo-bg/promo-bg-large.webp 1x">
+            <source media="(max-width: 460px)" srcset="assets/img/promo-bg/promo-bg-small.png">
+            <source media="(max-width: 1200px)" srcset="assets/img/promo-bg/promo-bg-middle.png 1x">
+            <img class="promo__bg__img" src="assets/img/promo-bg/promo-bg-large.png" alt="Изображение девушки в бане.">
+          </picture>
 
           <!-- <video class="promo__bg__video" loop="" muted="" autoplay="" poster="video/plane.jpg.html">
             <source src="https://vkusbani.ru/wp-content/uploads/2019/03/video-bg.mp4" type="video/mp4" />

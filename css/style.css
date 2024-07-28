@@ -1689,6 +1689,8 @@ legend {
 
     color: var(--brown-pallet-100);
     background-color: var(--brown-pallet-600);
+
+    clip-path: url(#promo-mask-large);
 }
 
 .promo__bg {
@@ -1858,6 +1860,7 @@ legend {
 @media (max-width: 1200px) {
     .promo {
         min-height: 822px;
+        clip-path: url(#promo-mask-middle);
     }
 
     .promo__title {
@@ -1910,6 +1913,7 @@ legend {
 @media (max-width: 560px) {
     .promo {
         min-height: 448px;
+        clip-path: url(#promo-mask-small);
     }
         
     .promo__location {    
