@@ -2252,11 +2252,12 @@ legend {
     position: absolute;
     inset: 0;
 
+    background-image: url("../assets/img/price-bg/price-bg-large.png");
     background-image: image-set(
-        url("../assets/img/price-bg/price-bg-1920.webp") type("image/webp") 1x,
-        url("../assets/img/price-bg/price-bg-1920@2x.webp") type("image/webp") 2x,
-        url("../assets/img/price-bg/price-bg-1920.png") type("image/png") 1x,
-        url("../assets/img/price-bg/price-bg-1920@2x.png") type("image/png") 2x
+        url("../assets/img/price-bg/price-bg-large.webp") type("image/webp") 1x,
+        url("../assets/img/price-bg/price-bg-large@2x.webp") type("image/webp") 2x,
+        url("../assets/img/price-bg/price-bg-large@3x.webp") type("image/webp") 3x,
+        url("../assets/img/price-bg/price-bg-large.png") type("image/png") 1x
     );
     background-size: cover;
     background-repeat: no-repeat;
@@ -2308,17 +2309,7 @@ legend {
     background-color: var(--brown-pallet-100);
 }
 
-@media (max-width: 1500px) {
-    .price {
-        background-image: url("../assets/img/price-bg/price-bg-1440.png");    
-        background-image: image-set(
-            url("../assets/img/price-bg/price-bg-1440.webp") type("image/webp") 1x,
-            url("../assets/img/price-bg/price-bg-1440@2x.webp") type("image/webp") 2x,
-            url("../assets/img/price-bg/price-bg-1440.png") type("image/png") 1x,
-            url("../assets/img/price-bg/price-bg-1440@2x.png") type("image/png") 2x
-        );
-    }
-    
+@media (max-width: 1500px) {    
     .price__title {
         margin-bottom: 48px;
     }
@@ -2342,13 +2333,13 @@ legend {
 }
 
 @media (max-width: 1200px) {
-    .price {
-        background-image: url("../assets/img/price-bg/price-bg-1024.png");    
+    .price__bg {
+        background-image: url("../assets/img/price-bg/price-bg-middle.png");
         background-image: image-set(
-            url("../assets/img/price-bg/price-bg-1024.webp") type("image/webp") 1x,
-            url("../assets/img/price-bg/price-bg-1024@2x.webp") type("image/webp") 2x,
-            url("../assets/img/price-bg/price-bg-1024.png") type("image/png") 1x,
-            url("../assets/img/price-bg/price-bg-1024@2x.png") type("image/png") 2x
+            url("../assets/img/price-bg/price-bg-middle.webp") type("image/webp") 1x,
+            url("../assets/img/price-bg/price-bg-middle@2x.webp") type("image/webp") 2x,
+            url("../assets/img/price-bg/price-bg-middle@3x.webp") type("image/webp") 3x,
+            url("../assets/img/price-bg/price-bg-middle.png") type("image/png") 1x
         );
     }
     
@@ -2370,17 +2361,7 @@ legend {
     }
 }
 
-@media (max-width: 960px) {
-    .price {
-        background-image: url("../assets/img/price-bg/price-bg-768.png");    
-        background-image: image-set(
-            url("../assets/img/price-bg/price-bg-768.webp") type("image/webp") 1x,
-            url("../assets/img/price-bg/price-bg-768@2x.webp") type("image/webp") 2x,
-            url("../assets/img/price-bg/price-bg-768.png") type("image/png") 1x,
-            url("../assets/img/price-bg/price-bg-768@2x.png") type("image/png") 2x
-        );
-    }
-    
+@media (max-width: 960px) {    
     .price__title {
         margin-bottom: 16px;
     }
@@ -2404,15 +2385,15 @@ legend {
 }
 
 @media (max-width: 560px) {
-    .price {
-        background-image: url("../assets/img/price-bg/price-bg-320.png");    
+    .price__bg {
+        background-image: url("../assets/img/price-bg/price-bg-small.png");
         background-image: image-set(
-            url("../assets/img/price-bg/price-bg-320.webp") type("image/webp") 1x,
-            url("../assets/img/price-bg/price-bg-320@2x.webp") type("image/webp") 2x,
-            url("../assets/img/price-bg/price-bg-320.png") type("image/png") 1x,
-            url("../assets/img/price-bg/price-bg-320@2x.png") type("image/png") 2x
+            url("../assets/img/price-bg/price-bg-small.webp") type("image/webp") 1x,
+            url("../assets/img/price-bg/price-bg-small@2x.webp") type("image/webp") 2x,
+            url("../assets/img/price-bg/price-bg-small@3x.webp") type("image/webp") 3x,
+            url("../assets/img/price-bg/price-bg-small.png") type("image/png") 1x
         );
-    } 
+    }
 }
 
 /* Услуги */
