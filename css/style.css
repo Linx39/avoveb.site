@@ -214,6 +214,12 @@ legend {
     clip: rect(0 0 0 0);
 }
 
+.mask {
+    position: absolute; 
+    width: 0; 
+    height: 0;
+}
+
 .page__body {
     box-sizing: border-box;
     min-width: 320px;
@@ -2697,17 +2703,25 @@ legend {
     overflow: hidden;    
 
     color: var(--brown-pallet-100);
-    background-color: var(--brown-pallet-600);    
+    background-color: var(--brown-pallet-600); 
+    
+    clip-path: url(#advantages-mask-large);
 }
 
 .advantages__bg {
     position: absolute;
     inset: 0;
 
-    background-image: url("../assets/img/advantages-bg/advantages-bg-1920.png");
+    background-image: url("../assets/img/advantages-bg/advantages-bg-large.png");
+    background-image: image-set(
+        url("../assets/img/advantages-bg/advantages-bg-large.webp") type("image/webp") 1x,
+        url("../assets/img/advantages-bg/advantages-bg-large@2x.webp") type("image/webp") 2x,
+        url("../assets/img/advantages-bg/advantages-bg-large@3x.webp") type("image/webp") 3x,
+        url("../assets/img/advantages-bg/advantages-bg-large.png") type("image/png") 1x
+    );
+    background-size: cover;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
     background-attachment: fixed;
 
     @supports (-webkit-overflow-scrolling: touch) {
@@ -2715,14 +2729,14 @@ legend {
     }
 }
 
-.advantages__bg::after {
+/* .advantages__bg::after {
     position: absolute;
     content: "";
     inset: 0;
 
     background-color: var(--brown-pallet-600);
     opacity: .5; 
-}
+} */
 
 .advantages__container {
     position: relative;
@@ -2765,7 +2779,18 @@ legend {
 }
 
 @media (max-width: 1200px) {
-    .advantages {
+    .advantages {    
+        clip-path: url(#advantages-mask-middle);
+    }
+
+    .advantages__bg {
+        background-image: url("../assets/img/advantages-bg/advantages-bg-middle.png");
+        background-image: image-set(
+            url("../assets/img/advantages-bg/advantages-bg-middle.webp") type("image/webp") 1x,
+            url("../assets/img/advantages-bg/advantages-bg-middle@2x.webp") type("image/webp") 2x,
+            url("../assets/img/advantages-bg/advantages-bg-middle@3x.webp") type("image/webp") 3x,
+            url("../assets/img/advantages-bg/advantages-bg-middle.png") type("image/png") 1x
+        );
     }
 
     .advantages__title {
@@ -2795,11 +2820,20 @@ legend {
     }
 }
 
-@media (max-width: 560px) { 
-    .advantages {
-        background-image: url("../assets/img/advantages-bg/advantages-bg-768.png");
-    }  
+@media (max-width: 560px) {
+    .advantages {    
+        clip-path: url(#advantages-mask-small);
+    }
 
+    .advantages__bg {
+        background-image: url("../assets/img/advantages-bg/advantages-bg-small.png");
+        background-image: image-set(
+            url("../assets/img/advantages-bg/advantages-bg-small.webp") type("image/webp") 1x,
+            url("../assets/img/advantages-bg/advantages-bg-small@2x.webp") type("image/webp") 2x,
+            url("../assets/img/advantages-bg/advantages-bg-small@3x.webp") type("image/webp") 3x,
+            url("../assets/img/advantages-bg/advantages-bg-small.png") type("image/png") 1x
+        );
+    }
 }
 
 /* Блок Гарантии */
@@ -4919,7 +4953,7 @@ legend {
 }
 
 .services__decor__item__cap {
-    bottom: -140px;
+    bottom: -30px;
     left: 388px;
 
     width: 168px;

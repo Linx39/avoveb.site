@@ -270,17 +270,17 @@
 
     <main class="page__main">
       <section class="promo wrapperPadding" id="promo">
-        <svg style="position: absolute; width: 0; height: 0;">
+        <svg class="mask">
           <clipPath id="promo-mask-large" clipPathUnits="objectBoundingBox">
             <path d="M0.527,0.953 C0.433,0.953,0.341,0.982,0.267,0.985 C0.194,0.987,0.13,1,-0.001,0.956 V0 H0.999 C0.999,0.314,0.999,0.95,0.999,0.98 C0.993,0.966,0.934,0.96,0.894,0.96 C0.854,0.96,0.788,1,0.737,1 C0.686,1,0.621,0.953,0.527,0.953"></path>
           </clipPath>
         </svg>
-        <svg style="position: absolute; width: 0; height: 0;">
+        <svg class="mask">
           <clipPath id="promo-mask-middle" clipPathUnits="objectBoundingBox">
             <path d="M0,0 H1 V0.971 C1,0.971,0.979,0.978,0.875,0.992 C0.771,1,0.653,0.971,0.5,0.971 C0.379,0.971,0.285,1,0.187,0.998 C0.089,0.985,0,0.992,0,0.992 V0"></path>
           </clipPath>
         </svg>
-        <svg style="position: absolute; width: 0; height: 0;">
+        <svg class="mask">
           <clipPath id="promo-mask-small" clipPathUnits="objectBoundingBox">
             <path d="M0,0 H1 V0.955 L0.828,0.98 C0.775,0.987,0.721,0.992,0.667,0.994 L0.59,0.997 C0.53,0.999,0.47,0.998,0.411,0.993 L0.371,0.99 C0.289,0.983,0.205,0.983,0.123,0.99 L0,1 V0"></path>
           </clipPath>
@@ -681,7 +681,7 @@
           </p>
         </div>
 
-        <svg width="0" height="0">
+        <svg class="mask">
           <clipPath id="services-mask" clipPathUnits="objectBoundingBox">
             <path d="M1,0.291 C1,0.259,0.975,0.237,0.952,0.237 V0.237 C0.887,0.237,0.833,0.162,0.833,0.071 V0.071 C0.833,0.037,0.817,0,0.792,0 H0.06 C0.027,0,0,0.037,0,0.083 V0.917 C0,0.963,0.027,1,0.06,1 H0.94 C0.973,1,1,0.963,1,0.917 V0.291"></path>
           </clipPath>
@@ -1139,19 +1139,15 @@
       </section>
 
       <section class="advantages wrapperPadding" id="advantages">
-        <img src="assets/img/advantages-bg/advantages-wave-top.png" alt="" class="advantages__wave advantages__wave_top" />
-        <img src="assets/img/advantages-bg/advantages-wave-bottom.png" alt="" class="advantages__wave advantages__wave_bottom" />
-
-        <img
-          src="assets/img/advantages-bg/advantages-wave-top-768.png"
-          alt=""
-          class="advantages__wave advantages__wave_top advantages__wave_top_768"
-        />
-        <img
-          src="assets/img/advantages-bg/advantages-wave-bottom-768.png"
-          alt=""
-          class="advantages__wave advantages__wave_bottom advantages__wave_bottom_768"
-        />
+        <svg class="mask">
+          <clipPath id="advantages-mask-large" clipPathUnits="objectBoundingBox"><path d="M0.746,0.001 C0.684,-0.005,0.474,0.025,0.418,0.025 C0.237,0.025,0.18,-0.014,-0.003,0.025 V0.993 C0,1,0.029,0.997,0.117,0.983 C0.226,0.966,0.396,0.967,0.476,0.976 C0.556,0.985,0.667,0.984,0.746,0.976 C0.808,0.97,0.94,0.984,0.997,0.991 V0.001 C0.992,0.03,0.766,0.003,0.746,0.001"></path></clipPath>
+        </svg>
+        <svg class="mask">
+          <clipPath id="advantages-mask-middle" clipPathUnits="objectBoundingBox"><path d="M0,0.016 C0,0.016,0.202,0.002,0.28,0 C0.357,-0.002,0.55,0.049,0.665,0.058 C0.78,0.067,1,0.037,1,0.037 V0.985 C1,0.985,0.861,0.97,0.78,0.97 C0.625,0.97,0.469,1,0.315,1 C0.252,1,0,0.953,0,0.953 L0,0.016"></path></clipPath>
+        </svg>
+        <svg class="mask">
+          <clipPath id="advantages-mask-small" clipPathUnits="objectBoundingBox"><path d="M0,0.009 L0.169,0.003 C0.223,0.001,0.277,0,0.331,0.001 L0.488,0.004 L0.663,0.007 C0.721,0.008,0.779,0.008,0.837,0.006 L1,-0.001 V0.999 H0.75 L0.325,0.991 C0.275,0.99,0.225,0.991,0.176,0.993 L0,0.999 V0.009"></path></clipPath>
+        </svg>
 
         <div class="advantages__bg"></div>
 
