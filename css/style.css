@@ -1035,7 +1035,7 @@ legend {
 }
 
 /* Кнопки слайдера вправо влево */
-.sliderButton {
+.navigationButton {
     width: 80px;
     height: 80px;
 
@@ -1047,62 +1047,85 @@ legend {
     cursor: pointer;
 }
 
-.sliderButton svg {
+.navigationButton svg {
     max-width: 60%;
     max-height: 60%;
 }
 
 @media (max-width: 1200px) {
-    .sliderButton {
+    .navigationButton {
         width: 60px;
         height: 60px;
     }
 }
 
 @media (max-width: 960px) {
-    .sliderButton {
+    .navigationButton {
         width: 40px;
         height: 40px;
     }
 }
 
-.sliderButton_green {
+.navigationButton_green {
     background-color: var(--green-pallet-500);
     box-shadow: 0px 4px 20px 0px #31080054;
 }
 
+.navigationButton_green svg {
+    fill: var(--brown-pallet-100);
+}
+
+.navigationButton_transparent {
+    background-color: transparent;
+}
+
+.navigationButton_transparent svg {
+    max-width: 69%;
+    max-height: 69%;
+    fill: var(--brown-pallet-400);
+}
+
+.navigationButton_light {
+    background-color: var(--brown-pallet-200);
+    box-shadow: 0px 4px 20px 0px #31080054;
+    opacity: .6;
+}
+
+.navigationButton_light svg {
+    fill: var(--brown-pallet-400);
+}
+
 @media (max-width: 960px) {
-    .sliderButton_green {
+    .navigationButton_green {
         box-shadow: 0px 4px 16px 0px #31080054;
     }
 }
 
-.sliderButton_green:hover,
-.sliderButton_green:focus-visible  {
-    opacity: .7;;
+.navigationButton_green:hover,
+.navigationButton_green:focus-visible {
+    opacity: .7;
 }
 
-.sliderButton_green:active {
-    opacity: .8;;
+.navigationButton_green:active {
+    opacity: .5;
 }
 
-.sliderButton_green svg {
-    fill: var(--brown-pallet-100);
+.navigationButton_transparent:hover svg,
+.navigationButton_transparent:focus-visible svg {
+    opacity: .7;
 }
 
-.sliderButton_brown:hover,
-.sliderButton_brown:focus-visible {
-    opacity: .7;;
+.navigationButton_transparent:active svg {
+    opacity: .5;
 }
 
-.sliderButton_brown:active {
-    opacity: .8;;
+.navigationButton_light:hover,
+.navigationButton_light:focus-visible {
+    opacity: .9;
 }
 
-.sliderButton_brown svg {
-    max-width: 69%;
-    max-height: 69%;
-    fill: #B98A44;
+.navigationButton_light:active {
+    opacity: .6;
 }
 
 /* Слайдер */
@@ -2702,7 +2725,6 @@ legend {
         url("../assets/img/advantages-bg/advantages-bg-large@3x.webp") type("image/webp") 3x,
         url("../assets/img/advantages-bg/advantages-bg-large.png") type("image/png") 1x
     );
-    background-size: cover;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -5180,5 +5202,35 @@ legend {
     
     .footer__decor__item__dandelion {
         display: none;
+    }
+}
+
+.scrollUp {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 98;
+  
+    padding: 40px;
+
+    opacity: 0;
+    transform: translateY(150%);
+    transition: transform .5s ease, opacity .5s ease;
+}
+  
+.scrollUp_show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 1200px) {
+    .scrollUp {        
+        padding: 20px;
+    }
+}
+
+@media (max-width: 960px) {
+    .scrollUp {        
+        padding: 16px;
     }
 }

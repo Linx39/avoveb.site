@@ -162,6 +162,7 @@ new Swiper(".certificates__swiper", {
     prevEl: ".certificates__swiper__buttonPrev",
     nextEl: ".certificates__swiper__buttonNext",
   },
+  
   pagination: {
     el: ".certificates__swiper__pagination",
     bulletClass: 'bullet',
@@ -264,33 +265,42 @@ window.addEventListener('resize', () => {
 // })
 
 // Инициализация модальных окон
+const fixedElements = ['.scrollUp'];
+
 const sidebarModal = new HystModal({
   linkAttributeName: "data-sidebar",
+  fixedSelectors: fixedElements,
 })
 
 const certificatesModal = new HystModal({
   linkAttributeName: "data-certificates",
+  fixedSelectors: fixedElements,
 });
 
 const certificateModal = new HystModal({
   linkAttributeName: "data-sertificate",
+  fixedSelectors: fixedElements,
   afterClose: () => certificatesModal.open(),
 });
 
 const galleryModal = new HystModal({
   linkAttributeName: "data-review",
+  fixedSelectors: fixedElements,
 });
 
 const servicesModal = new HystModal({
   linkAttributeName: "data-services",
+  fixedSelectors: fixedElements,
 });
 
 const feedbackModal = new HystModal({
   linkAttributeName: "data-feedback",
+  fixedSelectors: fixedElements,
 });
 
 const successModal = new HystModal({
   linkAttributeName: "data-success",
+  fixedSelectors: fixedElements,
 });
 
 
@@ -309,4 +319,28 @@ stagesItems.forEach(item => {
       item.classList.add(STAGES_ITEM_CURRENT_CLASS);
     }
   })
+});
+
+const SCROLL_UP_SHOW_CLASS = 'scrollUp_show';
+const SCROLL_HEIGHT = window.innerHeight;
+
+const scrollUp = document.querySelector('.scrollUp');
+
+const btnUp = document.querySelector('.scrollUp__button');
+
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset > SCROLL_HEIGHT) {
+    scrollUp.classList.add(SCROLL_UP_SHOW_CLASS);
+  } else {
+    scrollUp.classList.remove(SCROLL_UP_SHOW_CLASS);
+  }
+});
+
+
+btnUp.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  window.scrollTo({
+    top: 0, 
+    behavior: 'smooth',
+  });
 });
