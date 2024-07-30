@@ -266,7 +266,7 @@ certificatesCardButtons.forEach(btn => {
 
     setTimeout(() => {
       certificateModal.open(id);      
-    }, 600);
+    }, 1000);
   })
 })
 

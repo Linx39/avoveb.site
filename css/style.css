@@ -1524,59 +1524,6 @@ legend {
     }
 }
 
-/* Модальное окно сайдбар */
-.sidebarModal {
-    position: relative;
-    height: 100%;
-    padding: 32px 44px 32px 120px;
-
-    color: var(--brown-pallet-600);
-    background-color: transparent;
-
-    margin: 0;
-    margin-left: auto; /*!!!*/
-}
-
-.sidebarModal__bg {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-}
-
-.sidebarModal__bg svg {
-    width: 100%;
-    height: 100%;
-
-    fill: var(--brown-pallet-100);
-}
-
-.sidebarModal__content {
-    position: relative;
-    z-index: 5;
-
-    min-width: 400px;
-}
-
-@media (max-width: 1200px) {
-    .sidebarModal {        
-        padding: 28px 36px 28px 100px;
-    }
-
-    .sidebarModal__content {
-        min-width: 340px;
-    }
-}
-
-@media (max-width: 960px) {
-    .sidebarModal {        
-        padding: 24px 28px 24px 66px;
-    }
-
-    .sidebarModal__content {
-        min-width: 220px;
-    }
-}
-
 /* Сайдбар */
 .sidebar {
     position: relative;
@@ -3741,6 +3688,99 @@ legend {
     /* transition: opacity 0.6s; */
 }
 
+/* Модальное окно сайдбар */
+.sidebarModal {
+    /* left: auto;
+
+    transform: translateX(110%);
+    opacity: 0;
+    transition: transform 0.6s, opacity 0.6s; */
+}
+
+.hystmodal--active.sidebarModal {
+    overflow: hidden;
+
+    /* transform: translateX(0);
+    opacity: 1;
+    transition: transform 0.6s, opacity 0.6s; */
+}
+
+.sidebarModal__wrap {
+    display: flex;
+    align-items: end;
+}
+
+.sidebarWindow {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: auto;
+
+    width: 564px;
+    height: 100%;
+    padding: 32px 44px 32px 120px;
+
+    color: var(--brown-pallet-600);
+    background-color: transparent;
+
+    margin: 0;
+
+    transform: translateX(10%);
+    opacity: 0;
+    /* transition: transform 0.6s ease, opacity 0.6s ease; */
+    transition: all 0.42s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.hystmodal--active .sidebarWindow {    
+    transform: translateX(0);
+    right: 0;
+    opacity: 1;
+    /* transition: transform 0.6s, opacity 0.6s; */
+}
+
+.sidebarWindow__bg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.sidebarWindow__bg svg {
+    width: 100%;
+    height: 100%;
+
+    fill: var(--brown-pallet-100);
+}
+
+.sidebarWindow__content {
+    position: relative;
+    z-index: 5;
+
+    /* min-width: 400px; */
+}
+
+@media (max-width: 1200px) {
+    .sidebarWindow {    
+        width: 476px;    
+        padding: 28px 36px 28px 100px;
+    }
+
+    .sidebarWindow__content {
+        /* min-width: 340px; */
+    }
+}
+
+@media (max-width: 960px) {
+    .sidebarWindow {     
+        width: 322px;   
+        padding: 24px 28px 24px 66px;
+    }
+
+    .sidebarWindow__content {
+        /* min-width: 220px; */
+    }
+}
+
 
 /* Общий контейнер для попапов */
 .popupWindow {
@@ -3751,7 +3791,7 @@ legend {
 
     opacity: 0;
     transform: rotateX(80deg) translateY(-110%);
-    transition: transform 1s ease, opacity .5s ease, top .5s ease;
+    transition: transform 1s ease, opacity .5s ease;
     transition-delay: 0s;
 }
 
