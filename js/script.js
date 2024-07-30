@@ -248,12 +248,12 @@ window.addEventListener('resize', () => {
 
 
 /* Закрытие модального окна увеличенной картинки */
-// const gallery = document.querySelectorAll('.galleryModal');
+// const gallery = document.querySelectorAll('.reviewModal');
 // const gallery = document.querySelectorAll('.gallery');
 // gallery.forEach(item => {
-//   const btn = item.querySelector('.galleryModal__close');
+//   const btn = item.querySelector('.reviewModal__close');
 //   btn.addEventListener('click', () => {    
-//     // galleryModal.close();
+//     // reviewModal.close();
 //     // certificatesModal.open();
 //   })
 
@@ -266,7 +266,7 @@ certificatesCardButtons.forEach(btn => {
 
     setTimeout(() => {
       certificateModal.open(id);      
-    }, 1000);
+    }, 520);
   })
 })
 
@@ -304,7 +304,7 @@ const certificateModal = new HystModal({
   afterClose: () => certificatesModal.open(),
 });
 
-const galleryModal = new HystModal({
+const reviewModal = new HystModal({
   linkAttributeName: "data-review",
   fixedSelectors: fixedElements,
   waitTransitions: true,

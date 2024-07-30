@@ -26,6 +26,7 @@
   visibility: visible;
 
   overflow-y: scroll;
+  overflow: hidden;
   -webkit-overflow-scrolling: touch;
 }
 
