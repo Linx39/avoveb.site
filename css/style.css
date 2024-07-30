@@ -1086,13 +1086,13 @@ legend {
 }
 
 .navigationButton_light {
-    background-color: var(--brown-pallet-200);
+    background-color: var(--green-pallet-500);
     box-shadow: 0px 4px 20px 0px #31080054;
     opacity: .6;
 }
 
 .navigationButton_light svg {
-    fill: var(--brown-pallet-400);
+    fill: var(--brown-pallet-100);
 }
 
 @media (max-width: 960px) {
@@ -3722,94 +3722,118 @@ legend {
     }
 }
 
-/* Общий контейнер для модальных окон */
-.hystmodal__shadow--show {
-    background-color: #2E1F1C;
-    opacity: .8;
-    /* backdrop-filter: blur(5px); */
-    /* backdrop-filter: blur(2px) brightness(0.49); */
+/* Переопределенные стили hystmodal */
+.hystmodal__opened .header {
+  overflow-y: scroll;
 }
 
-.modal {
+.hystmodal__shadow {
+    background-color: #2E1F1C;
+
+    opacity: 0;
+    transition: opacity 0.6s;
+}
+
+.hystmodal__shadow--show {
+    overflow-y: scroll;
+
+    opacity: .8;
+    /* transition: opacity 0.6s; */
+}
+
+
+/* Общий контейнер для попапов */
+.popupWindow {
     position: relative;
     width: 1440px;
     background-color: var(--brown-pallet-100);
     border-radius: 60px;
+
+    opacity: 0;
+    transform: rotateX(80deg) translateY(-110%);
+    transition: transform 1s ease, opacity .5s ease, top .5s ease;
+    transition-delay: 0s;
 }
 
-.modal__closeButton {
+.hystmodal--active .popupWindow {
+    opacity: 1;
+    transform: rotateX(0deg) translateY(0);
+    transition-delay: .3s;
+}
+
+.popupWindow__closeButton {
     position: absolute;
     top: 60px;
     right: 60px;
     z-index: 2;
 }
 
-.modal__content {
+.popupWindow__content {
     padding: var(--xl-padding-h) 0;
 }
 
-.modal__bottomButton {
+.popupWindow__bottomButton {
     width: 336px;
 }
 
 @media (max-width: 1500px) {
-    .modal {
+    .popupWindow {
         width: 1160px;
         border-radius: 40px;
     }
 
-    .modal__closeButton {    
+    .popupWindow__closeButton {    
         top: 50px;
         right: 50px;
     }
 
-    .modal__content {
+    .popupWindow__content {
         padding: var(--lg-padding-h) 0;
     }
 }
 
 @media (max-width: 1200px) {
-    .modal {    
+    .popupWindow {    
         width: 860px;
         border-radius: 20px;
     }
 
-    .modal__closeButton {
+    .popupWindow__closeButton {
         top: 40px;
         right: 40px;
     }
 
-    .modal__content {
+    .popupWindow__content {
         padding: var(--md-padding-h) 0;
     }
 }
 
 @media (max-width: 960px) {
-    .modal {
+    .popupWindow {
         width: 720px;
     }
 
-    .modal__closeButton {
+    .popupWindow__closeButton {
         top: 20px;
         right: 20px;
     }
 
-    .modal__content {
+    .popupWindow__content {
         padding: calc(var(--xs-padding-h) / 2) 0;
     }
 
-    .modal__bottomButton {
+    .popupWindow__bottomButton {
         min-height: 40px;
         width: 100%;
     }
 }
 
 @media (max-width: 760px) {
-    .modal {        
+    .popupWindow {        
         width: calc(100% - 40px);
     }
 
-    .modal__closeButton {
+    .popupWindow__closeButton {
         top: 16px;
         right: 16px;
     }
@@ -3820,82 +3844,82 @@ legend {
 }
 
 @media (max-width: 560px) {
-    .modal { 
+    .popupWindow { 
         width: calc(100% - 32px);
     }
 
-    .modal__content {
+    .popupWindow__content {
         padding: var(--xs-padding-h) 0;
     }
 
-    .modal__bottomButton {
+    .popupWindow__bottomButton {
         min-height: 48px;
     }
 }
 
 /* Модальное окно услуги */
-.productModal {
+.productWindow {
     display: grid;
     grid-template-columns: 40% 60%;
 }
 
-.productModal__bg {
+.productWindow__bg {
     background-repeat: no-repeat;
     background-position: top right;
     background-size: cover;
 }
 
-.productModal__content {
+.productWindow__content {
     padding-left: 160px;
     padding-right: 80px;
 }
 
 @media (max-width: 1500px) {
-    .productModal {        
+    .productWindow {        
         grid-template-columns: 35% 65%;
     }
 
-    .productModal__content {
+    .productWindow__content {
         padding-left: 120px;
         padding-right: 60px;
     }
 }
 
 @media (max-width: 1200px) {
-    .productModal__content {
+    .productWindow__content {
         padding-left: 80px;
         padding-right: 40px;
     }
 }
 
 @media (max-width: 960px) {
-    .productModal {        
+    .productWindow {        
         grid-template-columns: 30% 70%;
     }
 
-    .productModal__content {
+    .productWindow__content {
         padding-left: 60px;
         padding-right: 30px;
     }
 }
 
 @media (max-width: 760px) {
-    .productModal {        
+    .productWindow {        
         display: block;
     }
 
-    .productModal__bg {
+    .productWindow__bg {
         display: none;
     }
     
-    .productModal__content {
+    .productWindow__content {
         padding-left: 30px;
         padding-right: 30px;
     }
 }
 
 @media (max-width: 560px) {    
-    .productModal__content {
+    .productWindow__content {
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -4044,64 +4068,64 @@ legend {
 }
 
 /* Модальное окно обратной связи */
-.feedbackModal {
+.feedbackWindow {
     display: grid;
     grid-template-columns: 40% 60%;
 }
 
-.feedbackModal__bg {
+.feedbackWindow__bg {
     background-repeat: no-repeat;
     background-position: top right;
     background-size: cover;
 }
 
-.feedbackModal__content {
+.feedbackWindow__content {
     padding-left: 176px;
     padding-right: 176px;
 }
 
 @media (max-width: 1500px) {
-    .feedbackModal {
+    .feedbackWindow {
         grid-template-columns: 35% 65%;
     }
 
-    .feedbackModal__content {
+    .feedbackWindow__content {
         padding-left: 135px;
         padding-right: 105px;
     }
 }
 
 @media (max-width: 1200px) {
-    .feedbackModal__content {
+    .feedbackWindow__content {
         padding-left: 50px;
         padding-right: 50px;
     }
 }
 
 @media (max-width: 960px) {
-    .feedbackModal {
+    .feedbackWindow {
         grid-template-columns: 25% 75%;
     }
 
-    .feedbackModal__content {
+    .feedbackWindow__content {
         padding-left: 70px;
         padding-right: 70px;
     }
 }
 
 @media (max-width: 760px) {
-    .feedbackModal {
+    .feedbackWindow {
         grid-template-columns: 1fr;
     }
 
-    .feedbackModal__content {
+    .feedbackWindow__content {
         padding-left: 30px;
         padding-right: 30px;
     }
 }
 
 @media (max-width: 560px) {
-    .feedbackModal__content {
+    .feedbackWindow__content {
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -4491,81 +4515,90 @@ legend {
 }
 
 /* Модальное окно с изображением */
-.galleryModal {
+.galleryWindow {
     position: relative;
     padding: 0 80px;
     background-color: transparent;
+
+    opacity: 0;
+    transform: scale(0.6);
+    transition: transform 1s ease, opacity .5s ease;
 }
 
-.galleryModal__content_vertical {
+.hystmodal--active .galleryWindow {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.galleryWindow__content_vertical {
     /* width: 551px; */
     width: 620px;
 }
 
-.galleryModal__content_horizontal {
+.galleryWindow__content_horizontal {
     /* width: 713px; */
     width: 840px;
 }
 
-.galleryModal__content img {
+.galleryWindow__content img {
     width: 100%;
     height: 100%;
     object-fit: contain;
     object-position: center;
 }
 
-.galleryModal__close {
+.galleryWindow__close {
     position: absolute;
     top: 0;
     right: 0;
 }
 
-.galleryModal__close svg{
+.galleryWindow__close svg{
     fill: var(--brown-pallet-500);
 }
 
-.galleryModal__close:hover svg,
-.galleryModal__close:focus-visible svg {
+.galleryWindow__close:hover svg,
+.galleryWindow__close:focus-visible svg {
     fill: var(--brown-pallet-400);
 }
 
-.galleryModal__close:active svg {
+.galleryWindow__close:active svg {
     fill: var(--brown-pallet-400);
     opacity: .8;
 }
 
 @media (max-width: 1500px) {
-    .galleryModal__content_vertical {
+    .galleryWindow__content_vertical {
         width: 560px;
     }
     
-    .galleryModal__content_horizontal {
+    .galleryWindow__content_horizontal {
         width: 740px;
     }
 }
 
 @media (max-width: 1200px) {
-    .galleryModal__content_vertical {
+    .galleryWindow__content_vertical {
         width: 460px;
     }
     
-    .galleryModal__content_horizontal {
+    .galleryWindow__content_horizontal {
         width: 620px;
     }
 }
 
 @media (max-width: 960px) {
-    .galleryModal {  
+    .galleryWindow {  
         padding: 0 56px;
     }
     
-    .galleryModal__content_vertical {
+    .galleryWindow__content_vertical {
         /* width: 220px; */
         width: auto;
         height: calc(100vh - 20px);
     }
     
-    .galleryModal__content_horizontal {
+    .galleryWindow__content_horizontal {
         /* width: 300px; */
         width: auto;
         height: calc(2 * 100vh / 3);
@@ -4573,7 +4606,7 @@ legend {
         /* height: calc(100vh - 20px); */
     }
 
-    .galleryModal__content_var1 {
+    .galleryWindow__content_var1 {
         height: calc(100vh - 40px);
     }
 }
@@ -4582,17 +4615,17 @@ legend {
 }
 
 @media (max-width: 560px) {
-    .galleryModal {
+    .galleryWindow {
         width: calc(100% - 32px);
         padding: 56px 0;
     }
 
-    .galleryModal__content_vertical {
+    .galleryWindow__content_vertical {
         width: 100%;
         height: auto;
     }
     
-    .galleryModal__content_horizontal {
+    .galleryWindow__content_horizontal {
         width: 100%;
         height: auto;
     }

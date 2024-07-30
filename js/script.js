@@ -162,7 +162,7 @@ new Swiper(".certificates__swiper", {
     prevEl: ".certificates__swiper__buttonPrev",
     nextEl: ".certificates__swiper__buttonNext",
   },
-  
+
   pagination: {
     el: ".certificates__swiper__pagination",
     bulletClass: 'bullet',
@@ -257,12 +257,30 @@ window.addEventListener('resize', () => {
 //     // certificatesModal.open();
 //   })
 
-//   const wrap = item.querySelector('.gallery__wrap');
-//   wrap.addEventListener('click', () => {    
-//     // galleryModal.close();
-//     // certificatesModal.open();
-//   })
-// })
+
+const certificatesCardButtons = document.querySelectorAll('.certificates__card');
+
+certificatesCardButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const id = btn.getAttribute('href');
+
+    setTimeout(() => {
+      certificateModal.open(id);      
+    }, 600);
+  })
+})
+
+const servicesCardButtons = document.querySelectorAll('.services__card');
+
+servicesCardButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const id = btn.getAttribute('href');
+
+    setTimeout(() => {
+      feedbackModal.open(id);      
+    }, 500);
+  })
+})
 
 // Инициализация модальных окон
 const fixedElements = ['.scrollUp'];
@@ -270,38 +288,44 @@ const fixedElements = ['.scrollUp'];
 const sidebarModal = new HystModal({
   linkAttributeName: "data-sidebar",
   fixedSelectors: fixedElements,
+  waitTransitions: true,
 })
 
 const certificatesModal = new HystModal({
   linkAttributeName: "data-certificates",
   fixedSelectors: fixedElements,
+  waitTransitions: true,
 });
 
 const certificateModal = new HystModal({
   linkAttributeName: "data-sertificate",
   fixedSelectors: fixedElements,
+  waitTransitions: true,
   afterClose: () => certificatesModal.open(),
 });
 
 const galleryModal = new HystModal({
   linkAttributeName: "data-review",
   fixedSelectors: fixedElements,
+  waitTransitions: true,
 });
 
 const servicesModal = new HystModal({
   linkAttributeName: "data-services",
   fixedSelectors: fixedElements,
+  waitTransitions: true,
 });
 
 const feedbackModal = new HystModal({
   linkAttributeName: "data-feedback",
   fixedSelectors: fixedElements,
+  waitTransitions: true,
 });
 
-const successModal = new HystModal({
-  linkAttributeName: "data-success",
-  fixedSelectors: fixedElements,
-});
+// const successModal = new HystModal({
+//   linkAttributeName: "data-success",
+//   fixedSelectors: fixedElements,
+// });
 
 
 // Блок этапы

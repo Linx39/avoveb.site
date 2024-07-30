@@ -2,10 +2,6 @@
   overflow-y: hidden;
 }
 
-.hystmodal__opened .header {
-  overflow-y: scroll;
-}
-
 .hystmodal {
   position: fixed;
   top: 0;
@@ -18,13 +14,10 @@
   flex-flow: column nowrap;
   justify-content: flex-start;
 
-  opacity: 1;
-
-  /* overflow-y: scroll;
-  -webkit-overflow-scrolling: touch; */
-
   pointer-events: none;
   visibility: hidden;
+
+  opacity: 1;
 }
 
 .hystmodal--active {
@@ -66,11 +59,21 @@
   box-sizing: border-box;
   max-width: 100%;
 
-  overflow: visible;
+  overflow: visible;  
   
-  transition: transform 0.6s, opacity 0.6s;
-  transform: scale(0.9);
   opacity: 0;
+  transform: scale(0.9);
+
+  transition: transform 0.6s, opacity 0.6s;
+}
+
+.hystmodal--active .hystmodal__window { 
+  opacity: 1;
+  transform: scale(1); 
+
+  /* transition: transform 0.6s, opacity 0.6s; */
+  
+  /* transition-delay: .2s; */
 }
 
 @media (max-width: 960px) {
@@ -83,12 +86,6 @@
   .hystmodal__window {
     margin: 20px 0;
   }
-}
-
-.hystmodal--active .hystmodal__window {
-  transition: transform 0.6s, opacity 0.6s;
-  transform: scale(1);
-  opacity: 1;
 }
 
 .hystmodal__shadow {
