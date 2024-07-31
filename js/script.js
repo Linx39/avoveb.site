@@ -288,7 +288,7 @@ const fixedElements = ['.scrollUp'];
 const sidebarModal = new HystModal({
   linkAttributeName: "data-sidebar",
   fixedSelectors: fixedElements,
-  waitTransitions: true,
+  // waitTransitions: true,
 })
 
 const certificatesModal = new HystModal({
