@@ -1531,7 +1531,6 @@ legend {
     display: flex;
     flex-direction: column;
     gap: 42px;
-    height: 100%;
 }
 
 .sidebar__head {
@@ -3687,19 +3686,19 @@ legend {
 
     opacity: .8;
     transition: opacity .6s ease;
-    /* transition: opacity 0.6s; */
 }
 
 /* Модальное окно сайдбар */
 .hystmodal--active.sidebarHystmodal {
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
-.sidebarHystmodal__wrap {
+.sidebarHystmodal__wrap { 
     display: flex;
     align-items: end;
 }
 
+/* Анимация модальных окон */
 .modalAnimation {
     opacity: 0;
     transform: rotateX(80deg) translateY(-110%);
@@ -3743,15 +3742,20 @@ legend {
 
 /* Сайдбар */
 .sidebarModal {
-    position: relative;
+    position: relative;  
+    flex-grow: 1;
+
+    display: flex;
     width: 564px;
     height: 100%;
     padding: 32px 44px 32px 120px;
 
     color: var(--brown-pallet-600);
-    background-color: transparent;
+    background-color: var(--brown-pallet-100);
 
     margin: 0;
+
+    clip-path: url(#sidebar-mask);
 }
 
 .sidebarModal__bg {
@@ -3768,6 +3772,8 @@ legend {
 }
 
 .sidebarModal__content {
+    flex-grow: 1;
+
     position: relative;
     z-index: 5;
 }
@@ -3779,7 +3785,7 @@ legend {
     }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 560px) {
     .sidebarModal {     
         width: 322px;   
         padding: 24px 28px 24px 66px;

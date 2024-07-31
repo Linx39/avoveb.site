@@ -135,21 +135,9 @@
         <path fill-rule="evenodd" clip-rule="evenodd" d="M459 68.4664C459 61.117 451.349 56 444 56C421.909 56 404 38.0914 404 16C404 8.23537 398.634 0 390.869 0H20C8.9543 0 0 8.95431 0 20V393C0 404.046 8.9543 413 20 413H439C450.046 413 459 404.046 459 393V68.4664Z"/>
       </symbol>
 
-      <!-- <symbol id="review-bg" viewBox="0 0 368 331" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M368 78.7073C368 68.7196 355.988 62 346 62C323.909 62 306 44.0914 306 22C306 12.0122 299.28 0 289.293 0H20C8.95431 0 0 8.9543 0 20V311C0 322.046 8.9543 331 20 331H348C359.046 331 368 322.046 368 311V78.7073Z">
-      </symbol> -->
-
-      <!-- <symbol id="review-bg" viewBox="0 0 350 311" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M350 85.9576C350 74.1128 333.845 66 322 66C298.804 66 280 47.196 280 24C280 13.2269 272.753 0 261.98 0H20C8.95431 0 0 8.95431 0 20V291C0 302.046 8.9543 311 20 311H330C341.046 311 350 302.046 350 291V85.9576Z"/>
-      </symbol> -->
-
-      <!-- <symbol id="review-bg" viewBox="0 0 288 219" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M288 63.1396C288 55.9732 278.004 51.3014 270.944 52.5313C269.175 52.8394 267.356 53 265.5 53C248.103 53 234 38.897 234 21.5C234 19.7215 234.147 17.9775 234.431 16.2794C235.582 9.37773 231.052 0 224.055 0H8C3.58172 0 0 3.58172 0 8V211C0 215.418 3.58173 219 8 219H280C284.418 219 288 215.418 288 211V63.1396Z"/>
-      </symbol> -->
-
-      <symbol id="sidebar-bg" viewBox="0 0 471 1024" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- <symbol id="sidebar-bg" viewBox="0 0 471 1024" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M15.0012 0H474.501V1024H15.0012C15.0012 1024 -0.154088 938.986 0.00118504 884C0.208614 810.544 26.8586 771.447 28.0012 698C29.1389 624.865 9.88969 585.04 6.00118 512C0.683029 412.105 17.9899 355.991 15.0012 256C13.5048 205.938 7.00118 178.085 7.00118 128C7.00118 77.9154 15.0012 0 15.0012 0Z"/>
-      </symbol>
+      </symbol> -->
 
       <symbol id="top-bg" viewBox="0 0 1920 1664" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1595 169C1710.5 50.9999 1772.5 296 1940.5 0.499817V486.989C1925.83 500.489 1862.8 555.489 1728 667.489C1559.5 807.489 1663.66 1398.5 1475.5 1336.99C928 1158 928.5 1440 612 1592C493.5 1648.91 141.833 1669.82 -20 1661.99V1381.49C132.5 1349.49 522.5 1132 715 1087.5C907.5 1043 1020 868.5 1285 836.5C1550 804.5 1464.17 302.664 1595 169Z"/>
@@ -198,9 +186,14 @@
     <div class="sidebarHystmodal hystmodal" id="sidebar" aria-hidden="true">
       <div class="sidebarHystmodal__wrap hystmodal__wrap">
         <div class="sidebarModal sidebarAnimation hystmodal__window" role="dialog" aria-modal="true">
-          <div class="sidebarModal__bg">
+          <svg class="mask">
+            <clipPath id="sidebar-mask" clipPathUnits="objectBoundingBox">
+              <path d="M0.033,0 H1 V1 H0.033 C0.033,1,0.001,0.917,0.001,0.863 C0.001,0.792,0.058,0.753,0.06,0.682 C0.062,0.61,0.022,0.571,0.014,0.5 C0.002,0.402,0.039,0.348,0.033,0.25 C0.03,0.201,0.016,0.174,0.016,0.125 C0.016,0.076,0.033,0,0.033,0"></path>
+            </clipPath>
+          </svg>
+          <!-- <div class="sidebarModal__bg">
             <svg><use href="#sidebar-bg"></use></svg>
-          </div>
+          </div> -->
 
           <div class="sidebar__decor">
             <div class="sidebar__decor__item sidebar__decor__item__branch-5"></div>
@@ -657,7 +650,7 @@
                     </label>
                   </div>
 
-                  <button class="feedback__submitButton popup__bottomButton button button_left" type="submit">Оставить заявку</button>
+                  <button class="feedback__submitButton modal__bottomButton button button_left" type="submit">Оставить заявку</button>
                 </form>
               </div>
             </div>
@@ -864,7 +857,7 @@
                   </div>
                 </div>   
 
-                <a class="popup__bottomButton button button_left" href="#feedback" data-feedback="#feedback" data-hystclose>
+                <a class="modal__bottomButton button button_left" href="#feedback" data-feedback="#feedback" data-hystclose>
                   Хочу попробовать!
                 </a>
               </div>
@@ -903,7 +896,7 @@
                   </div>
                 </div>
   
-                <a class="popup__bottomButton button button_left" href="#feedback" data-feedback="#feedback" data-hystclose>
+                <a class="modal__bottomButton button button_left" href="#feedback" data-feedback="#feedback" data-hystclose>
                   Хочу попробовать!
                 </a>
               </div>
@@ -950,7 +943,7 @@
                   </div>
                 </div>
     
-                <a class="popup__bottomButton button button_left" href="#feedback" data-feedback="#feedback" data-hystclose>
+                <a class="modal__bottomButton button button_left" href="#feedback" data-feedback="#feedback" data-hystclose>
                   Хочу попробовать!
                 </a>
               </div>
@@ -986,7 +979,7 @@
                   </div>
                 </div>
     
-                <a class="popup__bottomButton button button_left" href="#feedback" data-feedback="#feedback" data-hystclose>
+                <a class="modal__bottomButton button button_left" href="#feedback" data-feedback="#feedback" data-hystclose>
                   Хочу попробовать!
                 </a>
               </div>
@@ -1021,7 +1014,7 @@
                   </div>
                 </div>
     
-                <a class="popup__bottomButton button button_left" href="#feedback" data-feedback="#feedback" data-hystclose>
+                <a class="modal__bottomButton button button_left" href="#feedback" data-feedback="#feedback" data-hystclose>
                   Хочу попробовать!
                 </a>
               </div>
@@ -1061,7 +1054,7 @@
                   </div>
                 </div>
     
-                <a class="popup__bottomButton button button_left" href="#feedback" data-feedback="#feedback" data-hystclose>
+                <a class="modal__bottomButton button button_left" href="#feedback" data-feedback="#feedback" data-hystclose>
                   Хочу попробовать!
                 </a>
               </div>
@@ -1096,7 +1089,7 @@
                   </div>
                 </div>
     
-                <a class="popup__bottomButton button button_left" href="#feedback" data-feedback="#feedback" data-hystclose>
+                <a class="modal__bottomButton button button_left" href="#feedback" data-feedback="#feedback" data-hystclose>
                   Хочу попробовать!
                 </a>
               </div>
@@ -1129,7 +1122,7 @@
                   </div>
                 </div>
     
-                <a class="popup__bottomButton button button_left" href="#feedback" data-feedback="#feedback" data-hystclose>
+                <a class="modal__bottomButton button button_left" href="#feedback" data-feedback="#feedback" data-hystclose>
                   Хочу попробовать!
                 </a>
               </div>
