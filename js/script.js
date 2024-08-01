@@ -243,15 +243,6 @@ window.addEventListener('resize', () => {
 // })
 
 
-// Закрытие модального окна сертификатов
-// const certificatesModalElement = document.querySelector('.certificatesModal');
-// const certificatesModalButtons = certificatesModalElement.querySelectorAll('.certificates__card');
-
-// certificatesModalButtons.forEach(btn => {
-//   btn.addEventListener('click', () => {
-//     certificatesModal.close();
-//   })
-// })
 
 
 /* Закрытие модального окна увеличенной картинки */
@@ -264,30 +255,30 @@ window.addEventListener('resize', () => {
 //     // certificatesModal.open();
 //   })
 
+// const servicesCardButtons = document.querySelectorAll('.services__card');
 
-const certificatesCardButtons = document.querySelectorAll('.certificates__card');
+// servicesCardButtons.forEach(btn => {
+//   btn.addEventListener('click', () => {
+//     const id = btn.getAttribute('href');
 
-certificatesCardButtons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const id = btn.getAttribute('href');
+//     // setTimeout(() => {
+//       servicesModal.open(id);      
+//     // }, 500);
+//   })
+// })
 
-    setTimeout(() => {
-      certificateModal.open(id);      
-    }, 520);
-  })
-})
 
-const servicesCardButtons = document.querySelectorAll('.services__card');
+// const certificatesCardButtons = document.querySelectorAll('.certificates__card');
 
-servicesCardButtons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const id = btn.getAttribute('href');
+// certificatesCardButtons.forEach(btn => {
+//   btn.addEventListener('click', () => {
+//     const id = btn.getAttribute('href');
 
-    setTimeout(() => {
-      feedbackModal.open(id);      
-    }, 500);
-  })
-})
+//     // setTimeout(() => {
+//       certificateModal.open(id);      
+//     // }, 520);
+//   })
+// })
 
 // Инициализация модальных окон
 const fixedElements = ['.scrollUp'];
@@ -298,19 +289,6 @@ const sidebarModal = new HystModal({
   // waitTransitions: true,
 })
 
-const certificatesModal = new HystModal({
-  linkAttributeName: "data-certificates",
-  fixedSelectors: fixedElements,
-  waitTransitions: true,
-});
-
-const certificateModal = new HystModal({
-  linkAttributeName: "data-sertificate",
-  fixedSelectors: fixedElements,
-  waitTransitions: true,
-  afterClose: () => certificatesModal.open(),
-});
-
 const reviewModal = new HystModal({
   linkAttributeName: "data-review",
   fixedSelectors: fixedElements,
@@ -320,20 +298,66 @@ const reviewModal = new HystModal({
 const servicesModal = new HystModal({
   linkAttributeName: "data-services",
   fixedSelectors: fixedElements,
-  waitTransitions: true,
+  // waitTransitions: true,
 });
 
 const feedbackModal = new HystModal({
   linkAttributeName: "data-feedback",
   fixedSelectors: fixedElements,
-  waitTransitions: true,
+  // waitTransitions: true,
 });
 
-// const successModal = new HystModal({
-//   linkAttributeName: "data-success",
-//   fixedSelectors: fixedElements,
-// });
+const certificatesModal = new HystModal({
+  linkAttributeName: "data-certificates",
+  fixedSelectors: fixedElements,
+  // waitTransitions: true,
+});
 
+const certificateModal = new HystModal({
+  linkAttributeName: "data-sertificate",
+  fixedSelectors: fixedElements,
+  // waitTransitions: true,
+  afterClose: () => certificatesModal.open(),
+});
+
+// Закрытие модального окна сертификатов
+const MODAL_ANIMATION_CLASS = 'modalAnimation';
+const certificatesElement = document.querySelector('.certificatesModal');
+const certificatesCloseButton = certificatesElement.querySelector('.certificatesModal__closeButton');
+const certificatesCardButtons = certificatesElement.querySelectorAll('.certificates__card');
+
+// const certificateElement = document.querySelector('.certificateModal');
+// const certificateCloseButtons = certificateElement.querySelectorAll('.certificateModal__closeButton');
+
+certificatesCardButtons.forEach(btn => {
+  btn.addEventListener('click', (evt) => {
+    evt.preventDefault;
+    certificatesElement.classList.remove(MODAL_ANIMATION_CLASS);
+    certificatesModal.config.waitTransitions = false;
+    certificatesModal.close();
+    const id = btn.getAttribute('href');
+    certificateModal.open(id);
+  })
+})
+
+// certificateCloseButtons.forEach(btn => {
+//   btn.addEventListener('click', (evt) => {
+//     evt.preventDefault;
+//     certificateModal.close();
+//   })
+// })
+
+closeCertificates = () => {
+  certificatesElement.classList.add(MODAL_ANIMATION_CLASS);
+  certificatesModal.config.waitTransitions = true;
+  certificatesModal.close();
+  certificatesModal.config.waitTransitions = false;
+}
+
+certificatesCloseButton.addEventListener('click', (evt) => {
+  evt.preventDefault;
+  closeCertificates();
+})
 
 // Блок этапы
 const STAGES_ITEM_CURRENT_CLASS = 'stages__item_current';
