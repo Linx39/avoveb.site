@@ -85,26 +85,32 @@ new Swiper(".reviews__swiper", {
   breakpoints: {
     320: {
       slidesPerView: 1,
+      slidesPerGroup: 1,
       spaceBetween: 20,
     },
     560: {
       slidesPerView: 2,
+      slidesPerGroup: 2,
       spaceBetween: 16,
     },
     760: {
       slidesPerView: 3,
+      slidesPerGroup: 3,
       spaceBetween: 16,
     },
     960: {
       slidesPerView: 3,
+      slidesPerGroup: 3,
       spaceBetween: 20,
     },
     1200: {
       slidesPerView: 3,
+      slidesPerGroup: 3,
       spaceBetween: 28,
     },
     1700: {
       slidesPerView: 3,
+      slidesPerGroup: 3,
       spaceBetween: 32,
     },
   },
@@ -124,6 +130,7 @@ new Swiper(".reviews__swiper", {
 
 new Swiper(".certificates__swiper", {
   loop: true,
+  // loopAddBlankSlides: false,
 
   breakpoints: {
     320: {
