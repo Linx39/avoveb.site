@@ -131,14 +131,6 @@
         <path d="M22.1196 1.49406L8.11955 15.4941C8.03829 15.5754 7.94178 15.64 7.83556 15.684C7.72934 15.728 7.61548 15.7507 7.50049 15.7507C7.3855 15.7507 7.27164 15.728 7.16541 15.684C7.05919 15.64 6.96269 15.5754 6.88142 15.4941L0.756424 9.36906C0.592238 9.20488 0.5 8.98219 0.5 8.75C0.5 8.51781 0.592238 8.29512 0.756424 8.13094C0.92061 7.96675 1.14329 7.87451 1.37549 7.87451C1.60768 7.87451 1.83036 7.96675 1.99455 8.13094L7.50049 13.638L20.8814 0.255935C21.0456 0.0917497 21.2683 -0.000488283 21.5005 -0.000488281C21.7327 -0.00048828 21.9554 0.0917497 22.1196 0.255935C22.2837 0.420121 22.376 0.642805 22.376 0.874998C22.376 1.10719 22.2837 1.32988 22.1196 1.49406Z"/>
       </symbol>
 
-      <symbol id="review-bg" viewBox="0 0 459 413" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M459 68.4664C459 61.117 451.349 56 444 56C421.909 56 404 38.0914 404 16C404 8.23537 398.634 0 390.869 0H20C8.9543 0 0 8.95431 0 20V393C0 404.046 8.9543 413 20 413H439C450.046 413 459 404.046 459 393V68.4664Z"/>
-      </symbol>
-
-      <!-- <symbol id="sidebar-bg" viewBox="0 0 471 1024" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M15.0012 0H474.501V1024H15.0012C15.0012 1024 -0.154088 938.986 0.00118504 884C0.208614 810.544 26.8586 771.447 28.0012 698C29.1389 624.865 9.88969 585.04 6.00118 512C0.683029 412.105 17.9899 355.991 15.0012 256C13.5048 205.938 7.00118 178.085 7.00118 128C7.00118 77.9154 15.0012 0 15.0012 0Z"/>
-      </symbol> -->
-
       <symbol id="top-bg" viewBox="0 0 1920 1664" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1595 169C1710.5 50.9999 1772.5 296 1940.5 0.499817V486.989C1925.83 500.489 1862.8 555.489 1728 667.489C1559.5 807.489 1663.66 1398.5 1475.5 1336.99C928 1158 928.5 1440 612 1592C493.5 1648.91 141.833 1669.82 -20 1661.99V1381.49C132.5 1349.49 522.5 1132 715 1087.5C907.5 1043 1020 868.5 1285 836.5C1550 804.5 1464.17 302.664 1595 169Z"/>
       </symbol>
@@ -148,12 +140,25 @@
       </symbol>
     </svg>
 
+    <svg class="mask">
+      <clipPath id="modal-mask" clipPathUnits="objectBoundingBox">
+        <path d="M1,0.311 C1,0.223,0.939,0.067,0.908,0 H0 V1 H1 C0.969,0.943,0.908,0.805,0.908,0.734 C0.908,0.645,1,0.422,1,0.311"></path>
+      </clipPath>
+    </svg>
+
     <header class="header">
       <div class="header__container">
         <h1 class="visually-hidden">Вкус бани</h1>
 
         <div class="header__company">
-          <img class="header__logo logo" src="assets/img/logo.png" alt="Логотип">
+          <div class="header__logo logo">
+            <picture>
+              <source type="image/webp" media="(max-width: 960px)" srcset="assets/img/logo/logo-small.webp 1x, assets/img/logo/logo-small@2x.webp 2x, assets/img/logo/logo-small@3x.webp 3x">
+              <source type="image/webp" srcset="assets/img/logo/logo-large.webp 1x, assets/img/logo/logo-large@2x.webp 2x, assets/img/logo/logo-large@3x.webp 3x">
+              <source media="(max-width: 960px)" src="assets/img/logo/logo-small.png">
+              <img src="assets/img/logo/logo-large.png" alt="Логотип.">
+            </picture>
+          </div>
           <p class="header__description">Ceмeйныe банные традиции –от&nbsp;пармастеров со стажем</p>
         </div>
 
@@ -201,7 +206,14 @@
 
           <div class="sidebarModal__content sidebar">
             <div class="sidebar__head">
-              <img class="logo" src="assets/img/logo-dark.png" width="213" height="57" alt="Логотип">
+              <div class="header__logo logo">
+                <picture>
+                  <source type="image/webp" media="(max-width: 960px)" srcset="assets/img/logo/logo-dark-small.webp 1x, assets/img/logo/logo-dark-small@2x.webp 2x, assets/img/logo/logo-dark-small@3x.webp 3x">
+                  <source type="image/webp" srcset="assets/img/logo/logo-dark-large.webp 1x, assets/img/logo/logo-dark-large@2x.webp 2x, assets/img/logo/logo-dark-large@3x.webp 3x">
+                  <source media="(max-width: 960px)" src="assets/img/logo/logo-dark-small.png">
+                  <img src="assets/img/logo/logo-dark-large.png" alt="Логотип.">
+                </picture>
+              </div>
   
               <button class="sidebar__close__button closeButton" type="button" data-hystclose>
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
@@ -278,7 +290,7 @@
 
         <div class="promo__bg">
           <picture>
-            <source type="image/webp" media="(max-width: 460px)" srcset="assets/img/promo-bg/promo-bg-small.webp 1x">
+            <source type="image/webp" media="(max-width: 560px)" srcset="assets/img/promo-bg/promo-bg-small.webp 1x">
             <source type="image/webp" media="(max-width: 1200px)" srcset="assets/img/promo-bg/promo-bg-middle.webp 1x">
             <source type="image/webp" srcset="assets/img/promo-bg/promo-bg-large.webp 1x">
             <source media="(max-width: 460px)" srcset="assets/img/promo-bg/promo-bg-small.png">
@@ -720,7 +732,30 @@
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
 
-              <div class="feedbackModal__bg" style="background-image: url('assets/img/feedback/feedback-bg-1440.png');"></div>
+              <div class="feedbackModal__bg modal__bg modal__bg_large" style="
+                  background-image: url('assets/img/feedback-modal/feedback-modal-large.png');
+                  background-image: image-set(
+                  url('assets/img/feedback-modal/feedback-modal-large.webp') type('image/webp') 1x,
+                  url('assets/img/feedback-modal/feedback-modal-large@2x.webp') type('image/webp') 2x,
+                  url('assets/img/feedback-modal/feedback-modal-large@3x.webp') type('image/webp') 3x,
+                  url('assets/img/feedback-modal/feedback-modal-large.png') type('image/png') 1x);">                
+              </div>
+              <div class="feedbackModal__bg modal__bg modal__bg_middle" style="
+                  background-image: url('assets/img/feedback-modal/feedback-modal-middle.png');
+                  background-image: image-set(
+                  url('assets/img/feedback-modal/feedback-modal-middle.webp') type('image/webp') 1x,
+                  url('assets/img/feedback-modal/feedback-modal-middle@2x.webp') type('image/webp') 2x,
+                  url('assets/img/feedback-modal/feedback-modal-middle@3x.webp') type('image/webp') 3x,
+                  url('assets/img/feedback-modal/feedback-modal-middle.png') type('image/png') 1x);">                
+              </div>
+              <div class="feedbackModal__bg modal__bg modal__bg_small" style="
+                  background-image: url('assets/img/feedback-modal/feedback-modal-small.png');
+                  background-image: image-set(
+                  url('assets/img/feedback-modal/feedback-modal-small.webp') type('image/webp') 1x,
+                  url('assets/img/feedback-modal/feedback-modal-small@2x.webp') type('image/webp') 2x,
+                  url('assets/img/feedback-modal/feedback-modal-small@3x.webp') type('image/webp') 3x,
+                  url('assets/img/feedback-modal/feedback-modal-small.png') type('image/png') 1x);">                
+              </div>
 
               <div class="feedbackModal__content modal__content feedback">
                 <h2 class="feedback__title maintitle">Оставить заявку</h2>
@@ -933,9 +968,32 @@
               <button class="modal__closeButton closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
-              </button>
-              
-              <div class="productModal__bg" style="background-image: url('assets/img/services-modal/services-modal-1-1920.png');"></div>
+              </button>              
+
+              <div class="productModal__bg modal__bg modal__bg_large" style="
+                  background-image: url('assets/img/services-modal/services-modal-1-large.png');
+                  background-image: image-set(
+                  url('assets/img/services-modal/services-modal-1-large.webp') type('image/webp') 1x,
+                  url('assets/img/services-modal/services-modal-1-large@2x.webp') type('image/webp') 2x,
+                  url('assets/img/services-modal/services-modal-1-large@3x.webp') type('image/webp') 3x,
+                  url('assets/img/services-modal/services-modal-1-large.png') type('image/png') 1x);">                
+              </div>
+              <div class="productModal__bg modal__bg modal__bg_middle" style="
+                  background-image: url('assets/img/services-modal/services-modal-1-middle.png');
+                  background-image: image-set(
+                  url('assets/img/services-modal/services-modal-1-middle.webp') type('image/webp') 1x,
+                  url('assets/img/services-modal/services-modal-1-middle@2x.webp') type('image/webp') 2x,
+                  url('assets/img/services-modal/services-modal-1-middle@3x.webp') type('image/webp') 3x,
+                  url('assets/img/services-modal/services-modal-1-middle.png') type('image/png') 1x);">                
+              </div>
+              <div class="productModal__bg modal__bg modal__bg_small" style="
+                  background-image: url('assets/img/services-modal/services-modal-1-small.png');
+                  background-image: image-set(
+                  url('assets/img/services-modal/services-modal-1-small.webp') type('image/webp') 1x,
+                  url('assets/img/services-modal/services-modal-1-small@2x.webp') type('image/webp') 2x,
+                  url('assets/img/services-modal/services-modal-1-small@3x.webp') type('image/webp') 3x,
+                  url('assets/img/services-modal/services-modal-1-large.png') type('image/png') 1x);">                
+              </div>
                               
               <div class="productModal__content product modal__content">
                 <h2 class="product__title maintitle"><span>Парение</span> <br>Первый пар</h2>
@@ -963,10 +1021,33 @@
               <button class="modal__closeButton closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
-              </button>
-              
-              <div class="productModal__bg" style="background-image: url('assets/img/services-modal/services-modal-2-1920.png');"></div>
-            
+              </button>   
+
+              <div class="productModal__bg modal__bg modal__bg_large" style="
+                  background-image: url('assets/img/services-modal/services-modal-2-large.png');
+                  background-image: image-set(
+                  url('assets/img/services-modal/services-modal-2-large.webp') type('image/webp') 1x,
+                  url('assets/img/services-modal/services-modal-2-large@2x.webp') type('image/webp') 2x,
+                  url('assets/img/services-modal/services-modal-2-large@3x.webp') type('image/webp') 3x,
+                  url('assets/img/services-modal/services-modal-2-large.png') type('image/png') 1x);">                
+              </div>
+              <div class="productModal__bg modal__bg modal__bg_middle" style="
+                  background-image: url('assets/img/services-modal/services-modal-2-middle.png');
+                  background-image: image-set(
+                  url('assets/img/services-modal/services-modal-2-middle.webp') type('image/webp') 1x,
+                  url('assets/img/services-modal/services-modal-2-middle@2x.webp') type('image/webp') 2x,
+                  url('assets/img/services-modal/services-modal-2-middle@3x.webp') type('image/webp') 3x,
+                  url('assets/img/services-modal/services-modal-2-middle.png') type('image/png') 1x);">                
+              </div>
+              <div class="productModal__bg modal__bg modal__bg_small" style="
+                  background-image: url('assets/img/services-modal/services-modal-2-small.png');
+                  background-image: image-set(
+                  url('assets/img/services-modal/services-modal-2-small.webp') type('image/webp') 1x,
+                  url('assets/img/services-modal/services-modal-2-small@2x.webp') type('image/webp') 2x,
+                  url('assets/img/services-modal/services-modal-2-small@3x.webp') type('image/webp') 3x,
+                  url('assets/img/services-modal/services-modal-2-large.png') type('image/png') 1x);">                
+              </div>   
+
               <div class="productModal__content product modal__content">
                 <h2 class="product__title maintitle"><span>Парение</span> <br>Классическое</h2>
                 <p class="product__subtitle maintext">Длительность - 30 минут</p>
@@ -1004,7 +1085,30 @@
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
               
-              <div class="productModal__bg" style="background-image: url('assets/img/services-modal/services-modal-3-1920.png');"></div>
+              <div class="productModal__bg modal__bg modal__bg_large" style="
+                  background-image: url('assets/img/services-modal/services-modal-3-large.png');
+                  background-image: image-set(
+                  url('assets/img/services-modal/services-modal-3-large.webp') type('image/webp') 1x,
+                  url('assets/img/services-modal/services-modal-3-large@2x.webp') type('image/webp') 2x,
+                  url('assets/img/services-modal/services-modal-3-large@3x.webp') type('image/webp') 3x,
+                  url('assets/img/services-modal/services-modal-3-large.png') type('image/png') 1x);">                
+              </div>
+              <div class="productModal__bg modal__bg modal__bg_middle" style="
+                  background-image: url('assets/img/services-modal/services-modal-3-middle.png');
+                  background-image: image-set(
+                  url('assets/img/services-modal/services-modal-3-middle.webp') type('image/webp') 1x,
+                  url('assets/img/services-modal/services-modal-3-middle@2x.webp') type('image/webp') 2x,
+                  url('assets/img/services-modal/services-modal-3-middle@3x.webp') type('image/webp') 3x,
+                  url('assets/img/services-modal/services-modal-3-middle.png') type('image/png') 1x);">                
+              </div>
+              <div class="productModal__bg modal__bg modal__bg_small" style="
+                  background-image: url('assets/img/services-modal/services-modal-3-small.png');
+                  background-image: image-set(
+                  url('assets/img/services-modal/services-modal-3-small.webp') type('image/webp') 1x,
+                  url('assets/img/services-modal/services-modal-3-small@2x.webp') type('image/webp') 2x,
+                  url('assets/img/services-modal/services-modal-3-small@3x.webp') type('image/webp') 3x,
+                  url('assets/img/services-modal/services-modal-3-large.png') type('image/png') 1x);">                
+              </div>   
 
               <div class="productModal__content product modal__content">
                 <h2 class="product__title maintitle"><span>Парение</span> <br>Гурме</h2>
@@ -1051,7 +1155,30 @@
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
               
-              <div class="productModal__bg" style="background-image: url('assets/img/services-modal/services-modal-4-1920.png');"></div>
+              <div class="productModal__bg modal__bg modal__bg_large" style="
+                  background-image: url('assets/img/services-modal/services-modal-4-large.png');
+                  background-image: image-set(
+                  url('assets/img/services-modal/services-modal-4-large.webp') type('image/webp') 1x,
+                  url('assets/img/services-modal/services-modal-4-large@2x.webp') type('image/webp') 2x,
+                  url('assets/img/services-modal/services-modal-4-large@3x.webp') type('image/webp') 3x,
+                  url('assets/img/services-modal/services-modal-4-large.png') type('image/png') 1x);">                
+              </div>
+              <div class="productModal__bg modal__bg modal__bg_middle" style="
+                  background-image: url('assets/img/services-modal/services-modal-4-middle.png');
+                  background-image: image-set(
+                  url('assets/img/services-modal/services-modal-4-middle.webp') type('image/webp') 1x,
+                  url('assets/img/services-modal/services-modal-4-middle@2x.webp') type('image/webp') 2x,
+                  url('assets/img/services-modal/services-modal-4-middle@3x.webp') type('image/webp') 3x,
+                  url('assets/img/services-modal/services-modal-4-middle.png') type('image/png') 1x);">                
+              </div>
+              <div class="productModal__bg modal__bg modal__bg_small" style="
+                  background-image: url('assets/img/services-modal/services-modal-4-small.png');
+                  background-image: image-set(
+                  url('assets/img/services-modal/services-modal-4-small.webp') type('image/webp') 1x,
+                  url('assets/img/services-modal/services-modal-4-small@2x.webp') type('image/webp') 2x,
+                  url('assets/img/services-modal/services-modal-4-small@3x.webp') type('image/webp') 3x,
+                  url('assets/img/services-modal/services-modal-4-large.png') type('image/png') 1x);">                
+              </div>   
   
               <div class="productModal__content product modal__content">
                 <h2 class="product__title maintitle"><span>Парение</span> <br>Коллективное</h2>
@@ -1087,7 +1214,30 @@
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
               
-              <div class="productModal__bg" style="background-image: url('assets/img/services-modal/services-modal-5-1920.png');"></div>
+              <div class="productModal__bg modal__bg modal__bg_large" style="
+                  background-image: url('assets/img/services-modal/services-modal-5-large.png');
+                  background-image: image-set(
+                  url('assets/img/services-modal/services-modal-5-large.webp') type('image/webp') 1x,
+                  url('assets/img/services-modal/services-modal-5-large@2x.webp') type('image/webp') 2x,
+                  url('assets/img/services-modal/services-modal-5-large@3x.webp') type('image/webp') 3x,
+                  url('assets/img/services-modal/services-modal-5-large.png') type('image/png') 1x);">                
+              </div>
+              <div class="productModal__bg modal__bg modal__bg_middle" style="
+                  background-image: url('assets/img/services-modal/services-modal-5-middle.png');
+                  background-image: image-set(
+                  url('assets/img/services-modal/services-modal-5-middle.webp') type('image/webp') 1x,
+                  url('assets/img/services-modal/services-modal-5-middle@2x.webp') type('image/webp') 2x,
+                  url('assets/img/services-modal/services-modal-5-middle@3x.webp') type('image/webp') 3x,
+                  url('assets/img/services-modal/services-modal-5-middle.png') type('image/png') 1x);">                
+              </div>
+              <div class="productModal__bg modal__bg modal__bg_small" style="
+                  background-image: url('assets/img/services-modal/services-modal-5-small.png');
+                  background-image: image-set(
+                  url('assets/img/services-modal/services-modal-5-small.webp') type('image/webp') 1x,
+                  url('assets/img/services-modal/services-modal-5-small@2x.webp') type('image/webp') 2x,
+                  url('assets/img/services-modal/services-modal-5-small@3x.webp') type('image/webp') 3x,
+                  url('assets/img/services-modal/services-modal-5-large.png') type('image/png') 1x);">                
+              </div>   
 
               <div class="productModal__content product modal__content">
                 <h2 class="product__title maintitle">Медовая ладка</h2>
@@ -1122,7 +1272,30 @@
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
               
-              <div class="productModal__bg" style="background-image: url('assets/img/services-modal/services-modal-6-1920.png');"></div>
+              <div class="productModal__bg modal__bg modal__bg_large" style="
+                  background-image: url('assets/img/services-modal/services-modal-6-large.png');
+                  background-image: image-set(
+                  url('assets/img/services-modal/services-modal-6-large.webp') type('image/webp') 1x,
+                  url('assets/img/services-modal/services-modal-6-large@2x.webp') type('image/webp') 2x,
+                  url('assets/img/services-modal/services-modal-6-large@3x.webp') type('image/webp') 3x,
+                  url('assets/img/services-modal/services-modal-6-large.png') type('image/png') 1x);">                
+              </div>
+              <div class="productModal__bg modal__bg modal__bg_middle" style="
+                  background-image: url('assets/img/services-modal/services-modal-6-middle.png');
+                  background-image: image-set(
+                  url('assets/img/services-modal/services-modal-6-middle.webp') type('image/webp') 1x,
+                  url('assets/img/services-modal/services-modal-6-middle@2x.webp') type('image/webp') 2x,
+                  url('assets/img/services-modal/services-modal-6-middle@3x.webp') type('image/webp') 3x,
+                  url('assets/img/services-modal/services-modal-6-middle.png') type('image/png') 1x);">                
+              </div>
+              <div class="productModal__bg modal__bg modal__bg_small" style="
+                  background-image: url('assets/img/services-modal/services-modal-6-small.png');
+                  background-image: image-set(
+                  url('assets/img/services-modal/services-modal-6-small.webp') type('image/webp') 1x,
+                  url('assets/img/services-modal/services-modal-6-small@2x.webp') type('image/webp') 2x,
+                  url('assets/img/services-modal/services-modal-6-small@3x.webp') type('image/webp') 3x,
+                  url('assets/img/services-modal/services-modal-6-large.png') type('image/png') 1x);">                
+              </div>   
 
               <div class="productModal__content product modal__content">
                 <h2 class="product__title maintitle">Очищение солью</h2>
@@ -1160,9 +1333,32 @@
               <button class="modal__closeButton closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
-              </button>
+              </button> 
               
-              <div class="productModal__bg" style="background-image: url('assets/img/services-modal/services-modal-7-1920.png');"></div>
+              <div class="productModal__bg modal__bg modal__bg_large" style="
+                  background-image: url('assets/img/services-modal/services-modal-7-large.png');
+                  background-image: image-set(
+                  url('assets/img/services-modal/services-modal-7-large.webp') type('image/webp') 1x,
+                  url('assets/img/services-modal/services-modal-7-large@2x.webp') type('image/webp') 2x,
+                  url('assets/img/services-modal/services-modal-7-large@3x.webp') type('image/webp') 3x,
+                  url('assets/img/services-modal/services-modal-7-large.png') type('image/png') 1x);">                
+              </div>
+              <div class="productModal__bg modal__bg modal__bg_middle" style="
+                  background-image: url('assets/img/services-modal/services-modal-7-middle.png');
+                  background-image: image-set(
+                  url('assets/img/services-modal/services-modal-7-middle.webp') type('image/webp') 1x,
+                  url('assets/img/services-modal/services-modal-7-middle@2x.webp') type('image/webp') 2x,
+                  url('assets/img/services-modal/services-modal-7-middle@3x.webp') type('image/webp') 3x,
+                  url('assets/img/services-modal/services-modal-7-middle.png') type('image/png') 1x);">                
+              </div>
+              <div class="productModal__bg modal__bg modal__bg_small" style="
+                  background-image: url('assets/img/services-modal/services-modal-7-small.png');
+                  background-image: image-set(
+                  url('assets/img/services-modal/services-modal-7-small.webp') type('image/webp') 1x,
+                  url('assets/img/services-modal/services-modal-7-small@2x.webp') type('image/webp') 2x,
+                  url('assets/img/services-modal/services-modal-7-small@3x.webp') type('image/webp') 3x,
+                  url('assets/img/services-modal/services-modal-7-large.png') type('image/png') 1x);">                
+              </div>   
               
               <div class="productModal__content product modal__content">
                 <h2 class="product__title maintitle">Березовая помывка</h2>
@@ -1195,9 +1391,32 @@
               <button class="modal__closeButton closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
-              </button>
-
-              <div class="productModal__bg" style="background-image: url('assets/img/services-modal/services-modal-8-1920.png');"></div>
+              </button>             
+              
+              <div class="productModal__bg modal__bg modal__bg_large" style="
+                  background-image: url('assets/img/services-modal/services-modal-8-large.png');
+                  background-image: image-set(
+                  url('assets/img/services-modal/services-modal-8-large.webp') type('image/webp') 1x,
+                  url('assets/img/services-modal/services-modal-8-large@2x.webp') type('image/webp') 2x,
+                  url('assets/img/services-modal/services-modal-8-large@3x.webp') type('image/webp') 3x,
+                  url('assets/img/services-modal/services-modal-8-large.png') type('image/png') 1x);">                
+              </div>
+              <div class="productModal__bg modal__bg modal__bg_middle" style="
+                  background-image: url('assets/img/services-modal/services-modal-8-middle.png');
+                  background-image: image-set(
+                  url('assets/img/services-modal/services-modal-8-middle.webp') type('image/webp') 1x,
+                  url('assets/img/services-modal/services-modal-8-middle@2x.webp') type('image/webp') 2x,
+                  url('assets/img/services-modal/services-modal-8-middle@3x.webp') type('image/webp') 3x,
+                  url('assets/img/services-modal/services-modal-8-middle.png') type('image/png') 1x);">                
+              </div>
+              <div class="productModal__bg modal__bg modal__bg_small" style="
+                  background-image: url('assets/img/services-modal/services-modal-8-small.png');
+                  background-image: image-set(
+                  url('assets/img/services-modal/services-modal-8-small.webp') type('image/webp') 1x,
+                  url('assets/img/services-modal/services-modal-8-small@2x.webp') type('image/webp') 2x,
+                  url('assets/img/services-modal/services-modal-8-small@3x.webp') type('image/webp') 3x,
+                  url('assets/img/services-modal/services-modal-8-large.png') type('image/png') 1x);">                
+              </div>   
 
               <div class="productModal__content product modal__content">
                 <h2 class="product__title maintitle">Пилинг тела</h2>
