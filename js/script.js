@@ -181,7 +181,7 @@ new Swiper(".certificates__swiper", {
 
 
 // Сайдбар
-const header = document.querySelector('.header');
+const headerMenu = document.querySelector('.header__menu');
 const sidebar = document.querySelector('.sidebar');
 const links = sidebar.querySelectorAll('.sidebar__link');
 
@@ -190,7 +190,7 @@ const getElementByLink = (link) => document.querySelector(link.getAttribute('hre
 const setScrollMarginTop = () => {
   links.forEach(link => {    
     const element = getElementByLink(link);
-    const headerHeigt = header.clientHeight - 5;
+    const headerHeigt = headerMenu.clientHeight;
     element.style.scrollMarginTop = `${headerHeigt}px`;
   });
 }
@@ -218,20 +218,20 @@ links.forEach(link => {
 })
 
 // Сдвиг main относительно фиксированной шапки
-const main = document.querySelector('.page__main');
+// const main = document.querySelector('.page__main');
 
-const setMainMarginTop = () => {
-  const headerHeigt = header.clientHeight - 5;
-  main.style.marginTop = `${headerHeigt}px`;
-}
+// const setMainMarginTop = () => {
+//   const headerHeigt = headerMenu.clientHeight - 5;
+//   main.style.marginTop = `${headerHeigt}px`;
+// }
 
-window.addEventListener('load', () => {
-  setMainMarginTop();
-})
+// window.addEventListener('load', () => {
+//   setMainMarginTop();
+// })
 
-window.addEventListener('resize', () => {
-  setMainMarginTop();
-});
+// window.addEventListener('resize', () => {
+//   setMainMarginTop();
+// });
 
 /* Закрытие модального окна услуг перед открытием формы заявки */
 // const servicesModalElements = document.querySelectorAll('.servicesModal');
@@ -242,9 +242,6 @@ window.addEventListener('resize', () => {
 //    servicesModal.close();
 //   })
 // })
-
-
-
 
 /* Закрытие модального окна увеличенной картинки */
 // const gallery = document.querySelectorAll('.reviewModal');

@@ -214,12 +214,6 @@ legend {
     clip: rect(0 0 0 0);
 }
 
-.mask {
-    position: absolute; 
-    width: 0; 
-    height: 0;
-}
-
 .page__body {
     box-sizing: border-box;
     min-width: 320px;
@@ -1298,7 +1292,7 @@ legend {
 }
 
 /* Шапка */
-.header {
+.header__menu {
     position: fixed;
     top: 0;
     left: 0;
@@ -1395,7 +1389,7 @@ legend {
 }
 
 @media (max-width: 1200px) {
-    .header {
+    .header__menu {
         min-height: 139px;
     }
 
@@ -1440,7 +1434,7 @@ legend {
 }
 
 @media (max-width: 960px) {
-    .header {
+    .header__menu {
         min-height: 80px;
         padding: 15px 0;
     }
@@ -1484,8 +1478,7 @@ legend {
 }
 
 @media (max-width: 760px) {
-    .header {
-        min-height: 90px;
+    .header__menu {
         padding: 10px 0;
     }
 
@@ -1526,6 +1519,10 @@ legend {
 }
 
 @media (max-width: 560px) {
+    .header__menu {
+        min-height: 90px;
+    }
+
     .header__nav {
         flex-direction: column;
         align-items: end;   
@@ -1626,56 +1623,14 @@ legend {
     }
 }
 
-/* Отдельно стили для волны под блоком промо */
-.promo__wave {
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    right: 0;
-    z-index: 9;
-
-    width: 100%
-}
-
-.promo__wave_768 {
-    display: none
-}
-
-.promo__wave_320 {
-    display: none
-}
-
-@media (max-width: 960px) {
-    .promo__wave {
-        display: none
-    }
-
-    .promo__wave_768 {
-        display: block;
-        width: 100%;
-        left: 0
-    }
-}
-
-@media (max-width: 760px) {
-    .promo__wave_768 {
-        display: none
-    }
-
-    .promo__wave_320 {
-        display: block;
-        width: 100%;
-        left: 0
-    }
-}
-
 /* Блок Промо */
 .promo {
     position: relative;
 
     display: flex;
     
-    min-height: 766px;
+    min-height: 909px;
+    padding-top: 143px;
 
     color: var(--brown-pallet-100);
     background-color: var(--brown-pallet-600);
@@ -1835,7 +1790,7 @@ legend {
 
 @media (max-width: 1500px) {
     .promo {
-        min-height: 747px;
+        min-height: 890px;        
     }
 
     .promo__title {
@@ -1850,6 +1805,8 @@ legend {
 @media (max-width: 1200px) {
     .promo {
         min-height: 822px;
+        padding-top: 139px;
+
         clip-path: url(#promo-mask-middle);
     }
 
@@ -1869,6 +1826,7 @@ legend {
 @media (max-width: 960px) {
     .promo {
         min-height: 620px;
+        padding-top: 80px;
     }
 }
 
@@ -1902,13 +1860,10 @@ legend {
 
 @media (max-width: 560px) {
     .promo {
-        min-height: 448px;
+        min-height: 540px;
+        padding-top: 90px;
+
         clip-path: url(#promo-mask-small);
-    }
-        
-    .promo__location {    
-        /* font-size: 14px;
-        line-height: 20px; */
     }
 
     .promo__button {
@@ -2614,54 +2569,6 @@ legend {
     .services__swiper {
         max-width: calc(var(--mobile-container) + 32px);
     }
-}
-
-/* Временно отдельно вынесла волну */
-.advantages__wave {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    z-index: 9;
-}
-
-.advantages__wave_top {
-    top: 0
-}
-
-.advantages__wave_bottom {
-    bottom: 0
-}
-
-.advantages__wave_bottom_768,
-.advantages__wave_top_768 {
-    display: none
-}
-
-@media (max-width: 1200px) {
-    .advantages__wave {
-        width: 100%
-    }
-}
-
-@media (max-width: 1060) {
-    .advantages__wave_bottom,
-    .advantages__wave_top {
-        display: none
-    }
-
-    .advantages__wave_bottom_768,
-    .advantages__wave_top_768 {
-        display: block
-    }
-}
-
-@media (max-width: 624) {
-    .advantages__wave {
-        width: 100%
-    }
-}
-
-@media (max-width: 430) {
 }
 
 /* Блок Преимущества */
@@ -3663,7 +3570,7 @@ legend {
 }
 
 /* Переопределенные стили hystmodal */
-.hystmodal__opened .header {
+.hystmodal__opened .header__menu {
   overflow-y: scroll;
 }
 
@@ -4165,7 +4072,7 @@ legend {
 
 @media (max-width: 760px) {
     .feedbackModal {
-        grid-template-columns: 1fr;
+        display: block;
     }
 
     .feedbackModal__content {

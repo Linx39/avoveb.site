@@ -3,9 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Сайт по заказу парильных услуг">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/hystmodal.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="assets/fonts/Manrope-Medium.ttf" as="font" type="font/ttf">
+    <link rel="preload" href="assets/fonts/Dudka-Bold.ttf" as="font" type="font/ttf">
+    <link rel="preload" href="assets/fonts/Manrope-ExtraBold.ttf" as="font" type="font/ttf">
+    <link rel="preload" href="assets/fonts/Manrope-Regular.ttf" as="font" type="font/ttf">
     <title>Вкус бани</title>
   </head>
 
@@ -96,173 +101,163 @@
       </symbol>
     </svg>
 
-    <svg class="mask">
+    <svg class="mask" style="position: absolute; width: 0;  height: 0;">
       <clipPath id="modal-mask" clipPathUnits="objectBoundingBox">
         <path d="M1,0.311 C1,0.223,0.939,0.067,0.908,0 H0 V1 H1 C0.969,0.943,0.908,0.805,0.908,0.734 C0.908,0.645,1,0.422,1,0.311"></path>
       </clipPath>
-    </svg>
-    <svg class="mask">
       <clipPath id="sidebar-mask" clipPathUnits="objectBoundingBox">
         <path d="M0.033,0 H1 V1 H0.033 C0.033,1,0.001,0.917,0.001,0.863 C0.001,0.792,0.058,0.753,0.06,0.682 C0.062,0.61,0.022,0.571,0.014,0.5 C0.002,0.402,0.039,0.348,0.033,0.25 C0.03,0.201,0.016,0.174,0.016,0.125 C0.016,0.076,0.033,0,0.033,0"></path>
       </clipPath>
-    </svg>
-    <svg class="mask">
       <clipPath id="promo-mask-large" clipPathUnits="objectBoundingBox">
         <path d="M0.527,0.953 C0.433,0.953,0.341,0.982,0.267,0.985 C0.194,0.987,0.13,1,-0.001,0.956 V0 H0.999 C0.999,0.314,0.999,0.95,0.999,0.98 C0.993,0.966,0.934,0.96,0.894,0.96 C0.854,0.96,0.788,1,0.737,1 C0.686,1,0.621,0.953,0.527,0.953"></path>
       </clipPath>
-    </svg>
-    <svg class="mask">
       <clipPath id="promo-mask-middle" clipPathUnits="objectBoundingBox">
         <path d="M0,0 H1 V0.971 C1,0.971,0.979,0.978,0.875,0.992 C0.771,1,0.653,0.971,0.5,0.971 C0.379,0.971,0.285,1,0.187,0.998 C0.089,0.985,0,0.992,0,0.992 V0"></path>
       </clipPath>
-    </svg>
-    <svg class="mask">
       <clipPath id="promo-mask-small" clipPathUnits="objectBoundingBox">
         <path d="M0,0 H1 V0.955 L0.828,0.98 C0.775,0.987,0.721,0.992,0.667,0.994 L0.59,0.997 C0.53,0.999,0.47,0.998,0.411,0.993 L0.371,0.99 C0.289,0.983,0.205,0.983,0.123,0.99 L0,1 V0"></path>
       </clipPath>
-    </svg>
-    <svg class="mask">
       <clipPath id="services-mask" clipPathUnits="objectBoundingBox">
         <path d="M1,0.291 C1,0.259,0.975,0.237,0.952,0.237 V0.237 C0.887,0.237,0.833,0.162,0.833,0.071 V0.071 C0.833,0.037,0.817,0,0.792,0 H0.06 C0.027,0,0,0.037,0,0.083 V0.917 C0,0.963,0.027,1,0.06,1 H0.94 C0.973,1,1,0.963,1,0.917 V0.291"></path>
       </clipPath>
-    </svg>
-    <svg class="mask">
-      <clipPath id="advantages-mask-large" clipPathUnits="objectBoundingBox"><path d="M0.746,0.001 C0.684,-0.005,0.474,0.025,0.418,0.025 C0.237,0.025,0.18,-0.014,-0.003,0.025 V0.993 C0,1,0.029,0.997,0.117,0.983 C0.226,0.966,0.396,0.967,0.476,0.976 C0.556,0.985,0.667,0.984,0.746,0.976 C0.808,0.97,0.94,0.984,0.997,0.991 V0.001 C0.992,0.03,0.766,0.003,0.746,0.001"></path></clipPath>
-    </svg>
-    <svg class="mask">
-      <clipPath id="advantages-mask-middle" clipPathUnits="objectBoundingBox"><path d="M0,0.016 C0,0.016,0.202,0.002,0.28,0 C0.357,-0.002,0.55,0.049,0.665,0.058 C0.78,0.067,1,0.037,1,0.037 V0.985 C1,0.985,0.861,0.97,0.78,0.97 C0.625,0.97,0.469,1,0.315,1 C0.252,1,0,0.953,0,0.953 L0,0.016"></path></clipPath>
-    </svg>
-    <svg class="mask">
-      <clipPath id="advantages-mask-small" clipPathUnits="objectBoundingBox"><path d="M0,0.009 L0.169,0.003 C0.223,0.001,0.277,0,0.331,0.001 L0.488,0.004 L0.663,0.007 C0.721,0.008,0.779,0.008,0.837,0.006 L1,-0.001 V0.999 H0.75 L0.325,0.991 C0.275,0.99,0.225,0.991,0.176,0.993 L0,0.999 V0.009"></path></clipPath>
-    </svg>          
-    <svg class="mask">
+      <clipPath id="advantages-mask-large" clipPathUnits="objectBoundingBox">
+        <path d="M0.746,0.001 C0.684,-0.005,0.474,0.025,0.418,0.025 C0.237,0.025,0.18,-0.014,-0.003,0.025 V0.993 C0,1,0.029,0.997,0.117,0.983 C0.226,0.966,0.396,0.967,0.476,0.976 C0.556,0.985,0.667,0.984,0.746,0.976 C0.808,0.97,0.94,0.984,0.997,0.991 V0.001 C0.992,0.03,0.766,0.003,0.746,0.001"></path>
+      </clipPath>
+      <clipPath id="advantages-mask-middle" clipPathUnits="objectBoundingBox">
+        <path d="M0,0.016 C0,0.016,0.202,0.002,0.28,0 C0.357,-0.002,0.55,0.049,0.665,0.058 C0.78,0.067,1,0.037,1,0.037 V0.985 C1,0.985,0.861,0.97,0.78,0.97 C0.625,0.97,0.469,1,0.315,1 C0.252,1,0,0.953,0,0.953 L0,0.016"></path>
+      </clipPath>
+      <clipPath id="advantages-mask-small" clipPathUnits="objectBoundingBox">
+        <path d="M0,0.009 L0.169,0.003 C0.223,0.001,0.277,0,0.331,0.001 L0.488,0.004 L0.663,0.007 C0.721,0.008,0.779,0.008,0.837,0.006 L1,-0.001 V0.999 H0.75 L0.325,0.991 C0.275,0.99,0.225,0.991,0.176,0.993 L0,0.999 V0.009"></path>
+      </clipPath>
       <clipPath id="review-mask" clipPathUnits="objectBoundingBox">
         <path d="M1,0.238 C1,0.208,0.967,0.187,0.94,0.187 C0.88,0.187,0.832,0.133,0.832,0.066 C0.832,0.036,0.813,0,0.786,0 H0.054 C0.024,0,0,0.027,0,0.06 V0.94 C0,0.973,0.024,1,0.054,1 H0.946 C0.976,1,1,0.973,1,0.94 V0.238"></path>
       </clipPath>
     </svg>
     
     <header class="header">
-      <div class="header__container">
-        <h1 class="visually-hidden">Вкус бани</h1>
+      <div class="header__menu">
+        <div class="header__container">
+          <h1 class="visually-hidden">Вкус бани</h1>
 
-        <div class="header__company">
-          <div class="header__logo logo">
-            <picture>
-              <source type="image/webp" media="(max-width: 560px)" srcset="assets/img/logo/logo-small.webp 1x, assets/img/logo/logo-small@2x.webp 2x, assets/img/logo/logo-small@3x.webp 3x">
-              <source type="image/webp" srcset="assets/img/logo/logo-large.webp 1x, assets/img/logo/logo-large@2x.webp 2x, assets/img/logo/logo-large@3x.webp 3x">
-              <source media="(max-width: 560px)" srcset="assets/img/logo/logo-small.png">
-              <img src="assets/img/logo/logo-large.png" alt="Логотип.">
-            </picture>
-          </div>
-          <p class="header__description">Ceмeйныe банные традиции –от&nbsp;пармастеров со стажем</p>
-        </div>
-
-        <nav class="header__nav">
-          <a class="header__phone phone subtitle" href="tel:+79263906734">
-            <span class="header__phone__icon phone__icon">
-              <svg style="width: 28px; height: 28px; transform: translateY(4%);"><use href="#phone"></use></svg>
-            </span>
-            +7-926-390-67-34
-          </a>
-
-          <div class="header__buttons">
-            <div class="header__social">
-              <a class="header__social__button header__button" href="https://t.me/olga_rsh">
-                <svg style="width: 46px; height: 42px; transform: translateY(1px);"><use href="#telegram"></use></svg>
-                <span class="visually-hidden">Написать в Telegram</span>
-              </a>
-              <a class="header__social__button header__button" href="https://wa.me/79832276997?text=Здравствуйте,%20хочу%20заказать%20услугу.">
-                <svg style="width: 44px; height: 44px;"><use href="#whatsapp"></use></svg>
-                <span class="visually-hidden">Написать в Whatsapp</span>
-              </a>
+          <div class="header__company">
+            <div class="header__logo logo">
+              <picture>
+                <source type="image/webp" media="(max-width: 560px)" srcset="assets/img/logo/logo-small.webp 1x, assets/img/logo/logo-small@2x.webp 2x, assets/img/logo/logo-small@3x.webp 3x">
+                <source type="image/webp" srcset="assets/img/logo/logo-large.webp 1x, assets/img/logo/logo-large@2x.webp 2x, assets/img/logo/logo-large@3x.webp 3x">
+                <source media="(max-width: 560px)" srcset="assets/img/logo/logo-small.png">
+                <img src="assets/img/logo/logo-large.png" alt="Логотип.">
+              </picture>
             </div>
-            <button class="header__sidebar__button header__button" data-sidebar="#sidebar" type="button">
-              <span class="visually-hidden">Открыть меню сайта</span>
-              <svg  style="width: 60px; height: 34px;"><use href="#burger"></use></svg>
-            </button>
-          </div>
-        </nav>
-      </div>
-    </header>
-
-    <div class="sidebarHystmodal hystmodal" id="sidebar" aria-hidden="true">
-      <div class="sidebarHystmodal__wrap hystmodal__wrap">
-        <div class="sidebarModal sidebarAnimation hystmodal__window" role="dialog" aria-modal="true">
-          <div class="sidebarModal__decor">
-            <div class="sidebarModal__decor__item sidebarModal__decor__item__branch-5"></div>
-            <div class="sidebarModal__decor__item sidebarModal__decor__item__flower"></div>
-            <div class="sidebarModal__decor__item sidebarModal__decor__item__branch-2"></div>
-            <div class="sidebarModal__decor__item sidebarModal__decor__item__hogweed-2"></div>
+            <p class="header__description">Ceмeйныe банные традиции –от&nbsp;пармастеров со стажем</p>
           </div>
 
-          <div class="sidebarModal__content sidebar">
-            <div class="sidebar__head">
-              <div class="header__logo logo">
-                <picture>
-                  <source type="image/webp" media="(max-width: 560px)" srcset="assets/img/logo/logo-dark-small.webp 1x, assets/img/logo/logo-dark-small@2x.webp 2x, assets/img/logo/logo-dark-small@3x.webp 3x">
-                  <source type="image/webp" srcset="assets/img/logo/logo-dark-large.webp 1x, assets/img/logo/logo-dark-large@2x.webp 2x, assets/img/logo/logo-dark-large@3x.webp 3x">
-                  <source media="(max-width: 560px)" srcset="assets/img/logo/logo-dark-small.png">
-                  <img src="assets/img/logo/logo-dark-large.png" alt="Логотип.">
-                </picture>
-              </div>
-  
-              <button class="sidebar__close__button closeButton" type="button" data-hystclose>
-                <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
-                <span class="visually-hidden">Закрыть меню сайта</span>
-              </button>
-            </div>
+          <nav class="header__nav">
+            <a class="header__phone phone subtitle" href="tel:+79263906734">
+              <span class="header__phone__icon phone__icon">
+                <svg style="width: 28px; height: 28px; transform: translateY(4%);"><use href="#phone"></use></svg>
+              </span>
+              +7-926-390-67-34
+            </a>
 
-            <ul class="sidebar__list subtitle">
-              <li class="sidebar__item">
-                <a href="#offer" class="sidebar__link">Это актуально</a>
-              </li>
-              <li class="sidebar__item">
-                <a href="#aboutUs" class="sidebar__link">О нас</a>
-              </li>
-              <li class="sidebar__item">
-                <a href="#price" class="sidebar__link">Стоимость</a>
-              </li>
-              <li class="sidebar__item">
-                <a href="#services" class="sidebar__link">Услуги</a>
-              </li>
-              <li class="sidebar__item">
-                <a href="#guarantees" class="sidebar__link">Гарантии</a>
-              </li>
-              <li class="sidebar__item">
-                <a href="#reviews" class="sidebar__link">Отзывы</a>
-              </li>
-              <li class="sidebar__item">
-                <a href="#stages" class="sidebar__link">Этапы</a>
-              </li>
-              <li class="sidebar__item">
-                <a href="#footer" class="sidebar__link">Контакты</a>
-              </li>
-            </ul>
-
-            <div class="sidebar__contacts">
-              <a class="sidebar__phone phone subtitle" href="tel:+79263906734">
-                <span class="phone__icon">
-                  <svg style="width: 28px; height: 28px; transform: translateY(4%);"><use href="#phone"></use></svg>
-                </span>
-                +7-926-390-67-34
-              </a>            
-              <div class="sidebar__social socialList">
-                <a href="index.html#" class="socialButton">
-                  <svg style="width: 38px; height: 35px; transform: translateX(-6%) translateY(2%);"><use href="#telegram"></use></svg>
+            <div class="header__buttons">
+              <div class="header__social">
+                <a class="header__social__button header__button" href="https://t.me/olga_rsh">
+                  <svg style="width: 46px; height: 42px; transform: translateY(1px);"><use href="#telegram"></use></svg>
                   <span class="visually-hidden">Написать в Telegram</span>
                 </a>
-                <a href="index.html#" class="socialButton">
-                  <svg style="width: 36px; height: 36px; transform: translateX(1%);"><use href="#whatsapp"></use></svg>
+                <a class="header__social__button header__button" href="https://wa.me/79832276997?text=Здравствуйте,%20хочу%20заказать%20услугу.">
+                  <svg style="width: 44px; height: 44px;"><use href="#whatsapp"></use></svg>
                   <span class="visually-hidden">Написать в Whatsapp</span>
                 </a>
               </div>
+              <button class="header__sidebar__button header__button" data-sidebar="#sidebar" type="button">
+                <span class="visually-hidden">Открыть меню сайта</span>
+                <svg  style="width: 60px; height: 34px;"><use href="#burger"></use></svg>
+              </button>
             </div>
-            
-            <a class="sidebar__privacy" href="#">Политика конфиденциальности</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="sidebarHystmodal hystmodal" id="sidebar" aria-hidden="true">
+        <div class="sidebarHystmodal__wrap hystmodal__wrap">
+          <div class="sidebarModal sidebarAnimation hystmodal__window" role="dialog" aria-modal="true">
+            <div class="sidebarModal__decor">
+              <div class="sidebarModal__decor__item sidebarModal__decor__item__branch-5"></div>
+              <div class="sidebarModal__decor__item sidebarModal__decor__item__flower"></div>
+              <div class="sidebarModal__decor__item sidebarModal__decor__item__branch-2"></div>
+              <div class="sidebarModal__decor__item sidebarModal__decor__item__hogweed-2"></div>
+            </div>
+  
+            <div class="sidebarModal__content sidebar">
+              <div class="sidebar__head">
+                <div class="header__logo logo">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 560px)" srcset="assets/img/logo/logo-dark-small.webp 1x, assets/img/logo/logo-dark-small@2x.webp 2x, assets/img/logo/logo-dark-small@3x.webp 3x">
+                    <source type="image/webp" srcset="assets/img/logo/logo-dark-large.webp 1x, assets/img/logo/logo-dark-large@2x.webp 2x, assets/img/logo/logo-dark-large@3x.webp 3x">
+                    <source media="(max-width: 560px)" srcset="assets/img/logo/logo-dark-small.png">
+                    <img src="assets/img/logo/logo-dark-large.png" alt="Логотип.">
+                  </picture>
+                </div>
+    
+                <button class="sidebar__close__button closeButton" type="button" data-hystclose>
+                  <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
+                  <span class="visually-hidden">Закрыть меню сайта</span>
+                </button>
+              </div>
+  
+              <ul class="sidebar__list subtitle">
+                <li class="sidebar__item">
+                  <a href="#offer" class="sidebar__link">Это актуально</a>
+                </li>
+                <li class="sidebar__item">
+                  <a href="#aboutUs" class="sidebar__link">О нас</a>
+                </li>
+                <li class="sidebar__item">
+                  <a href="#price" class="sidebar__link">Стоимость</a>
+                </li>
+                <li class="sidebar__item">
+                  <a href="#services" class="sidebar__link">Услуги</a>
+                </li>
+                <li class="sidebar__item">
+                  <a href="#guarantees" class="sidebar__link">Гарантии</a>
+                </li>
+                <li class="sidebar__item">
+                  <a href="#reviews" class="sidebar__link">Отзывы</a>
+                </li>
+                <li class="sidebar__item">
+                  <a href="#stages" class="sidebar__link">Этапы</a>
+                </li>
+                <li class="sidebar__item">
+                  <a href="#footer" class="sidebar__link">Контакты</a>
+                </li>
+              </ul>
+  
+              <div class="sidebar__contacts">
+                <a class="sidebar__phone phone subtitle" href="tel:+79263906734">
+                  <span class="phone__icon">
+                    <svg style="width: 28px; height: 28px; transform: translateY(4%);"><use href="#phone"></use></svg>
+                  </span>
+                  +7-926-390-67-34
+                </a>            
+                <div class="sidebar__social socialList">
+                  <a href="index.html#" class="socialButton">
+                    <svg style="width: 38px; height: 35px; transform: translateX(-6%) translateY(2%);"><use href="#telegram"></use></svg>
+                    <span class="visually-hidden">Написать в Telegram</span>
+                  </a>
+                  <a href="index.html#" class="socialButton">
+                    <svg style="width: 36px; height: 36px; transform: translateX(1%);"><use href="#whatsapp"></use></svg>
+                    <span class="visually-hidden">Написать в Whatsapp</span>
+                  </a>
+                </div>
+              </div>
+              
+              <a class="sidebar__privacy" href="#">Политика конфиденциальности</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </header>
 
     <main class="page__main">
       <section class="promo wrapperPadding" id="promo">
@@ -519,6 +514,7 @@
 
       <section class="certificateModals">
         <h2 class="visually-hidden">Модальное окно сертификатов</h2>
+
         <div class="hystmodal" id="certificate-01" aria-hidden="true">
           <div class="hystmodal__wrap">
             <div class="galleryModal galleryAnimation hystmodal__window" role="dialog" aria-modal="true">          
@@ -777,7 +773,7 @@
 
                 <picture>
                   <source type="image/webp" srcset="assets/img/services/services-1.webp 1x, assets/img/services/services-1@2x.webp 2x, assets/img/services/services-1@3x.webp 3x">
-                  <img class="services__card__img card__img" src="assets/img/services/services-1.png" alt="Изображение парения.">
+                  <img class="services__card__img card__img" src="assets/img/services/services-1.png" alt="Изображение парения." width="336" height="241">
                 </picture>
                 
                 <div class="services__card__bottom">
@@ -793,7 +789,7 @@
 
                 <picture>
                   <source type="image/webp" srcset="assets/img/services/services-2.webp 1x, assets/img/services/services-2@2x.webp 2x, assets/img/services/services-2@3x.webp 3x">
-                  <img class="services__card__img card__img" src="assets/img/services/services-2.png" alt="Изображение парения.">
+                  <img class="services__card__img card__img" src="assets/img/services/services-2.png" alt="Изображение парения." width="336" height="241">
                 </picture>
                 
                 <div class="services__card__bottom">
@@ -809,7 +805,7 @@
                 
                 <picture>
                   <source type="image/webp" srcset="assets/img/services/services-3.webp 1x, assets/img/services/services-3@2x.webp 2x, assets/img/services/services-3@3x.webp 3x">
-                  <img class="services__card__img card__img" src="assets/img/services/services-3.png" alt="Изображение парения.">
+                  <img class="services__card__img card__img" src="assets/img/services/services-3.png" alt="Изображение парения." width="336" height="241">
                 </picture>
                                 
                 <div class="services__card__bottom">
@@ -829,7 +825,7 @@
                   
                 <picture>
                   <source type="image/webp" srcset="assets/img/services/services-4.webp 1x, assets/img/services/services-4@2x.webp 2x, assets/img/services/services-4@3x.webp 3x">
-                  <img class="services__card__img card__img" src="assets/img/services/services-4.png" alt="Изображение парения.">
+                  <img class="services__card__img card__img" src="assets/img/services/services-4.png" alt="Изображение парения." width="336" height="241">
                 </picture>
                                 
                 <div class="services__card__bottom">
@@ -845,7 +841,7 @@
 
                 <picture>
                   <source type="image/webp" srcset="assets/img/services/services-5.webp 1x, assets/img/services/services-5@2x.webp 2x, assets/img/services/services-5@3x.webp 3x">
-                  <img class="services__card__img card__img" src="assets/img/services/services-5.png" alt="Изображение парения.">
+                  <img class="services__card__img card__img" src="assets/img/services/services-5.png" alt="Изображение парения." width="336" height="241">
                 </picture>
                 
                 <div class="services__card__bottom">
@@ -861,7 +857,7 @@
                 
                 <picture>
                   <source type="image/webp" srcset="assets/img/services/services-6.webp 1x, assets/img/services/services-6@2x.webp 2x, assets/img/services/services-6@3x.webp 3x">
-                  <img class="services__card__img card__img" src="assets/img/services/services-6.png" alt="Изображение парения.">
+                  <img class="services__card__img card__img" src="assets/img/services/services-6.png" alt="Изображение парения." width="336" height="241">
                 </picture>
                 
                 <div class="services__card__bottom">
@@ -877,7 +873,7 @@
 
                 <picture>
                   <source type="image/webp" srcset="assets/img/services/services-7.webp 1x, assets/img/services/services-7@2x.webp 2x, assets/img/services/services-7@3x.webp 3x">
-                  <img class="services__card__img card__img" src="assets/img/services/services-7.png" alt="Изображение парения.">
+                  <img class="services__card__img card__img" src="assets/img/services/services-7.png" alt="Изображение парения." width="336" height="241">
                 </picture>
                                   
                 <div class="services__card__bottom">
@@ -893,7 +889,7 @@
                 
                 <picture>
                   <source type="image/webp" srcset="assets/img/services/services-8.webp 1x, assets/img/services/services-8@2x.webp 2x, assets/img/services/services-8@3x.webp 3x">
-                  <img class="services__card__img card__img" src="assets/img/services/services-8.png" alt="Изображение парения.">
+                  <img class="services__card__img card__img" src="assets/img/services/services-8.png" alt="Изображение парения." width="336" height="241">
                 </picture>
                                   
                 <div class="services__card__bottom">
