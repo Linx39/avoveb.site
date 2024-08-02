@@ -3043,7 +3043,7 @@ legend {
     margin-bottom: 32px;
 }
 
-.review__slide {
+.reviews__slide {
     transition: opacity .5s;
     opacity: 0;
 }
@@ -3795,21 +3795,16 @@ legend {
 }
 
 .modal__bg {
-    border-top-left-radius: 60px;
-    border-bottom-left-radius: 60px;
-
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-
     clip-path: url(#modal-mask);
 }
 
-.modal__bg_middle,
-.modal__bg_small {
-    display: none;
-}
+.modal__bg img {
+    border-top-left-radius: 60px;
+    border-bottom-left-radius: 60px;
 
+    object-fit: cover;
+    object-position: center;
+}
 
 .modal__content {
     padding: var(--xl-padding-h) 0;
@@ -3830,7 +3825,7 @@ legend {
         right: 50px;
     }
 
-    .modal__bg {
+    .modal__bg img {
         border-top-left-radius: 40px;
         border-bottom-left-radius: 40px;
     }
@@ -3851,17 +3846,9 @@ legend {
         right: 40px;
     }
 
-    .modal__bg {
+    .modal__bg img {
         border-top-left-radius: 20px;
         border-bottom-left-radius: 20px;
-    }
-
-    .modal__bg_large {
-        display: none;
-    }
-
-    .modal__bg_middle {
-        display: block;
     }
 
     .modal__content {
@@ -3877,14 +3864,6 @@ legend {
     .modal__closeButton {
         top: 20px;
         right: 20px;
-    }
-
-    .modal__bg_middle {
-        display: none;
-    }
-
-    .modal__bg_small {
-        display: block;
     }
 
     .modal__content {
@@ -4726,7 +4705,7 @@ legend {
     inset: 0;
 }
 
-.sidebar__decor__item {
+.sidebarModal__decor__item {
     position: absolute;
     content: "";
     z-index: 1;
@@ -4736,7 +4715,7 @@ legend {
     background-size: contain;
 }
 
-.sidebar__decor__item__branch-5 {
+.sidebarModal__decor__item__branch-5 {
     top: 15%;
     right: 10px;
 
@@ -4745,7 +4724,7 @@ legend {
     background-image: url("../assets/img/decor-item/branch-5.svg");
 }
 
-.sidebar__decor__item__flower {
+.sidebarModal__decor__item__flower {
     top: 45%;
     right: 130px;
 
@@ -4755,7 +4734,7 @@ legend {
     transform: rotate(-162deg);
 }
 
-.sidebar__decor__item__branch-2 {
+.sidebarModal__decor__item__branch-2 {
     top: 75%;
     right: 30px;
 
@@ -4764,7 +4743,7 @@ legend {
     background-image: url("../assets/img/decor-item/branch-2.svg");
 }
 
-.sidebar__decor__item__hogweed-2 {
+.sidebarModal__decor__item__hogweed-2 {
     top: 83%;
     left: 10px;
 
@@ -4774,38 +4753,38 @@ legend {
 }
 
 @media (max-width: 1200px) {
-    .sidebar__decor__item__branch-5 {    
+    .sidebarModal__decor__item__branch-5 {    
         width: 118px;
         height: 109px;
     }
 
-    .sidebar__decor__item__flower {    
+    .sidebarModal__decor__item__flower {    
         width: 77px;
         height: 88px;
     }
 }
 
 @media (max-width: 960px) {
-    .sidebar__decor__item__branch-5 { 
+    .sidebarModal__decor__item__branch-5 { 
         top: 50%;
         right: 30px;   
         width: 118px;
         height: 109px;
     }
 
-    .sidebar__decor__item__flower {
+    .sidebarModal__decor__item__flower {
         top: 18%;
         right: 40px;    
         width: 77px;
         height: 88px;
     }
 
-    .sidebar__decor__item__branch-2 {
+    .sidebarModal__decor__item__branch-2 {
         top: 78%;
         right: 30px;
     }
     
-    .sidebar__decor__item__hogweed-2 {
+    .sidebarModal__decor__item__hogweed-2 {
         top: 83%;
         left: 10px;
     

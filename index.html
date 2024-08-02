@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -189,10 +189,10 @@
       <div class="sidebarHystmodal__wrap hystmodal__wrap">
         <div class="sidebarModal sidebarAnimation hystmodal__window" role="dialog" aria-modal="true">
           <div class="sidebarModal__decor">
-            <div class="sidebar__decor__item sidebar__decor__item__branch-5"></div>
-            <div class="sidebar__decor__item sidebar__decor__item__flower"></div>
-            <div class="sidebar__decor__item sidebar__decor__item__branch-2"></div>
-            <div class="sidebar__decor__item sidebar__decor__item__hogweed-2"></div>
+            <div class="sidebarModal__decor__item sidebarModal__decor__item__branch-5"></div>
+            <div class="sidebarModal__decor__item sidebarModal__decor__item__flower"></div>
+            <div class="sidebarModal__decor__item sidebarModal__decor__item__branch-2"></div>
+            <div class="sidebarModal__decor__item sidebarModal__decor__item__hogweed-2"></div>
           </div>
 
           <div class="sidebarModal__content sidebar">
@@ -421,7 +421,7 @@
               <div class="certificatesModal__content certificates">
                 <h2 class="certificates__title maintitle">Сертификаты</h2>
 
-                <div class="certificates__swiper swiper">
+                <div class="certificates__swiper slider swiper">
                   <div class="certificates__list swiper-wrapper">
                     <div class="certificates__slide swiper-slide">
                       <a class="certificates__card" href="#certificate-01">
@@ -518,6 +518,7 @@
       </section>
 
       <section class="certificateModals">
+        <h2 class="visually-hidden">Модальное окно сертификатов</h2>
         <div class="hystmodal" id="certificate-01" aria-hidden="true">
           <div class="hystmodal__wrap">
             <div class="galleryModal galleryAnimation hystmodal__window" role="dialog" aria-modal="true">          
@@ -712,29 +713,15 @@
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
 
-              <div class="feedbackModal__bg modal__bg modal__bg_large" style="
-                  background-image: url('assets/img/feedback-modal/feedback-modal-large.png');
-                  background-image: image-set(
-                  url('assets/img/feedback-modal/feedback-modal-large.webp') type('image/webp') 1x,
-                  url('assets/img/feedback-modal/feedback-modal-large@2x.webp') type('image/webp') 2x,
-                  url('assets/img/feedback-modal/feedback-modal-large@3x.webp') type('image/webp') 3x,
-                  url('assets/img/feedback-modal/feedback-modal-large.png') type('image/png') 1x);">                
-              </div>
-              <div class="feedbackModal__bg modal__bg modal__bg_middle" style="
-                  background-image: url('assets/img/feedback-modal/feedback-modal-middle.png');
-                  background-image: image-set(
-                  url('assets/img/feedback-modal/feedback-modal-middle.webp') type('image/webp') 1x,
-                  url('assets/img/feedback-modal/feedback-modal-middle@2x.webp') type('image/webp') 2x,
-                  url('assets/img/feedback-modal/feedback-modal-middle@3x.webp') type('image/webp') 3x,
-                  url('assets/img/feedback-modal/feedback-modal-middle.png') type('image/png') 1x);">                
-              </div>
-              <div class="feedbackModal__bg modal__bg modal__bg_small" style="
-                  background-image: url('assets/img/feedback-modal/feedback-modal-small.png');
-                  background-image: image-set(
-                  url('assets/img/feedback-modal/feedback-modal-small.webp') type('image/webp') 1x,
-                  url('assets/img/feedback-modal/feedback-modal-small@2x.webp') type('image/webp') 2x,
-                  url('assets/img/feedback-modal/feedback-modal-small@3x.webp') type('image/webp') 3x,
-                  url('assets/img/feedback-modal/feedback-modal-small.png') type('image/png') 1x);">                
+              <div class="feedbackModal__bg modal__bg">
+                <picture>
+                  <source type="image/webp" media="(max-width: 960px)" srcset="assets/img/feedback-modal/feedback-modal-small.webp 1x, assets/img/feedback-modal/feedback-modal-small@2x.webp 2x, assets/img/feedback-modal/feedback-modal-small@3x.webp 3x">
+                  <source type="image/webp" media="(max-width: 1200px)" srcset="assets/img/feedback-modal/feedback-modal-middle.webp 1x, assets/img/feedback-modal/feedback-modal-middle@2x.webp 2x, assets/img/feedback-modal/feedback-modal-middle@3x.webp 3x">
+                  <source type="image/webp" srcset="assets/img/feedback-modal/feedback-modal-large.webp 1x, assets/img/feedback-modal/feedback-modal-large@2x.webp 2x, assets/img/feedback-modal/feedback-modal-large@3x.webp 3x">
+                  <source media="(max-width: 960px)" srcset="assets/img/feedback-modal/feedback-modal-small.png">
+                  <source media="(max-width: 1200px)" srcset="assets/img/feedback-modal/feedback-modal-middle.png">
+                  <img src="assets/img/feedback-modal/feedback-modal-large.png" alt="Сертификат.">
+                </picture>
               </div>
 
               <div class="feedbackModal__content modal__content feedback">
@@ -942,31 +929,17 @@
               <button class="modal__closeButton closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
-              </button>              
+              </button>   
 
-              <div class="productModal__bg modal__bg modal__bg_large" style="
-                  background-image: url('assets/img/services-modal/services-modal-1-large.png');
-                  background-image: image-set(
-                  url('assets/img/services-modal/services-modal-1-large.webp') type('image/webp') 1x,
-                  url('assets/img/services-modal/services-modal-1-large@2x.webp') type('image/webp') 2x,
-                  url('assets/img/services-modal/services-modal-1-large@3x.webp') type('image/webp') 3x,
-                  url('assets/img/services-modal/services-modal-1-large.png') type('image/png') 1x);">                
-              </div>
-              <div class="productModal__bg modal__bg modal__bg_middle" style="
-                  background-image: url('assets/img/services-modal/services-modal-1-middle.png');
-                  background-image: image-set(
-                  url('assets/img/services-modal/services-modal-1-middle.webp') type('image/webp') 1x,
-                  url('assets/img/services-modal/services-modal-1-middle@2x.webp') type('image/webp') 2x,
-                  url('assets/img/services-modal/services-modal-1-middle@3x.webp') type('image/webp') 3x,
-                  url('assets/img/services-modal/services-modal-1-middle.png') type('image/png') 1x);">                
-              </div>
-              <div class="productModal__bg modal__bg modal__bg_small" style="
-                  background-image: url('assets/img/services-modal/services-modal-1-small.png');
-                  background-image: image-set(
-                  url('assets/img/services-modal/services-modal-1-small.webp') type('image/webp') 1x,
-                  url('assets/img/services-modal/services-modal-1-small@2x.webp') type('image/webp') 2x,
-                  url('assets/img/services-modal/services-modal-1-small@3x.webp') type('image/webp') 3x,
-                  url('assets/img/services-modal/services-modal-1-large.png') type('image/png') 1x);">                
+              <div class="productModal__bg modal__bg">
+                <picture>
+                  <source type="image/webp" media="(max-width: 960px)" srcset="assets/img/services-modal/services-modal-1-small.webp 1x, assets/img/services-modal/services-modal-1-small@2x.webp 2x, assets/img/services-modal/services-modal-1-small@3x.webp 3x">
+                  <source type="image/webp" media="(max-width: 1200px)" srcset="assets/img/services-modal/services-modal-1-middle.webp 1x, assets/img/services-modal/services-modal-1-middle@2x.webp 2x, assets/img/services-modal/services-modal-1-middle@3x.webp 3x">
+                  <source type="image/webp" srcset="assets/img/services-modal/services-modal-1-large.webp 1x, assets/img/services-modal/services-modal-1-large@2x.webp 2x, assets/img/services-modal/services-modal-1-large@3x.webp 3x">
+                  <source media="(max-width: 960px)" srcset="assets/img/services-modal/services-modal-1-small.png">
+                  <source media="(max-width: 1200px)" srcset="assets/img/services-modal/services-modal-1-middle.png">
+                  <img src="assets/img/services-modal/services-modal-1-large.png" alt="Сертификат.">
+                </picture>
               </div>
                               
               <div class="productModal__content product modal__content">
@@ -995,32 +968,18 @@
               <button class="modal__closeButton closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
-              </button>   
+              </button>    
 
-              <div class="productModal__bg modal__bg modal__bg_large" style="
-                  background-image: url('assets/img/services-modal/services-modal-2-large.png');
-                  background-image: image-set(
-                  url('assets/img/services-modal/services-modal-2-large.webp') type('image/webp') 1x,
-                  url('assets/img/services-modal/services-modal-2-large@2x.webp') type('image/webp') 2x,
-                  url('assets/img/services-modal/services-modal-2-large@3x.webp') type('image/webp') 3x,
-                  url('assets/img/services-modal/services-modal-2-large.png') type('image/png') 1x);">                
+              <div class="productModal__bg modal__bg">
+                <picture>
+                  <source type="image/webp" media="(max-width: 960px)" srcset="assets/img/services-modal/services-modal-2-small.webp 1x, assets/img/services-modal/services-modal-2-small@2x.webp 2x, assets/img/services-modal/services-modal-2-small@3x.webp 3x">
+                  <source type="image/webp" media="(max-width: 1200px)" srcset="assets/img/services-modal/services-modal-2-middle.webp 1x, assets/img/services-modal/services-modal-2-middle@2x.webp 2x, assets/img/services-modal/services-modal-2-middle@3x.webp 3x">
+                  <source type="image/webp" srcset="assets/img/services-modal/services-modal-2-large.webp 1x, assets/img/services-modal/services-modal-2-large@2x.webp 2x, assets/img/services-modal/services-modal-2-large@3x.webp 3x">
+                  <source media="(max-width: 960px)" srcset="assets/img/services-modal/services-modal-2-small.png">
+                  <source media="(max-width: 1200px)" srcset="assets/img/services-modal/services-modal-2-middle.png">
+                  <img src="assets/img/services-modal/services-modal-2-large.png" alt="Сертификат.">
+                </picture>
               </div>
-              <div class="productModal__bg modal__bg modal__bg_middle" style="
-                  background-image: url('assets/img/services-modal/services-modal-2-middle.png');
-                  background-image: image-set(
-                  url('assets/img/services-modal/services-modal-2-middle.webp') type('image/webp') 1x,
-                  url('assets/img/services-modal/services-modal-2-middle@2x.webp') type('image/webp') 2x,
-                  url('assets/img/services-modal/services-modal-2-middle@3x.webp') type('image/webp') 3x,
-                  url('assets/img/services-modal/services-modal-2-middle.png') type('image/png') 1x);">                
-              </div>
-              <div class="productModal__bg modal__bg modal__bg_small" style="
-                  background-image: url('assets/img/services-modal/services-modal-2-small.png');
-                  background-image: image-set(
-                  url('assets/img/services-modal/services-modal-2-small.webp') type('image/webp') 1x,
-                  url('assets/img/services-modal/services-modal-2-small@2x.webp') type('image/webp') 2x,
-                  url('assets/img/services-modal/services-modal-2-small@3x.webp') type('image/webp') 3x,
-                  url('assets/img/services-modal/services-modal-2-large.png') type('image/png') 1x);">                
-              </div>   
 
               <div class="productModal__content product modal__content">
                 <h2 class="product__title maintitle"><span>Парение</span> <br>Классическое</h2>
@@ -1057,32 +1016,18 @@
               <button class="modal__closeButton closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
-              </button>
-              
-              <div class="productModal__bg modal__bg modal__bg_large" style="
-                  background-image: url('assets/img/services-modal/services-modal-3-large.png');
-                  background-image: image-set(
-                  url('assets/img/services-modal/services-modal-3-large.webp') type('image/webp') 1x,
-                  url('assets/img/services-modal/services-modal-3-large@2x.webp') type('image/webp') 2x,
-                  url('assets/img/services-modal/services-modal-3-large@3x.webp') type('image/webp') 3x,
-                  url('assets/img/services-modal/services-modal-3-large.png') type('image/png') 1x);">                
+              </button>   
+
+              <div class="productModal__bg modal__bg">
+                <picture>
+                  <source type="image/webp" media="(max-width: 960px)" srcset="assets/img/services-modal/services-modal-3-small.webp 1x, assets/img/services-modal/services-modal-3-small@2x.webp 2x, assets/img/services-modal/services-modal-3-small@3x.webp 3x">
+                  <source type="image/webp" media="(max-width: 1200px)" srcset="assets/img/services-modal/services-modal-3-middle.webp 1x, assets/img/services-modal/services-modal-3-middle@2x.webp 2x, assets/img/services-modal/services-modal-3-middle@3x.webp 3x">
+                  <source type="image/webp" srcset="assets/img/services-modal/services-modal-3-large.webp 1x, assets/img/services-modal/services-modal-3-large@2x.webp 2x, assets/img/services-modal/services-modal-3-large@3x.webp 3x">
+                  <source media="(max-width: 960px)" srcset="assets/img/services-modal/services-modal-3-small.png">
+                  <source media="(max-width: 1200px)" srcset="assets/img/services-modal/services-modal-3-middle.png">
+                  <img src="assets/img/services-modal/services-modal-3-large.png" alt="Сертификат.">
+                </picture>
               </div>
-              <div class="productModal__bg modal__bg modal__bg_middle" style="
-                  background-image: url('assets/img/services-modal/services-modal-3-middle.png');
-                  background-image: image-set(
-                  url('assets/img/services-modal/services-modal-3-middle.webp') type('image/webp') 1x,
-                  url('assets/img/services-modal/services-modal-3-middle@2x.webp') type('image/webp') 2x,
-                  url('assets/img/services-modal/services-modal-3-middle@3x.webp') type('image/webp') 3x,
-                  url('assets/img/services-modal/services-modal-3-middle.png') type('image/png') 1x);">                
-              </div>
-              <div class="productModal__bg modal__bg modal__bg_small" style="
-                  background-image: url('assets/img/services-modal/services-modal-3-small.png');
-                  background-image: image-set(
-                  url('assets/img/services-modal/services-modal-3-small.webp') type('image/webp') 1x,
-                  url('assets/img/services-modal/services-modal-3-small@2x.webp') type('image/webp') 2x,
-                  url('assets/img/services-modal/services-modal-3-small@3x.webp') type('image/webp') 3x,
-                  url('assets/img/services-modal/services-modal-3-large.png') type('image/png') 1x);">                
-              </div>   
 
               <div class="productModal__content product modal__content">
                 <h2 class="product__title maintitle"><span>Парение</span> <br>Гурме</h2>
@@ -1127,32 +1072,18 @@
               <button class="modal__closeButton closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
-              </button>
-              
-              <div class="productModal__bg modal__bg modal__bg_large" style="
-                  background-image: url('assets/img/services-modal/services-modal-4-large.png');
-                  background-image: image-set(
-                  url('assets/img/services-modal/services-modal-4-large.webp') type('image/webp') 1x,
-                  url('assets/img/services-modal/services-modal-4-large@2x.webp') type('image/webp') 2x,
-                  url('assets/img/services-modal/services-modal-4-large@3x.webp') type('image/webp') 3x,
-                  url('assets/img/services-modal/services-modal-4-large.png') type('image/png') 1x);">                
+              </button>   
+
+              <div class="productModal__bg modal__bg">
+                <picture>
+                  <source type="image/webp" media="(max-width: 960px)" srcset="assets/img/services-modal/services-modal-4-small.webp 1x, assets/img/services-modal/services-modal-4-small@2x.webp 2x, assets/img/services-modal/services-modal-4-small@3x.webp 3x">
+                  <source type="image/webp" media="(max-width: 1200px)" srcset="assets/img/services-modal/services-modal-4-middle.webp 1x, assets/img/services-modal/services-modal-4-middle@2x.webp 2x, assets/img/services-modal/services-modal-4-middle@3x.webp 3x">
+                  <source type="image/webp" srcset="assets/img/services-modal/services-modal-4-large.webp 1x, assets/img/services-modal/services-modal-4-large@2x.webp 2x, assets/img/services-modal/services-modal-4-large@3x.webp 3x">
+                  <source media="(max-width: 960px)" srcset="assets/img/services-modal/services-modal-4-small.png">
+                  <source media="(max-width: 1200px)" srcset="assets/img/services-modal/services-modal-4-middle.png">
+                  <img src="assets/img/services-modal/services-modal-4-large.png" alt="Сертификат.">
+                </picture>
               </div>
-              <div class="productModal__bg modal__bg modal__bg_middle" style="
-                  background-image: url('assets/img/services-modal/services-modal-4-middle.png');
-                  background-image: image-set(
-                  url('assets/img/services-modal/services-modal-4-middle.webp') type('image/webp') 1x,
-                  url('assets/img/services-modal/services-modal-4-middle@2x.webp') type('image/webp') 2x,
-                  url('assets/img/services-modal/services-modal-4-middle@3x.webp') type('image/webp') 3x,
-                  url('assets/img/services-modal/services-modal-4-middle.png') type('image/png') 1x);">                
-              </div>
-              <div class="productModal__bg modal__bg modal__bg_small" style="
-                  background-image: url('assets/img/services-modal/services-modal-4-small.png');
-                  background-image: image-set(
-                  url('assets/img/services-modal/services-modal-4-small.webp') type('image/webp') 1x,
-                  url('assets/img/services-modal/services-modal-4-small@2x.webp') type('image/webp') 2x,
-                  url('assets/img/services-modal/services-modal-4-small@3x.webp') type('image/webp') 3x,
-                  url('assets/img/services-modal/services-modal-4-large.png') type('image/png') 1x);">                
-              </div>   
   
               <div class="productModal__content product modal__content">
                 <h2 class="product__title maintitle"><span>Парение</span> <br>Коллективное</h2>
@@ -1186,32 +1117,18 @@
               <button class="modal__closeButton closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
-              </button>
-              
-              <div class="productModal__bg modal__bg modal__bg_large" style="
-                  background-image: url('assets/img/services-modal/services-modal-5-large.png');
-                  background-image: image-set(
-                  url('assets/img/services-modal/services-modal-5-large.webp') type('image/webp') 1x,
-                  url('assets/img/services-modal/services-modal-5-large@2x.webp') type('image/webp') 2x,
-                  url('assets/img/services-modal/services-modal-5-large@3x.webp') type('image/webp') 3x,
-                  url('assets/img/services-modal/services-modal-5-large.png') type('image/png') 1x);">                
+              </button>   
+
+              <div class="productModal__bg modal__bg">
+                <picture>
+                  <source type="image/webp" media="(max-width: 960px)" srcset="assets/img/services-modal/services-modal-5-small.webp 1x, assets/img/services-modal/services-modal-5-small@2x.webp 2x, assets/img/services-modal/services-modal-5-small@3x.webp 3x">
+                  <source type="image/webp" media="(max-width: 1200px)" srcset="assets/img/services-modal/services-modal-5-middle.webp 1x, assets/img/services-modal/services-modal-5-middle@2x.webp 2x, assets/img/services-modal/services-modal-5-middle@3x.webp 3x">
+                  <source type="image/webp" srcset="assets/img/services-modal/services-modal-5-large.webp 1x, assets/img/services-modal/services-modal-5-large@2x.webp 2x, assets/img/services-modal/services-modal-5-large@3x.webp 3x">
+                  <source media="(max-width: 960px)" srcset="assets/img/services-modal/services-modal-5-small.png">
+                  <source media="(max-width: 1200px)" srcset="assets/img/services-modal/services-modal-5-middle.png">
+                  <img src="assets/img/services-modal/services-modal-5-large.png" alt="Сертификат.">
+                </picture>
               </div>
-              <div class="productModal__bg modal__bg modal__bg_middle" style="
-                  background-image: url('assets/img/services-modal/services-modal-5-middle.png');
-                  background-image: image-set(
-                  url('assets/img/services-modal/services-modal-5-middle.webp') type('image/webp') 1x,
-                  url('assets/img/services-modal/services-modal-5-middle@2x.webp') type('image/webp') 2x,
-                  url('assets/img/services-modal/services-modal-5-middle@3x.webp') type('image/webp') 3x,
-                  url('assets/img/services-modal/services-modal-5-middle.png') type('image/png') 1x);">                
-              </div>
-              <div class="productModal__bg modal__bg modal__bg_small" style="
-                  background-image: url('assets/img/services-modal/services-modal-5-small.png');
-                  background-image: image-set(
-                  url('assets/img/services-modal/services-modal-5-small.webp') type('image/webp') 1x,
-                  url('assets/img/services-modal/services-modal-5-small@2x.webp') type('image/webp') 2x,
-                  url('assets/img/services-modal/services-modal-5-small@3x.webp') type('image/webp') 3x,
-                  url('assets/img/services-modal/services-modal-5-large.png') type('image/png') 1x);">                
-              </div>   
 
               <div class="productModal__content product modal__content">
                 <h2 class="product__title maintitle">Медовая ладка</h2>
@@ -1244,32 +1161,18 @@
               <button class="modal__closeButton closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
-              </button>
-              
-              <div class="productModal__bg modal__bg modal__bg_large" style="
-                  background-image: url('assets/img/services-modal/services-modal-6-large.png');
-                  background-image: image-set(
-                  url('assets/img/services-modal/services-modal-6-large.webp') type('image/webp') 1x,
-                  url('assets/img/services-modal/services-modal-6-large@2x.webp') type('image/webp') 2x,
-                  url('assets/img/services-modal/services-modal-6-large@3x.webp') type('image/webp') 3x,
-                  url('assets/img/services-modal/services-modal-6-large.png') type('image/png') 1x);">                
+              </button>   
+
+              <div class="productModal__bg modal__bg">
+                <picture>
+                  <source type="image/webp" media="(max-width: 960px)" srcset="assets/img/services-modal/services-modal-6-small.webp 1x, assets/img/services-modal/services-modal-6-small@2x.webp 2x, assets/img/services-modal/services-modal-6-small@3x.webp 3x">
+                  <source type="image/webp" media="(max-width: 1200px)" srcset="assets/img/services-modal/services-modal-6-middle.webp 1x, assets/img/services-modal/services-modal-6-middle@2x.webp 2x, assets/img/services-modal/services-modal-6-middle@3x.webp 3x">
+                  <source type="image/webp" srcset="assets/img/services-modal/services-modal-6-large.webp 1x, assets/img/services-modal/services-modal-6-large@2x.webp 2x, assets/img/services-modal/services-modal-6-large@3x.webp 3x">
+                  <source media="(max-width: 960px)" srcset="assets/img/services-modal/services-modal-6-small.png">
+                  <source media="(max-width: 1200px)" srcset="assets/img/services-modal/services-modal-6-middle.png">
+                  <img src="assets/img/services-modal/services-modal-6-large.png" alt="Сертификат.">
+                </picture>
               </div>
-              <div class="productModal__bg modal__bg modal__bg_middle" style="
-                  background-image: url('assets/img/services-modal/services-modal-6-middle.png');
-                  background-image: image-set(
-                  url('assets/img/services-modal/services-modal-6-middle.webp') type('image/webp') 1x,
-                  url('assets/img/services-modal/services-modal-6-middle@2x.webp') type('image/webp') 2x,
-                  url('assets/img/services-modal/services-modal-6-middle@3x.webp') type('image/webp') 3x,
-                  url('assets/img/services-modal/services-modal-6-middle.png') type('image/png') 1x);">                
-              </div>
-              <div class="productModal__bg modal__bg modal__bg_small" style="
-                  background-image: url('assets/img/services-modal/services-modal-6-small.png');
-                  background-image: image-set(
-                  url('assets/img/services-modal/services-modal-6-small.webp') type('image/webp') 1x,
-                  url('assets/img/services-modal/services-modal-6-small@2x.webp') type('image/webp') 2x,
-                  url('assets/img/services-modal/services-modal-6-small@3x.webp') type('image/webp') 3x,
-                  url('assets/img/services-modal/services-modal-6-large.png') type('image/png') 1x);">                
-              </div>   
 
               <div class="productModal__content product modal__content">
                 <h2 class="product__title maintitle">Очищение солью</h2>
@@ -1307,32 +1210,18 @@
               <button class="modal__closeButton closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
-              </button> 
-              
-              <div class="productModal__bg modal__bg modal__bg_large" style="
-                  background-image: url('assets/img/services-modal/services-modal-7-large.png');
-                  background-image: image-set(
-                  url('assets/img/services-modal/services-modal-7-large.webp') type('image/webp') 1x,
-                  url('assets/img/services-modal/services-modal-7-large@2x.webp') type('image/webp') 2x,
-                  url('assets/img/services-modal/services-modal-7-large@3x.webp') type('image/webp') 3x,
-                  url('assets/img/services-modal/services-modal-7-large.png') type('image/png') 1x);">                
+              </button>    
+
+              <div class="productModal__bg modal__bg">
+                <picture>
+                  <source type="image/webp" media="(max-width: 960px)" srcset="assets/img/services-modal/services-modal-7-small.webp 1x, assets/img/services-modal/services-modal-7-small@2x.webp 2x, assets/img/services-modal/services-modal-7-small@3x.webp 3x">
+                  <source type="image/webp" media="(max-width: 1200px)" srcset="assets/img/services-modal/services-modal-7-middle.webp 1x, assets/img/services-modal/services-modal-7-middle@2x.webp 2x, assets/img/services-modal/services-modal-7-middle@3x.webp 3x">
+                  <source type="image/webp" srcset="assets/img/services-modal/services-modal-7-large.webp 1x, assets/img/services-modal/services-modal-7-large@2x.webp 2x, assets/img/services-modal/services-modal-7-large@3x.webp 3x">
+                  <source media="(max-width: 960px)" srcset="assets/img/services-modal/services-modal-7-small.png">
+                  <source media="(max-width: 1200px)" srcset="assets/img/services-modal/services-modal-7-middle.png">
+                  <img src="assets/img/services-modal/services-modal-7-large.png" alt="Сертификат.">
+                </picture>
               </div>
-              <div class="productModal__bg modal__bg modal__bg_middle" style="
-                  background-image: url('assets/img/services-modal/services-modal-7-middle.png');
-                  background-image: image-set(
-                  url('assets/img/services-modal/services-modal-7-middle.webp') type('image/webp') 1x,
-                  url('assets/img/services-modal/services-modal-7-middle@2x.webp') type('image/webp') 2x,
-                  url('assets/img/services-modal/services-modal-7-middle@3x.webp') type('image/webp') 3x,
-                  url('assets/img/services-modal/services-modal-7-middle.png') type('image/png') 1x);">                
-              </div>
-              <div class="productModal__bg modal__bg modal__bg_small" style="
-                  background-image: url('assets/img/services-modal/services-modal-7-small.png');
-                  background-image: image-set(
-                  url('assets/img/services-modal/services-modal-7-small.webp') type('image/webp') 1x,
-                  url('assets/img/services-modal/services-modal-7-small@2x.webp') type('image/webp') 2x,
-                  url('assets/img/services-modal/services-modal-7-small@3x.webp') type('image/webp') 3x,
-                  url('assets/img/services-modal/services-modal-7-large.png') type('image/png') 1x);">                
-              </div>   
               
               <div class="productModal__content product modal__content">
                 <h2 class="product__title maintitle">Березовая помывка</h2>
@@ -1365,32 +1254,18 @@
               <button class="modal__closeButton closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
-              </button>             
-              
-              <div class="productModal__bg modal__bg modal__bg_large" style="
-                  background-image: url('assets/img/services-modal/services-modal-8-large.png');
-                  background-image: image-set(
-                  url('assets/img/services-modal/services-modal-8-large.webp') type('image/webp') 1x,
-                  url('assets/img/services-modal/services-modal-8-large@2x.webp') type('image/webp') 2x,
-                  url('assets/img/services-modal/services-modal-8-large@3x.webp') type('image/webp') 3x,
-                  url('assets/img/services-modal/services-modal-8-large.png') type('image/png') 1x);">                
+              </button>    
+
+              <div class="productModal__bg modal__bg">
+                <picture>
+                  <source type="image/webp" media="(max-width: 960px)" srcset="assets/img/services-modal/services-modal-8-small.webp 1x, assets/img/services-modal/services-modal-8-small@2x.webp 2x, assets/img/services-modal/services-modal-8-small@3x.webp 3x">
+                  <source type="image/webp" media="(max-width: 1200px)" srcset="assets/img/services-modal/services-modal-8-middle.webp 1x, assets/img/services-modal/services-modal-8-middle@2x.webp 2x, assets/img/services-modal/services-modal-8-middle@3x.webp 3x">
+                  <source type="image/webp" srcset="assets/img/services-modal/services-modal-8-large.webp 1x, assets/img/services-modal/services-modal-8-large@2x.webp 2x, assets/img/services-modal/services-modal-8-large@3x.webp 3x">
+                  <source media="(max-width: 960px)" srcset="assets/img/services-modal/services-modal-8-small.png">
+                  <source media="(max-width: 1200px)" srcset="assets/img/services-modal/services-modal-8-middle.png">
+                  <img src="assets/img/services-modal/services-modal-8-large.png" alt="Сертификат.">
+                </picture>
               </div>
-              <div class="productModal__bg modal__bg modal__bg_middle" style="
-                  background-image: url('assets/img/services-modal/services-modal-8-middle.png');
-                  background-image: image-set(
-                  url('assets/img/services-modal/services-modal-8-middle.webp') type('image/webp') 1x,
-                  url('assets/img/services-modal/services-modal-8-middle@2x.webp') type('image/webp') 2x,
-                  url('assets/img/services-modal/services-modal-8-middle@3x.webp') type('image/webp') 3x,
-                  url('assets/img/services-modal/services-modal-8-middle.png') type('image/png') 1x);">                
-              </div>
-              <div class="productModal__bg modal__bg modal__bg_small" style="
-                  background-image: url('assets/img/services-modal/services-modal-8-small.png');
-                  background-image: image-set(
-                  url('assets/img/services-modal/services-modal-8-small.webp') type('image/webp') 1x,
-                  url('assets/img/services-modal/services-modal-8-small@2x.webp') type('image/webp') 2x,
-                  url('assets/img/services-modal/services-modal-8-small@3x.webp') type('image/webp') 3x,
-                  url('assets/img/services-modal/services-modal-8-large.png') type('image/png') 1x);">                
-              </div>   
 
               <div class="productModal__content product modal__content">
                 <h2 class="product__title maintitle">Пилинг тела</h2>
@@ -1494,8 +1369,8 @@
                   <source type="image/webp" media="(max-width: 960px)" srcset="assets/img/guarantees/guarantees-small.webp 1x, assets/img/guarantees/guarantees-small@2x.webp 2x, assets/img/guarantees/guarantees-small@3x.webp 3x">
                   <source type="image/webp" media="(max-width: 1500px)" srcset="assets/img/guarantees/guarantees-middle.webp 1x, assets/img/guarantees/guarantees-middle@2x.webp 2x, assets/img/guarantees/guarantees-middle@3x.webp 3x">
                   <source type="image/webp" srcset="assets/img/guarantees/guarantees-large.webp 1x, assets/img/guarantees/guarantees-large@2x.webp 2x, assets/img/guarantees/guarantees-large@3x.webp 3x">
-                  <source media="(max-width: 960px)" src="assets/img/guarantees/guarantees-small.png">
-                  <source media="(max-width: 1500px)" src="assets/img/guarantees/guarantees-middle.png">
+                  <source media="(max-width: 960px)" srcset="assets/img/guarantees/guarantees-small.png">
+                  <source media="(max-width: 1500px)" srcset="assets/img/guarantees/guarantees-middle.png">
                   <img src="assets/img/guarantees/guarantees-large.png" alt="Фото компании.">
                 </picture>
               </div>
@@ -1544,7 +1419,7 @@
           <h2 class="reviews__title title container">Отзывы</h2>
           <div class="reviews__swiper slider container swiper">
             <div class="reviews__list swiper-wrapper">
-              <div class="review__slide swiper-slide">
+              <div class="reviews__slide swiper-slide">
                 <a class="reviews__card" data-review="#review-01" href="#review-01">
                   <div class="reviews__card__circle circle">
                     <span class="reviews__card__circle__icon circle__icon">
@@ -1559,7 +1434,7 @@
                   </div>
                 </a>
               </div>
-              <div class="review__slide swiper-slide">
+              <div class="reviews__slide swiper-slide">
                 <a class="reviews__card" data-review="#review-02" href="#review-02">
                   <div class="reviews__card__circle circle">
                     <span class="reviews__card__circle__icon circle__icon">
@@ -1574,7 +1449,7 @@
                   </div>
                 </a>
               </div>
-              <div class="review__slide swiper-slide">
+              <div class="reviews__slide swiper-slide">
                 <a class="reviews__card" data-review="#review-03" href="#review-03">
                   <div class="reviews__card__circle circle">
                     <span class="reviews__card__circle__icon circle__icon">
@@ -1589,7 +1464,7 @@
                   </div>
                 </a>
               </div>
-              <div class="review__slide swiper-slide">
+              <div class="reviews__slide swiper-slide">
                 <a class="reviews__card" data-review="#review-04" href="#review-04">
                   <div class="reviews__card__circle circle">
                     <span class="reviews__card__circle__icon circle__icon">
@@ -1604,7 +1479,7 @@
                   </div>
                 </a>
               </div>
-              <div class="review__slide swiper-slide">
+              <div class="reviews__slide swiper-slide">
                 <a class="reviews__card" data-review="#review-05" href="#review-05">
                   <div class="reviews__card__circle circle">
                     <span class="reviews__card__circle__icon circle__icon">
@@ -1619,7 +1494,7 @@
                   </div>
                 </a>
               </div>
-              <div class="review__slide swiper-slide">
+              <div class="reviews__slide swiper-slide">
                 <a class="reviews__card" data-review="#review-06" href="#review-06">
                   <div class="reviews__card__circle circle">
                     <span class="reviews__card__circle__icon circle__icon">
@@ -1634,7 +1509,7 @@
                   </div>
                 </a>
               </div>
-              <div class="review__slide swiper-slide">
+              <div class="reviews__slide swiper-slide">
                 <a class="reviews__card" data-review="#review-07" href="#review-07">
                   <div class="reviews__card__circle circle">
                     <span class="reviews__card__circle__icon circle__icon">
@@ -1649,7 +1524,7 @@
                   </div>
                 </a>
               </div>
-              <div class="review__slide swiper-slide">
+              <div class="reviews__slide swiper-slide">
                 <a class="reviews__card" data-review="#review-08" href="#review-08">
                   <div class="reviews__card__circle circle">
                     <span class="reviews__card__circle__icon circle__icon">
@@ -1664,7 +1539,7 @@
                   </div>
                 </a>
               </div>
-              <div class="review__slide swiper-slide">
+              <div class="reviews__slide swiper-slide">
                 <a class="reviews__card" data-review="#review-09" href="#review-09">
                   <div class="reviews__card__circle circle">
                     <span class="reviews__card__circle__icon circle__icon">
@@ -1679,7 +1554,7 @@
                   </div>
                 </a>
               </div>
-              <div class="review__slide swiper-slide">
+              <div class="reviews__slide swiper-slide">
                 <a class="reviews__card" data-review="#review-10" href="#review-10">
                   <div class="reviews__card__circle circle">
                     <span class="reviews__card__circle__icon circle__icon">
@@ -1694,7 +1569,7 @@
                   </div>
                 </a>
               </div>
-              <div class="review__slide swiper-slide">
+              <div class="reviews__slide swiper-slide">
                 <a class="reviews__card" data-review="#review-11" href="#review-11">
                   <div class="reviews__card__circle circle">
                     <span class="reviews__card__circle__icon circle__icon">
@@ -1709,7 +1584,7 @@
                   </div>
                 </a>
               </div>
-              <div class="review__slide swiper-slide">
+              <div class="reviews__slide swiper-slide">
                 <a class="reviews__card" data-review="#review-12" href="#review-12">
                   <div class="reviews__card__circle circle">
                     <span class="reviews__card__circle__icon circle__icon">
@@ -1724,7 +1599,7 @@
                   </div>
                 </a>
               </div>
-              <div class="review__slide swiper-slide">
+              <div class="reviews__slide swiper-slide">
                 <a class="reviews__card" data-review="#review-13" href="#review-13">
                   <div class="reviews__card__circle circle">
                     <span class="reviews__card__circle__icon circle__icon">
@@ -1739,7 +1614,7 @@
                   </div>
                 </a>
               </div>
-              <div class="review__slide swiper-slide">
+              <div class="reviews__slide swiper-slide">
                 <a class="reviews__card" data-review="#review-14" href="#review-14">
                   <div class="reviews__card__circle circle">
                     <span class="reviews__card__circle__icon circle__icon">
@@ -1754,7 +1629,7 @@
                   </div>
                 </a>
               </div>
-              <div class="review__slide swiper-slide">
+              <div class="reviews__slide swiper-slide">
                 <a class="reviews__card" data-review="#review-15" href="#review-15">
                   <div class="reviews__card__circle circle">
                     <span class="reviews__card__circle__icon circle__icon">
@@ -1790,7 +1665,8 @@
         </section>
       </div>
            
-      <section class="reviewModals">  
+      <section class="reviewModals"> 
+        <h2 class="visually-hidden">Модальные окна отзывов</h2>
         <div class="hystmodal" id="review-01" aria-hidden="true">
           <div class="hystmodal__wrap">
             <div class="galleryModal galleryAnimation hystmodal__window" role="dialog" aria-modal="true">
@@ -1803,8 +1679,8 @@
                   <source type="image/webp" media="(max-width: 960px)" srcset="assets/img/reviews/review-01-small.webp 1x, assets/img/reviews/review-01-small@2x.webp 2x, assets/img/reviews/review-01-small@3x.webp 3x">
                   <source type="image/webp" media="(max-width: 1200px)" srcset="assets/img/reviews/review-01-middle.webp 1x, assets/img/reviews/review-01-middle@2x.webp 2x, assets/img/reviews/review-01-middle@3x.webp 3x">
                   <source type="image/webp" srcset="assets/img/reviews/review-01-large.webp 1x, assets/img/reviews/review-01-large@2x.webp 2x, assets/img/reviews/review-01-large@3x.webp 3x">
-                  <source media="(max-width: 960px)" src="assets/img/reviews/review-01-small.png">
-                  <source media="(max-width: 1200px)" src="assets/img/reviews/review-01-middle.png">
+                  <source media="(max-width: 960px)" srcset="assets/img/reviews/review-01-small.png">
+                  <source media="(max-width: 1200px)" srcset="assets/img/reviews/review-01-middle.png">
                   <img src="assets/img/reviews/review-01-large.png" alt="Фото компании.">
                 </picture>
               </div>
@@ -1823,8 +1699,8 @@
                   <source type="image/webp" media="(max-width: 960px)" srcset="assets/img/reviews/review-02-small.webp 1x, assets/img/reviews/review-02-small@2x.webp 2x, assets/img/reviews/review-02-small@3x.webp 3x">
                   <source type="image/webp" media="(max-width: 1200px)" srcset="assets/img/reviews/review-02-middle.webp 1x, assets/img/reviews/review-02-middle@2x.webp 2x, assets/img/reviews/review-02-middle@3x.webp 3x">
                   <source type="image/webp" srcset="assets/img/reviews/review-02-large.webp 1x, assets/img/reviews/review-02-large@2x.webp 2x, assets/img/reviews/review-02-large@3x.webp 3x">
-                  <source media="(max-width: 960px)" src="assets/img/reviews/review-02-small.png">
-                  <source media="(max-width: 1200px)" src="assets/img/reviews/review-02-middle.png">
+                  <source media="(max-width: 960px)" srcset="assets/img/reviews/review-02-small.png">
+                  <source media="(max-width: 1200px)" srcset="assets/img/reviews/review-02-middle.png">
                   <img src="assets/img/reviews/review-02-large.png" alt="Фото компании.">
                 </picture>
               </div>
@@ -1843,8 +1719,8 @@
                   <source type="image/webp" media="(max-width: 960px)" srcset="assets/img/reviews/review-03-small.webp 1x, assets/img/reviews/review-03-small@2x.webp 2x, assets/img/reviews/review-03-small@3x.webp 3x">
                   <source type="image/webp" media="(max-width: 1200px)" srcset="assets/img/reviews/review-03-middle.webp 1x, assets/img/reviews/review-03-middle@2x.webp 2x, assets/img/reviews/review-03-middle@3x.webp 3x">
                   <source type="image/webp" srcset="assets/img/reviews/review-03-large.webp 1x, assets/img/reviews/review-03-large@2x.webp 2x, assets/img/reviews/review-03-large@3x.webp 3x">
-                  <source media="(max-width: 960px)" src="assets/img/reviews/review-03-small.png">
-                  <source media="(max-width: 1200px)" src="assets/img/reviews/review-03-middle.png">
+                  <source media="(max-width: 960px)" srcset="assets/img/reviews/review-03-small.png">
+                  <source media="(max-width: 1200px)" srcset="assets/img/reviews/review-03-middle.png">
                   <img src="assets/img/reviews/review-03-large.png" alt="Фото компании.">
                 </picture>
               </div>
@@ -1863,8 +1739,8 @@
                   <source type="image/webp" media="(max-width: 960px)" srcset="assets/img/reviews/review-04-small.webp 1x, assets/img/reviews/review-04-small@2x.webp 2x, assets/img/reviews/review-04-small@3x.webp 3x">
                   <source type="image/webp" media="(max-width: 1200px)" srcset="assets/img/reviews/review-04-middle.webp 1x, assets/img/reviews/review-04-middle@2x.webp 2x, assets/img/reviews/review-04-middle@3x.webp 3x">
                   <source type="image/webp" srcset="assets/img/reviews/review-04-large.webp 1x, assets/img/reviews/review-04-large@2x.webp 2x, assets/img/reviews/review-04-large@3x.webp 3x">
-                  <source media="(max-width: 960px)" src="assets/img/reviews/review-04-small.png">
-                  <source media="(max-width: 1200px)" src="assets/img/reviews/review-04-middle.png">
+                  <source media="(max-width: 960px)" srcset="assets/img/reviews/review-04-small.png">
+                  <source media="(max-width: 1200px)" srcset="assets/img/reviews/review-04-middle.png">
                   <img src="assets/img/reviews/review-04-large.png" alt="Фото компании.">
                 </picture>
               </div>
@@ -1883,8 +1759,8 @@
                   <source type="image/webp" media="(max-width: 960px)" srcset="assets/img/reviews/review-05-small.webp 1x, assets/img/reviews/review-05-small@2x.webp 2x, assets/img/reviews/review-05-small@3x.webp 3x">
                   <source type="image/webp" media="(max-width: 1200px)" srcset="assets/img/reviews/review-05-middle.webp 1x, assets/img/reviews/review-05-middle@2x.webp 2x, assets/img/reviews/review-05-middle@3x.webp 3x">
                   <source type="image/webp" srcset="assets/img/reviews/review-05-large.webp 1x, assets/img/reviews/review-05-large@2x.webp 2x, assets/img/reviews/review-05-large@3x.webp 3x">
-                  <source media="(max-width: 960px)" src="assets/img/reviews/review-05-small.png">
-                  <source media="(max-width: 1200px)" src="assets/img/reviews/review-05-middle.png">
+                  <source media="(max-width: 960px)" srcset="assets/img/reviews/review-05-small.png">
+                  <source media="(max-width: 1200px)" srcset="assets/img/reviews/review-05-middle.png">
                   <img src="assets/img/reviews/review-05-large.png" alt="Фото компании.">
                 </picture>
               </div>
@@ -1903,8 +1779,8 @@
                   <source type="image/webp" media="(max-width: 960px)" srcset="assets/img/reviews/review-06-small.webp 1x, assets/img/reviews/review-06-small@2x.webp 2x, assets/img/reviews/review-06-small@3x.webp 3x">
                   <source type="image/webp" media="(max-width: 1200px)" srcset="assets/img/reviews/review-06-middle.webp 1x, assets/img/reviews/review-06-middle@2x.webp 2x, assets/img/reviews/review-06-middle@3x.webp 3x">
                   <source type="image/webp" srcset="assets/img/reviews/review-06-large.webp 1x, assets/img/reviews/review-06-large@2x.webp 2x, assets/img/reviews/review-06-large@3x.webp 3x">
-                  <source media="(max-width: 960px)" src="assets/img/reviews/review-06-small.png">
-                  <source media="(max-width: 1200px)" src="assets/img/reviews/review-06-middle.png">
+                  <source media="(max-width: 960px)" srcset="assets/img/reviews/review-06-small.png">
+                  <source media="(max-width: 1200px)" srcset="assets/img/reviews/review-06-middle.png">
                   <img src="assets/img/reviews/review-06-large.png" alt="Фото компании.">
                 </picture>
               </div>
@@ -1923,8 +1799,8 @@
                   <source type="image/webp" media="(max-width: 960px)" srcset="assets/img/reviews/review-07-small.webp 1x, assets/img/reviews/review-07-small@2x.webp 2x, assets/img/reviews/review-07-small@3x.webp 3x">
                   <source type="image/webp" media="(max-width: 1200px)" srcset="assets/img/reviews/review-07-middle.webp 1x, assets/img/reviews/review-07-middle@2x.webp 2x, assets/img/reviews/review-07-middle@3x.webp 3x">
                   <source type="image/webp" srcset="assets/img/reviews/review-07-large.webp 1x, assets/img/reviews/review-07-large@2x.webp 2x, assets/img/reviews/review-07-large@3x.webp 3x">
-                  <source media="(max-width: 960px)" src="assets/img/reviews/review-07-small.png">
-                  <source media="(max-width: 1200px)" src="assets/img/reviews/review-07-middle.png">
+                  <source media="(max-width: 960px)" srcset="assets/img/reviews/review-07-small.png">
+                  <source media="(max-width: 1200px)" srcset="assets/img/reviews/review-07-middle.png">
                   <img src="assets/img/reviews/review-07-large.png" alt="Фото компании.">
                 </picture>
               </div>
@@ -1943,8 +1819,8 @@
                   <source type="image/webp" media="(max-width: 960px)" srcset="assets/img/reviews/review-08-small.webp 1x, assets/img/reviews/review-08-small@2x.webp 2x, assets/img/reviews/review-08-small@3x.webp 3x">
                   <source type="image/webp" media="(max-width: 1200px)" srcset="assets/img/reviews/review-08-middle.webp 1x, assets/img/reviews/review-08-middle@2x.webp 2x, assets/img/reviews/review-08-middle@3x.webp 3x">
                   <source type="image/webp" srcset="assets/img/reviews/review-08-large.webp 1x, assets/img/reviews/review-08-large@2x.webp 2x, assets/img/reviews/review-08-large@3x.webp 3x">
-                  <source media="(max-width: 960px)" src="assets/img/reviews/review-08-small.png">
-                  <source media="(max-width: 1200px)" src="assets/img/reviews/review-08-middle.png">
+                  <source media="(max-width: 960px)" srcset="assets/img/reviews/review-08-small.png">
+                  <source media="(max-width: 1200px)" srcset="assets/img/reviews/review-08-middle.png">
                   <img src="assets/img/reviews/review-08-large.png" alt="Фото компании.">
                 </picture>
               </div>
@@ -1963,8 +1839,8 @@
                   <source type="image/webp" media="(max-width: 960px)" srcset="assets/img/reviews/review-09-small.webp 1x, assets/img/reviews/review-09-small@2x.webp 2x, assets/img/reviews/review-09-small@3x.webp 3x">
                   <source type="image/webp" media="(max-width: 1200px)" srcset="assets/img/reviews/review-09-middle.webp 1x, assets/img/reviews/review-09-middle@2x.webp 2x, assets/img/reviews/review-09-middle@3x.webp 3x">
                   <source type="image/webp" srcset="assets/img/reviews/review-09-large.webp 1x, assets/img/reviews/review-09-large@2x.webp 2x, assets/img/reviews/review-09-large@3x.webp 3x">
-                  <source media="(max-width: 960px)" src="assets/img/reviews/review-09-small.png">
-                  <source media="(max-width: 1200px)" src="assets/img/reviews/review-09-middle.png">
+                  <source media="(max-width: 960px)" srcset="assets/img/reviews/review-09-small.png">
+                  <source media="(max-width: 1200px)" srcset="assets/img/reviews/review-09-middle.png">
                   <img src="assets/img/reviews/review-09-large.png" alt="Фото компании.">
                 </picture>
               </div>
@@ -1983,8 +1859,8 @@
                   <source type="image/webp" media="(max-width: 960px)" srcset="assets/img/reviews/review-10-small.webp 1x, assets/img/reviews/review-10-small@2x.webp 2x, assets/img/reviews/review-10-small@3x.webp 3x">
                   <source type="image/webp" media="(max-width: 1200px)" srcset="assets/img/reviews/review-10-middle.webp 1x, assets/img/reviews/review-10-middle@2x.webp 2x, assets/img/reviews/review-10-middle@3x.webp 3x">
                   <source type="image/webp" srcset="assets/img/reviews/review-10-large.webp 1x, assets/img/reviews/review-10-large@2x.webp 2x, assets/img/reviews/review-10-large@3x.webp 3x">
-                  <source media="(max-width: 960px)" src="assets/img/reviews/review-10-small.png">
-                  <source media="(max-width: 1200px)" src="assets/img/reviews/review-10-middle.png">
+                  <source media="(max-width: 960px)" srcset="assets/img/reviews/review-10-small.png">
+                  <source media="(max-width: 1200px)" srcset="assets/img/reviews/review-10-middle.png">
                   <img src="assets/img/reviews/review-10-large.png" alt="Фото компании.">
                 </picture>
               </div>
@@ -2003,8 +1879,8 @@
                   <source type="image/webp" media="(max-width: 960px)" srcset="assets/img/reviews/review-11-small.webp 1x, assets/img/reviews/review-11-small@2x.webp 2x, assets/img/reviews/review-11-small@3x.webp 3x">
                   <source type="image/webp" media="(max-width: 1200px)" srcset="assets/img/reviews/review-11-middle.webp 1x, assets/img/reviews/review-11-middle@2x.webp 2x, assets/img/reviews/review-11-middle@3x.webp 3x">
                   <source type="image/webp" srcset="assets/img/reviews/review-11-large.webp 1x, assets/img/reviews/review-11-large@2x.webp 2x, assets/img/reviews/review-11-large@3x.webp 3x">
-                  <source media="(max-width: 960px)" src="assets/img/reviews/review-11-small.png">
-                  <source media="(max-width: 1200px)" src="assets/img/reviews/review-11-middle.png">
+                  <source media="(max-width: 960px)" srcset="assets/img/reviews/review-11-small.png">
+                  <source media="(max-width: 1200px)" srcset="assets/img/reviews/review-11-middle.png">
                   <img src="assets/img/reviews/review-11-large.png" alt="Фото компании.">
                 </picture>
               </div>
@@ -2023,8 +1899,8 @@
                   <source type="image/webp" media="(max-width: 960px)" srcset="assets/img/reviews/review-12-small.webp 1x, assets/img/reviews/review-12-small@2x.webp 2x, assets/img/reviews/review-12-small@3x.webp 3x">
                   <source type="image/webp" media="(max-width: 1200px)" srcset="assets/img/reviews/review-12-middle.webp 1x, assets/img/reviews/review-12-middle@2x.webp 2x, assets/img/reviews/review-12-middle@3x.webp 3x">
                   <source type="image/webp" srcset="assets/img/reviews/review-12-large.webp 1x, assets/img/reviews/review-12-large@2x.webp 2x, assets/img/reviews/review-12-large@3x.webp 3x">
-                  <source media="(max-width: 960px)" src="assets/img/reviews/review-12-small.png">
-                  <source media="(max-width: 1200px)" src="assets/img/reviews/review-12-middle.png">
+                  <source media="(max-width: 960px)" srcset="assets/img/reviews/review-12-small.png">
+                  <source media="(max-width: 1200px)" srcset="assets/img/reviews/review-12-middle.png">
                   <img src="assets/img/reviews/review-12-large.png" alt="Фото компании.">
                 </picture>
               </div>
@@ -2043,8 +1919,8 @@
                   <source type="image/webp" media="(max-width: 960px)" srcset="assets/img/reviews/review-13-small.webp 1x, assets/img/reviews/review-13-small@2x.webp 2x, assets/img/reviews/review-13-small@3x.webp 3x">
                   <source type="image/webp" media="(max-width: 1200px)" srcset="assets/img/reviews/review-13-middle.webp 1x, assets/img/reviews/review-13-middle@2x.webp 2x, assets/img/reviews/review-13-middle@3x.webp 3x">
                   <source type="image/webp" srcset="assets/img/reviews/review-13-large.webp 1x, assets/img/reviews/review-13-large@2x.webp 2x, assets/img/reviews/review-13-large@3x.webp 3x">
-                  <source media="(max-width: 960px)" src="assets/img/reviews/review-13-small.png">
-                  <source media="(max-width: 1200px)" src="assets/img/reviews/review-13-middle.png">
+                  <source media="(max-width: 960px)" srcset="assets/img/reviews/review-13-small.png">
+                  <source media="(max-width: 1200px)" srcset="assets/img/reviews/review-13-middle.png">
                   <img src="assets/img/reviews/review-13-large.png" alt="Фото компании.">
                 </picture>
               </div>
@@ -2063,8 +1939,8 @@
                   <source type="image/webp" media="(max-width: 960px)" srcset="assets/img/reviews/review-14-small.webp 1x, assets/img/reviews/review-14-small@2x.webp 2x, assets/img/reviews/review-14-small@3x.webp 3x">
                   <source type="image/webp" media="(max-width: 1200px)" srcset="assets/img/reviews/review-14-middle.webp 1x, assets/img/reviews/review-14-middle@2x.webp 2x, assets/img/reviews/review-14-middle@3x.webp 3x">
                   <source type="image/webp" srcset="assets/img/reviews/review-14-large.webp 1x, assets/img/reviews/review-14-large@2x.webp 2x, assets/img/reviews/review-14-large@3x.webp 3x">
-                  <source media="(max-width: 960px)" src="assets/img/reviews/review-14-small.png">
-                  <source media="(max-width: 1200px)" src="assets/img/reviews/review-14-middle.png">
+                  <source media="(max-width: 960px)" srcset="assets/img/reviews/review-14-small.png">
+                  <source media="(max-width: 1200px)" srcset="assets/img/reviews/review-14-middle.png">
                   <img src="assets/img/reviews/review-14-large.png" alt="Фото компании.">
                 </picture>
               </div>
@@ -2083,8 +1959,8 @@
                   <source type="image/webp" media="(max-width: 960px)" srcset="assets/img/reviews/review-15-small.webp 1x, assets/img/reviews/review-15-small@2x.webp 2x, assets/img/reviews/review-15-small@3x.webp 3x">
                   <source type="image/webp" media="(max-width: 1200px)" srcset="assets/img/reviews/review-15-middle.webp 1x, assets/img/reviews/review-15-middle@2x.webp 2x, assets/img/reviews/review-15-middle@3x.webp 3x">
                   <source type="image/webp" srcset="assets/img/reviews/review-15-large.webp 1x, assets/img/reviews/review-15-large@2x.webp 2x, assets/img/reviews/review-15-large@3x.webp 3x">
-                  <source media="(max-width: 960px)" src="assets/img/reviews/review-15-small.png">
-                  <source media="(max-width: 1200px)" src="assets/img/reviews/review-15-middle.png">
+                  <source media="(max-width: 960px)" srcset="assets/img/reviews/review-15-small.png">
+                  <source media="(max-width: 1200px)" srcset="assets/img/reviews/review-15-middle.png">
                   <img src="assets/img/reviews/review-15-large.png" alt="Фото компании.">
                 </picture>
               </div>
