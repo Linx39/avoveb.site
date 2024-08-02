@@ -81,10 +81,10 @@ export const optimizeImages = () => {
 
 export const createWebp = () => {
   return gulp.src([
-    `assets/img/promo-bg/*.png`,
+    `assets/img/offer/*.png`,
   ])
-    .pipe(webp({quality: 90}))
-    .pipe(gulp.dest(`assets/img/promo-bg`))
+    .pipe(webp({quality: 100}))
+    .pipe(gulp.dest(`assets/img/offer`))
 }
 
 // Copy

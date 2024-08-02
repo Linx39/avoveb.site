@@ -505,7 +505,7 @@ legend {
     font-weight: 800;
     text-align: center;
 
-    color: var(--white-pallet-100);
+    color: #ffffff;
     background-color: var(--green-pallet-500);
     border-radius: var(--xl-button-radius);
 
@@ -1924,7 +1924,6 @@ legend {
     width: var(--xl-column-3);
     min-height: 100%;
     
-    color: var(--white-pallet-100);
     background: var(--green-pallet-500);
 }
 
@@ -3145,8 +3144,10 @@ legend {
 }
 
 .stages__item_current {
-    color: var(--white-pallet-100);
+    color: var(--brown-pallet-100);
     background-color: var(--green-pallet-500);
+
+    transition: background-color .8s;
 }
 
 .stages__item__number {
@@ -3225,7 +3226,7 @@ legend {
 }
 
 .stages__item_current .stages__item__listItem::before {
-    background-color: var(--white-pallet-100);
+    background-color: var(--brown-pallet-100);
 }
 
 .stages__list__decor {

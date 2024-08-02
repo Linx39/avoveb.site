@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/hystmodal.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="preload" href="assets/fonts/Manrope-Medium.ttf" as="font" type="font/ttf">
-    <link rel="preload" href="assets/fonts/Dudka-Bold.ttf" as="font" type="font/ttf">
-    <link rel="preload" href="assets/fonts/Manrope-ExtraBold.ttf" as="font" type="font/ttf">
-    <link rel="preload" href="assets/fonts/Manrope-Regular.ttf" as="font" type="font/ttf">
+    <link rel="preload" href="assets/fonts/Manrope-Medium.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="assets/fonts/Dudka-Bold.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="assets/fonts/Manrope-ExtraBold.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="assets/fonts/Manrope-Regular.ttf" as="font" type="font/ttf" crossorigin>
     <title>Вкус бани</title>
   </head>
 
@@ -318,8 +318,10 @@
             <div class="offer__list container__mobile">
               <div class="offer__card card">
                 <picture>
-                  <source type="image/webp" srcset="assets/img/offer/offer-1.webp 1x, assets/img/offer/offer-1@2x.webp 2x, assets/img/offer/offer-1@3x.webp 3x">
-                  <img class="offer__card__img card__img" src="assets/img/offer/offer-1.png" alt="Изображение парения.">
+                  <source type="image/webp" media="(max-width: 960px)" srcset="assets/img/offer/offer-1-small.webp 1x, assets/img/offer/offer-1-small@2x.webp 2x, assets/img/offer/offer-1-small@3x.webp 3x">
+                  <source type="image/webp" srcset="assets/img/offer/offer-1-large.webp 1x, assets/img/offer/offer-1-large@2x.webp 2x, assets/img/offer/offer-1-large@3x.webp 3x">
+                  <source media="(max-width: 960px)" srcset="assets/img/offer/offer-1-small.png">
+                  <img class="offer__card__img card__img" src="assets/img/offer/offer-1-large.png" alt="Изображение парения.">
                 </picture>
                   
                 <p class="offer__card__description">
@@ -331,8 +333,10 @@
               </div>
               <div class="offer__card card">
                 <picture>
-                  <source type="image/webp" srcset="assets/img/offer/offer-2.webp 1x, assets/img/offer/offer-2@2x.webp 2x, assets/img/offer/offer-2@3x.webp 3x">
-                  <img class="offer__card__img card__img" src="assets/img/offer/offer-2.png" alt="Изображение парения.">
+                  <source type="image/webp" media="(max-width: 960px)" srcset="assets/img/offer/offer-2-small.webp 1x, assets/img/offer/offer-2-small@2x.webp 2x, assets/img/offer/offer-2-small@3x.webp 3x">
+                  <source type="image/webp" srcset="assets/img/offer/offer-2-large.webp 1x, assets/img/offer/offer-2-large@2x.webp 2x, assets/img/offer/offer-2-large@3x.webp 3x">
+                  <source media="(max-width: 960px)" srcset="assets/img/offer/offer-2-small.png">
+                  <img class="offer__card__img card__img" src="assets/img/offer/offer-2-large.png" alt="Изображение парения.">
                 </picture>
                   
                 <p class="offer__card__description">
@@ -343,10 +347,12 @@
                   праздников.
                 </p>
               </div>
-              <div class="offer__card card">                
+              <div class="offer__card card"> 
                 <picture>
-                  <source type="image/webp" srcset="assets/img/offer/offer-3.webp 1x, assets/img/offer/offer-3@2x.webp 2x, assets/img/offer/offer-3@3x.webp 3x">
-                  <img class="offer__card__img card__img" src="assets/img/offer/offer-3.png" alt="Изображение парения.">
+                  <source type="image/webp" media="(max-width: 960px)" srcset="assets/img/offer/offer-3-small.webp 1x, assets/img/offer/offer-3-small@2x.webp 2x, assets/img/offer/offer-3-small@3x.webp 3x">
+                  <source type="image/webp" srcset="assets/img/offer/offer-3-large.webp 1x, assets/img/offer/offer-3-large@2x.webp 2x, assets/img/offer/offer-3-large@3x.webp 3x">
+                  <source media="(max-width: 960px)" srcset="assets/img/offer/offer-3-small.png">
+                  <img class="offer__card__img card__img" src="assets/img/offer/offer-3-large.png" alt="Изображение парения.">
                 </picture>
                                     
                 <p class="offer__card__description">
