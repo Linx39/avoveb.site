@@ -37,9 +37,9 @@ const initServisesSwiper = () => {
   
     pagination: {
       el: ".services__swiper__pagination",
-      bulletClass: 'bullet',
-      bulletActiveClass: 'bullet_current',
-      clickable: true,
+      bulletClass: 'slider__bullet',
+      bulletActiveClass: 'slider__bullet_current',
+      // clickable: true,
     },
   });
 
@@ -86,32 +86,26 @@ new Swiper(".reviews__swiper", {
   breakpoints: {
     320: {
       slidesPerView: 1,
-      slidesPerGroup: 1,
       spaceBetween: 20,
     },
     560: {
       slidesPerView: 2,
-      slidesPerGroup: 2,
       spaceBetween: 16,
     },
     760: {
       slidesPerView: 3,
-      slidesPerGroup: 3,
       spaceBetween: 16,
     },
     960: {
       slidesPerView: 3,
-      slidesPerGroup: 3,
       spaceBetween: 20,
     },
     1200: {
       slidesPerView: 3,
-      slidesPerGroup: 3,
       spaceBetween: 28,
     },
     1700: {
       slidesPerView: 3,
-      slidesPerGroup: 3,
       spaceBetween: 32,
     },
   },
@@ -119,19 +113,20 @@ new Swiper(".reviews__swiper", {
   navigation: {
     prevEl: ".reviews__swiper__buttonPrev",
     nextEl: ".reviews__swiper__buttonNext",
+    disabledClass: ".navigationButton_disabled",
   },
 
   pagination: {
     el: ".reviews__swiper__pagination",
-    bulletClass: 'bullet',
-    bulletActiveClass: 'bullet_current',
-    clickable: true,
+    bulletClass: 'slider__bullet',
+    bulletActiveClass: 'slider__bullet_current',
+    // clickable: true,
   },
 });
 
 new Swiper(".certificates__swiper", {
-  loop: true,
-  loopAddBlankSlides: false,
+  // loop: true,
+  // loopAddBlankSlides: false,
 
   breakpoints: {
     320: {
@@ -169,13 +164,14 @@ new Swiper(".certificates__swiper", {
   navigation: {
     prevEl: ".certificates__swiper__buttonPrev",
     nextEl: ".certificates__swiper__buttonNext",
+    disabledClass: "navigationButton_transparent_disabled",
   },
 
   pagination: {
     el: ".certificates__swiper__pagination",
-    bulletClass: 'bullet',
-    bulletActiveClass: 'bullet_current',
-    clickable: true,
+    bulletClass: 'slider__bullet',
+    bulletActiveClass: 'slider__bullet_current',
+    // clickable: true,
   },
 });
 

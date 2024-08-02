@@ -505,7 +505,7 @@ legend {
     font-weight: 800;
     text-align: center;
 
-    color: #ffffff;
+    color: var(--white-pallet-100);
     background-color: var(--green-pallet-500);
     border-radius: var(--xl-button-radius);
 
@@ -993,41 +993,6 @@ legend {
     }
 }
 
-/* Буллеты */
-.bullet {
-    flex-shrink: 0;
-    
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    border: 2px solid var(--brown-pallet-400);
-    background: inherit;
-
-    cursor: pointer;
-}
-
-.bullet:hover,
-.bullet:focus-visible {
-    background: var(--brown-pallet-400);
-    opacity: .8;
-    outline: none;
-}
-
-.bullet:active {
-    background: var(--brown-pallet-400);
-}
-
-.bullet_current {
-    background: var(--brown-pallet-400);
-}
-
-@media (max-width: 960px) {
-    .bullet {
-        width: 12px;
-        height: 12px
-    }
-}
-
 /* Кнопки слайдера вправо влево */
 .navigationButton {
     flex-shrink: 0;
@@ -1079,6 +1044,11 @@ legend {
     max-width: 69%;
     max-height: 69%;
     fill: var(--brown-pallet-400);
+}
+
+.navigationButton_transparent_disabled {
+    opacity: .3;
+    cursor: initial;
 }
 
 .navigationButton_light {
@@ -1133,7 +1103,7 @@ legend {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 60px;
+    gap: 40px;
 }
 
 .slider__buttonNext,
@@ -1166,7 +1136,21 @@ legend {
     flex-wrap: wrap;
     column-gap: 12px;
     row-gap: 6px;
-    /* max-width: 160px; */
+}
+
+.slider__bullet {
+    flex-shrink: 0;
+    
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid var(--brown-pallet-400);
+    background: inherit;
+}
+
+.slider__bullet_current {
+    background: var(--brown-pallet-400);
+    opacity: .8;
 }
 
 @media (max-width: 1200px) {
@@ -1186,16 +1170,41 @@ legend {
             display: block;
         }
     }
+
+    .slider__bullet {
+        width: 12px;
+        height: 12px;
+    }
 }
 
 @media (max-width: 960px) {
     .slider__controls {
-        gap: 15px;
+        gap: 24px;
     }
 
     .slider__pagination {
         column-gap: 6px;
-        row-gap: 4px;
+    }
+
+    .slider__bullet {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+@media (max-width: 560px) {
+    .slider__controls {
+        gap: 12px;
+    }
+
+    .slider__pagination {
+        column-gap: 4px;
+    }
+
+    .slider__bullet {
+        width: 6px;
+        height: 6px;
+        border: 1px solid var(--brown-pallet-400);
     }
 }
 
@@ -1915,6 +1924,7 @@ legend {
     width: var(--xl-column-3);
     min-height: 100%;
     
+    color: var(--white-pallet-100);
     background: var(--green-pallet-500);
 }
 
@@ -3135,10 +3145,8 @@ legend {
 }
 
 .stages__item_current {
-    color: var(--brown-pallet-100);
+    color: var(--white-pallet-100);
     background-color: var(--green-pallet-500);
-
-    transition: background-color .8s;
 }
 
 .stages__item__number {
@@ -3217,7 +3225,7 @@ legend {
 }
 
 .stages__item_current .stages__item__listItem::before {
-    background-color: var(--brown-pallet-100);
+    background-color: var(--white-pallet-100);
 }
 
 .stages__list__decor {
