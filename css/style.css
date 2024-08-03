@@ -1032,6 +1032,15 @@ legend {
     box-shadow: 0px 4px 20px 0px #31080054;
 }
 
+.navigationButton_green:hover,
+.navigationButton_green:focus-visible {
+    opacity: .7;
+}
+
+.navigationButton_green:active {
+    opacity: .5;
+}
+
 .navigationButton_green svg {
     fill: var(--brown-pallet-100);
 }
@@ -1051,47 +1060,19 @@ legend {
     cursor: initial;
 }
 
-.navigationButton_light {
-    background-color: var(--green-pallet-500);
-    box-shadow: 0px 4px 20px 0px #31080054;
-    opacity: .6;
+.navigationButton_transparent:not(navigationButton_transparent_disabled):hover svg,
+.navigationButton_transparent:not(navigationButton_transparent_disabled):focus-visible svg {
+    opacity: .7;
 }
 
-.navigationButton_light svg {
-    fill: var(--brown-pallet-100);
+.navigationButton_transparent:not(navigationButton_transparent_disabled):active svg {
+    opacity: .5;
 }
 
 @media (max-width: 960px) {
     .navigationButton_green {
         box-shadow: 0px 4px 16px 0px #31080054;
     }
-}
-
-.navigationButton_green:hover,
-.navigationButton_green:focus-visible {
-    opacity: .7;
-}
-
-.navigationButton_green:active {
-    opacity: .5;
-}
-
-.navigationButton_transparent:hover svg,
-.navigationButton_transparent:focus-visible svg {
-    opacity: .7;
-}
-
-.navigationButton_transparent:active svg {
-    opacity: .5;
-}
-
-.navigationButton_light:hover,
-.navigationButton_light:focus-visible {
-    opacity: .9;
-}
-
-.navigationButton_light:active {
-    opacity: .6;
 }
 
 /* Слайдер */
@@ -3613,19 +3594,12 @@ legend {
     transform: rotateX(80deg) translateY(-110%);
     transition: transform 1s ease, opacity .5s ease;
     transition-delay: 0s;
-
-    /* opacity: 0;
-    transform: scale(.6);
-    transition: transform .6s ease, opacity .6s ease; */
 }
 
 .hystmodal--active .modalAnimation {
     opacity: 1;
     transform: rotateX(0deg) translateY(0);
-    transition-delay: .3s;
-
-    /* opacity: 1;
-    transform: scale(1); */    
+    transition-delay: .25s; 
 }
 
 .galleryAnimation {
@@ -3648,7 +3622,7 @@ legend {
 
     transform: translateX(110%);
     opacity: 0;
-    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    /* transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1); */
 }
 
 .hystmodal--active .sidebarAnimation {    
@@ -5204,6 +5178,19 @@ legend {
 .scrollUp_show {
     opacity: 1;
     transform: translateY(0);
+}
+
+.scrollUp__button {
+    opacity: .6;
+}
+
+.scrollUp__button:hover,
+.scrollUp__button:focus-visible {
+    opacity: .9;
+}
+
+.scrollUp__button:active {
+    opacity: .6;
 }
 
 @media (max-width: 1200px) {

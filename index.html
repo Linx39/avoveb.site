@@ -414,7 +414,7 @@
         <div class="hystmodal" id="certificates" aria-hidden="true">
           <div class="hystmodal__wrap">
             <div class="certificatesModal modal modalAnimation hystmodal__window" role="dialog" aria-modal="true">
-              <button class="certificatesModal__closeButton modal__closeButton closeButton" type="button">
+              <button class="certificatesModal__closeButton modal__closeButton closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
@@ -425,7 +425,7 @@
                 <div class="certificates__swiper slider swiper">
                   <div class="certificates__list swiper-wrapper">
                     <div class="certificates__slide swiper-slide">
-                      <a class="certificates__card" href="#certificate-01">
+                      <a class="certificates__card" href="#certificate-01" data-sertificate="#certificate-01">
                         <div class="certificates__img">
                           <picture>
                             <source type="image/webp" media="(max-width: 960px)" srcset="assets/img/certificates/certificate-01-mini.webp 1x, assets/img/certificates/certificate-01-mini@2x.webp 2x, assets/img/certificates/certificate-01-mini@3x.webp 3x">
@@ -437,7 +437,7 @@
                       </a>
                     </div>
                     <div class="certificates__slide swiper-slide">
-                      <a class="certificates__card" href="#certificate-02">
+                      <a class="certificates__card" href="#certificate-02" data-sertificate="#certificate-02">
                         <div class="certificates__img">
                           <picture>
                             <source type="image/webp" media="(max-width: 960px)" srcset="assets/img/certificates/certificate-02-mini.webp 1x, assets/img/certificates/certificate-02-mini@2x.webp 2x, assets/img/certificates/certificate-02-mini@3x.webp 3x">
@@ -449,7 +449,7 @@
                       </a>
                     </div>
                     <div class="certificates__slide swiper-slide">
-                      <a class="certificates__card" href="#certificate-03">
+                      <a class="certificates__card" href="#certificate-03" data-sertificate="#certificate-03">
                         <div class="certificates__img">
                           <picture>
                             <source type="image/webp" media="(max-width: 960px)" srcset="assets/img/certificates/certificate-03-mini.webp 1x, assets/img/certificates/certificate-03-mini@2x.webp 2x, assets/img/certificates/certificate-03-mini@3x.webp 3x">
@@ -461,7 +461,7 @@
                       </a>
                     </div>
                     <div class="certificates__slide swiper-slide">
-                      <a class="certificates__card" href="#certificate-04">
+                      <a class="certificates__card" href="#certificate-04" data-sertificate="#certificate-04">
                         <div class="certificates__img">
                           <picture>
                             <source type="image/webp" media="(max-width: 960px)" srcset="assets/img/certificates/certificate-04-mini.webp 1x, assets/img/certificates/certificate-04-mini@2x.webp 2x, assets/img/certificates/certificate-04-mini@3x.webp 3x">
@@ -473,7 +473,7 @@
                       </a>
                     </div>
                     <div class="certificates__slide swiper-slide">
-                      <a class="certificates__card" href="#certificate-05">
+                      <a class="certificates__card" href="#certificate-05" data-sertificate="#certificate-05">
                         <div class="certificates__img">
                           <picture>
                             <source type="image/webp" media="(max-width: 960px)" srcset="assets/img/certificates/certificate-05-mini.webp 1x, assets/img/certificates/certificate-05-mini@2x.webp 2x, assets/img/certificates/certificate-05-mini@3x.webp 3x">
@@ -485,7 +485,7 @@
                       </a>
                     </div>
                     <div class="certificates__slide swiper-slide">
-                      <a class="certificates__card" href="#certificate-06">
+                      <a class="certificates__card" href="#certificate-06" data-sertificate="#certificate-06">
                         <div class="certificates__img">
                           <picture>
                             <source type="image/webp" media="(max-width: 960px)" srcset="assets/img/certificates/certificate-06-mini.webp 1x, assets/img/certificates/certificate-06-mini@2x.webp 2x, assets/img/certificates/certificate-06-mini@3x.webp 3x">
@@ -497,7 +497,7 @@
                       </a>
                     </div>
                     <div class="certificates__slide swiper-slide">
-                      <a class="certificates__card" href="#certificate-07">
+                      <a class="certificates__card" href="#certificate-07" data-sertificate="#certificate-07">
                         <div class="certificates__img">
                           <picture>
                             <source type="image/webp" media="(max-width: 960px)" srcset="assets/img/certificates/certificate-07-mini.webp 1x, assets/img/certificates/certificate-07-mini@2x.webp 2x, assets/img/certificates/certificate-07-mini@3x.webp 3x">
@@ -2095,7 +2095,7 @@
     </footer>
 
     <div class="scrollUp">
-      <button class="scrollUp__button navigationButton navigationButton_light" type="button">
+      <button class="scrollUp__button navigationButton navigationButton_green" type="button">
         <svg style="width: 27px; height: 48px; transform: rotate(90deg) translateX(-10%);">
           <use href="#arrow"></use>
         </svg>

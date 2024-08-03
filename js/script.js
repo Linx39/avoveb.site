@@ -39,7 +39,6 @@ const initServisesSwiper = () => {
       el: ".services__swiper__pagination",
       bulletClass: 'slider__bullet',
       bulletActiveClass: 'slider__bullet_current',
-      // clickable: true,
     },
   });
 
@@ -120,7 +119,6 @@ new Swiper(".reviews__swiper", {
     el: ".reviews__swiper__pagination",
     bulletClass: 'slider__bullet',
     bulletActiveClass: 'slider__bullet_current',
-    // clickable: true,
   },
 });
 
@@ -171,7 +169,6 @@ new Swiper(".certificates__swiper", {
     el: ".certificates__swiper__pagination",
     bulletClass: 'slider__bullet',
     bulletActiveClass: 'slider__bullet_current',
-    // clickable: true,
   },
 });
 
@@ -213,74 +210,69 @@ links.forEach(link => {
   });
 })
 
-// Сдвиг main относительно фиксированной шапки
-// const main = document.querySelector('.page__main');
 
-// const setMainMarginTop = () => {
-//   const headerHeigt = headerMenu.clientHeight - 5;
-//   main.style.marginTop = `${headerHeigt}px`;
-// }
+// Управление анимацией модальных окон
+const MODAL_ANIMATION_CLASS = 'modalAnimation';
 
-// window.addEventListener('load', () => {
-//   setMainMarginTop();
-// })
+setAnimationTrue = (modal, animationClass) => {
+  if (modal._modalBlock) {
+    modal._modalBlock.classList.add(animationClass);
+    modal.config.waitTransitions = true;
+  }
+}
 
-// window.addEventListener('resize', () => {
-//   setMainMarginTop();
-// });
-
-/* Закрытие модального окна услуг перед открытием формы заявки */
-// const servicesModalElements = document.querySelectorAll('.servicesModal');
-
-// servicesModalElements.forEach(item => {
-//   const servicesModalButton = item.querySelector('.servicesModal__button');
-//   servicesModalButton.addEventListener('click', () => {
-//    servicesModal.close();
-//   })
-// })
-
-/* Закрытие модального окна увеличенной картинки */
-// const gallery = document.querySelectorAll('.reviewModal');
-// const gallery = document.querySelectorAll('.gallery');
-// gallery.forEach(item => {
-//   const btn = item.querySelector('.reviewModal__close');
-//   btn.addEventListener('click', () => {    
-//     // reviewModal.close();
-//     // certificatesModal.open();
-//   })
-
-// const servicesCardButtons = document.querySelectorAll('.services__card');
-
-// servicesCardButtons.forEach(btn => {
-//   btn.addEventListener('click', () => {
-//     const id = btn.getAttribute('href');
-
-//     // setTimeout(() => {
-//       servicesModal.open(id);      
-//     // }, 500);
-//   })
-// })
-
-
-// const certificatesCardButtons = document.querySelectorAll('.certificates__card');
-
-// certificatesCardButtons.forEach(btn => {
-//   btn.addEventListener('click', () => {
-//     const id = btn.getAttribute('href');
-
-//     // setTimeout(() => {
-//       certificateModal.open(id);      
-//     // }, 520);
-//   })
-// })
+setAnimationFalse = (modal, animationClass) => {
+  if (modal._modalBlock) {
+    modal._modalBlock.classList.remove(animationClass);
+    modal.config.waitTransitions = false;
+  }
+}
 
 // Инициализация модальных окон
 const fixedElements = ['.scrollUp'];
 
+const servicesModal = new HystModal({
+  linkAttributeName: "data-services",
+  fixedSelectors: fixedElements,
+  waitTransitions: true,
+});
+
+const feedbackModal = new HystModal({
+  linkAttributeName: "data-feedback",
+  fixedSelectors: fixedElements,
+  waitTransitions: true,
+  beforeOpen: () => {
+    setAnimationFalse(servicesModal, MODAL_ANIMATION_CLASS);
+    servicesModal.close();
+  },
+  afterClose: () => {
+    setAnimationTrue(servicesModal, MODAL_ANIMATION_CLASS);
+  },
+});
+
+const certificatesModal = new HystModal({
+  linkAttributeName: "data-certificates",
+  fixedSelectors: fixedElements,
+  waitTransitions: true,
+});
+
+const certificateModal = new HystModal({
+  linkAttributeName: "data-sertificate",
+  fixedSelectors: fixedElements,
+  waitTransitions: true,
+  beforeOpen: () => {
+    setAnimationFalse(certificatesModal, MODAL_ANIMATION_CLASS);
+    certificatesModal.close();
+  },
+  afterClose: () => {
+    certificatesModal.open();
+    setAnimationTrue(certificatesModal, MODAL_ANIMATION_CLASS);
+  },
+});
+
 const sidebarModal = new HystModal({
   linkAttributeName: "data-sidebar",
   fixedSelectors: fixedElements,
-  // waitTransitions: true,
 })
 
 const reviewModal = new HystModal({
@@ -289,69 +281,6 @@ const reviewModal = new HystModal({
   waitTransitions: true,
 });
 
-const servicesModal = new HystModal({
-  linkAttributeName: "data-services",
-  fixedSelectors: fixedElements,
-  // waitTransitions: true,
-});
-
-const feedbackModal = new HystModal({
-  linkAttributeName: "data-feedback",
-  fixedSelectors: fixedElements,
-  // waitTransitions: true,
-});
-
-const certificatesModal = new HystModal({
-  linkAttributeName: "data-certificates",
-  fixedSelectors: fixedElements,
-  // waitTransitions: true,
-});
-
-const certificateModal = new HystModal({
-  linkAttributeName: "data-sertificate",
-  fixedSelectors: fixedElements,
-  // waitTransitions: true,
-  afterClose: () => certificatesModal.open(),
-});
-
-// Закрытие модального окна сертификатов
-const MODAL_ANIMATION_CLASS = 'modalAnimation';
-const certificatesElement = document.querySelector('.certificatesModal');
-const certificatesCloseButton = certificatesElement.querySelector('.certificatesModal__closeButton');
-const certificatesCardButtons = certificatesElement.querySelectorAll('.certificates__card');
-
-// const certificateElement = document.querySelector('.certificateModal');
-// const certificateCloseButtons = certificateElement.querySelectorAll('.certificateModal__closeButton');
-
-certificatesCardButtons.forEach(btn => {
-  btn.addEventListener('click', (evt) => {
-    evt.preventDefault;
-    certificatesElement.classList.remove(MODAL_ANIMATION_CLASS);
-    certificatesModal.config.waitTransitions = false;
-    certificatesModal.close();
-    const id = btn.getAttribute('href');
-    certificateModal.open(id);
-  })
-})
-
-// certificateCloseButtons.forEach(btn => {
-//   btn.addEventListener('click', (evt) => {
-//     evt.preventDefault;
-//     certificateModal.close();
-//   })
-// })
-
-closeCertificates = () => {
-  certificatesElement.classList.add(MODAL_ANIMATION_CLASS);
-  certificatesModal.config.waitTransitions = true;
-  certificatesModal.close();
-  certificatesModal.config.waitTransitions = false;
-}
-
-certificatesCloseButton.addEventListener('click', (evt) => {
-  evt.preventDefault;
-  closeCertificates();
-})
 
 // Блок этапы
 const STAGES_ITEM_CURRENT_CLASS = 'stages__item_current';
@@ -370,6 +299,8 @@ stagesItems.forEach(item => {
   })
 });
 
+
+// Скролл к началу страницы
 const SCROLL_UP_SHOW_CLASS = 'scrollUp_show';
 const SCROLL_HEIGHT = window.innerHeight;
 
