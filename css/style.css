@@ -1060,12 +1060,12 @@ legend {
     cursor: initial;
 }
 
-.navigationButton_transparent:not(navigationButton_transparent_disabled):hover svg,
-.navigationButton_transparent:not(navigationButton_transparent_disabled):focus-visible svg {
+.navigationButton_transparent:not(.navigationButton_transparent_disabled):hover svg,
+.navigationButton_transparent:not(.navigationButton_transparent_disabled):focus-visible svg {
     opacity: .7;
 }
 
-.navigationButton_transparent:not(navigationButton_transparent_disabled):active svg {
+.navigationButton_transparent:not(.navigationButton_transparent_disabled):active svg {
     opacity: .5;
 }
 
@@ -3614,15 +3614,9 @@ legend {
 }
 
 .sidebarAnimation {
-    position: relative;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: auto;
-
     transform: translateX(110%);
     opacity: 0;
-    /* transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1); */
+    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .hystmodal--active .sidebarAnimation {    
@@ -4638,7 +4632,7 @@ legend {
 }
 
 .sidebarModal__decor__item__hogweed-2 {
-    top: 83%;
+    top: 82%;
     left: 10px;
 
     width: 125px;

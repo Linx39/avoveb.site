@@ -70,7 +70,6 @@ window.addEventListener('resize', () => {
   setSwiperMode();
 });
 
-
 new Swiper(".reviews__swiper", {
   watchSlidesProgress: true,
   slideVisibleClass: 'review__slide_visible',
@@ -176,13 +175,13 @@ new Swiper(".certificates__swiper", {
 // Сайдбар
 const headerMenu = document.querySelector('.header__menu');
 const sidebar = document.querySelector('.sidebar');
-const links = sidebar.querySelectorAll('.sidebar__link');
+const sidebarLinks = sidebar.querySelectorAll('.sidebar__link');
 
-const getElementByLink = (link) => document.querySelector(link.getAttribute('href'));
+const getElementByHref = (link) => document.querySelector(link.getAttribute('href'));
 
 const setScrollMarginTop = () => {
-  links.forEach(link => {    
-    const element = getElementByLink(link);
+  sidebarLinks.forEach(link => {    
+    const element = getElementByHref(link);
     const headerHeigt = headerMenu.clientHeight;
     element.style.scrollMarginTop = `${headerHeigt}px`;
   });
@@ -196,10 +195,14 @@ window.addEventListener('resize', () => {
   setScrollMarginTop();
 });
 
-links.forEach(link => {
+screen.addEventListener('orientationchange', function () {
+  setScrollMarginTop();
+});
+
+sidebarLinks.forEach(link => {
   link.addEventListener('click', (evt) => {
     evt.preventDefault();
-    const element = getElementByLink(link);
+    const element = getElementByHref(link);
 
     sidebarModal.close();
 
@@ -230,6 +233,11 @@ setAnimationFalse = (modal, animationClass) => {
 
 // Инициализация модальных окон
 const fixedElements = ['.scrollUp'];
+
+const sidebarModal = new HystModal({
+  linkAttributeName: "data-sidebar",
+  fixedSelectors: fixedElements,
+})
 
 const servicesModal = new HystModal({
   linkAttributeName: "data-services",
@@ -269,11 +277,6 @@ const certificateModal = new HystModal({
     setAnimationTrue(certificatesModal, MODAL_ANIMATION_CLASS);
   },
 });
-
-const sidebarModal = new HystModal({
-  linkAttributeName: "data-sidebar",
-  fixedSelectors: fixedElements,
-})
 
 const reviewModal = new HystModal({
   linkAttributeName: "data-review",
