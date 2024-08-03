@@ -173,7 +173,7 @@ new Swiper(".certificates__swiper", {
 
 
 // Сайдбар
-const headerMenu = document.querySelector('.header__menu');
+const headerMenu = document.querySelector('.header__topbar');
 const sidebar = document.querySelector('.sidebar');
 const sidebarLinks = sidebar.querySelectorAll('.sidebar__link');
 
@@ -285,24 +285,6 @@ const reviewModal = new HystModal({
 });
 
 
-// Блок этапы
-const STAGES_ITEM_CURRENT_CLASS = 'stages__item_current';
-const stagesItems = document.querySelectorAll('.stages__item');
-
-stagesItems.forEach(item => {
-  // const itemNumber = item.querySelector('.stages__item__number');
-
-  item.addEventListener('click', () => {
-    const itemCurrent = document.querySelector(`.${STAGES_ITEM_CURRENT_CLASS}`);
-
-    if(item !== itemCurrent) {
-      itemCurrent.classList.remove(STAGES_ITEM_CURRENT_CLASS);
-      item.classList.add(STAGES_ITEM_CURRENT_CLASS);
-    }
-  })
-});
-
-
 // Скролл к началу страницы
 const SCROLL_UP_SHOW_CLASS = 'scrollUp_show';
 const SCROLL_HEIGHT = window.innerHeight;
@@ -326,4 +308,37 @@ btnUp.addEventListener('click', (evt) => {
     top: 0, 
     behavior: 'smooth',
   });
+});
+
+
+// Блок этапы
+const STAGES_ITEM_CURRENT_CLASS = 'stages__item_current';
+const STAGES_ITEM_NEARBY_CLASS = 'stages__item_nearby';
+
+const stagesItems = document.querySelectorAll('.stages__item');
+
+stagesItems.forEach(item => {
+  item.addEventListener('click', () => {
+    const itemCurrent = document.querySelector(`.${STAGES_ITEM_CURRENT_CLASS}`);
+
+    if(item !== itemCurrent) {
+      stagesItems.forEach(item => item.classList.remove(STAGES_ITEM_NEARBY_CLASS));
+      
+      itemCurrent.classList.remove(STAGES_ITEM_CURRENT_CLASS);
+      item.classList.add(STAGES_ITEM_CURRENT_CLASS);
+
+      const stagesItemsArray = [...stagesItems];
+      const index = stagesItemsArray.indexOf(item);
+
+      console.log(stagesItemsArray[index + 1]);
+
+      if(stagesItemsArray[index - 1]) {
+        stagesItemsArray[index - 1].classList.add(STAGES_ITEM_NEARBY_CLASS);
+      }
+
+      if(stagesItemsArray[index + 1]) {
+        stagesItemsArray[index + 1].classList.add(STAGES_ITEM_NEARBY_CLASS);
+      }      
+    }
+  })
 });

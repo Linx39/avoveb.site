@@ -716,10 +716,6 @@ legend {
     top: 0;
     right: 0;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     border-radius: 50%;
 
     font-size: 20px;
@@ -743,13 +739,12 @@ legend {
     
     width: 100%;
     height: 100%;
-    padding: 10px;
 
     border-radius: 50%;
 }
 
-.circle__icon {
-    padding: 0;
+.circle__text {
+    padding: 10px;
 }
 
 .circle__icon svg {
@@ -1282,7 +1277,7 @@ legend {
 }
 
 /* Шапка */
-.header__menu {
+.header__topbar {
     position: fixed;
     top: 0;
     left: 0;
@@ -1379,7 +1374,7 @@ legend {
 }
 
 @media (max-width: 1200px) {
-    .header__menu {
+    .header__topbar {
         min-height: 139px;
     }
 
@@ -1424,7 +1419,7 @@ legend {
 }
 
 @media (max-width: 960px) {
-    .header__menu {
+    .header__topbar {
         min-height: 80px;
         padding: 15px 0;
     }
@@ -1468,7 +1463,7 @@ legend {
 }
 
 @media (max-width: 760px) {
-    .header__menu {
+    .header__topbar {
         padding: 10px 0;
     }
 
@@ -1509,7 +1504,7 @@ legend {
 }
 
 @media (max-width: 560px) {
-    .header__menu {
+    .header__topbar {
         min-height: 90px;
     }
 
@@ -1748,7 +1743,6 @@ legend {
 
 .promo__button:hover::after,
 .promo__button:focus-visible::after {
-    transition: opacity .5s;
     opacity: .5;
 }
 
@@ -1757,9 +1751,7 @@ legend {
 }
 
 .promo__button__icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
 
     width: 40px;
     height: 40px;
@@ -1768,12 +1760,17 @@ legend {
     border-radius: 50%;
 }
 
-.promo__button__icon svg {
-    max-width: 53%;
-    max-height: 53%;
+.promo__button__icon::after {
+    position: absolute;
+    content: "";
 
-    fill: var(--brown-pallet-100);
-    stroke: var(--brown-pallet-100);
+    width: 100%;
+    height: 100%;
+
+    background-image: url("../assets/img/icons/play.svg");
+    background-repeat: no-repeat;
+    background-size: 11px 12px;
+    background-position: center;
 
     transform: translateX(1px);
 }
@@ -1841,11 +1838,6 @@ legend {
         font-size: 18px;
         line-height: 22px;
     }
-
-    .promo__button__icon {
-        width: 32px;
-        height: 32px;
-    }
 }
 
 @media (max-width: 560px) {
@@ -1870,6 +1862,10 @@ legend {
     .promo__button__icon {
         width: 20px;
         height: 20px;
+    }
+
+    .promo__button__icon::after {        
+        background-size: 6px 7px;
     }
 }
 
@@ -2959,12 +2955,14 @@ legend {
     aspect-ratio: 111/100;
 }
 
-.reviews__card:focus-visible {
+.reviews__card:focus-visible,
+.reviews__card:hover  {
+    opacity: .8;
     outline: none;
 }
 
 .reviews__card:active {
-    opacity: .8;
+    opacity: .6;
 }
 
 .reviews__card__circle {
@@ -2975,17 +2973,17 @@ legend {
     transform: translateX(5%) translateY(-5%);
 }
 
-.reviews__card:hover .reviews__card__circle {
-    opacity: .8;
-}
+.reviews__card__circle__icon::after {
+    position: absolute;
+    content: "";
+    
+    width: 44%;
+    height: 44%;
 
-.reviews__card:active .reviews__card__circle {
-    opacity: .8;
-}
-
-.reviews__card__circle__icon svg {
-    max-width: 44%;
-    max-height: 44%;
+    background-image: url("../assets/img/icons/increase.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
 .reviews__card__img {
@@ -3001,16 +2999,6 @@ legend {
     width: 100%;
     height: 100%;
     object-fit: contain;
-}
-
-.reviews__card:hover .reviews__card__img,
-.reviews__card:focus-visible .reviews__card__img {
-    fill: var(--green-pallet-300);
-    opacity: .8;
-}
-
-.reviews__card:active .reviews__card__img {
-    fill: var(--green-pallet-300);
 }
 
 @media (max-width: 1500px) {    
@@ -3148,7 +3136,9 @@ legend {
     font-size: 32px;
     line-height: 40px;
     color: var(--brown-pallet-100);
-    background-color: var(--green-pallet-300);
+    background-color: var(--green-pallet-200);
+
+    transition: background-color .8s;
 
     cursor: pointer;
 }
@@ -3157,12 +3147,8 @@ legend {
     background-color: var(--green-pallet-500);
 }
 
-.stages__item_current ~ .stages__item .stages__item__number {
-    background-color: var(--green-pallet-200);
-}
-
-.stages__item_current + .stages__item .stages__item__number {
-    background-color: var(--green-pallet-300);
+.stages__item_nearby .stages__item__number {
+    background-color: var(--green-pallet-300);    
 }
 
 .stages__item_1 .stages__item__number {
@@ -3560,7 +3546,7 @@ legend {
 }
 
 /* Переопределенные стили hystmodal */
-.hystmodal__opened .header__menu {
+.hystmodal__opened .header__topbar {
   overflow-y: scroll;
 }
 
