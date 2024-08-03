@@ -173,7 +173,7 @@ new Swiper(".certificates__swiper", {
 
 
 // Сайдбар
-const headerMenu = document.querySelector('.header__topbar');
+const topbar = document.querySelector('.topbar');
 const sidebar = document.querySelector('.sidebar');
 const sidebarLinks = sidebar.querySelectorAll('.sidebar__link');
 
@@ -182,7 +182,7 @@ const getElementByHref = (link) => document.querySelector(link.getAttribute('hre
 const setScrollMarginTop = () => {
   sidebarLinks.forEach(link => {    
     const element = getElementByHref(link);
-    const headerHeigt = headerMenu.clientHeight;
+    const headerHeigt = topbar.clientHeight - 5;
     element.style.scrollMarginTop = `${headerHeigt}px`;
   });
 }
