@@ -195,7 +195,7 @@ window.addEventListener('resize', () => {
   setScrollMarginTop();
 });
 
-screen.addEventListener('orientationchange', function () {
+screen.addEventListener('orientationchange', () => {
   setScrollMarginTop();
 });
 
@@ -206,10 +206,15 @@ sidebarLinks.forEach(link => {
 
     sidebarModal.close();
 
-    element.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
+    const scrollToLinks = () => {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+
+    sidebarModal.afterClose = scrollToLinks();
+    
   });
 })
 
