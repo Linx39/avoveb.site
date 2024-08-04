@@ -744,13 +744,15 @@
                     <label class="feedback__form__label" for="userphone">
                       <input class="feedback__form__input" name="userphone" id="userphone" type="tel" placeholder="Номер телефона" required>
                     </label>
-                    <label class="feedback__form__control" for="privacy">
-                      <input class="feedback__form__control__input visually-hidden" type="checkbox" name="privacy" id="privacy" required tabindex="-1">
-                      <span class="feedback__form__control__mark" tabindex="0">
-                        <svg style="width: 23px; height: 16px;"><use href="#check"></use></svg>
-                      </span>
+                    <div class="feedback__form__privacy">
+                      <label class="feedback__form__control" for="privacy">
+                        <input class="feedback__form__control__input visually-hidden" type="checkbox" name="privacy" id="privacy" required tabindex="-1">
+                        <span class="feedback__form__control__mark" tabindex="0">
+                          <svg style="width: 23px; height: 16px;"><use href="#check"></use></svg>
+                        </span>
+                      </label>
                       Я даю своё согласие на обработку персональных данных
-                    </label>
+                    </div>
                   </div>
 
                   <button class="feedback__submitButton modal__bottomButton button button_left" type="submit">Оставить заявку</button>
@@ -930,7 +932,7 @@
         </div> 
       </section>
 
-      <section class="servicesProducts">  
+      <section class="products">  
         <div class="hystmodal" id="services-1" aria-hidden="true">
           <div class="hystmodal__wrap">
             <div class="productModal modal modalAnimation  hystmodal__window" role="dialog" aria-modal="true">

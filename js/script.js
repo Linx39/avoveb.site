@@ -4,10 +4,10 @@ const initServisesSwiper = () => {
     slideVisibleClass: 'services__slide_visible',
     loop: true,
     
-    // autoplay: {
-    //   delay: 2000,
-    //   pauseOnMouseEnter: true,
-    // },
+    autoplay: {
+      delay: 2000,
+      pauseOnMouseEnter: true,
+    },
 
     breakpoints: {
       320: {
@@ -76,10 +76,10 @@ new Swiper(".reviews__swiper", {
   loop: true,
   loopAddBlankSlides: false,
 
-  // autoplay: {
-  //   delay: 2000,
-  //   pauseOnMouseEnter: true,
-  // },
+  autoplay: {
+    delay: 2000,
+    pauseOnMouseEnter: true,
+  },
 
   breakpoints: {
     320: {
@@ -217,6 +217,7 @@ const scrollToLinks = (element) => {
   }
 }
 
+
 // Управление анимацией модальных окон
 const MODAL_ANIMATION_CLASS = 'modalAnimation';
 
@@ -295,7 +296,6 @@ const SCROLL_UP_SHOW_CLASS = 'scrollUp_show';
 const SCROLL_HEIGHT = window.innerHeight;
 
 const scrollUp = document.querySelector('.scrollUp');
-
 const btnUp = document.querySelector('.scrollUp__button');
 
 window.addEventListener('scroll', () => {
@@ -305,7 +305,6 @@ window.addEventListener('scroll', () => {
     scrollUp.classList.remove(SCROLL_UP_SHOW_CLASS);
   }
 });
-
 
 btnUp.addEventListener('click', (evt) => {
   evt.preventDefault();
@@ -334,8 +333,6 @@ stagesItems.forEach(item => {
 
       const stagesItemsArray = [...stagesItems];
       const index = stagesItemsArray.indexOf(item);
-
-      console.log(stagesItemsArray[index + 1]);
 
       if(stagesItemsArray[index - 1]) {
         stagesItemsArray[index - 1].classList.add(STAGES_ITEM_NEARBY_CLASS);
