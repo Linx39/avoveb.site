@@ -217,7 +217,6 @@ const scrollToLinks = (element) => {
   }
 }
 
-
 // Управление анимацией модальных окон
 const MODAL_ANIMATION_CLASS = 'modalAnimation';
 
@@ -241,6 +240,7 @@ const fixedElements = ['.scrollUp'];
 const sidebarModal = new HystModal({
   linkAttributeName: "data-sidebar",
   fixedSelectors: fixedElements,
+  waitTransitions: true,
   afterClose: () => scrollToLinks(elementByLink),
 })
 
