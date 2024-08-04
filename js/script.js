@@ -199,24 +199,23 @@ screen.addEventListener('orientationchange', () => {
   setScrollMarginTop();
 });
 
+let elementByLink = null;
+
 sidebarLinks.forEach(link => {
   link.addEventListener('click', (evt) => {
     evt.preventDefault();
-    const element = getElementByHref(link);
-
-    sidebarModal.close();
-
-    const scrollToLinks = () => {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-
-    sidebarModal.afterClose = scrollToLinks();
-    
+    elementByLink = getElementByHref(link); 
   });
 })
+
+const scrollToLinks = (element) => {    
+  if(element) {
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
+}
 
 
 // Управление анимацией модальных окон
@@ -242,6 +241,7 @@ const fixedElements = ['.scrollUp'];
 const sidebarModal = new HystModal({
   linkAttributeName: "data-sidebar",
   fixedSelectors: fixedElements,
+  afterClose: () => scrollToLinks(elementByLink),
 })
 
 const servicesModal = new HystModal({
