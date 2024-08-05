@@ -1,5 +1,4 @@
 import gulp from 'gulp';
-// import plumber from 'gulp-plumber';
 import sourcemap from 'gulp-sourcemaps';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
@@ -9,7 +8,6 @@ import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
 import imagemin from 'gulp-imagemin';
 import webp from 'gulp-webp';
-// import svgstore from 'gulp-svgstore';
 
 const SOURCE_FOLDER = 'avoveb.site';
 const PUBLIC_FOLDER = 'min';
@@ -49,9 +47,9 @@ export const optimizeImages = () => {
 }
 
 export const createWebp = () => {
-  return gulp.src(`assets/img/logo/*.png`)
-    .pipe(webp({quality: 100}))
-    .pipe(gulp.dest(`assets/img/logo`))
+  return gulp.src(`assets/img/stages/*.png`)
+    .pipe(webp({quality: 90}))
+    .pipe(gulp.dest(`assets/img/stages`))
 }
 
 // Copy
