@@ -25,13 +25,11 @@ export const html = () => {
 // Styles
 export const styles = () => {
   return gulp.src(`css/style.css`)
-    // .pipe(sourcemap.init())
     .pipe(postcss([
       autoprefixer(),
       cssnano()
     ]))
     .pipe(rename('style.min.css'))
-    // .pipe(sourcemap.write('.'))
     .pipe(gulp.dest(`css`))
 }
 
@@ -45,37 +43,15 @@ export const scripts = () => {
 
 // Images
 export const optimizeImages = () => {
-  return gulp.src([
-    `${SOURCE_FOLDER}/img/**/*.{png,jpg,svg}`,
-    `!${SOURCE_FOLDER}/img/sprite/*`
-  ])
+  return gulp.src([`assets/img/**/*.png`, `!assets/img/sprite`, `!assets/img/mask`, `!assets/img/icons`])
     .pipe(imagemin())
-    .pipe(gulp.dest(`${PUBLIC_FOLDER}/img`));
+    .pipe(gulp.dest(`assets/img/`));
 }
 
-// export const copyImages = () => {
-//   return gulp.src([
-//     `${SOURCE_FOLDER}/img/**/*.{png,jpg,svg}`,
-//     `!${SOURCE_FOLDER}/img/sprite/*`
-//   ])
-//     .pipe(gulp.dest(`${PUBLIC_FOLDER}/img`));
-// }
-
-// export const createWebp = () => {
-//   return gulp.src([
-//     `${SOURCE_FOLDER}/img/**/*.{jpg,png}`,
-//     `!${SOURCE_FOLDER}/img/favicons/*`
-//   ])
-//     .pipe(webp({quality: 90}))
-//     .pipe(gulp.dest(`${PUBLIC_FOLDER}/img`))
-// }
-
 export const createWebp = () => {
-  return gulp.src([
-    `assets/img/certificates/*.png`,
-  ])
-    .pipe(webp({quality: 100}))
-    .pipe(gulp.dest(`assets/img/certificates`))
+  return gulp.src(`assets/img/**/*.webp`)
+    .pipe(webp({quality: 90}))
+    .pipe(gulp.dest(`assets/img/`))
 }
 
 // Copy
