@@ -43,15 +43,15 @@ export const scripts = () => {
 
 // Images
 export const optimizeImages = () => {
-  return gulp.src([`assets/img/**/*.png`, `!assets/img/sprite`, `!assets/img/mask`, `!assets/img/icons`])
+  return gulp.src([`assets/img/logo/*.png`, `!assets/img/sprite`, `!assets/img/mask`, `!assets/img/icons`])
     .pipe(imagemin())
-    .pipe(gulp.dest(`assets/img/`));
+    .pipe(gulp.dest(`assets/img/logo`));
 }
 
 export const createWebp = () => {
-  return gulp.src(`assets/img/**/*.webp`)
-    .pipe(webp({quality: 90}))
-    .pipe(gulp.dest(`assets/img/`))
+  return gulp.src(`assets/img/logo/*.png`)
+    .pipe(webp({quality: 100}))
+    .pipe(gulp.dest(`assets/img/logo`))
 }
 
 // Copy
