@@ -1,56 +1,47 @@
 import gulp from 'gulp';
 // import plumber from 'gulp-plumber';
-// import sourcemap from 'gulp-sourcemaps';
-// import less from 'gulp-less';
-// import postcss from 'gulp-postcss';
-// import autoprefixer from 'autoprefixer';
-// import csso from 'postcss-csso';
-// import rename from 'gulp-rename';
-// import htmlmin from 'gulp-htmlmin';
+import sourcemap from 'gulp-sourcemaps';
+import postcss from 'gulp-postcss';
+import autoprefixer from 'autoprefixer';
+import cssnano from 'cssnano';
+import rename from 'gulp-rename';
+import htmlmin from 'gulp-htmlmin';
+import terser from 'gulp-terser';
 import imagemin from 'gulp-imagemin';
 import webp from 'gulp-webp';
 // import svgstore from 'gulp-svgstore';
 
-const SOURCE_FOLDER = 'source';
-const PUBLIC_FOLDER = 'docs';
+const SOURCE_FOLDER = 'avoveb.site';
+const PUBLIC_FOLDER = 'min';
 
 // HTML
-// export const html = () => {
-//   return gulp.src(`${SOURCE_FOLDER}/*.html`)
-//   .pipe(htmlmin({ collapseWhitespace: true }))
-//   .pipe(gulp.dest(PUBLIC_FOLDER))
-//   .pipe(browser.stream());
-// }
+export const html = () => {
+  return gulp.src(`*.html`)
+  .pipe(htmlmin({ collapseWhitespace: true }))
+  .pipe(rename('index.min.html'))
+  .pipe(gulp.dest(PUBLIC_FOLDER))
+}
 
 // Styles
-// export const styles = () => {
-//   return gulp.src(`${SOURCE_FOLDER}/less/style.less`, { sourcemaps: true })
-//     .pipe(plumber())
-//     .pipe(sourcemap.init())
-//     .pipe(less())
-//     .pipe(postcss([
-//       autoprefixer(),
-//       csso()
-//     ]))
-//     .pipe(rename('style.min.css'))
-//     .pipe(sourcemap.write('.'))
-//     .pipe(gulp.dest(`${PUBLIC_FOLDER}/css`))
-//     .pipe(browser.stream());
-// }
+export const styles = () => {
+  return gulp.src(`css/style.css`)
+    // .pipe(sourcemap.init())
+    .pipe(postcss([
+      autoprefixer(),
+      cssnano()
+    ]))
+    .pipe(rename('style.min.css'))
+    // .pipe(sourcemap.write('.'))
+    .pipe(gulp.dest(`css`))
+}
 
 // Scripts
-// export const scripts = () => {
-//   return gulp.src(`${SOURCE_FOLDER}/js/*.js`)
-//     .pipe(webpack({
-//       mode: 'development',
-//       devtool: 'source-map',
-//       output: {
-//           filename: 'app.min.js',
-//       }
-//     }))
-//     .pipe(gulp.dest(`${PUBLIC_FOLDER}/js`))
-//     .pipe(browser.stream());
-// }
+export const scripts = () => {
+  return gulp.src(`js/hystmodal.js`)
+    .pipe(terser())
+    .pipe(rename('hystmodal.min.js'))
+    .pipe(gulp.dest(`js`))
+}
 
 // Images
 export const optimizeImages = () => {

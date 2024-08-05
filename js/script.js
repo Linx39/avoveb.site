@@ -3,11 +3,6 @@ const initServisesSwiper = () => {
     watchSlidesProgress: true,
     slideVisibleClass: 'services__slide_visible',
     loop: true,
-    
-    autoplay: {
-      delay: 2000,
-      pauseOnMouseEnter: true,
-    },
 
     breakpoints: {
       320: {
@@ -74,12 +69,6 @@ new Swiper(".reviews__swiper", {
   watchSlidesProgress: true,
   slideVisibleClass: 'review__slide_visible',
   loop: true,
-  loopAddBlankSlides: false,
-
-  autoplay: {
-    delay: 2000,
-    pauseOnMouseEnter: true,
-  },
 
   breakpoints: {
     320: {
@@ -122,9 +111,6 @@ new Swiper(".reviews__swiper", {
 });
 
 new Swiper(".certificates__swiper", {
-  // loop: true,
-  // loopAddBlankSlides: false,
-
   breakpoints: {
     320: {
       slidesPerView: 2,
