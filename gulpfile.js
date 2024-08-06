@@ -9,15 +9,13 @@ import terser from 'gulp-terser';
 import imagemin from 'gulp-imagemin';
 import webp from 'gulp-webp';
 
-const SOURCE_FOLDER = 'avoveb.site';
-const PUBLIC_FOLDER = 'min';
 
 // HTML
 export const html = () => {
-  return gulp.src(`*.html`)
+  return gulp.src(`index.full.html`)
   .pipe(htmlmin({ collapseWhitespace: true }))
-  .pipe(rename('index.min.html'))
-  .pipe(gulp.dest(PUBLIC_FOLDER))
+  .pipe(rename('index.html'))
+  .pipe(gulp.dest('min'))
 }
 
 // Styles
