@@ -65,52 +65,62 @@ window.addEventListener('resize', () => {
   setSwiperMode();
 });
 
-new Swiper(".reviews__swiper", {
-  watchSlidesProgress: true,
-  slideVisibleClass: 'review__slide_visible',
-  loop: true,
+const initReviewsSwiper = (isLoop = true) => {
+  const reviewsSwiper = new Swiper(".reviews__swiper", {
+    watchSlidesProgress: true,
+    slideVisibleClass: 'review__slide_visible',
+    loop: isLoop,
+    
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      560: {
+        slidesPerView: 2,
+        spaceBetween: 16,
+      },
+      760: {
+        slidesPerView: 3,
+        spaceBetween: 16,
+      },
+      960: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 28,
+      },
+      1700: {
+        slidesPerView: 3,
+        spaceBetween: 32,
+      },
+    },
 
-  breakpoints: {
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 20,
+    navigation: {
+      prevEl: ".reviews__swiper__buttonPrev",
+      nextEl: ".reviews__swiper__buttonNext",
+      disabledClass: ".navigationButton_disabled",
     },
-    560: {
-      slidesPerView: 2,
-      spaceBetween: 16,
-    },
-    760: {
-      slidesPerView: 3,
-      spaceBetween: 16,
-    },
-    960: {
-      slidesPerView: 3,
-      spaceBetween: 20,
-    },
-    1200: {
-      slidesPerView: 3,
-      spaceBetween: 28,
-    },
-    1700: {
-      slidesPerView: 3,
-      spaceBetween: 32,
-    },
-  },
 
-  navigation: {
-    prevEl: ".reviews__swiper__buttonPrev",
-    nextEl: ".reviews__swiper__buttonNext",
-    disabledClass: ".navigationButton_disabled",
-  },
+    pagination: {
+      el: ".reviews__swiper__pagination",
+      bulletClass: 'slider__bullet',
+      bulletActiveClass: 'slider__bullet_current',
+    },
+  });
 
-  pagination: {
-    el: ".reviews__swiper__pagination",
-    bulletClass: 'slider__bullet',
-    bulletActiveClass: 'slider__bullet_current',
-  },
-});
+  return reviewsSwiper;
+}
 
-new Swiper(".certificates__swiper", {
+if (navigator.userAgent.includes('Firefox')) {
+  initReviewsSwiper(false);
+} else {
+  initReviewsSwiper();
+}
+
+new Swiper(".certificates__swiper", {  
   breakpoints: {
     320: {
       slidesPerView: 2,
