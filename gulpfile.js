@@ -15,7 +15,7 @@ export const html = () => {
   return gulp.src(`index.full.html`)
   .pipe(htmlmin({ collapseWhitespace: true }))
   .pipe(rename('index.html'))
-  .pipe(gulp.dest('min'))
+  .pipe(gulp.dest('/'))
 }
 
 // Styles
@@ -31,9 +31,9 @@ export const styles = () => {
 
 // Scripts
 export const scripts = () => {
-  return gulp.src(`js/hystmodal.js`)
+  return gulp.src(`js/script.js`)
     .pipe(terser())
-    .pipe(rename('hystmodal.min.js'))
+    .pipe(rename('script.min.js'))
     .pipe(gulp.dest(`js`))
 }
 
