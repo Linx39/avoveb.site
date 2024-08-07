@@ -191,10 +191,6 @@ window.addEventListener('resize', () => {
   setScrollMarginTop();
 });
 
-screen.addEventListener('orientationchange', () => {
-  setScrollMarginTop();
-});
-
 let elementByLink = null;
 
 sidebarLinks.forEach(link => {
