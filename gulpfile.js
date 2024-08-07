@@ -12,10 +12,10 @@ import webp from 'gulp-webp';
 
 // HTML
 export const html = () => {
-  return gulp.src(`index.full.html`)
+  return gulp.src('index.full.html')
   .pipe(htmlmin({ collapseWhitespace: true }))
   .pipe(rename('index.html'))
-  .pipe(gulp.dest('/'))
+  .pipe(gulp.dest('min'))
 }
 
 // Styles
