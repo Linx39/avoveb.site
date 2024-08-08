@@ -1,5 +1,5 @@
 const initServisesSwiper = () => {
-  const servisesSwiper = new Swiper('.services__swiper', {
+  const servisesSwiper = new Swiper(".services__swiper", {
     watchSlidesProgress: true,
     slideVisibleClass: 'services__slide_visible',
     loop: true,
@@ -40,30 +40,31 @@ const initServisesSwiper = () => {
   return servisesSwiper;
 };
 
-let isSwiperInit = false;
+let isServisesSwiperInit = false;
 let servisesSwiper = Swiper;
 
-const setSwiperMode = () => {
+const setServisesSwiperMode = () => {
   const isDisabledSwiperWidth = window.matchMedia(`(min-width: 960px)`).matches;
 
-  if (!isDisabledSwiperWidth && !isSwiperInit){
+  if (!isDisabledSwiperWidth && !isServisesSwiperInit){
     servisesSwiper = initServisesSwiper();
-    isSwiperInit = true;
+    isServisesSwiperInit = true;
   }
 
-  if (isDisabledSwiperWidth && isSwiperInit) {
+  if (isDisabledSwiperWidth && isServisesSwiperInit) {
     servisesSwiper.destroy();
-    isSwiperInit = false;
+    isServisesSwiperInit = false;
   }
 };
 
 window.addEventListener('load', () => {
-  setSwiperMode();
+  setServisesSwiperMode();
 });
 
 window.addEventListener('resize', () => {
-  setSwiperMode();
+  setServisesSwiperMode();
 });
+
 
 const initReviewsSwiper = (isLoop = true) => {
   const reviewsSwiper = new Swiper(".reviews__swiper", {
@@ -112,7 +113,7 @@ const initReviewsSwiper = (isLoop = true) => {
   });
 
   return reviewsSwiper;
-}
+};
 
 if (navigator.userAgent.includes('Firefox')) {
   initReviewsSwiper(false);
@@ -226,6 +227,7 @@ setAnimationFalse = (modal, animationClass) => {
     modal.config.waitTransitions = false;
   }
 }
+
 
 // Инициализация модальных окон
 const fixedElements = ['.scrollUp'];
