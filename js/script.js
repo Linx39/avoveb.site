@@ -4,6 +4,17 @@ const initServisesSwiper = () => {
     slideVisibleClass: 'services__slide_visible',
     loop: true,
 
+    navigation: {
+      prevEl: '.services__swiper__buttonPrev',
+      nextEl: '.services__swiper__buttonNext',
+    },
+  
+    pagination: {
+      el: '.services__swiper__pagination',
+      bulletClass: 'slider__bullet',
+      bulletActiveClass: 'slider__bullet_current',
+    },
+
     breakpoints: {
       320: {
         slidesPerView: 1,
@@ -23,17 +34,6 @@ const initServisesSwiper = () => {
       960: {
         maxBackfaceHiddenSlides: 0,
       },
-    },
-
-    navigation: {
-      prevEl: '.services__swiper__buttonPrev',
-      nextEl: '.services__swiper__buttonNext',
-    },
-  
-    pagination: {
-      el: '.services__swiper__pagination',
-      bulletClass: 'slider__bullet',
-      bulletActiveClass: 'slider__bullet_current',
     },
   });
 

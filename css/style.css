@@ -1099,13 +1099,6 @@ legend {
     right: 20px;
 }
 
-/* @-moz-document url-prefix() {
-    .slider__buttonNext,
-    .slider__buttonPrev {
-        display: none;
-    }
-} */
-
 .slider__pagination {
     position: static;
     display: flex;
@@ -1123,6 +1116,7 @@ legend {
     border-radius: 50%;
     border: 1px solid var(--brown-pallet-400);
     background: inherit;
+    cursor: pointer;
 }
 
 .slider__bullet_current {
@@ -1141,16 +1135,10 @@ legend {
         transform: none;
     }
 
-    /* @-moz-document url-prefix() {
-        .slider__buttonNext,
-        .slider__buttonPrev {
-            display: block;
-        }
-    } */
-
     .slider__bullet {
         width: 12px;
         height: 12px;
+        cursor: initial;
     }
 }
 
