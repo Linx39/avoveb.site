@@ -1,5 +1,5 @@
 const initServisesSwiper = () => {
-  const servisesSwiper = new Swiper(".services__swiper", {
+  const servisesSwiper = new Swiper('.services__swiper', {
     watchSlidesProgress: true,
     slideVisibleClass: 'services__slide_visible',
     loop: true,
@@ -26,12 +26,12 @@ const initServisesSwiper = () => {
     },
 
     navigation: {
-      prevEl: ".services__swiper__buttonPrev",
-      nextEl: ".services__swiper__buttonNext",
+      prevEl: '.services__swiper__buttonPrev',
+      nextEl: '.services__swiper__buttonNext',
     },
   
     pagination: {
-      el: ".services__swiper__pagination",
+      el: '.services__swiper__pagination',
       bulletClass: 'slider__bullet',
       bulletActiveClass: 'slider__bullet_current',
     },
@@ -40,37 +40,48 @@ const initServisesSwiper = () => {
   return servisesSwiper;
 };
 
-let isServisesSwiperInit = false;
+let isSwiperInit = false;
 let servisesSwiper = Swiper;
 
-const setServisesSwiperMode = () => {
+const setSwiperMode = () => {
   const isDisabledSwiperWidth = window.matchMedia(`(min-width: 960px)`).matches;
 
-  if (!isDisabledSwiperWidth && !isServisesSwiperInit){
+  if (!isDisabledSwiperWidth && !isSwiperInit){
     servisesSwiper = initServisesSwiper();
-    isServisesSwiperInit = true;
+    isSwiperInit = true;
   }
 
-  if (isDisabledSwiperWidth && isServisesSwiperInit) {
+  if (isDisabledSwiperWidth && isSwiperInit) {
     servisesSwiper.destroy();
-    isServisesSwiperInit = false;
+    isSwiperInit = false;
   }
 };
 
 window.addEventListener('load', () => {
-  setServisesSwiperMode();
+  setSwiperMode();
 });
 
 window.addEventListener('resize', () => {
-  setServisesSwiperMode();
+  setSwiperMode();
 });
 
-
 const initReviewsSwiper = (isLoop = true) => {
-  const reviewsSwiper = new Swiper(".reviews__swiper", {
+  const reviewsSwiper = new Swiper('.reviews__swiper', {
     watchSlidesProgress: true,
     slideVisibleClass: 'review__slide_visible',
     loop: isLoop,
+
+    navigation: {
+      prevEl: '.reviews__swiper__buttonPrev',
+      nextEl: '.reviews__swiper__buttonNext',
+      disabledClass: 'navigationButton_disabled',
+    },
+
+    pagination: {
+      el: '.reviews__swiper__pagination',
+      bulletClass: 'slider__bullet',
+      bulletActiveClass: 'slider__bullet_current',
+    },
     
     breakpoints: {
       320: {
@@ -98,22 +109,10 @@ const initReviewsSwiper = (isLoop = true) => {
         spaceBetween: 32,
       },
     },
-
-    navigation: {
-      prevEl: ".reviews__swiper__buttonPrev",
-      nextEl: ".reviews__swiper__buttonNext",
-      disabledClass: ".navigationButton_disabled",
-    },
-
-    pagination: {
-      el: ".reviews__swiper__pagination",
-      bulletClass: 'slider__bullet',
-      bulletActiveClass: 'slider__bullet_current',
-    },
   });
 
   return reviewsSwiper;
-};
+}
 
 if (navigator.userAgent.includes('Firefox')) {
   initReviewsSwiper(false);
@@ -121,7 +120,7 @@ if (navigator.userAgent.includes('Firefox')) {
   initReviewsSwiper();
 }
 
-new Swiper(".certificates__swiper", {  
+new Swiper('.certificates__swiper', {  
   breakpoints: {
     320: {
       slidesPerView: 2,
@@ -156,13 +155,13 @@ new Swiper(".certificates__swiper", {
   },
 
   navigation: {
-    prevEl: ".certificates__swiper__buttonPrev",
-    nextEl: ".certificates__swiper__buttonNext",
-    disabledClass: "navigationButton_transparent_disabled",
+    prevEl: '.certificates__swiper__buttonPrev',
+    nextEl: '.certificates__swiper__buttonNext',
+    disabledClass: 'navigationButton_disabled',
   },
 
   pagination: {
-    el: ".certificates__swiper__pagination",
+    el: '.certificates__swiper__pagination',
     bulletClass: 'slider__bullet',
     bulletActiveClass: 'slider__bullet_current',
   },
@@ -227,7 +226,6 @@ setAnimationFalse = (modal, animationClass) => {
     modal.config.waitTransitions = false;
   }
 }
-
 
 // Инициализация модальных окон
 const fixedElements = ['.scrollUp'];

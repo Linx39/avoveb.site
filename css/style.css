@@ -1023,6 +1023,11 @@ legend {
     }
 }
 
+.navigationButton_disabled {
+    opacity: .3;
+    cursor: initial;
+}
+
 .navigationButton_green {
     background-color: var(--green-pallet-500);
     box-shadow: 0px 4px 20px 0px #31080054;
@@ -1034,12 +1039,12 @@ legend {
     }
 }
 
-.navigationButton_green:hover,
-.navigationButton_green:focus-visible {
+.navigationButton_green:not(.navigationButton_disabled):hover,
+.navigationButton_green:not(.navigationButton_disabled):focus-visible {
     opacity: .7;
 }
 
-.navigationButton_green:active {
+.navigationButton_green:not(.navigationButton_disabled):active {
     opacity: .5;
 }
 
@@ -1057,17 +1062,12 @@ legend {
     fill: var(--brown-pallet-400);
 }
 
-.navigationButton_transparent_disabled {
-    opacity: .3;
-    cursor: initial;
-}
-
-.navigationButton_transparent:not(.navigationButton_transparent_disabled):hover svg,
-.navigationButton_transparent:not(.navigationButton_transparent_disabled):focus-visible svg {
+.navigationButton_transparent:not(.navigationButton_disabled):hover svg,
+.navigationButton_transparent:not(.navigationButton_disabled):focus-visible svg {
     opacity: .7;
 }
 
-.navigationButton_transparent:not(.navigationButton_transparent_disabled):active svg {
+.navigationButton_transparent:not(.navigationButton_disabled):active svg {
     opacity: .5;
 }
 
