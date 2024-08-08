@@ -96,7 +96,7 @@ ul {
 }
 
 img {
-    vertical-align: top;
+    display: block;
 }
 
 address {
@@ -2838,7 +2838,8 @@ legend {
 
 .reviews__card__img img {
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
+    aspect-ratio: 111/100;
     object-fit: contain;
 }
 
