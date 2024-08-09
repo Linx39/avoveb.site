@@ -4007,7 +4007,7 @@ legend {
     outline: none;
 }
 
-.feedback__form__input:focus {
+.feedback__form__input:focus {    
     border-radius: inherit;
 }
 
@@ -4114,6 +4114,12 @@ legend {
     .feedback__form__input {
         min-height: 38px;
         padding: 6px 24px;
+
+        font-size: 16px;
+    }
+
+    .feedback__form__input::placeholder {
+        font-size: 14px;
     }
 
     .feedback__form__privacy {
