@@ -1519,6 +1519,27 @@ legend {
     clip-path: url(#promo-mask-large);
 }
 
+.promo__decorBottom {
+    display: none;
+}
+
+@media (max-resolution: 1dppx) {
+    .promo {
+        clip-path: none;
+    }
+
+    .promo__decorBottom {
+        position: absolute;
+
+        left: 0;
+        right: 0;
+        bottom: -2px;
+        
+        display: block;
+        width: 100%;
+    }
+}
+
 .promo__bg {
     position: absolute;
     inset: 0;
@@ -1693,6 +1714,10 @@ legend {
         clip-path: url(#promo-mask-middle);
     }
 
+    .promo__decorBottom {
+        display: none;
+    }
+
     .promo__title {
         margin-bottom: 17px;
     }
@@ -1705,6 +1730,12 @@ legend {
         border-radius: 12px;
     }
 }
+
+/* @media ((max-resolution: 1dppx) and (max-width: 1200px)) {
+    .promo::after {
+        display: none;
+    }
+} */
 
 @media (max-width: 960px) {
     .promo {
@@ -2448,6 +2479,37 @@ legend {
     clip-path: url(#advantages-mask-large);
 }
 
+.advantages__decorTop,
+.advantages__decorBottom {
+    display: none;
+}
+
+@media (max-resolution: 1dppx) {
+    .advantages {
+        clip-path: none;
+    }
+
+    .advantages__decorTop {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -2px;
+        
+        display: block;
+        width: 100%;
+    }
+
+    .advantages__decorBottom {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -2px;
+        
+        display: block;
+        width: 100%;
+    }
+}
+
 .advantages__bg {
     position: absolute;
     inset: 0;
@@ -2526,6 +2588,11 @@ legend {
 
     .advantages__text {
         margin-bottom: 32px;
+    }
+
+    .advantages__decorTop,
+    .advantages__decorBottom {
+        display: block;
     }
 }
 
@@ -4624,6 +4691,7 @@ legend {
 .offer__decor__item {
     position: absolute;
     content: "";
+    z-index: 1;
 
     background-repeat: no-repeat;
     background-position: center;
@@ -4836,6 +4904,7 @@ legend {
 .services__decor__item {
     position: absolute;
     content: "";
+    z-index: 1;
 
     background-repeat: no-repeat;
     background-position: center;
@@ -4916,6 +4985,7 @@ legend {
 .stages__decor__item {
     position: absolute;
     content: "";
+    z-index: 1;
 
     background-repeat: no-repeat;
     background-position: center;
@@ -5020,6 +5090,7 @@ legend {
 .footer__decor__item {
     position: absolute;
     content: "";
+    z-index: 1;
 
     background-repeat: no-repeat;
     background-position: center;
