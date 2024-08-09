@@ -64,6 +64,7 @@
     margin: 0;
     padding: 0;
     border: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 *,
@@ -81,7 +82,6 @@ a {
     text-decoration: none;
     cursor: pointer;
     color: inherit;
-    text-decoration: none;
 }
 
 a:hover {
