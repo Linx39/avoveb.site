@@ -2592,7 +2592,7 @@ legend {
 
     .advantages__decorTop,
     .advantages__decorBottom {
-        display: block;
+        display: none;
     }
 }
 
@@ -4589,12 +4589,12 @@ legend {
 
 
 /* Декоративные элементы фона */
-.sidebarModal__decor {
+.bgDecor  {
     position: absolute;
     inset: 0;
 }
 
-.sidebarModal__decor__item {
+.bgDecor__item {
     position: absolute;
     content: "";
     z-index: 1;
@@ -4604,7 +4604,7 @@ legend {
     background-size: contain;
 }
 
-.sidebarModal__decor__item__branch-5 {
+.sidebarModal__bgDecor__branch-5 {
     top: 15%;
     right: 10px;
 
@@ -4613,7 +4613,7 @@ legend {
     background-image: url("../assets/img/decor-item/branch-5.svg");
 }
 
-.sidebarModal__decor__item__flower {
+.sidebarModal__bgDecor__flower {
     top: 45%;
     right: 130px;
 
@@ -4623,7 +4623,7 @@ legend {
     transform: rotate(-162deg);
 }
 
-.sidebarModal__decor__item__branch-2 {
+.sidebarModal__bgDecor__branch-2 {
     top: 75%;
     right: 30px;
 
@@ -4632,7 +4632,7 @@ legend {
     background-image: url("../assets/img/decor-item/branch-2.svg");
 }
 
-.sidebarModal__decor__item__hogweed-2 {
+.sidebarModal__bgDecor__hogweed-2 {
     top: 82%;
     left: 10px;
 
@@ -4642,38 +4642,38 @@ legend {
 }
 
 @media (max-width: 1200px) {
-    .sidebarModal__decor__item__branch-5 {    
+    .sidebarModal__bgDecor__branch-5 {    
         width: 118px;
         height: 109px;
     }
 
-    .sidebarModal__decor__item__flower {    
+    .sidebarModal__bgDecor__flower {    
         width: 77px;
         height: 88px;
     }
 }
 
 @media (max-width: 960px) {
-    .sidebarModal__decor__item__branch-5 { 
+    .sidebarModal__bgDecor__branch-5 { 
         top: 50%;
         right: 30px;   
         width: 118px;
         height: 109px;
     }
 
-    .sidebarModal__decor__item__flower {
+    .sidebarModal__bgDecor__flower {
         top: 18%;
         right: 40px;    
         width: 77px;
         height: 88px;
     }
 
-    .sidebarModal__decor__item__branch-2 {
+    .sidebarModal__bgDecor__branch-2 {
         top: 78%;
         right: 30px;
     }
     
-    .sidebarModal__decor__item__hogweed-2 {
+    .sidebarModal__bgDecor__hogweed-2 {
         top: 83%;
         left: 10px;
     
@@ -4683,22 +4683,7 @@ legend {
 }
 
 
-.offer__decor {
-    position: absolute;
-    inset: 0;
-}
-
-.offer__decor__item {
-    position: absolute;
-    content: "";
-    z-index: 1;
-
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-}
-
-.offer__decor__item__flower {
+.offer__bgDecor__flower {
     top: 91px;
     left: -48px;
 
@@ -4707,7 +4692,7 @@ legend {
     background-image: url("../assets/img/decor-item/flower.svg");
 }
 
-.offer__decor__item__branch-2 {
+.offer__bgDecor__branch-2 {
     bottom: 122px;
     left: -37px;
 
@@ -4716,7 +4701,7 @@ legend {
     background-image: url("../assets/img/decor-item/branch-2.svg");
 }
 
-.offer__decor__item__mitten {
+.offer__bgDecor__mitten {
     top: 11px;
     right: -72px;
 
@@ -4725,7 +4710,7 @@ legend {
     background-image: url("../assets/img/decor-item/mitten.svg");
 }
 
-.offer__decor__item__branch-1 {
+.offer__bgDecor__branch-1 {
     bottom: 209px;
     right: 14px;
 
@@ -4734,7 +4719,7 @@ legend {
     background-image: url("../assets/img/decor-item/branch-1.svg");
 }
 
-.offer__decor__item__broom-1 {
+.offer__bgDecor__broom-1 {
     bottom: -236px;
     left: 120px;
 
@@ -4743,7 +4728,7 @@ legend {
     background-image: url("../assets/img/decor-item/broom-1.svg");
 }
 
-.offer__decor__item__cap {
+.offer__bgDecor__cap {
     bottom: -149px;
     right: 165px;
 
@@ -4752,14 +4737,14 @@ legend {
     background-image: url("../assets/img/decor-item/cap.svg");
 }
 
-.offer__decor__item__broom-2 {
+.offer__bgDecor__broom-2 {
     display: none;
 
     background-image: url("../assets/img/decor-item/broom-2.svg");
 }
 
 @media (max-width: 1500px) {  
-    .offer__decor__item__flower {
+    .offer__bgDecor__flower {
         top: 112px;
         left: -18px;
 
@@ -4767,7 +4752,7 @@ legend {
         height: 60px;
     }
 
-    .offer__decor__item__branch-2 {
+    .offer__bgDecor__branch-2 {
         bottom: 98px;
         left: -24px;
 
@@ -4775,7 +4760,7 @@ legend {
         height: 58px;
     }
 
-    .offer__decor__item__mitten {
+    .offer__bgDecor__mitten {
         top: 13px;
         right: 3px;
 
@@ -4783,7 +4768,7 @@ legend {
         height: 136px;
     }
 
-    .offer__decor__item__branch-1 {
+    .offer__bgDecor__branch-1 {
         bottom: 65px;
         right: -4px;
 
@@ -4791,7 +4776,7 @@ legend {
         height: 126px;
     }
 
-    .offer__decor__item__broom-1 {
+    .offer__bgDecor__broom-1 {
         bottom: -215px;
         left: 53px;
 
@@ -4799,7 +4784,7 @@ legend {
         height: 214px;
     }
 
-    .offer__decor__item__cap {
+    .offer__bgDecor__cap {
         bottom: -109px;
         right: 178px;
 
@@ -4809,7 +4794,7 @@ legend {
 }
 
 @media (max-width: 1200px) {  
-    .offer__decor__item__flower {
+    .offer__bgDecor__flower {
         top: unset;
         bottom: -153px;
         left: 0;
@@ -4820,7 +4805,7 @@ legend {
         transform: rotate(-18deg);
     }
 
-    .offer__decor__item__branch-2 {
+    .offer__bgDecor__branch-2 {
         inset: unset;
         top: 17px;
         right: 57px;
@@ -4829,7 +4814,7 @@ legend {
         height: 93px;
     }
 
-    .offer__decor__item__mitten {
+    .offer__bgDecor__mitten {
         inset: unset;
         bottom: -162px;
         right: 0;
@@ -4838,7 +4823,7 @@ legend {
         height: 156px;
     }
 
-    .offer__decor__item__branch-1 {
+    .offer__bgDecor__branch-1 {
         inset: unset;
         bottom: -84px;
         left: 210px;
@@ -4847,17 +4832,17 @@ legend {
         height: 73px;
     }
 
-    .offer__decor__item__broom-1 {
+    .offer__bgDecor__broom-1 {
         display: none;
     }
 
-    .offer__decor__item__cap {
+    .offer__bgDecor__cap {
         display: none;
     }
 }
 
 @media (max-width: 960px) {  
-    .offer__decor__item__branch-2 {
+    .offer__bgDecor__branch-2 {
         top: 14px;
         right: 20px;
 
@@ -4865,25 +4850,25 @@ legend {
         height: 73px;
     }
 
-    .offer__decor__item__branch-1 {
+    .offer__bgDecor__branch-1 {
         display: none;
     }
 }
 
 @media (max-width: 560px) {  
-    .offer__decor__item__flower {
+    .offer__bgDecor__flower {
         display: none;
     }
 
-    .offer__decor__item__branch-2 {
+    .offer__bgDecor__branch-2 {
         display: none;
     }
 
-    .offer__decor__item__mitten {
+    .offer__bgDecor__mitten {
         display: none;
     }
 
-    .offer__decor__item__broom-2 {
+    .offer__bgDecor__broom-2 {
         display: block;
         top: 0;
         left: 50%;
@@ -4896,22 +4881,41 @@ legend {
 }
 
 
-.services__decor {
-    position: absolute;
-    inset: 0;
+.guarantees__bgDecor__hogweed {
+    top: 76px;
+    left: 162px;
+
+    width: 125px;
+    height: 132px;
+    background-image: url("../assets/img/decor-item/hogweed.svg");
 }
 
-.services__decor__item {
-    position: absolute;
-    content: "";
-    z-index: 1;
-
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+@media (max-width: 1500px) {    
+    .guarantees__bgDecor__hogweed {
+        top: 46px;
+        left: 142px;
+    }
 }
 
-.services__decor__item__branch-1 {
+@media (max-width: 1200px) {    
+    .guarantees__bgDecor__hogweed {
+        top: 0;
+        left: 62px;
+    }
+}
+
+@media (max-width: 960px) {    
+    .guarantees__bgDecor__hogweed {
+        top: 0;
+        left: 16px;
+
+        width: 73px;
+        height: 85px;
+    }
+}
+
+
+.services__bgDecor__branch-1 {
     top: 11px;
     left: 120px;
 
@@ -4922,7 +4926,7 @@ legend {
     transform: rotate(-34deg);
 }
 
-.services__decor__item__branch-3 {
+.services__bgDecor__branch-3 {
     top: 74px;
     right: -3px;
 
@@ -4933,7 +4937,7 @@ legend {
     transform: rotate(96deg);
 }
 
-.services__decor__item__cap {
+.services__bgDecor__cap {
     bottom: -30px;
     left: 388px;
 
@@ -4943,7 +4947,7 @@ legend {
 }
 
 @media (max-width:1500px) {
-    .services__decor__item__branch-1 {
+    .services__bgDecor__branch-1 {
         top: 96px;
         left: 74px;
     
@@ -4953,7 +4957,7 @@ legend {
         transform: rotate(-17deg);
     }
     
-    .services__decor__item__branch-3 {
+    .services__bgDecor__branch-3 {
         top: 59px;
         right: 67px;
     
@@ -4961,17 +4965,17 @@ legend {
         height: 115px;
     }
     
-    .services__decor__item__cap {
+    .services__bgDecor__cap {
         display: none;
     }
 }
 
 @media (max-width: 1200px) {
-    .services__decor__item__branch-1 {
+    .services__bgDecor__branch-1 {
         display: none;
     }
     
-    .services__decor__item__branch-3 {
+    .services__bgDecor__branch-3 {
         display: none;
     }
 }
@@ -4992,7 +4996,7 @@ legend {
     background-size: contain;
 }
 
-.stages__decor__item__branch-3 {
+.stages__bgDecor__branch-3 {
     top: 451px;
     left: -57px;
 
@@ -5001,7 +5005,7 @@ legend {
     background-image: url("../assets/img/decor-item/branch-3.svg");
 }
 
-.stages__decor__item__mitten {
+.stages__bgDecor__mitten {
     top: 214px;
     right: -56px;
 
@@ -5010,7 +5014,7 @@ legend {
     background-image: url("../assets/img/decor-item/mitten-2.svg");
 }
 
-.stages__decor__item__cap {
+.stages__bgDecor__cap {
     bottom: 226px;
     left: 272px;
 
@@ -5019,7 +5023,7 @@ legend {
     background-image: url("../assets/img/decor-item/cap.svg");
 }
 
-.stages__decor__item__broom-2 {
+.stages__bgDecor__broom-2 {
     bottom: 286px;
     right: 298px;
 
@@ -5030,7 +5034,7 @@ legend {
 }
 
 @media (max-width: 1500px) {
-    .stages__decor__item__branch-3 {
+    .stages__bgDecor__branch-3 {
         top: 317px;
         left: 10px;
     
@@ -5038,7 +5042,7 @@ legend {
         height: 64px;
     }
     
-    .stages__decor__item__mitten {
+    .stages__bgDecor__mitten {
         top: 87px;
         right: 23px;
     
@@ -5046,7 +5050,7 @@ legend {
         height: 142px;
     }
     
-    .stages__decor__item__cap {
+    .stages__bgDecor__cap {
         bottom: 133px;
         left: 134px;
     
@@ -5054,7 +5058,7 @@ legend {
         height: 152px;
     }
     
-    .stages__decor__item__broom-2 {
+    .stages__bgDecor__broom-2 {
         bottom: 224px;
         right: 118px;
     
@@ -5064,40 +5068,25 @@ legend {
 }
 
 @media (max-width: 1200px) {
-    .stages__decor__item__branch-3 {
+    .stages__bgDecor__branch-3 {
         display: none;
     }
     
-    .stages__decor__item__mitten {
+    .stages__bgDecor__mitten {
         display: none;
     }
     
-    .stages__decor__item__cap {
+    .stages__bgDecor__cap {
         display: none;
     }
     
-    .stages__decor__item__broom-2 {
+    .stages__bgDecor__broom-2 {
         display: none;
     }
 }
 
 
-.footer__decor {
-    position: absolute;
-    inset: 0;
-}
-
-.footer__decor__item {
-    position: absolute;
-    content: "";
-    z-index: 1;
-
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-}
-
-.footer__decor__item__branch-4 {
+.footer__bgDecor__branch-4 {
     top: 143px;
     left: 70px;
 
@@ -5106,7 +5095,7 @@ legend {
     background-image: url("../assets/img/decor-item/branch-4.svg");
 }
 
-.footer__decor__item__hogweed {
+.footer__bgDecor__hogweed {
     top: 56px;
     right: -72px;
 
@@ -5115,7 +5104,7 @@ legend {
     background-image: url("../assets/img/decor-item/hogweed.svg");
 }
 
-.footer__decor__item__dandelion {
+.footer__bgDecor__dandelion {
     bottom: 93px;
     right: 161px;
 
@@ -5125,7 +5114,7 @@ legend {
 }
 
 @media (max-width:1500px) {
-    .footer__decor__item__branch-4 {
+    .footer__bgDecor__branch-4 {
         top: 150px;
         left: 35px;
     
@@ -5133,7 +5122,7 @@ legend {
         height: 126px;
     }
     
-    .footer__decor__item__hogweed {
+    .footer__bgDecor__hogweed {
         top: 0;
         right: -11px;
     
@@ -5141,7 +5130,7 @@ legend {
         height: 132px;
     }
     
-    .footer__decor__item__dandelion {
+    .footer__bgDecor__dandelion {
         bottom: 101px;
         right: 68px;
     
@@ -5151,15 +5140,15 @@ legend {
 }
 
 @media (max-width: 1200px) {
-    .footer__decor__item__branch-4 {
+    .footer__bgDecor__branch-4 {
         display: none;
     }
     
-    .footer__decor__item__hogweed {
+    .footer__bgDecor__hogweed {
         display: none;
     }
     
-    .footer__decor__item__dandelion {
+    .footer__bgDecor__dandelion {
         display: none;
     }
 }
