@@ -230,6 +230,12 @@ setAnimationFalse = (modal, animationClass) => {
 // Инициализация модальных окон
 const fixedElements = ['.scrollUp'];
 
+const videoModal = new HystModal({
+  linkAttributeName: "data-video",
+  fixedSelectors: fixedElements,
+  waitTransitions: true,
+});
+
 const sidebarModal = new HystModal({
   linkAttributeName: "data-sidebar",
   fixedSelectors: fixedElements,

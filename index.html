@@ -6,7 +6,7 @@
     <meta name="description" content="Сайт по заказу парильных услуг">
     <title>Вкус бани</title>
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="css/hystmodal.min.css">
+    <link rel="stylesheet" href="css/hystmodal.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel= "apple-touch-icon" sizes="57x57" href= "assets/img/favicons/apple-icon-57x57.png"> 
     <link rel= "apple-touch-icon" sizes="60x60" href= "assets/img/favicons/apple-icon-60x60.png"> 
@@ -293,14 +293,34 @@
               <p class="promo__location__item">Москва и МО</p>
               <p class="promo__location__item">Выезд на дом</p>
             </div>
-            <a class="promo__button" href="https://youtu.be/rP3UAYMxNgM?si=qQ-MyO6uy-cCTMIF" target="_blank">
+            <!-- <a class="promo__button" href="https://youtu.be/rP3UAYMxNgM?si=qQ-MyO6uy-cCTMIF" target="_blank">
               Посмотреть видеоролик
               <span class="promo__button__icon"></span>
-            </a>
+            </a> -->
+            <a class="promo__button" data-video="#video" href="#video">
+              Посмотреть видеоролик
+              <span class="promo__button__icon"></span>
+            </a> 
           </div>
         </div>
 
         <img class="promo__decorBottom" src="assets/img/promo-bg/promo-decor-bottom.png" alt="">
+      </section>
+
+      <section class="video">
+        <div class="videoHystmodal hystmodal" id="video" aria-hidden="true">
+          <div class="hystmodal__wrap">
+            <div class="galleryModal galleryModal_fullScreen galleryAnimation hystmodal__window" role="dialog" aria-modal="true">
+              <button class="galleryModal__closeButton closeButton" data-hystclose type="button">
+                <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
+                <span class="visually-hidden">Закрыть окно</span> 
+              </button>
+              <div class="galleryModal__video">
+                <iframe src="https://www.youtube.com/embed/rP3UAYMxNgM?si=u1bNnOj8Gw7jqnz2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <div class="wrapperTop">          
@@ -545,7 +565,7 @@
         <div class="hystmodal" id="certificate-01" aria-hidden="true">
           <div class="hystmodal__wrap">
             <div class="galleryModal galleryAnimation hystmodal__window" role="dialog" aria-modal="true">          
-              <button class="galleryModal__close closeButton" data-hystclose type="button">
+              <button class="galleryModal__closeButton closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
@@ -565,7 +585,7 @@
         <div class="hystmodal" id="certificate-02" aria-hidden="true">
           <div class="hystmodal__wrap">
             <div class="galleryModal galleryAnimation hystmodal__window" role="dialog" aria-modal="true">          
-              <button class="galleryModal__close closeButton" data-hystclose type="button">
+              <button class="galleryModal__closeButton closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
@@ -585,7 +605,7 @@
         <div class="hystmodal" id="certificate-03" aria-hidden="true">
           <div class="hystmodal__wrap">
             <div class="galleryModal galleryAnimation hystmodal__window" role="dialog" aria-modal="true">          
-              <button class="galleryModal__close closeButton" data-hystclose type="button">
+              <button class="galleryModal__closeButton closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
@@ -605,7 +625,7 @@
         <div class="hystmodal" id="certificate-04" aria-hidden="true">
           <div class="hystmodal__wrap">
             <div class="galleryModal galleryAnimation hystmodal__window" role="dialog" aria-modal="true">          
-              <button class="galleryModal__close closeButton" data-hystclose type="button">
+              <button class="galleryModal__closeButton closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
@@ -625,7 +645,7 @@
         <div class="hystmodal" id="certificate-05" aria-hidden="true">
           <div class="hystmodal__wrap">
             <div class="galleryModal galleryAnimation hystmodal__window" role="dialog" aria-modal="true">          
-              <button class="galleryModal__close closeButton" data-hystclose type="button">
+              <button class="galleryModal__closeButton closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
@@ -645,7 +665,7 @@
         <div class="hystmodal" id="certificate-06" aria-hidden="true">
           <div class="hystmodal__wrap">
             <div class="galleryModal galleryAnimation hystmodal__window" role="dialog" aria-modal="true">          
-              <button class="galleryModal__close closeButton" data-hystclose type="button">
+              <button class="galleryModal__closeButton closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
@@ -665,7 +685,7 @@
         <div class="hystmodal" id="certificate-07" aria-hidden="true">
           <div class="hystmodal__wrap">
             <div class="galleryModal galleryAnimation hystmodal__window" role="dialog" aria-modal="true">          
-              <button class="galleryModal__close closeButton" data-hystclose type="button">
+              <button class="galleryModal__closeButton closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
@@ -1669,7 +1689,7 @@
         <div class="hystmodal" id="review-01" aria-hidden="true">
           <div class="hystmodal__wrap">
             <div class="galleryModal galleryAnimation hystmodal__window" role="dialog" aria-modal="true">
-              <button class="galleryModal__close closeButton" data-hystclose type="button">
+              <button class="galleryModal__closeButton closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
@@ -1689,7 +1709,7 @@
         <div class="hystmodal" id="review-02" aria-hidden="true">
           <div class="hystmodal__wrap">
             <div class="galleryModal galleryAnimation hystmodal__window" role="dialog" aria-modal="true">
-              <button class="galleryModal__close closeButton" data-hystclose type="button">
+              <button class="galleryModal__closeButton closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
@@ -1709,7 +1729,7 @@
         <div class="hystmodal" id="review-03" aria-hidden="true">
           <div class="hystmodal__wrap">
             <div class="galleryModal galleryAnimation hystmodal__window" role="dialog" aria-modal="true">
-              <button class="galleryModal__close closeButton" data-hystclose type="button">
+              <button class="galleryModal__closeButton closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
@@ -1729,7 +1749,7 @@
         <div class="hystmodal" id="review-04" aria-hidden="true">
           <div class="hystmodal__wrap">
             <div class="galleryModal galleryAnimation hystmodal__window" role="dialog" aria-modal="true">
-              <button class="galleryModal__close closeButton" data-hystclose type="button">
+              <button class="galleryModal__closeButton closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
@@ -1749,7 +1769,7 @@
         <div class="hystmodal" id="review-05" aria-hidden="true">
           <div class="hystmodal__wrap">
             <div class="galleryModal galleryAnimation hystmodal__window" role="dialog" aria-modal="true">
-              <button class="galleryModal__close closeButton" data-hystclose type="button">
+              <button class="galleryModal__closeButton closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
@@ -1769,7 +1789,7 @@
         <div class="hystmodal" id="review-06" aria-hidden="true">
           <div class="hystmodal__wrap">
             <div class="galleryModal galleryAnimation hystmodal__window" role="dialog" aria-modal="true">
-              <button class="galleryModal__close closeButton" data-hystclose type="button">
+              <button class="galleryModal__closeButton closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
@@ -1789,7 +1809,7 @@
         <div class="hystmodal" id="review-07" aria-hidden="true">
           <div class="hystmodal__wrap">
             <div class="galleryModal galleryAnimation hystmodal__window" role="dialog" aria-modal="true">
-              <button class="galleryModal__close closeButton" data-hystclose type="button">
+              <button class="galleryModal__closeButton closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
@@ -1809,7 +1829,7 @@
         <div class="hystmodal" id="review-08" aria-hidden="true">
           <div class="hystmodal__wrap">
             <div class="galleryModal galleryAnimation hystmodal__window" role="dialog" aria-modal="true">
-              <button class="galleryModal__close closeButton" data-hystclose type="button">
+              <button class="galleryModal__closeButton closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
@@ -1829,7 +1849,7 @@
         <div class="hystmodal" id="review-09" aria-hidden="true">
           <div class="hystmodal__wrap">
             <div class="galleryModal galleryAnimation hystmodal__window" role="dialog" aria-modal="true">
-              <button class="galleryModal__close closeButton" data-hystclose type="button">
+              <button class="galleryModal__closeButton closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
@@ -1849,7 +1869,7 @@
         <div class="hystmodal" id="review-10" aria-hidden="true">
           <div class="hystmodal__wrap">
             <div class="galleryModal galleryAnimation hystmodal__window" role="dialog" aria-modal="true">
-              <button class="galleryModal__close closeButton" data-hystclose type="button">
+              <button class="galleryModal__closeButton closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
@@ -1869,7 +1889,7 @@
         <div class="hystmodal" id="review-11" aria-hidden="true">
           <div class="hystmodal__wrap">
             <div class="galleryModal galleryAnimation hystmodal__window" role="dialog" aria-modal="true">
-              <button class="galleryModal__close closeButton" data-hystclose type="button">
+              <button class="galleryModal__closeButton closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
@@ -1889,7 +1909,7 @@
         <div class="hystmodal" id="review-12" aria-hidden="true">
           <div class="hystmodal__wrap">
             <div class="galleryModal galleryAnimation hystmodal__window" role="dialog" aria-modal="true">
-              <button class="galleryModal__close closeButton" data-hystclose type="button">
+              <button class="galleryModal__closeButton closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
@@ -1909,7 +1929,7 @@
         <div class="hystmodal" id="review-13" aria-hidden="true">
           <div class="hystmodal__wrap">
             <div class="galleryModal galleryAnimation hystmodal__window" role="dialog" aria-modal="true">
-              <button class="galleryModal__close closeButton" data-hystclose type="button">
+              <button class="galleryModal__closeButton closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
@@ -1929,7 +1949,7 @@
         <div class="hystmodal" id="review-14" aria-hidden="true">
           <div class="hystmodal__wrap">
             <div class="galleryModal galleryAnimation hystmodal__window" role="dialog" aria-modal="true">
-              <button class="galleryModal__close closeButton" data-hystclose type="button">
+              <button class="galleryModal__closeButton closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
@@ -1949,7 +1969,7 @@
         <div class="hystmodal" id="review-15" aria-hidden="true">
           <div class="hystmodal__wrap">
             <div class="galleryModal galleryAnimation hystmodal__window" role="dialog" aria-modal="true">
-              <button class="galleryModal__close closeButton" data-hystclose type="button">
+              <button class="galleryModal__closeButton closeButton" data-hystclose type="button">
                 <svg style="width: 32px; height: 32px;"><use href="#cross"></use></svg>
                 <span class="visually-hidden">Закрыть окно</span> 
               </button>
