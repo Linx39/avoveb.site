@@ -3490,6 +3490,10 @@ legend {
     opacity: 1;
 }
 
+.sidebarHystmodal {
+    overflow: hidden;
+}
+
 /* SidebarModal */
 .sidebarModal {
     position: relative;  
