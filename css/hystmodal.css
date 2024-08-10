@@ -12,7 +12,7 @@
 
   pointer-events: none;
   visibility: hidden;
-  overflow: hidden;
+  overflow-y: scroll;
 }
 
 .hystmodal--active {

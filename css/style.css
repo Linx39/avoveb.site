@@ -3454,7 +3454,8 @@ legend {
 .modalAnimation {
     opacity: 0;
     transform: rotateX(80deg) translateY(-110%);
-    transition: transform 1s ease, opacity .5s ease;
+    /* transition: transform 1s ease, opacity .5s ease; */
+    transition: transform 3s ease, opacity 2s ease;
     transition-delay: 0s;
 }
 
