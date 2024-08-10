@@ -227,6 +227,19 @@ setAnimationFalse = (modal, animationClass) => {
   }
 }
 
+// Фон для видео
+const HYSTMODAL_SHADOW_BLACK_CLASS = 'hystmodal__shadow_black';
+
+const addShadowClass = () => {
+  const hystmodalShadow = document.querySelector('.hystmodal__shadow');
+  hystmodalShadow.classList.add(HYSTMODAL_SHADOW_BLACK_CLASS);
+}
+
+const removeShadowClass = () => {
+  const hystmodalShadow = document.querySelector('.hystmodal__shadow');
+  hystmodalShadow.classList.remove(HYSTMODAL_SHADOW_BLACK_CLASS);
+}
+
 // Инициализация модальных окон
 const fixedElements = ['.scrollUp'];
 
@@ -234,6 +247,8 @@ const videoModal = new HystModal({
   linkAttributeName: "data-video",
   fixedSelectors: fixedElements,
   waitTransitions: true,
+  beforeOpen: () => addShadowClass(),
+  afterClose: () => removeShadowClass(),
 });
 
 const sidebarModal = new HystModal({

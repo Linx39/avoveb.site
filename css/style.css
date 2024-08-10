@@ -3450,12 +3450,15 @@ legend {
     align-items: end;
 }
 
+.hystmodal__shadow_black {
+    background-color: #000000;
+}
+
 /* Анимация модальных окон */
 .modalAnimation {
     opacity: 0;
     transform: rotateX(80deg) translateY(-110%);
-    /* transition: transform 1s ease, opacity .5s ease; */
-    transition: transform 3s ease, opacity 2s ease;
+    transition: transform 1s ease, opacity .5s ease;
     transition-delay: 0s;
 }
 
@@ -4433,22 +4436,22 @@ legend {
 
 .galleryModal_fullScreen {
     display: flex;
-    width: 100%;
     height: 100%;
-    margin: 0;
-    padding: 40px 80px;
 }
 
 .galleryModal__video {
     max-width: 100%;
     height: 100%;
-    margin: 0 auto;
     aspect-ratio: 16 / 9;
-    /* box-shadow: 0 0 20px 0 var(--brown-pallet-700); */
     box-shadow: 0 0 20px #000000;
 }
 
 @media (orientation: portrait) {
+    .galleryModal_fullScreen {
+        width: 100%;
+        height: auto;
+    }
+
     .galleryModal__video {
         height: auto;
         width: 100%;
@@ -4485,6 +4488,10 @@ legend {
     right: 0;
 }
 
+.galleryModal_fullScreen .galleryModal__closeButton {
+
+}
+
 .galleryModal__closeButton svg{
     fill: var(--brown-pallet-500);
 }
@@ -4497,6 +4504,10 @@ legend {
 .galleryModal__closeButton:active svg {
     fill: var(--brown-pallet-400);
     opacity: .8;
+}
+
+.galleryModal_fullScreen .galleryModal__closeButton svg {
+    fill: var(--brown-pallet-100)
 }
 
 @media (max-width: 1500px) {
@@ -4525,10 +4536,6 @@ legend {
     .galleryModal {  
         padding: 0 56px;
     }
-
-    .galleryModal_fullScreen {
-        padding: 28px 56px;
-    }
     
     .galleryModal__img {
         height: calc(100vh - 20px);
@@ -4554,6 +4561,12 @@ legend {
     .galleryModal__img_horizontal {
         width: 100%;
         height: auto;
+    }
+}
+
+@media (orientation: portrait) {
+    .galleryModal__video {
+        aspect-ratio: 16 / 14;
     }
 }
 
