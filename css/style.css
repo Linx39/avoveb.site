@@ -3395,6 +3395,10 @@ legend {
   overflow-y: scroll;
 }
 
+.hystmodal__opened .scrollUp {
+    overflow-y: scroll;
+  }
+
 .hystmodal__shadow {
     background-color: #2E1F1C;
 
@@ -4429,7 +4433,6 @@ legend {
         height: auto;
         width: 100%;
         margin: auto 0;
-        aspect-ratio: 16 / 9;
     }
 }
 

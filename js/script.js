@@ -241,11 +241,8 @@ const removeShadowClass = () => {
 }
 
 // Инициализация модальных окон
-const fixedElements = ['.scrollUp'];
-
 const videoModal = new HystModal({
   linkAttributeName: "data-video",
-  fixedSelectors: fixedElements,
   waitTransitions: true,
   beforeOpen: () => addShadowClass(),
   afterClose: () => removeShadowClass(),
@@ -253,20 +250,17 @@ const videoModal = new HystModal({
 
 const sidebarModal = new HystModal({
   linkAttributeName: "data-sidebar",
-  fixedSelectors: fixedElements,
   waitTransitions: true,
   afterClose: () => scrollToLinks(elementByLink),
 })
 
 const servicesModal = new HystModal({
   linkAttributeName: "data-services",
-  fixedSelectors: fixedElements,
   waitTransitions: true,
 });
 
 const feedbackModal = new HystModal({
   linkAttributeName: "data-feedback",
-  fixedSelectors: fixedElements,
   waitTransitions: true,
   beforeOpen: () => {
     setAnimationFalse(servicesModal, MODAL_ANIMATION_CLASS);
@@ -279,13 +273,11 @@ const feedbackModal = new HystModal({
 
 const certificatesModal = new HystModal({
   linkAttributeName: "data-certificates",
-  fixedSelectors: fixedElements,
   waitTransitions: true,
 });
 
 const certificateModal = new HystModal({
   linkAttributeName: "data-sertificate",
-  fixedSelectors: fixedElements,
   waitTransitions: true,
   beforeOpen: () => {
     setAnimationFalse(certificatesModal, MODAL_ANIMATION_CLASS);
@@ -299,7 +291,6 @@ const certificateModal = new HystModal({
 
 const reviewModal = new HystModal({
   linkAttributeName: "data-review",
-  fixedSelectors: fixedElements,
   waitTransitions: true,
 });
 
