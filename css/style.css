@@ -3419,6 +3419,10 @@ legend {
     align-items: end;
 }
 
+.videoHystmodal .hystmodal__wrap {
+    height: 100%;
+}
+
 .hystmodal__shadow_black {
     background-color: #000000;
 }
