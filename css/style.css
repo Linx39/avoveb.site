@@ -1116,7 +1116,6 @@ legend {
     border-radius: 50%;
     border: 1px solid var(--brown-pallet-400);
     background: inherit;
-    cursor: pointer;
 }
 
 .slider__bullet_current {
@@ -4549,6 +4548,10 @@ legend {
 
 @media ((max-width: 560px) and (orientation: portrait)) {
     .galleryModal__video {
+        aspect-ratio: 1 / 1;
+    }
+
+    .galleryModal__video iframe {
         aspect-ratio: 1 / 1;
     }
 }
