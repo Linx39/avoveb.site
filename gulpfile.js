@@ -23,7 +23,7 @@ export const styles = () => {
   return gulp.src(`css/style.css`)
     .pipe(postcss([
       autoprefixer(),
-      cssnano()
+      // cssnano()
     ]))
     .pipe(rename('style.min.css'))
     .pipe(gulp.dest(`css`))
