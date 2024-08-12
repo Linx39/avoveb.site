@@ -4179,6 +4179,10 @@ legend {
         line-height: 16px;
     }
 
+    .feedback__form__control__input {
+        font-size: 16px;
+    }
+
     .feedback__form__control__mark {
         width: 16px;
         height: 16px;
