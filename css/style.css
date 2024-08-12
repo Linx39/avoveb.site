@@ -4087,6 +4087,7 @@ legend {
 
   border: 1px solid var(--green-pallet-200);
   border-radius: 4px;
+  background-color: var(--brown-pallet-50);
 }
 
 .feedback__form__control__mark:hover,
