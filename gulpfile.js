@@ -20,12 +20,12 @@ export const html = () => {
 
 // Styles
 export const styles = () => {
-  return gulp.src(`css/style.css`)
+  return gulp.src(`css/hystmodal.css`)
     .pipe(postcss([
       autoprefixer(),
       // cssnano()
     ]))
-    .pipe(rename('style.min.css'))
+    .pipe(rename('hystmodal.min.css'))
     .pipe(gulp.dest(`css`))
 }
 
