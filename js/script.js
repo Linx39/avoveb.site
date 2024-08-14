@@ -40,32 +40,34 @@ const initServisesSwiper = () => {
   return servisesSwiper;
 };
 
-let isSwiperInit = false;
+let isServisesSwiperInit = false;
 let servisesSwiper = Swiper;
 
-const setSwiperMode = () => {
+const setServisesSwiperMode = () => {
   const isDisabledSwiperWidth = window.matchMedia(`(min-width: 960px)`).matches;
 
-  if (!isDisabledSwiperWidth && !isSwiperInit){
+  if (!isDisabledSwiperWidth && !isServisesSwiperInit){
     servisesSwiper = initServisesSwiper();
-    isSwiperInit = true;
+    isServisesSwiperInit = true;
   }
 
-  if (isDisabledSwiperWidth && isSwiperInit) {
+  if (isDisabledSwiperWidth && isServisesSwiperInit) {
     servisesSwiper.destroy();
-    isSwiperInit = false;
+    isServisesSwiperInit = false;
   }
 };
 
-window.addEventListener('load', () => {
-  setSwiperMode();
+window.addEventListener("DOMContentLoaded", () => {
+  setServisesSwiperMode();
 });
 
 window.addEventListener('resize', () => {
-  setSwiperMode();
+  setServisesSwiperMode();
 });
 
-const initReviewsSwiper = (isLoop = true) => {
+const initReviewsSwiper = () => {
+  const isLoop = !navigator.userAgent.includes('Firefox');
+
   const reviewsSwiper = new Swiper('.reviews__swiper', {
     watchSlidesProgress: true,
     slideVisibleClass: 'review__slide_visible',
@@ -81,6 +83,7 @@ const initReviewsSwiper = (isLoop = true) => {
       el: '.reviews__swiper__pagination',
       bulletClass: 'slider__bullet',
       bulletActiveClass: 'slider__bullet_current',
+      clickable: true,
     },
     
     breakpoints: {
@@ -114,13 +117,23 @@ const initReviewsSwiper = (isLoop = true) => {
   return reviewsSwiper;
 }
 
-if (navigator.userAgent.includes('Firefox')) {
-  initReviewsSwiper(false);
-} else {
-  initReviewsSwiper();
-}
+initReviewsSwiper();
 
-new Swiper('.certificates__swiper', {  
+
+new Swiper('.certificates__swiper', { 
+  navigation: {
+    prevEl: '.certificates__swiper__buttonPrev',
+    nextEl: '.certificates__swiper__buttonNext',
+    disabledClass: 'navigationButton_disabled',
+  },
+
+  pagination: {
+    el: '.certificates__swiper__pagination',
+    bulletClass: 'slider__bullet',
+    bulletActiveClass: 'slider__bullet_current',
+    clickable: true,
+  },
+
   breakpoints: {
     320: {
       slidesPerView: 2,
@@ -152,18 +165,6 @@ new Swiper('.certificates__swiper', {
       slidesPerGroup: 3,
       spaceBetween: 32,
     },
-  },
-
-  navigation: {
-    prevEl: '.certificates__swiper__buttonPrev',
-    nextEl: '.certificates__swiper__buttonNext',
-    disabledClass: 'navigationButton_disabled',
-  },
-
-  pagination: {
-    el: '.certificates__swiper__pagination',
-    bulletClass: 'slider__bullet',
-    bulletActiveClass: 'slider__bullet_current',
   },
 });
 

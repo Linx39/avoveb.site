@@ -1105,13 +1105,27 @@ legend {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    column-gap: 12px;
+    column-gap: 4px;
     row-gap: 6px;
 }
 
 .slider__bullet {
     flex-shrink: 0;
     
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+
+    cursor: pointer;
+}
+
+.slider__bullet::after {
+    position: absolute;
+    content: "";
+
     width: 16px;
     height: 16px;
     border-radius: 50%;
@@ -1119,7 +1133,7 @@ legend {
     background: inherit;
 }
 
-.slider__bullet_current {
+.slider__bullet_current::after {
     background: var(--brown-pallet-400);
     opacity: .8;
 }
@@ -1133,12 +1147,6 @@ legend {
     .slider__buttonPrev {
         position: static;
         transform: none;
-    }
-
-    .slider__bullet {
-        width: 12px;
-        height: 12px;
-        cursor: initial;
     }
 }
 
@@ -1154,6 +1162,13 @@ legend {
     .slider__bullet {
         width: 8px;
         height: 8px;
+        cursor: initial;
+        pointer-events: none;
+    }
+
+    .slider__bullet::after {
+        width: 8px;
+        height: 8px;
     }
 }
 
@@ -1167,6 +1182,11 @@ legend {
     }
 
     .slider__bullet {
+        width: 6px;
+        height: 6px;
+    }
+
+    .slider__bullet::after {
         width: 6px;
         height: 6px;
     }
