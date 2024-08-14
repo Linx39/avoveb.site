@@ -969,11 +969,12 @@ legend {
 @media (max-width: 960px) {
     .tickets { 
         gap: var(--xs-gap);
+        row-gap: 12px;
     }
 
     .tickets__item {
         row-gap: 8px;
-        padding: 16px;
+        padding: 12px;
     }
 
     .tickets__item__decor {            
