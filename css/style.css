@@ -2525,9 +2525,9 @@ legend {
     background-attachment: fixed;
 }
 
-@supports (-webkit-overflow-scrolling: touch) {
+@supports (-webkit-touch-callout: none) {
     .advantages__bg {
-        background-attachment: scroll !important;
+        background-attachment: initial !important;
     }
 }
 
