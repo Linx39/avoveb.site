@@ -2523,8 +2523,10 @@ legend {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+}
 
-    @supports (-webkit-overflow-scrolling: touch) {
+@supports (-webkit-overflow-scrolling: touch) {
+    .advantages__bg {
         background-attachment: scroll !important;
     }
 }
