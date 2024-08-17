@@ -58,6 +58,8 @@
     --xs-button-radius: 8px;
 
     --mobile-container: 438px;
+
+
 }
 
 * {
@@ -4669,6 +4671,29 @@ legend {
 @media (max-width: 960px) {
     .scrollUp {        
         padding: 16px;
+    }
+}
+
+
+.scrollMarginTop {
+    scroll-margin-top: 138px;
+}
+
+@media (max-width: 1200px) {
+    .scrollMarginTop {
+        scroll-margin-top: 134px;
+    }
+}
+
+@media (max-width: 960px) {
+    .scrollMarginTop {
+        scroll-margin-top: 75px;
+    }
+}
+
+@media (max-width: 960px) {
+    .scrollMarginTop {
+        scroll-margin-top: 85px;
     }
 }
 

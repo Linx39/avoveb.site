@@ -184,7 +184,7 @@ const setScrollMarginTop = () => {
   });
 }
 
-window.addEventListener('load', () => {
+window.addEventListener('DOMContentLoaded', () => {
   setScrollMarginTop();
 })
 
