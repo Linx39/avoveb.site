@@ -1,8 +1,9 @@
 import gulp from 'gulp';
 import sourcemap from 'gulp-sourcemaps';
-import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import cssnano from 'cssnano';
+import csso from 'postcss-csso';
+import postcss from 'gulp-postcss';
 import rename from 'gulp-rename';
 import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
@@ -12,7 +13,7 @@ import webp from 'gulp-webp';
 
 // HTML
 export const html = () => {
-  return gulp.src('index.full.html')
+  return gulp.src('index-full.html')
   .pipe(htmlmin({ collapseWhitespace: true }))
   .pipe(rename('index.html'))
   .pipe(gulp.dest('min'))
@@ -20,12 +21,12 @@ export const html = () => {
 
 // Styles
 export const styles = () => {
-  return gulp.src(`css/hystmodal.css`)
+  return gulp.src(`css/style.css`)
     .pipe(postcss([
       autoprefixer(),
-      // cssnano()
+      csso()
     ]))
-    .pipe(rename('hystmodal.min.css'))
+    .pipe(rename('style.min.css'))
     .pipe(gulp.dest(`css`))
 }
 
