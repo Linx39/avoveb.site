@@ -241,13 +241,30 @@ const removeShadowClass = () => {
   hystmodalShadow.classList.remove(HYSTMODAL_SHADOW_BLACK_CLASS);
 }
 
+// Видео
+const SRC="https://dzen.ru/embed/v1t4CfPF7B00?from_block=partner&from=zen&mute=0&autoplay=1&tv=0";
+const iframe = document.querySelector('.iframe');
+
+const addIframeSrc = () => {
+  iframe.src = SRC;
+}
+
+const deleteIframeSrc = () => {
+  iframe.src = '';
+}
 
 // Инициализация модальных окон
 const videoModal = new HystModal({
   linkAttributeName: "data-video",
   waitTransitions: true,
-  beforeOpen: () => addShadowClass(),
-  afterClose: () => removeShadowClass(),
+  beforeOpen: () => {
+    addIframeSrc();
+    addShadowClass();
+  },
+  afterClose: () => {
+    deleteIframeSrc();
+    removeShadowClass();
+  },
 });
 
 const sidebarModal = new HystModal({
