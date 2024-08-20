@@ -1524,6 +1524,31 @@ legend {
     }
 }
 
+
+/* scrollMarginTop */
+.scrollMarginTop {
+    scroll-margin-top: 143px;
+}
+
+@media (max-width: 1200px) {
+    .scrollMarginTop {
+        scroll-margin-top: 139px;
+    }
+}
+
+@media (max-width: 960px) {
+    .scrollMarginTop {
+        scroll-margin-top: 80px;
+    }
+}
+
+@media (max-width: 560px) {
+    .scrollMarginTop {
+        scroll-margin-top: 90px;
+    }
+}
+
+
 /* Promo */
 .promo {
     position: relative;
