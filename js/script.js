@@ -210,7 +210,6 @@ const scrollToLinks = (element) => {
   }
 }
 
-
 // Управление анимацией модальных окон
 const MODAL_ANIMATION_CLASS = 'modalAnimation';
 
@@ -228,6 +227,7 @@ setAnimationFalse = (modal, animationClass) => {
   }
 }
 
+
 // Фон для видео
 const HYSTMODAL_SHADOW_BLACK_CLASS = 'hystmodal__shadow_black';
 
@@ -240,6 +240,7 @@ const removeShadowClass = () => {
   const hystmodalShadow = document.querySelector('.hystmodal__shadow');
   hystmodalShadow.classList.remove(HYSTMODAL_SHADOW_BLACK_CLASS);
 }
+
 
 // Инициализация модальных окон
 const videoModal = new HystModal({
