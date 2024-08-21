@@ -4468,6 +4468,18 @@ legend {
     height: 100%;
 }
 
+@media (orientation: portrait) {   
+
+    .galleryModal_fullScreen {
+        height: auto;
+        margin: auto 0;
+    }
+
+    .galleryModal__video {
+        aspect-ratio: 1 / 1;
+    }
+}
+
 .galleryModal__video {
     width: 100%;
     max-width: 100%;
@@ -4564,6 +4576,15 @@ legend {
         width: calc(100% - 32px);
         padding: 56px 0;
     }
+
+    /* .galleryModal_fullScreen {
+        height: auto;
+        margin: auto 0;
+    }
+
+    .galleryModal__video {
+        aspect-ratio: 1 / 1;
+    } */
 
     .galleryModal__img {
         width: 100%;
