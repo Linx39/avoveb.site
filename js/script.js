@@ -242,11 +242,11 @@ const removeShadowClass = () => {
 }
 
 // Видео
-const SRC="https://dzen.ru/embed/v1t4CfPF7B00?from_block=partner&from=zen&mute=0&autoplay=1&tv=0";
+const VIDEO_URL ="https://dzen.ru/embed/v1t4CfPF7B00?from_block=partner&from=zen&mute=0&autoplay=0&tv=0";
 const iframe = document.querySelector('.iframe');
 
 const addIframeSrc = () => {
-  iframe.src = SRC;
+  iframe.src = VIDEO_URL;
 }
 
 const deleteIframeSrc = () => {
